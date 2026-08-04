@@ -2,7 +2,8 @@ import React from 'react';
 
 export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
   const menuItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: '📊' },
+    { id: 'dashboard', label: 'Corporate Dashboard', icon: '📊' },
+    { id: 'iot', label: 'IoT Smart Home', icon: '🏠' },
     { id: 'orders', label: 'Orders & Invoices', icon: '🛒' },
     { id: 'users', label: 'User Management', icon: '👥' },
     { id: 'analytics', label: 'Traffic Analytics', icon: '📈' },
@@ -23,9 +24,9 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
           </div>
           {!isCollapsed && (
             <div className="overflow-hidden whitespace-nowrap">
-              <h2 className="font-bold text-slate-900 dark:text-slate-100 text-base tracking-tight">NGX Corporate</h2>
+              <h2 className="font-bold text-slate-900 dark:text-slate-100 text-base tracking-tight">NGX Admin</h2>
               <span className="text-[10px] font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded-full">
-                Business Suite
+                Full Suite React
               </span>
             </div>
           )}
@@ -62,7 +63,7 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
               PRO
             </div>
             <div className="overflow-hidden">
-              <span className="text-xs font-semibold text-slate-800 dark:text-slate-200 block truncate">Corporate Plan</span>
+              <span className="text-xs font-semibold text-slate-800 dark:text-slate-200 block truncate">Enterprise Plan</span>
               <span className="text-[10px] text-slate-400 block truncate">v1.0.0 Active</span>
             </div>
           </div>

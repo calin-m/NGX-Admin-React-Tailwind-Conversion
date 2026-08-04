@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import Sidebar from './Sidebar.jsx';
+import StatusCard from './StatusCard.jsx';
 
-describe('Sidebar Corporate Component Suite', () => {
+describe('StatusCard Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
-    const { container } = render(<Sidebar />);
+    const { container } = render(<StatusCard />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/NGX Admin/i)).toBeInTheDocument();
+    expect(screen.getByText(/Light/i)).toBeInTheDocument();
   });
 });

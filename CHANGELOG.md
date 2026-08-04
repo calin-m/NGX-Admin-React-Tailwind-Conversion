@@ -7,6 +7,15 @@
 ## [1.0.0] — 2026-08-04
 
 ### 🚀 New Features
+- **feat(corporate): convert complete enterprise utilities package (ThemeCustomizer, NotificationDrawer, SearchInput, CSV Export)** (`f7aaeb8`) *by Calin on 2026-08-04*
+  - Created src/components/sections/ThemeCustomizer.jsx (floating palette customizer)
+  - Created src/components/sections/NotificationDrawer.jsx (system alert stream drawer)
+  - Modified src/components/sections/SearchInput.jsx (global command palette with Ctrl+K)
+  - Modified src/components/sections/SmartTable.jsx (added CSV Export button & engine)
+  - Modified src/components/sections/Header.jsx (integrated Search, Customizer, and Notification triggers)
+  - Modified src/components/sections/Header.test.jsx (updated test assertions)
+  - Modified src/App.jsx (wired customizer and search modals)
+  - Modified walkthrough.md (documented utilities package completion)
 - **feat(corporate): batch convert remaining UserManagement, Settings, and OrderModal navigation views** (`1f9b971`) *by Calin on 2026-08-04*
   - Created src/components/sections/UserManagement.jsx (team directory & status indicators)
   - Created src/components/sections/UserManagement.stories.jsx (Storybook 8 catalog stories)
@@ -70,4 +79,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-04T19:27:54.477Z*
+*Last Auto-Generated: 2026-08-04T19:36:54.967Z*

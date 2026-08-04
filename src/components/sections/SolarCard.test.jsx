@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import Sidebar from './Sidebar.jsx';
+import SolarCard from './SolarCard.jsx';
 
-describe('Sidebar Corporate Component Suite', () => {
+describe('SolarCard Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
-    const { container } = render(<Sidebar />);
+    const { container } = render(<SolarCard />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/NGX Admin/i)).toBeInTheDocument();
+    expect(screen.getByText(/Solar Energy Output/i)).toBeInTheDocument();
   });
 });

@@ -17,6 +17,14 @@ import Settings from './components/sections/Settings.jsx';
 import OrderModal from './components/sections/OrderModal.jsx';
 import SearchInput from './components/sections/SearchInput.jsx';
 import ThemeCustomizer from './components/sections/ThemeCustomizer.jsx';
+import StatusCard from './components/sections/StatusCard.jsx';
+import TemperatureCard from './components/sections/TemperatureCard.jsx';
+import ElectricityCard from './components/sections/ElectricityCard.jsx';
+import SolarCard from './components/sections/SolarCard.jsx';
+import SecurityCameras from './components/sections/SecurityCameras.jsx';
+import RoomsCard from './components/sections/RoomsCard.jsx';
+import WeatherCard from './components/sections/WeatherCard.jsx';
+import KittenCard from './components/sections/KittenCard.jsx';
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -60,9 +68,41 @@ export default function App() {
           setActiveTab={setActiveTab}
         />
 
-        {/* Main Converted Corporate View */}
+        {/* Main Converted View */}
         <main className="flex-1 p-6 max-w-7xl mx-auto w-full space-y-6 overflow-x-hidden">
-          {activeTab === 'orders' ? (
+          {activeTab === 'iot' ? (
+            <div className="space-y-6">
+              {/* Device Toggle Cards */}
+              <StatusCard />
+
+              {/* Climate & Electricity Grid */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div>
+                  <TemperatureCard />
+                </div>
+                <div className="lg:col-span-2">
+                  <ElectricityCard />
+                </div>
+              </div>
+
+              {/* Cameras & Solar Output */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="lg:col-span-2">
+                  <SecurityCameras />
+                </div>
+                <div className="space-y-6">
+                  <SolarCard />
+                  <WeatherCard />
+                </div>
+              </div>
+
+              {/* Rooms & Pet Monitor */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <RoomsCard />
+                <KittenCard />
+              </div>
+            </div>
+          ) : activeTab === 'orders' ? (
             <div className="space-y-4">
               <div className="flex justify-end">
                 <button
@@ -123,18 +163,18 @@ export default function App() {
                 <div>
                   <div className="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-lg space-y-4">
                     <h4 className="font-bold text-slate-900 dark:text-slate-100">Quick Actions</h4>
-                    <p className="text-xs text-slate-500">Create new orders or navigate across Corporate suite tabs.</p>
+                    <p className="text-xs text-slate-500">Switch between Corporate E-Commerce and IoT Smart Home dashboards.</p>
                     <button
-                      onClick={() => setIsOrderModalOpen(true)}
+                      onClick={() => setActiveTab('iot')}
                       className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-sm transition-all"
                     >
-                      ➕ Create New Order
+                      🏠 Open IoT Smart Home View
                     </button>
                     <button
-                      onClick={() => setActiveTab('users')}
+                      onClick={() => setIsOrderModalOpen(true)}
                       className="w-full py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl text-xs font-semibold hover:bg-slate-200 dark:hover:bg-slate-600 transition-all"
                     >
-                      👥 View Team Directory
+                      ➕ Create New Order
                     </button>
                   </div>
                 </div>

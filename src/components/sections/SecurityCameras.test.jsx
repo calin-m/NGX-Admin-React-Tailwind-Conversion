@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import Sidebar from './Sidebar.jsx';
+import SecurityCameras from './SecurityCameras.jsx';
 
-describe('Sidebar Corporate Component Suite', () => {
+describe('SecurityCameras Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
-    const { container } = render(<Sidebar />);
+    const { container } = render(<SecurityCameras />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/NGX Admin/i)).toBeInTheDocument();
+    expect(screen.getByText(/Security Cameras Grid/i)).toBeInTheDocument();
   });
 });

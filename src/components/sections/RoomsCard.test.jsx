@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import Sidebar from './Sidebar.jsx';
+import RoomsCard from './RoomsCard.jsx';
 
-describe('Sidebar Corporate Component Suite', () => {
+describe('RoomsCard Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
-    const { container } = render(<Sidebar />);
+    const { container } = render(<RoomsCard />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/NGX Admin/i)).toBeInTheDocument();
+    expect(screen.getByText(/Smart Room Selector/i)).toBeInTheDocument();
   });
 });

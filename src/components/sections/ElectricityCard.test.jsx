@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import Sidebar from './Sidebar.jsx';
+import ElectricityCard from './ElectricityCard.jsx';
 
-describe('Sidebar Corporate Component Suite', () => {
+describe('ElectricityCard Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
-    const { container } = render(<Sidebar />);
+    const { container } = render(<ElectricityCard />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/NGX Admin/i)).toBeInTheDocument();
+    expect(screen.getByText(/Electricity Consumption/i)).toBeInTheDocument();
   });
 });
