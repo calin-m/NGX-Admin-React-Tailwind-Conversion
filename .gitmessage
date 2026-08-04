@@ -1,0 +1,27 @@
+# <type>(<scope>): <short summary in imperative present tense>
+# │       │       │
+# │       │       └─> Summary: max 50 chars, lowercase, no trailing period
+# │       └─> Scope: ui, sections, nav, docs, tests, scripts, config
+# └─> Type: feat, fix, docs, style, refactor, perf, test, build, ci, chore
+# ----------------------------------------------------------------------
+# [PHASE]: Phase 1 / Phase 2 / Phase 3
+# ----------------------------------------------------------------------
+# [WHY] Motivation & Context:
+# - Explain WHY this change is required and WHAT problem it solves.
+#
+# ----------------------------------------------------------------------
+# [WHAT] Summary of Changes:
+# - List key architectural updates, sub-component additions, or refactors.
+#
+# ----------------------------------------------------------------------
+# [VERIFICATION] Enterprise Quality Checklist:
+# [ ] Vitest unit test suites pass (npm test)
+# [ ] 7-Gateway Quality Engine audit verified (npm run verify)
+# [ ] Living architecture blueprint synced (ARCHITECTURE.md)
+# [ ] ADR record added if applicable (docs/DECISIONS.md)
+# [ ] Dual-theme Dark & Light mode parity verified
+#
+# ----------------------------------------------------------------------
+# [REFERENCES] (Optional):
+# ADR: ADR-001
+# Ref: #123

@@ -1,0 +1,9 @@
+node_modules
+dist
+build
+.git
+.github
+.vscode
+*.log
+coverage
+test-results.json

@@ -1,0 +1,19 @@
+# 📜 AUTOMATED RELEASE CHANGELOG
+
+> **Status**: 100% Auto-Generated from Conventional Git Commits | **Format**: Keep a Changelog v1.1.0
+
+---
+
+## [1.0.0] — 2026-08-04
+
+### 🧹 Maintenance & Refactors
+- **[PHASE]: Rule 9 Commit Formatting Protocol Standardization** (`ad0cf85`) *by Calin on 2026-08-04*
+- **[PHASE]: Custom Hooks AST Syntax Audit Fixes | [WHY]: Fix AST syntax errors in scaffolded hooks by replacing invalid function dot notation with valid identifiers and renaming useState hook to useAppState. | [WHAT]: Updated src/hooks/useCore.module.js, src/hooks/useMockData.module.js, and src/hooks/useState.js. | [VERIFICATION]: Verified AST parser succeeds across all files in src/ with 0 syntax errors.** (`3a627a6`) *by Calin on 2026-08-04*
+- **[PHASE]: Dependabot Automated PR Disable Setup | [WHY]: Set open-pull-requests-limit to 0 in .github/dependabot.yml to prevent Dependabot from opening automated Pull Requests. | [WHAT]: Updated .github/dependabot.yml with open-pull-requests-limit: 0. | [VERIFICATION]: Verified .github/dependabot.yml syntax.** (`3721bc9`) *by Calin on 2026-08-04*
+- **[PHASE]: GitHub Dependabot Security Scoping & Legacy Isolation Setup | [WHY]: Configure GitHub Dependabot to monitor security updates exclusively for the active root React stack ('/') and ignore legacy old-src reference packages, ensuring GitHub security alerts accurately reflect production application health. | [WHAT]: Created .github/dependabot.yml targeting directory '/' with weekly npm ecosystem schedule; updated walkthrough artifact documentation. | [VERIFICATION]: Verified .github/dependabot.yml configuration syntax and verified old-src isolation from production React bundle.** (`55694b3`) *by Calin on 2026-08-04*
+- **[PHASE]: Multi-Service Dev Suite, 7-Gateway Quality Engine & Pre-Commit Sync Fix | [WHY]: Integrate Storybook 8 config, Vitest UI launcher, clean Corporate Dashboard shell, Tailwind CSS v4 dependencies, updated living architecture documentation, and pre-commit auto-stage fix for docs/LEGACY_BLUEPRINT.md. | [WHAT]: Added .storybook/main.js & preview.js; updated .gitignore; updated package.json & package-lock.json; updated .husky/pre-commit to stage LEGACY_BLUEPRINT.md; updated vite.config.js; cleaned src/App.jsx; auto-scaffolded App and GlassCard stories/tests; updated ARCHITECTURE.md, CHANGELOG.md, and docs/LEGACY_BLUEPRINT.md; upgraded scripts/start-all.js and scripts/verify-build.js. | [VERIFICATION]: Verified npm run verify passes all 7 quality gates and pre-commit stages all auto-generated blueprints.** (`3553d11`) *by Calin on 2026-08-04*
+- **[PHASE]: Dual-Stack Modernization Architecture, ADR-002 Scoped Governance & Package Setup | [WHY]: Establish a production-grade Dual-Stack Modernization Architecture for migrating an enterprise Angular 15 application (ngx-admin-master) to a modern React 18 + Vite 6 + Tailwind CSS v4 stack. Formally scope the migration focus to the Corporate Business Suite via ADR-002 in docs/DECISIONS.md to deliver 100% of real-world B2B analytics requirements (revenue, profit, traffic, country orders, user activity) with zero technical debt and 100% automated living documentation sync. Rename package to ngx-admin-react-tailwind-conversion. | [WHAT]: Created docs/LEGACY_BLUEPRINT.md master living blueprint; upgraded scripts/generate-legacy-docs.js with 100% fail-safe AST scanner; recorded ADR-002 in docs/DECISIONS.md; updated .agents/AGENTS.md Rule 11 protocol; updated README.md, DEVELOPMENT.md, docs/PIPELINE_GUIDE.md; updated scripts/verify-build.js and package.json; excluded old-src/** in eslint.config.js and .prettierignore. | [VERIFICATION]: Verified node scripts/generate-legacy-docs.js scans 430 files with 0 unclassified discrepancies and npm run docs:sync auto-syncs both active React docs and legacy Angular blueprint.** (`1d3dbdb`) *by Calin on 2026-08-04*
+
+---
+
+*Last Auto-Generated: 2026-08-04T15:48:30.784Z*
