@@ -20,12 +20,15 @@ graph TD
 | Component Path | Domain Area | Status |
 | :--- | :--- | :---: |
 | `src/App.jsx` | **ROOT** | 🟢 Active |
+| `src/components/sections/CalendarApp.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ChartPanelHeader.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ChartPanelSummary.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ChartsPanel.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/Chat.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/CountryOrders.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/CountryOrdersChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/CountryOrdersMap.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/Dialogs.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/EarningCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/EarningCardBack.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/EarningCardFront.jsx` | **COMPONENTS** | 🟢 Active |
@@ -34,9 +37,12 @@ graph TD
 | `src/components/sections/ECommerce.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ElectricityCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/Footer.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/FormInputs.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/FormLayouts.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/Header.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/KittenCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/LegendChart.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/Login.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/NotificationDrawer.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/OrderModal.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/OrdersChart.jsx` | **COMPONENTS** | 🟢 Active |
@@ -45,6 +51,8 @@ graph TD
 | `src/components/sections/ProfitCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ProfitChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ProgressSection.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/Register.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/ResetPassword.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/RoomsCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/SearchInput.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/SecurityCameras.jsx` | **COMPONENTS** | 🟢 Active |
@@ -59,6 +67,7 @@ graph TD
 | `src/components/sections/TemperatureCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ThemeCustomizer.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TinyMce.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/Toastr.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/traffic-reveal/TrafficBackCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/traffic-reveal/TrafficFrontCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TrafficBar.jsx` | **COMPONENTS** | 🟢 Active |

@@ -6,7 +6,10 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
     { id: 'iot', label: 'IoT Smart Home', icon: '🏠' },
     { id: 'orders', label: 'Orders & Invoices', icon: '🛒' },
     { id: 'users', label: 'User Management', icon: '👥' },
-    { id: 'analytics', label: 'Traffic Analytics', icon: '📈' },
+    { id: 'chat', label: 'Support Chat App', icon: '💬' },
+    { id: 'calendar', label: 'Calendar Scheduler', icon: '📅' },
+    { id: 'forms', label: 'Form Controls', icon: '📝' },
+    { id: 'auth', label: 'Authentication', icon: '🔐' },
     { id: 'settings', label: 'Settings', icon: '⚙️' }
   ];
 
@@ -17,7 +20,6 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
       }`}
     >
       <div className="p-4 space-y-6">
-        {/* Sidebar Brand Header */}
         <div className="flex items-center space-x-3 px-2">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-indigo-400 text-white flex items-center justify-center font-black text-lg shadow-md shrink-0">
             N
@@ -32,7 +34,6 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
           )}
         </div>
 
-        {/* Sidebar Menu Items */}
         <nav className="space-y-1.5">
           {menuItems.map(item => {
             const isActive = activeTab === item.id;
@@ -40,14 +41,14 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
               <button
                 key={item.id}
                 onClick={() => setActiveTab && setActiveTab(item.id)}
-                className={`w-full flex items-center space-x-3.5 px-3.5 py-3 rounded-xl text-sm font-medium transition-all ${
+                className={`w-full flex items-center space-x-3.5 px-3.5 py-2.5 rounded-xl text-xs font-medium transition-all ${
                   isActive
                     ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/20'
                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-slate-900 dark:hover:text-slate-100'
                 } ${isCollapsed ? 'justify-center px-0' : ''}`}
                 title={isCollapsed ? item.label : undefined}
               >
-                <span className="text-lg shrink-0">{item.icon}</span>
+                <span className="text-base shrink-0">{item.icon}</span>
                 {!isCollapsed && <span className="truncate">{item.label}</span>}
               </button>
             );
@@ -55,7 +56,6 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
         </nav>
       </div>
 
-      {/* Sidebar Footer Info */}
       <div className="p-4 border-t border-slate-100 dark:border-slate-700/60">
         {!isCollapsed ? (
           <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-700/40 flex items-center space-x-3">

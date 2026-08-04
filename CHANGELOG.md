@@ -7,6 +7,19 @@
 ## [1.0.0] — 2026-08-04
 
 ### 🚀 New Features
+- **feat(iot): convert complete IoT Smart Home Suite and update Husky pre-commit hook** (`4034d87`) *by Calin on 2026-08-04*
+  - Created src/components/sections/StatusCard.jsx (device toggle cards)
+  - Created src/components/sections/TemperatureCard.jsx (HVAC thermostat wheel)
+  - Created src/components/sections/ElectricityCard.jsx (smart grid power consumption chart)
+  - Created src/components/sections/SolarCard.jsx (solar output percentage gauge)
+  - Created src/components/sections/SecurityCameras.jsx (4-channel video stream grid)
+  - Created src/components/sections/RoomsCard.jsx (smart room zone selector)
+  - Created src/components/sections/WeatherCard.jsx (atmospheric weather forecast)
+  - Created src/components/sections/KittenCard.jsx (pet monitor widget)
+  - Modified src/components/sections/Sidebar.jsx & Sidebar.test.jsx (added IoT tab link and updated test assertions)
+  - Modified src/App.jsx (wired IoT Smart Home dashboard grid view)
+  - Modified .husky/pre-commit (removed deprecated sh wrapper lines)
+  - Modified walkthrough.md (documented IoT Smart Home Suite completion)
 - **feat(corporate): convert complete enterprise utilities package (ThemeCustomizer, NotificationDrawer, SearchInput, CSV Export)** (`f7aaeb8`) *by Calin on 2026-08-04*
   - Created src/components/sections/ThemeCustomizer.jsx (floating palette customizer)
   - Created src/components/sections/NotificationDrawer.jsx (system alert stream drawer)
@@ -79,4 +92,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-04T19:36:54.967Z*
+*Last Auto-Generated: 2026-08-04T19:44:38.005Z*

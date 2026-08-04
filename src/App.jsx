@@ -25,6 +25,15 @@ import SecurityCameras from './components/sections/SecurityCameras.jsx';
 import RoomsCard from './components/sections/RoomsCard.jsx';
 import WeatherCard from './components/sections/WeatherCard.jsx';
 import KittenCard from './components/sections/KittenCard.jsx';
+import Chat from './components/sections/Chat.jsx';
+import CalendarApp from './components/sections/CalendarApp.jsx';
+import Toastr from './components/sections/Toastr.jsx';
+import Dialogs from './components/sections/Dialogs.jsx';
+import FormInputs from './components/sections/FormInputs.jsx';
+import FormLayouts from './components/sections/FormLayouts.jsx';
+import Login from './components/sections/Login.jsx';
+import Register from './components/sections/Register.jsx';
+import ResetPassword from './components/sections/ResetPassword.jsx';
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -50,7 +59,6 @@ export default function App() {
 
   return (
     <div className={`min-h-screen ${isDarkMode ? 'dark' : ''} bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans flex flex-col antialiased transition-colors duration-200`}>
-      {/* Top Converted Corporate Header Bar */}
       <Header
         isDarkMode={isDarkMode}
         onToggleTheme={toggleTheme}
@@ -59,23 +67,32 @@ export default function App() {
         onOpenThemeCustomizer={() => setIsCustomizerOpen(true)}
       />
 
-      {/* Main Body Layout with Sidebar Drawer */}
       <div className="flex-1 flex w-full">
-        {/* Converted Corporate Sidebar Navigation Drawer */}
         <Sidebar
           isCollapsed={isSidebarCollapsed}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
         />
 
-        {/* Main Converted View */}
         <main className="flex-1 p-6 max-w-7xl mx-auto w-full space-y-6 overflow-x-hidden">
-          {activeTab === 'iot' ? (
+          {activeTab === 'chat' ? (
+            <Chat />
+          ) : activeTab === 'calendar' ? (
+            <CalendarApp />
+          ) : activeTab === 'forms' ? (
             <div className="space-y-6">
-              {/* Device Toggle Cards */}
+              <FormInputs />
+              <FormLayouts />
+            </div>
+          ) : activeTab === 'auth' ? (
+            <div className="space-y-8 py-4">
+              <Login />
+              <Register />
+              <ResetPassword />
+            </div>
+          ) : activeTab === 'iot' ? (
+            <div className="space-y-6">
               <StatusCard />
-
-              {/* Climate & Electricity Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div>
                   <TemperatureCard />
@@ -84,8 +101,6 @@ export default function App() {
                   <ElectricityCard />
                 </div>
               </div>
-
-              {/* Cameras & Solar Output */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-2">
                   <SecurityCameras />
@@ -95,8 +110,6 @@ export default function App() {
                   <WeatherCard />
                 </div>
               </div>
-
-              {/* Rooms & Pet Monitor */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <RoomsCard />
                 <KittenCard />
@@ -122,20 +135,19 @@ export default function App() {
               <TrafficRevealCard />
             </div>
           ) : activeTab === 'settings' ? (
-            <Settings />
+            <div className="space-y-6">
+              <Settings />
+              <Toastr />
+              <Dialogs />
+            </div>
           ) : (
             <>
-              {/* Top-Level KPI Summary Cards */}
               <ECommerce />
-
-              {/* Row 1: Analytics Cards & Combined Dual Chart */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <ProfitCard />
                 <TrafficRevealCard />
                 <EarningCard />
               </div>
-
-              {/* Row 2: Combined Dual Chart & Country Orders */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-2">
                   <ChartsPanel />
@@ -144,8 +156,6 @@ export default function App() {
                   <CountryOrders />
                 </div>
               </div>
-
-              {/* Row 3: Progress Section & Visitors Analytics */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div>
                   <ProgressSection />
@@ -154,27 +164,25 @@ export default function App() {
                   <VisitorsAnalytics />
                 </div>
               </div>
-
-              {/* Row 4: Live Activity Stream & Quick Action Card */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-2">
                   <UserActivity />
                 </div>
                 <div>
                   <div className="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-lg space-y-4">
-                    <h4 className="font-bold text-slate-900 dark:text-slate-100">Quick Actions</h4>
-                    <p className="text-xs text-slate-500">Switch between Corporate E-Commerce and IoT Smart Home dashboards.</p>
+                    <h4 className="font-bold text-slate-900 dark:text-slate-100">Quick Navigation</h4>
+                    <p className="text-xs text-slate-500">Access all converted NGX-Admin application suites.</p>
                     <button
-                      onClick={() => setActiveTab('iot')}
+                      onClick={() => setActiveTab('chat')}
                       className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-sm transition-all"
                     >
-                      🏠 Open IoT Smart Home View
+                      💬 Open Support Chat App
                     </button>
                     <button
-                      onClick={() => setIsOrderModalOpen(true)}
+                      onClick={() => setActiveTab('iot')}
                       className="w-full py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl text-xs font-semibold hover:bg-slate-200 dark:hover:bg-slate-600 transition-all"
                     >
-                      ➕ Create New Order
+                      🏠 Open IoT Smart Home View
                     </button>
                   </div>
                 </div>
@@ -184,10 +192,8 @@ export default function App() {
         </main>
       </div>
 
-      {/* Global Command Palette Search Modal */}
       <SearchInput isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
-      {/* Theme Customizer Panel */}
       <ThemeCustomizer
         isOpen={isCustomizerOpen}
         onClose={() => setIsCustomizerOpen(false)}
@@ -197,7 +203,6 @@ export default function App() {
         onToggleTheme={toggleTheme}
       />
 
-      {/* Create Order Modal */}
       <OrderModal
         isOpen={isOrderModalOpen}
         onClose={() => setIsOrderModalOpen(false)}
@@ -206,7 +211,6 @@ export default function App() {
         }}
       />
 
-      {/* Converted Corporate Footer Bar */}
       <Footer />
     </div>
   );
