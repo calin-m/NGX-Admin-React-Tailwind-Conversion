@@ -2,10 +2,9 @@ import { useState, useEffect } from 'react';
 
 /**
  * useTrafficBar Custom Hook
- * Translated from Angular @Injectable() RxJS Service: @core/data/traffic-bar.ts
+ * Translated from Angular @Injectable() RxJS Service: @core/mock/traffic-bar.service.ts
  */
-export function useTrafficBar(initialPeriod = 'week') {
-  const [period, setPeriod] = useState(initialPeriod);
+export function useTrafficBar() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -14,30 +13,32 @@ export function useTrafficBar(initialPeriod = 'week') {
     let isMounted = true;
     setLoading(true);
 
-    // Simulate reactive data fetching
     const timer = setTimeout(() => {
       if (isMounted) {
+        // Domain traffic bar metrics from traffic-bar.service.ts
         setData([
-          { id: 1, title: 'TrafficBar Metric A', value: 1250, period },
-          { id: 2, title: 'TrafficBar Metric B', value: 3400, period },
-          { id: 3, title: 'TrafficBar Metric C', value: 8900, period }
+          { day: 'Mon', value: 300, comparison: 250 },
+          { day: 'Tue', value: 520, comparison: 480 },
+          { day: 'Wed', value: 435, comparison: 410 },
+          { day: 'Thu', value: 530, comparison: 500 },
+          { day: 'Fri', value: 730, comparison: 690 },
+          { day: 'Sat', value: 620, comparison: 580 },
+          { day: 'Sun', value: 660, comparison: 600 }
         ]);
         setLoading(false);
       }
-    }, 150);
+    }, 100);
 
     return () => {
       isMounted = false;
       clearTimeout(timer);
     };
-  }, [period]);
+  }, []);
 
   return {
     data,
     loading,
-    error,
-    period,
-    setPeriod
+    error
   };
 }
 

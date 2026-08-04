@@ -110,4 +110,6 @@ graph TD
 | `src/components/ui/Button.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/ui/Card.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/ui/GlassCard.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/context/AuthContext.jsx` | **CONTEXT** | 🟢 Active |
+| `src/context/ThemeContext.jsx` | **CONTEXT** | 🟢 Active |
 | `src/main.jsx` | **ROOT** | 🟢 Active |

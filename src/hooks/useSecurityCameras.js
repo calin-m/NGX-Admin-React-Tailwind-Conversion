@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 
 /**
  * useSecurityCameras Custom Hook
- * Translated from Angular @Injectable() RxJS Service: @core/data/security-cameras.ts
+ * Translated from Angular @Injectable() RxJS Service: @core/mock/security-cameras.service.ts
  */
-export function useSecurityCameras(initialPeriod = 'week') {
-  const [period, setPeriod] = useState(initialPeriod);
-  const [data, setData] = useState([]);
+export function useSecurityCameras() {
+  const [cameras, setCameras] = useState([]);
+  const [selectedCamera, setSelectedCamera] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,30 +14,33 @@ export function useSecurityCameras(initialPeriod = 'week') {
     let isMounted = true;
     setLoading(true);
 
-    // Simulate reactive data fetching
     const timer = setTimeout(() => {
       if (isMounted) {
-        setData([
-          { id: 1, title: 'SecurityCameras Metric A', value: 1250, period },
-          { id: 2, title: 'SecurityCameras Metric B', value: 3400, period },
-          { id: 3, title: 'SecurityCameras Metric C', value: 8900, period }
-        ]);
+        const domainCameras = [
+          { id: 1, title: 'Camera #1', source: 'assets/images/camera1.jpg', status: 'Active' },
+          { id: 2, title: 'Camera #2', source: 'assets/images/camera2.jpg', status: 'Active' },
+          { id: 3, title: 'Camera #3', source: 'assets/images/camera3.jpg', status: 'Paused' },
+          { id: 4, title: 'Camera #4', source: 'assets/images/camera4.jpg', status: 'Active' }
+        ];
+        setCameras(domainCameras);
+        setSelectedCamera(domainCameras[0]);
         setLoading(false);
       }
-    }, 150);
+    }, 100);
 
     return () => {
       isMounted = false;
       clearTimeout(timer);
     };
-  }, [period]);
+  }, []);
 
   return {
-    data,
+    cameras,
+    data: cameras,
+    selectedCamera,
+    setSelectedCamera,
     loading,
-    error,
-    period,
-    setPeriod
+    error
   };
 }
 

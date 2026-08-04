@@ -2,10 +2,9 @@ import { useState, useEffect } from 'react';
 
 /**
  * useTrafficChart Custom Hook
- * Translated from Angular @Injectable() RxJS Service: @core/data/traffic-chart.ts
+ * Translated from Angular @Injectable() RxJS Service: @core/mock/traffic-chart.service.ts
  */
-export function useTrafficChart(initialPeriod = 'week') {
-  const [period, setPeriod] = useState(initialPeriod);
+export function useTrafficChart() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -14,30 +13,24 @@ export function useTrafficChart(initialPeriod = 'week') {
     let isMounted = true;
     setLoading(true);
 
-    // Simulate reactive data fetching
     const timer = setTimeout(() => {
       if (isMounted) {
-        setData([
-          { id: 1, title: 'TrafficChart Metric A', value: 1250, period },
-          { id: 2, title: 'TrafficChart Metric B', value: 3400, period },
-          { id: 3, title: 'TrafficChart Metric C', value: 8900, period }
-        ]);
+        // Domain traffic series from traffic-chart.service.ts
+        setData([300, 520, 435, 530, 730, 620, 660, 860]);
         setLoading(false);
       }
-    }, 150);
+    }, 100);
 
     return () => {
       isMounted = false;
       clearTimeout(timer);
     };
-  }, [period]);
+  }, []);
 
   return {
     data,
     loading,
-    error,
-    period,
-    setPeriod
+    error
   };
 }
 

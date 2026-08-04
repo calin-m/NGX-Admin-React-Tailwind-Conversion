@@ -7,6 +7,13 @@
 ## [1.0.0] — 2026-08-04
 
 ### 🚀 New Features
+- **feat(interactive): complete interactive polish pass (theme switcher, search Esc key, chart period datasets)** (`6d1bfdd`) *by Calin on 2026-08-04*
+  - Fixed toggleTheme functional state updater in src/App.jsx (smooth Light/Dark switching)
+  - Added Escape key listener in src/components/sections/SearchInput.jsx (Esc dismisses search modal)
+  - Widened search input button in src/components/sections/Header.jsx
+  - Updated src/hooks/useOrdersChart.js to return rich week/month/year mock datasets
+  - Updated src/components/sections/ChartsPanel.jsx to swap chart line values dynamically on period click
+  - Modified walkthrough.md (documented interactive polish pass)
 - **feat(release): 100% exhaustive file-for-file migration completion across entire NGX-Admin codebase** (`9459ff8`) *by Calin on 2026-08-04*
   - Created List.jsx, InfiniteList.jsx, Tabs.jsx (Layout sub-pages)
   - Created FormButtons.jsx, Datepicker.jsx (Form sub-pages)
@@ -135,4 +142,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-04T20:28:58.870Z*
+*Last Auto-Generated: 2026-08-04T20:50:51.215Z*
