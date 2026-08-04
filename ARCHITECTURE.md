@@ -36,6 +36,8 @@ graph TD
 | `src/components/sections/Header.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/LegendChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/OrdersChart.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/profit-card/StatsCardBack.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/profit-card/StatsCardFront.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ProfitCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ProfitChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ProgressSection.jsx` | **COMPONENTS** | 🟢 Active |
@@ -46,6 +48,8 @@ graph TD
 | `src/components/sections/StatsCardBack.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/StatsCardFront.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TinyMce.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/traffic-reveal/TrafficBackCard.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/traffic-reveal/TrafficFrontCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TrafficBackCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TrafficBar.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TrafficBarChart.jsx` | **COMPONENTS** | 🟢 Active |
@@ -64,4 +68,4 @@ graph TD
 
 ---
 
-*Last Auto-Synchronized: 2026-08-04T15:59:55.137Z*
+*Last Auto-Synchronized: 2026-08-04T16:02:45.502Z*

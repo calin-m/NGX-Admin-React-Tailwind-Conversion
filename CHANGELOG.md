@@ -17,6 +17,11 @@
   - Configured GitHub Actions CI pipeline (.github/workflows/ci.yml) and Dependabot security rules (.github/dependabot.yml)
   - Synchronized ARCHITECTURE.md, docs/LEGACY_BLUEPRINT.md, docs/DECISIONS.md, and .agents/AGENTS.md
 
+### 🐛 Bug Fixes
+- **fix(hooks): add useOrdersProfit hook alias export** (`4eb3ff2`) *by Calin on 2026-08-04*
+  - Created src/hooks/useOrdersProfit.js (alias export wrapping useOrdersProfitChart)
+  - Modified walkthrough.md (documented import resolution fix)
+
 ---
 
-*Last Auto-Generated: 2026-08-04T16:00:12.052Z*
+*Last Auto-Generated: 2026-08-04T16:03:08.607Z*
