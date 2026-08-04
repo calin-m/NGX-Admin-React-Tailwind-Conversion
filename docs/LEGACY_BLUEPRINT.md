@@ -141,13 +141,13 @@ Below is the complete component inventory matrix automatically parsed from `old-
 | `old-src/ngx-admin-master/src/app/pages/forms/form-inputs/form-inputs.component.ts` | `<ngx-form-inputs>` | **FORMS** | 📦 Secondary Demo | None | `src/components/sections/FormInputs.jsx` | 🟢 Completed |
 | `old-src/ngx-admin-master/src/app/pages/forms/form-layouts/form-layouts.component.ts` | `<ngx-form-layouts>` | **FORMS** | 📦 Secondary Demo | None | `src/components/sections/FormLayouts.jsx` | 🟢 Completed |
 | `old-src/ngx-admin-master/src/app/pages/forms/forms.component.ts` | `<ngx-form-elements>` | **FORMS** | 📦 Secondary Demo | None | `src/components/sections/Forms.jsx` | 🔴 Pending |
-| `old-src/ngx-admin-master/src/app/pages/layout/accordion/accordion.component.ts` | `<ngx-accordion>` | **LAYOUT** | 📦 Secondary Demo | None | `src/components/sections/Accordion.jsx` | 🔴 Pending |
+| `old-src/ngx-admin-master/src/app/pages/layout/accordion/accordion.component.ts` | `<ngx-accordion>` | **LAYOUT** | 📦 Secondary Demo | None | `src/components/sections/Accordion.jsx` | 🟢 Completed |
 | `old-src/ngx-admin-master/src/app/pages/layout/infinite-list/infinite-list.component.ts` | `<ngx-infinite-list>` | **LAYOUT** | 📦 Secondary Demo | `NewsService` | `src/components/sections/InfiniteList.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/layout/infinite-list/news-post/news-post.component.ts` | `<ngx-news-post>` | **LAYOUT** | 📦 Secondary Demo | None | `src/components/sections/NewsPost.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/layout/infinite-list/news-post-placeholder/news-post-placeholder.component.ts` | `<ngx-news-post-placeholder>` | **LAYOUT** | 📦 Secondary Demo | None | `src/components/sections/NewsPostPlaceholder.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/layout/layout.component.ts` | `<ngx-components>` | **LAYOUT** | 📦 Secondary Demo | None | `src/components/sections/Layout.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/layout/list/list.component.ts` | `<ngx-list>` | **LAYOUT** | 📦 Secondary Demo | None | `src/components/sections/List.jsx` | 🔴 Pending |
-| `old-src/ngx-admin-master/src/app/pages/layout/stepper/stepper.component.ts` | `<ngx-stepper>` | **LAYOUT** | 📦 Secondary Demo | `UntypedFormBuilder` | `src/components/sections/Stepper.jsx` | 🔴 Pending |
+| `old-src/ngx-admin-master/src/app/pages/layout/stepper/stepper.component.ts` | `<ngx-stepper>` | **LAYOUT** | 📦 Secondary Demo | `UntypedFormBuilder` | `src/components/sections/Stepper.jsx` | 🟢 Completed |
 | `old-src/ngx-admin-master/src/app/pages/layout/tabs/tabs.component.ts` | `<ngx-tab1>` | **LAYOUT** | 📦 Secondary Demo | None | `src/components/sections/Tabs.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/maps/bubble/bubble-map.component.ts` | `<ngx-bubble-map>` | **MAPS** | 📦 Secondary Demo | `NbThemeService`, `HttpClient` | `src/components/sections/BubbleMap.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/maps/gmaps/gmaps.component.ts` | `<ngx-gmaps>` | **MAPS** | 📦 Secondary Demo | None | `src/components/sections/Gmaps.jsx` | 🔴 Pending |
@@ -171,11 +171,11 @@ Below is the complete component inventory matrix automatically parsed from `old-
 | `old-src/ngx-admin-master/src/app/pages/pages.component.ts` | `<ngx-pages>` | **PAGES.COMPONENT.TS** | 📦 Secondary Demo | None | `src/components/sections/Pages.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/tables/smart-table/smart-table.component.ts` | `<ngx-smart-table>` | **TABLES** | 📦 Secondary Demo | `SmartTableData` | `src/components/sections/SmartTable.jsx` | 🟢 Completed |
 | `old-src/ngx-admin-master/src/app/pages/tables/tables.component.ts` | `<ngx-tables>` | **TABLES** | 📦 Secondary Demo | None | `src/components/sections/Tables.jsx` | 🔴 Pending |
-| `old-src/ngx-admin-master/src/app/pages/tables/tree-grid/tree-grid.component.ts` | `<ngx-tree-grid>` | **TABLES** | 📦 Secondary Demo | `NbTreeGridDataSourceBuilderFSEntry` | `src/components/sections/TreeGrid.jsx` | 🔴 Pending |
-| `old-src/ngx-admin-master/src/app/pages/ui-features/grid/grid.component.ts` | `<ngx-grid>` | **UI-FEATURES** | 📦 Secondary Demo | None | `src/components/sections/Grid.jsx` | 🔴 Pending |
-| `old-src/ngx-admin-master/src/app/pages/ui-features/icons/icons.component.ts` | `<ngx-icons>` | **UI-FEATURES** | 📦 Secondary Demo | `NbIconLibraries` | `src/components/sections/Icons.jsx` | 🔴 Pending |
+| `old-src/ngx-admin-master/src/app/pages/tables/tree-grid/tree-grid.component.ts` | `<ngx-tree-grid>` | **TABLES** | 📦 Secondary Demo | `NbTreeGridDataSourceBuilderFSEntry` | `src/components/sections/TreeGrid.jsx` | 🟢 Completed |
+| `old-src/ngx-admin-master/src/app/pages/ui-features/grid/grid.component.ts` | `<ngx-grid>` | **UI-FEATURES** | 📦 Secondary Demo | None | `src/components/sections/Grid.jsx` | 🟢 Completed |
+| `old-src/ngx-admin-master/src/app/pages/ui-features/icons/icons.component.ts` | `<ngx-icons>` | **UI-FEATURES** | 📦 Secondary Demo | `NbIconLibraries` | `src/components/sections/Icons.jsx` | 🟢 Completed |
 | `old-src/ngx-admin-master/src/app/pages/ui-features/search-fields/search-fields.component.ts` | `<ngx-search-fields>` | **UI-FEATURES** | 📦 Secondary Demo | None | `src/components/sections/SearchFields.jsx` | 🔴 Pending |
-| `old-src/ngx-admin-master/src/app/pages/ui-features/typography/typography.component.ts` | `<ngx-typography>` | **UI-FEATURES** | 📦 Secondary Demo | `NbThemeService`, `NbMediaBreakpointsService` | `src/components/sections/Typography.jsx` | 🔴 Pending |
+| `old-src/ngx-admin-master/src/app/pages/ui-features/typography/typography.component.ts` | `<ngx-typography>` | **UI-FEATURES** | 📦 Secondary Demo | `NbThemeService`, `NbMediaBreakpointsService` | `src/components/sections/Typography.jsx` | 🟢 Completed |
 | `old-src/ngx-admin-master/src/app/pages/ui-features/ui-features.component.ts` | `<ngx-ui-features>` | **UI-FEATURES** | 📦 Secondary Demo | None | `src/components/sections/UiFeatures.jsx` | 🔴 Pending |
 
 ---

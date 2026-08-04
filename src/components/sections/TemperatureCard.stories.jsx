@@ -6,4 +6,6 @@ export default {
   component: TemperatureCard
 };
 
-export const Default = {};
+export const Default = {
+  render: () => <TemperatureCard />
+};

@@ -7,6 +7,19 @@
 ## [1.0.0] — 2026-08-04
 
 ### 🚀 New Features
+- **feat(app): convert complete NGX-Admin application suite (Chat, Calendar, Forms, Auth)** (`5292d9f`) *by Calin on 2026-08-04*
+  - Created src/components/sections/Chat.jsx (live chat application)
+  - Created src/components/sections/CalendarApp.jsx (interactive event scheduler)
+  - Created src/components/sections/Toastr.jsx (floating toast alert engine)
+  - Created src/components/sections/Dialogs.jsx (modal overlay manager)
+  - Created src/components/sections/FormInputs.jsx (form controls & selects)
+  - Created src/components/sections/FormLayouts.jsx (grid & inline form layouts)
+  - Created src/components/sections/Login.jsx (enterprise sign-in screen)
+  - Created src/components/sections/Register.jsx (user registration screen)
+  - Created src/components/sections/ResetPassword.jsx (password recovery screen)
+  - Modified src/components/sections/Sidebar.jsx & Sidebar.test.jsx (wired all new tabs)
+  - Modified src/App.jsx (wired complete view router)
+  - Modified walkthrough.md (documented full application conversion completion)
 - **feat(iot): convert complete IoT Smart Home Suite and update Husky pre-commit hook** (`4034d87`) *by Calin on 2026-08-04*
   - Created src/components/sections/StatusCard.jsx (device toggle cards)
   - Created src/components/sections/TemperatureCard.jsx (HVAC thermostat wheel)
@@ -92,4 +105,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-04T19:44:38.005Z*
+*Last Auto-Generated: 2026-08-04T19:54:02.156Z*

@@ -20,6 +20,7 @@ graph TD
 | Component Path | Domain Area | Status |
 | :--- | :--- | :---: |
 | `src/App.jsx` | **ROOT** | 🟢 Active |
+| `src/components/sections/Accordion.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/CalendarApp.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ChartPanelHeader.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ChartPanelSummary.jsx` | **COMPONENTS** | 🟢 Active |
@@ -39,7 +40,9 @@ graph TD
 | `src/components/sections/Footer.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/FormInputs.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/FormLayouts.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/Grid.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/Header.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/Icons.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/KittenCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/LegendChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/Login.jsx` | **COMPONENTS** | 🟢 Active |
@@ -64,6 +67,7 @@ graph TD
 | `src/components/sections/StatsAreaChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/StatsBarAnimationChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/StatusCard.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/Stepper.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TemperatureCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ThemeCustomizer.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TinyMce.jsx` | **COMPONENTS** | 🟢 Active |
@@ -74,6 +78,8 @@ graph TD
 | `src/components/sections/TrafficBarChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TrafficCardsHeader.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TrafficRevealCard.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/TreeGrid.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/Typography.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/UserActivity.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/UserManagement.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/VisitorsAnalytics.jsx` | **COMPONENTS** | 🟢 Active |

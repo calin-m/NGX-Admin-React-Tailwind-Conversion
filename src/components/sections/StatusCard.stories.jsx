@@ -6,4 +6,6 @@ export default {
   component: StatusCard
 };
 
-export const Default = {};
+export const Default = {
+  render: () => <StatusCard />
+};

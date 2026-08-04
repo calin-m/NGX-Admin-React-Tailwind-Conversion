@@ -34,6 +34,12 @@ import FormLayouts from './components/sections/FormLayouts.jsx';
 import Login from './components/sections/Login.jsx';
 import Register from './components/sections/Register.jsx';
 import ResetPassword from './components/sections/ResetPassword.jsx';
+import Stepper from './components/sections/Stepper.jsx';
+import Accordion from './components/sections/Accordion.jsx';
+import Grid from './components/sections/Grid.jsx';
+import Typography from './components/sections/Typography.jsx';
+import Icons from './components/sections/Icons.jsx';
+import TreeGrid from './components/sections/TreeGrid.jsx';
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -75,7 +81,19 @@ export default function App() {
         />
 
         <main className="flex-1 p-6 max-w-7xl mx-auto w-full space-y-6 overflow-x-hidden">
-          {activeTab === 'chat' ? (
+          {activeTab === 'stepper' ? (
+            <Stepper />
+          ) : activeTab === 'accordion' ? (
+            <Accordion />
+          ) : activeTab === 'grid' ? (
+            <Grid />
+          ) : activeTab === 'typography' ? (
+            <Typography />
+          ) : activeTab === 'icons' ? (
+            <Icons />
+          ) : activeTab === 'treegrid' ? (
+            <TreeGrid />
+          ) : activeTab === 'chat' ? (
             <Chat />
           ) : activeTab === 'calendar' ? (
             <CalendarApp />
@@ -170,19 +188,19 @@ export default function App() {
                 </div>
                 <div>
                   <div className="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-lg space-y-4">
-                    <h4 className="font-bold text-slate-900 dark:text-slate-100">Quick Navigation</h4>
-                    <p className="text-xs text-slate-500">Access all converted NGX-Admin application suites.</p>
+                    <h4 className="font-bold text-slate-900 dark:text-slate-100">100% Converted Suite</h4>
+                    <p className="text-xs text-slate-500">Access all converted NGX-Admin application views.</p>
                     <button
-                      onClick={() => setActiveTab('chat')}
+                      onClick={() => setActiveTab('stepper')}
                       className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-sm transition-all"
                     >
-                      💬 Open Support Chat App
+                      🪜 Open Multi-Step Stepper
                     </button>
                     <button
-                      onClick={() => setActiveTab('iot')}
+                      onClick={() => setActiveTab('treegrid')}
                       className="w-full py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl text-xs font-semibold hover:bg-slate-200 dark:hover:bg-slate-600 transition-all"
                     >
-                      🏠 Open IoT Smart Home View
+                      🌲 View Tree Grid Table
                     </button>
                   </div>
                 </div>
