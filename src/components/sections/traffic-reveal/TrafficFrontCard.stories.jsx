@@ -3,12 +3,7 @@ import TrafficFrontCard from './TrafficFrontCard.jsx';
 
 export default {
   title: 'Corporate/Sections/TrafficFrontCard',
-  component: TrafficFrontCard,
-  parameters: {
-    layout: 'padded',
-  },
+  component: TrafficFrontCard
 };
 
-export const Default = {
-  args: {},
-};
+export const Default = {};

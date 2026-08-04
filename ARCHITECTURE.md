@@ -45,16 +45,12 @@ graph TD
 | `src/components/sections/SlideOut.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/StatsAreaChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/StatsBarAnimationChart.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/StatsCardBack.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/StatsCardFront.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TinyMce.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/traffic-reveal/TrafficBackCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/traffic-reveal/TrafficFrontCard.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/TrafficBackCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TrafficBar.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TrafficBarChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TrafficCardsHeader.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/TrafficFrontCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TrafficRevealCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/UserActivity.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/VisitorsAnalytics.jsx` | **COMPONENTS** | 🟢 Active |
@@ -65,7 +61,3 @@ graph TD
 | `src/components/ui/Card.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/ui/GlassCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/main.jsx` | **ROOT** | 🟢 Active |
-
----
-
-*Last Auto-Synchronized: 2026-08-04T16:02:45.502Z*

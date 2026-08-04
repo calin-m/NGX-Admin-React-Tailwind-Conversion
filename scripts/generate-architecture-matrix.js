@@ -56,7 +56,5 @@ components.forEach(comp => {
   markdown += `| \`src/${comp}\` | **${domain.toUpperCase()}** | 🟢 Active |\n`;
 });
 
-markdown += `\n---\n\n*Last Auto-Synchronized: ${new Date().toISOString()}*\n`;
-
 fs.writeFileSync(archFile, markdown);
 console.log('✔ Successfully auto-synchronized ARCHITECTURE.md component inventory matrix.');

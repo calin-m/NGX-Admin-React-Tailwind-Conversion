@@ -244,10 +244,6 @@ md += `\n---
 - **Parsed Auxiliary Assets**: ${otherAssets.length}
 - **Unclassified Discrepancy Count**: 0 (100% Filesystem Coverage Verified)
 - **Corporate Migration Progress**: ${finalProgressCount} / ${inScopeCount} Corporate Components Converted (${progressPercent}%)
-
----
-
-*Last Auto-Synchronized: ${new Date().toISOString()}*
 `;
 
 fs.writeFileSync(targetBlueprintFile, md);

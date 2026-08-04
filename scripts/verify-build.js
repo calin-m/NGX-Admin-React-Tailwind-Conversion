@@ -8,15 +8,38 @@ console.log('🚀 NGX ADMIN AUTOMATED ENTERPRISE VERIFICATION ENGINE');
 console.log('===================================================\n');
 
 let errorCount = 0;
+const isWin = process.platform === 'win32';
 
 async function runVerification() {
   const root = process.cwd();
 
-  // 0. Living Architecture Auto-Sync & Zero-Manual Auto-Scaffolding Sweeper
-  console.log('🤖 [Pass 0/7] Running Living Architecture Auto-Sync & Auto-Scaffolder...');
+  // 0. Living Architecture Auto-Sync & Duplicate Story Cleaner Pass
+  console.log('🤖 [Pass 0/7] Running Living Architecture Auto-Sync & Duplicate Story Cleaner...');
+  
+  // Clean top-level duplicate section story/test files when modular subdirectories exist
+  const duplicateCleanupList = [
+    { subDirFile: 'profit-card/StatsCardFront.jsx', oldFile: 'StatsCardFront' },
+    { subDirFile: 'profit-card/StatsCardBack.jsx', oldFile: 'StatsCardBack' },
+    { subDirFile: 'traffic-reveal/TrafficFrontCard.jsx', oldFile: 'TrafficFrontCard' },
+    { subDirFile: 'traffic-reveal/TrafficBackCard.jsx', oldFile: 'TrafficBackCard' }
+  ];
+
+  duplicateCleanupList.forEach(item => {
+    const subPath = path.join(root, 'src', 'components', 'sections', item.subDirFile);
+    if (fs.existsSync(subPath)) {
+      ['.jsx', '.stories.jsx', '.test.jsx'].forEach(ext => {
+        const oldPath = path.join(root, 'src', 'components', 'sections', `${item.oldFile}${ext}`);
+        if (fs.existsSync(oldPath)) {
+          fs.unlinkSync(oldPath);
+          console.log(`  🧹 Cleaned duplicate top-level file: src/components/sections/${item.oldFile}${ext}`);
+        }
+      });
+    }
+  });
+
   try {
-    execSync('node scripts/generate-architecture-matrix.js', { stdio: 'inherit', shell: true });
-    execSync('node scripts/generate-legacy-docs.js', { stdio: 'inherit', shell: true });
+    execSync('node scripts/generate-architecture-matrix.js', { stdio: 'inherit', shell: isWin });
+    execSync('node scripts/generate-legacy-docs.js', { stdio: 'inherit', shell: isWin });
   } catch (err) {
     console.warn('  ⚠️ Living Architecture sync warning:', err.message);
   }
@@ -200,10 +223,10 @@ async function runVerification() {
   function verifyVitestResults(theme) {
     const resultsFile = path.join(root, 'test-results.json');
     try {
-      execSync('npx vitest run --reporter=default --reporter=json --outputFile=test-results.json', {
+      execSync('npx vitest run --reporter=json --outputFile=test-results.json', {
         env: { ...process.env, VITE_TEST_THEME: theme },
         stdio: 'inherit',
-        shell: true
+        shell: isWin
       });
     } catch (err) {
       // Vitest exits with code 1 if tests fail
@@ -240,16 +263,26 @@ async function runVerification() {
   // 7. In-Process Production Vite Bundle Build Verification
   console.log('\n📦 [Pass 7/7] Validating Production Vite Bundle Build Compilation...');
   try {
-    execSync('npx vite build', { stdio: 'inherit', shell: true });
+    execSync('npx vite build', { stdio: 'inherit', shell: isWin });
     console.log('  ✔ Production Vite Bundle Build Compilation Passed.');
   } catch (err) {
     console.error(`  ❌ Production Vite Bundle Build Failed: ${err.message}`);
     errorCount++;
   }
 
+  // 7.5 Storybook Catalog Build Verification
+  console.log('\n🎨 [Pass 7.5/7] Validating Storybook 8 Catalog Build Compilation...');
+  try {
+    execSync('npm run build-storybook', { stdio: 'inherit', shell: isWin });
+    console.log('  ✔ Storybook 8 Catalog Build Compilation Passed.');
+  } catch (err) {
+    console.error(`  ❌ Storybook 8 Catalog Build Failed: ${err.message}`);
+    errorCount++;
+  }
+
   console.log('\n===================================================');
   if (errorCount === 0) {
-    console.log('🎉 ALL 7 AUTOMATED QUALITY GATEWAYS PASSED (0 Errors)!');
+    console.log('🎉 ALL AUTOMATED QUALITY GATEWAYS PASSED (0 Errors)!');
     console.log('===================================================\n');
   } else {
     console.error(`💥 VERIFICATION FAILED with ${errorCount} error(s).`);
