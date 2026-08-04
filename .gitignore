@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Builds
+dist/
+build/
+storybook-static/
+.output/
+
+# Testing
+coverage/
+test-results.json
+.vitest/
+
+# Logs & Environment
+*.log
+dev-all.log
+.env
+.env.local
+.DS_Store
+.vscode/
