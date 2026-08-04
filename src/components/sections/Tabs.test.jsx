@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import Footer from './Footer.jsx';
+import Tabs from './Tabs.jsx';
 
-describe('Footer Corporate Component Suite', () => {
+describe('Tabs Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
-    const { container } = render(<Footer />);
+    const { container } = render(<Tabs />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Akveo/i)).toBeInTheDocument();
+    expect(screen.getByText(/Tab 1: Overview/i)).toBeInTheDocument();
   });
 });

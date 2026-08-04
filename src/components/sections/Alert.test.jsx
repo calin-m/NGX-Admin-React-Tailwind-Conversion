@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import Footer from './Footer.jsx';
+import Alert from './Alert.jsx';
 
-describe('Footer Corporate Component Suite', () => {
+describe('Alert Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
-    const { container } = render(<Footer />);
+    const { container } = render(<Alert />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Akveo/i)).toBeInTheDocument();
+    expect(screen.getByText(/Alert Banner Showcase/i)).toBeInTheDocument();
   });
 });

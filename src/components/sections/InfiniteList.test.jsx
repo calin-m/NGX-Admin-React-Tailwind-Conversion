@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import Footer from './Footer.jsx';
+import InfiniteList from './InfiniteList.jsx';
 
-describe('Footer Corporate Component Suite', () => {
+describe('InfiniteList Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
-    const { container } = render(<Footer />);
+    const { container } = render(<InfiniteList />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Akveo/i)).toBeInTheDocument();
+    expect(screen.getByText(/Infinite Scroll List/i)).toBeInTheDocument();
   });
 });

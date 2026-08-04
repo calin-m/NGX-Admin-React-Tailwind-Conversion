@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import Footer from './Footer.jsx';
+import Window from './Window.jsx';
 
-describe('Footer Corporate Component Suite', () => {
+describe('Window Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
-    const { container } = render(<Footer />);
+    const { container } = render(<Window />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Akveo/i)).toBeInTheDocument();
+    expect(screen.getByText(/Floating Window Modal/i)).toBeInTheDocument();
   });
 });

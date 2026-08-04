@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import Footer from './Footer.jsx';
+import FormButtons from './FormButtons.jsx';
 
-describe('Footer Corporate Component Suite', () => {
+describe('FormButtons Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
-    const { container } = render(<Footer />);
+    const { container } = render(<FormButtons />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Akveo/i)).toBeInTheDocument();
+    expect(screen.getByText(/Button Showcase/i)).toBeInTheDocument();
   });
 });
