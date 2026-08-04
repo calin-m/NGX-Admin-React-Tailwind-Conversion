@@ -7,7 +7,7 @@
 ## [1.0.0] — 2026-08-04
 
 ### 🚀 New Features
-- **feat(corporate): convert SmartTable into live Orders Data Table and optimize start-all script** (`771be9a`) *by Calin on 2026-08-04*
+- **feat(corporate): convert SmartTable into live Orders Data Table and optimize start-all script** (`1498e77`) *by Calin on 2026-08-04*
   - Modified scripts/start-all.js (removed Vitest spawn and port 51204 opener)
   - Created src/hooks/useSmartTableData.js (data table state management hook)
   - Modified src/components/sections/SmartTable.jsx (converted into live React Data Table)
@@ -58,4 +58,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-04T19:05:15.712Z*
+*Last Auto-Generated: 2026-08-04T19:09:08.755Z*

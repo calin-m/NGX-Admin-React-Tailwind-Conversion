@@ -35,6 +35,7 @@ graph TD
 | `src/components/sections/Footer.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/Header.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/LegendChart.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/OrderModal.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/OrdersChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/profit-card/StatsCardBack.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/profit-card/StatsCardFront.jsx` | **COMPONENTS** | 🟢 Active |
@@ -42,6 +43,7 @@ graph TD
 | `src/components/sections/ProfitChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ProgressSection.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/SearchInput.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/Settings.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/Sidebar.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/SlideOut.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/SmartTable.jsx` | **COMPONENTS** | 🟢 Active |
@@ -55,6 +57,7 @@ graph TD
 | `src/components/sections/TrafficCardsHeader.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TrafficRevealCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/UserActivity.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/UserManagement.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/VisitorsAnalytics.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/VisitorsAnalyticsChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/VisitorsStatistics.jsx` | **COMPONENTS** | 🟢 Active |
