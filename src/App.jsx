@@ -15,12 +15,17 @@ import SmartTable from './components/sections/SmartTable.jsx';
 import UserManagement from './components/sections/UserManagement.jsx';
 import Settings from './components/sections/Settings.jsx';
 import OrderModal from './components/sections/OrderModal.jsx';
+import SearchInput from './components/sections/SearchInput.jsx';
+import ThemeCustomizer from './components/sections/ThemeCustomizer.jsx';
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [activeTab, setActiveTab] = useState('dashboard');
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isCustomizerOpen, setIsCustomizerOpen] = useState(false);
+  const [accentColor, setAccentColor] = useState('indigo');
 
   const toggleTheme = () => {
     setIsDarkMode(prev => !prev);
@@ -42,6 +47,8 @@ export default function App() {
         isDarkMode={isDarkMode}
         onToggleTheme={toggleTheme}
         onToggleSidebar={toggleSidebar}
+        onOpenSearch={() => setIsSearchOpen(true)}
+        onOpenThemeCustomizer={() => setIsCustomizerOpen(true)}
       />
 
       {/* Main Body Layout with Sidebar Drawer */}
@@ -136,6 +143,19 @@ export default function App() {
           )}
         </main>
       </div>
+
+      {/* Global Command Palette Search Modal */}
+      <SearchInput isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+
+      {/* Theme Customizer Panel */}
+      <ThemeCustomizer
+        isOpen={isCustomizerOpen}
+        onClose={() => setIsCustomizerOpen(false)}
+        accentColor={accentColor}
+        setAccentColor={setAccentColor}
+        isDarkMode={isDarkMode}
+        onToggleTheme={toggleTheme}
+      />
 
       {/* Create Order Modal */}
       <OrderModal

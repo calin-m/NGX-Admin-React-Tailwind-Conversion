@@ -7,6 +7,6 @@ describe('Header Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<Header />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Corporate Overview/i)).toBeInTheDocument();
+    expect(screen.getByText(/Admin User/i)).toBeInTheDocument();
   });
 });

@@ -17,6 +17,19 @@ export default function SmartTable() {
     totalPages
   } = useSmartTableData();
 
+  const exportToCSV = () => {
+    const headers = ['Order ID', 'Customer', 'Email', 'Date', 'Total ($)', 'Status', 'Payment Method'];
+    const rows = orders.map(o => [o.id, o.customer, o.email, o.date, o.total.toFixed(2), o.status, o.method]);
+    const csvContent = 'data:text/csv;charset=utf-8,' + [headers.join(','), ...rows.map(e => e.join(','))].join('\n');
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement('a');
+    link.setAttribute('href', encodedUri);
+    link.setAttribute('download', `ngx_corporate_orders_${new Date().toISOString().slice(0, 10)}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const getStatusBadge = status => {
     switch (status) {
       case 'Completed':
@@ -52,6 +65,14 @@ export default function SmartTable() {
             />
             <span className="absolute left-3 top-2.5 text-xs text-slate-400">🔍</span>
           </div>
+
+          <button
+            onClick={exportToCSV}
+            className="px-3.5 py-2 text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl shadow-sm transition-all flex items-center space-x-1.5"
+            title="Download Filtered Records as CSV"
+          >
+            <span>📥 Export CSV</span>
+          </button>
 
           <select
             value={rowsPerPage}

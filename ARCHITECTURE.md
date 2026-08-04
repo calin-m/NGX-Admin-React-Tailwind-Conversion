@@ -35,6 +35,7 @@ graph TD
 | `src/components/sections/Footer.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/Header.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/LegendChart.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/NotificationDrawer.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/OrderModal.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/OrdersChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/profit-card/StatsCardBack.jsx` | **COMPONENTS** | 🟢 Active |
@@ -49,6 +50,7 @@ graph TD
 | `src/components/sections/SmartTable.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/StatsAreaChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/StatsBarAnimationChart.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/ThemeCustomizer.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TinyMce.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/traffic-reveal/TrafficBackCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/traffic-reveal/TrafficFrontCard.jsx` | **COMPONENTS** | 🟢 Active |

@@ -7,6 +7,18 @@
 ## [1.0.0] — 2026-08-04
 
 ### 🚀 New Features
+- **feat(corporate): batch convert remaining UserManagement, Settings, and OrderModal navigation views** (`1f9b971`) *by Calin on 2026-08-04*
+  - Created src/components/sections/UserManagement.jsx (team directory & status indicators)
+  - Created src/components/sections/UserManagement.stories.jsx (Storybook 8 catalog stories)
+  - Created src/components/sections/UserManagement.test.jsx (Vitest unit test suite)
+  - Created src/components/sections/Settings.jsx (system preferences & API key manager)
+  - Created src/components/sections/Settings.stories.jsx (Storybook 8 catalog stories)
+  - Created src/components/sections/Settings.test.jsx (Vitest unit test suite)
+  - Created src/components/sections/OrderModal.jsx (interactive order creation dialog)
+  - Created src/components/sections/OrderModal.stories.jsx (Storybook 8 catalog stories)
+  - Created src/components/sections/OrderModal.test.jsx (Vitest unit test suite)
+  - Modified src/App.jsx (wired full view switching across all 5 sidebar tabs)
+  - Modified walkthrough.md (documented batch conversion completion)
 - **feat(corporate): convert SmartTable into live Orders Data Table and optimize start-all script** (`1498e77`) *by Calin on 2026-08-04*
   - Modified scripts/start-all.js (removed Vitest spawn and port 51204 opener)
   - Created src/hooks/useSmartTableData.js (data table state management hook)
@@ -58,4 +70,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-04T19:09:08.755Z*
+*Last Auto-Generated: 2026-08-04T19:27:54.477Z*
