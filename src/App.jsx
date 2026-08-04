@@ -11,6 +11,7 @@ import EarningCard from './components/sections/EarningCard.jsx';
 import ChartsPanel from './components/sections/ChartsPanel.jsx';
 import ProgressSection from './components/sections/ProgressSection.jsx';
 import VisitorsAnalytics from './components/sections/VisitorsAnalytics.jsx';
+import SmartTable from './components/sections/SmartTable.jsx';
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -48,42 +49,67 @@ export default function App() {
           setActiveTab={setActiveTab}
         />
 
-        {/* Main Converted Corporate Dashboard Body View */}
+        {/* Main Converted Corporate View */}
         <main className="flex-1 p-6 max-w-7xl mx-auto w-full space-y-6 overflow-x-hidden">
-          {/* Top-Level KPI Summary Cards */}
-          <ECommerce />
-
-          {/* Row 1: Analytics Cards & Combined Dual Chart */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <ProfitCard />
-            <TrafficRevealCard />
-            <EarningCard />
-          </div>
-
-          {/* Row 2: Combined Dual Chart & Country Orders */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2">
-              <ChartsPanel />
-            </div>
-            <div>
-              <CountryOrders />
-            </div>
-          </div>
-
-          {/* Row 3: Progress Section & Visitors Analytics */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div>
-              <ProgressSection />
-            </div>
-            <div className="lg:col-span-2">
+          {activeTab === 'orders' ? (
+            <SmartTable />
+          ) : activeTab === 'analytics' ? (
+            <div className="space-y-6">
               <VisitorsAnalytics />
+              <TrafficRevealCard />
             </div>
-          </div>
+          ) : (
+            <>
+              {/* Top-Level KPI Summary Cards */}
+              <ECommerce />
 
-          {/* Row 4: Live Activity Stream */}
-          <div className="grid grid-cols-1 gap-6">
-            <UserActivity />
-          </div>
+              {/* Row 1: Analytics Cards & Combined Dual Chart */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <ProfitCard />
+                <TrafficRevealCard />
+                <EarningCard />
+              </div>
+
+              {/* Row 2: Combined Dual Chart & Country Orders */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="lg:col-span-2">
+                  <ChartsPanel />
+                </div>
+                <div>
+                  <CountryOrders />
+                </div>
+              </div>
+
+              {/* Row 3: Progress Section & Visitors Analytics */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div>
+                  <ProgressSection />
+                </div>
+                <div className="lg:col-span-2">
+                  <VisitorsAnalytics />
+                </div>
+              </div>
+
+              {/* Row 4: Live Activity Stream & Orders Preview */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="lg:col-span-2">
+                  <UserActivity />
+                </div>
+                <div>
+                  <div className="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-lg space-y-4">
+                    <h4 className="font-bold text-slate-900 dark:text-slate-100">Quick Table Access</h4>
+                    <p className="text-xs text-slate-500">Switch sidebar tabs to view full Orders & Invoices Data Table.</p>
+                    <button
+                      onClick={() => setActiveTab('orders')}
+                      className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-sm transition-all"
+                    >
+                      View All Orders ➔
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
         </main>
       </div>
 

@@ -7,7 +7,14 @@
 ## [1.0.0] — 2026-08-04
 
 ### 🚀 New Features
-- **feat(corporate): integrate full Dashboard layout and Sidebar Navigation Drawer** (`295b54e`) *by Calin on 2026-08-04*
+- **feat(corporate): convert SmartTable into live Orders Data Table and optimize start-all script** (`771be9a`) *by Calin on 2026-08-04*
+  - Modified scripts/start-all.js (removed Vitest spawn and port 51204 opener)
+  - Created src/hooks/useSmartTableData.js (data table state management hook)
+  - Modified src/components/sections/SmartTable.jsx (converted into live React Data Table)
+  - Created src/components/sections/SmartTable.test.jsx (Vitest unit test suite)
+  - Modified src/App.jsx (wired sidebar tab view switching for Orders Data Table)
+  - Modified walkthrough.md (documented Data Table implementation and start-all optimization)
+- **feat(corporate): integrate full Dashboard layout and Sidebar Navigation Drawer** (`854b377`) *by Calin on 2026-08-04*
   - Created src/components/sections/Sidebar.jsx (collapsible navigation menu)
   - Created src/components/sections/Sidebar.stories.jsx (Storybook 8 catalog stories)
   - Created src/components/sections/Sidebar.test.jsx (Vitest test suite)
@@ -51,4 +58,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-04T18:53:48.363Z*
+*Last Auto-Generated: 2026-08-04T19:05:15.712Z*

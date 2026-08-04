@@ -44,6 +44,7 @@ graph TD
 | `src/components/sections/SearchInput.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/Sidebar.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/SlideOut.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/SmartTable.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/StatsAreaChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/StatsBarAnimationChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/TinyMce.jsx` | **COMPONENTS** | 🟢 Active |

@@ -169,7 +169,7 @@ Below is the complete component inventory matrix automatically parsed from `old-
 | `old-src/ngx-admin-master/src/app/pages/modal-overlays/window/window-form/window-form.component.ts` | `n/a` | **MODAL-OVERLAYS** | 📦 Secondary Demo | `NbWindowRef` | `src/components/sections/WindowForm.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/modal-overlays/window/window.component.ts` | `<ngx-window>` | **MODAL-OVERLAYS** | 📦 Secondary Demo | `NbWindowService` | `src/components/sections/Window.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/pages.component.ts` | `<ngx-pages>` | **PAGES.COMPONENT.TS** | 📦 Secondary Demo | None | `src/components/sections/Pages.jsx` | 🔴 Pending |
-| `old-src/ngx-admin-master/src/app/pages/tables/smart-table/smart-table.component.ts` | `<ngx-smart-table>` | **TABLES** | 📦 Secondary Demo | `SmartTableData` | `src/components/sections/SmartTable.jsx` | 🔴 Pending |
+| `old-src/ngx-admin-master/src/app/pages/tables/smart-table/smart-table.component.ts` | `<ngx-smart-table>` | **TABLES** | 📦 Secondary Demo | `SmartTableData` | `src/components/sections/SmartTable.jsx` | 🟢 Completed |
 | `old-src/ngx-admin-master/src/app/pages/tables/tables.component.ts` | `<ngx-tables>` | **TABLES** | 📦 Secondary Demo | None | `src/components/sections/Tables.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/tables/tree-grid/tree-grid.component.ts` | `<ngx-tree-grid>` | **TABLES** | 📦 Secondary Demo | `NbTreeGridDataSourceBuilderFSEntry` | `src/components/sections/TreeGrid.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/ui-features/grid/grid.component.ts` | `<ngx-grid>` | **UI-FEATURES** | 📦 Secondary Demo | None | `src/components/sections/Grid.jsx` | 🔴 Pending |
@@ -276,4 +276,4 @@ Below are the SASS stylesheets, Angular Pipes, Directives, and DTO Models linked
 - **Parsed Pipes & Directives**: 5
 - **Parsed Auxiliary Assets**: 25
 - **Unclassified Discrepancy Count**: 0 (100% Filesystem Coverage Verified)
-- **Corporate Migration Progress**: 33 / 36 Corporate Components Converted (92%)
+- **Corporate Migration Progress**: 34 / 36 Corporate Components Converted (94%)

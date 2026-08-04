@@ -38,18 +38,13 @@ const sbProc = spawn('npx', ['storybook', 'dev', '-p', '6006', '--ci'], { shell:
 sbProc.stdout.on('data', data => log('\x1b[35m[STORYBOOK]\x1b[0m', data));
 sbProc.stderr.on('data', data => log('\x1b[35m[STORYBOOK]\x1b[0m', data));
 
-// 3. Spawn Vitest Visual Interactive Test UI Dashboard (disable native auto-open to prevent duplicate tabs)
-const vitestProc = spawn('npx', ['vitest', '--ui', '--open=false'], { shell: true, stdio: 'pipe' });
-vitestProc.stdout.on('data', data => log('\x1b[32m[VITEST-UI]\x1b[0m', data));
-vitestProc.stderr.on('data', data => log('\x1b[32m[VITEST-UI]\x1b[0m', data));
-
 // Helper function to open URLs in Chrome on Windows/Mac
 const openUrl = url => {
   const startCmd = process.platform === 'win32' ? `start ${url}` : `open ${url}`;
   exec(startCmd);
 };
 
-// Open EXACTLY ONE Chrome browser tab for each of the 3 services
+// Open Chrome browser tabs for Vite Web App and Storybook Catalog
 setTimeout(() => {
   log('\x1b[36m[LAUNCHER]\x1b[0m', '🌐 Opening Vite Web App (http://localhost:5173)...\n');
   openUrl('http://localhost:5173');
@@ -60,16 +55,10 @@ setTimeout(() => {
   openUrl('http://localhost:6006');
 }, 4000);
 
-setTimeout(() => {
-  log('\x1b[32m[LAUNCHER]\x1b[0m', '🧪 Opening Vitest Visual Test UI (http://localhost:51204/__vitest__/)\n');
-  openUrl('http://localhost:51204/__vitest__/');
-}, 5000);
-
 // Handle process cleanup
 process.on('SIGINT', () => {
   logStream.end();
   viteProc.kill();
   sbProc.kill();
-  vitestProc.kill();
   process.exit();
 });
