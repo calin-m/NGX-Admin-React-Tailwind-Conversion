@@ -26,6 +26,7 @@ graph TD
 | `src/components/sections/ChartPanelSummary.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/ChartsPanel.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/Chat.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/CkEditor.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/CountryOrders.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/CountryOrdersChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/CountryOrdersMap.jsx` | **COMPONENTS** | 🟢 Active |
@@ -46,6 +47,7 @@ graph TD
 | `src/components/sections/KittenCard.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/LegendChart.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/Login.jsx` | **COMPONENTS** | 🟢 Active |
+| `src/components/sections/Maps.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/NotificationDrawer.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/OrderModal.jsx` | **COMPONENTS** | 🟢 Active |
 | `src/components/sections/OrdersChart.jsx` | **COMPONENTS** | 🟢 Active |

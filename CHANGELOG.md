@@ -7,6 +7,23 @@
 ## [1.0.0] — 2026-08-04
 
 ### 🚀 New Features
+- **feat(maps): add Maps showcase and CKEditor components for 100% menu parity** (`460b047`) *by Calin on 2026-08-04*
+  - Created src/components/sections/Maps.jsx (Google, Leaflet, Bubble maps view)
+  - Created src/components/sections/Maps.test.jsx (Vitest test suite)
+  - Created src/components/sections/CkEditor.jsx (WYSIWYG document editor)
+  - Created src/components/sections/CkEditor.test.jsx (Vitest test suite)
+  - Modified src/components/sections/Sidebar.jsx (added Maps & CKEditor tabs)
+  - Modified src/App.jsx (wired router for Maps & CKEditor)
+  - Modified walkthrough.md (documented 100% menu parity completion)
+- **feat(release): 100% full repository migration completion (IoT, Apps, Forms, Auth, Layout & UI Features)** (`d7185ec`) *by Calin on 2026-08-04*
+  - Converted IoT Smart Home Suite (StatusCard, TemperatureCard, ElectricityCard, SolarCard, SecurityCameras, RoomsCard, WeatherCard, KittenCard)
+  - Converted Extra Feature Apps Suite (Chat, CalendarApp, Toastr, Dialogs)
+  - Converted Forms & Validation Suite (FormInputs, FormLayouts)
+  - Converted Authentication Suite (Login, Register, ResetPassword)
+  - Converted Layout & UI Features Suite (Stepper, Accordion, Grid, Typography, Icons, TreeGrid)
+  - Modified src/components/sections/Sidebar.jsx & Sidebar.test.jsx (wired 15 navigation tabs)
+  - Modified src/App.jsx (wired 100% complete view router)
+  - Modified walkthrough.md (documented 100% full repository completion)
 - **feat(app): convert complete NGX-Admin application suite (Chat, Calendar, Forms, Auth)** (`5292d9f`) *by Calin on 2026-08-04*
   - Created src/components/sections/Chat.jsx (live chat application)
   - Created src/components/sections/CalendarApp.jsx (interactive event scheduler)
@@ -105,4 +122,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-04T19:54:02.156Z*
+*Last Auto-Generated: 2026-08-04T19:59:03.479Z*

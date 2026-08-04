@@ -8,6 +8,8 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
     { id: 'users', label: 'User Management', icon: '👥' },
     { id: 'chat', label: 'Support Chat App', icon: '💬' },
     { id: 'calendar', label: 'Calendar Scheduler', icon: '📅' },
+    { id: 'maps', label: 'Maps Showcase', icon: '🗺️' },
+    { id: 'ckeditor', label: 'CKEditor Text Format', icon: '✍️' },
     { id: 'stepper', label: 'Multi-Step Stepper', icon: '🪜' },
     { id: 'accordion', label: 'Accordion List', icon: '📜' },
     { id: 'grid', label: 'Responsive Grid', icon: '📐' },
@@ -69,13 +71,13 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
               PRO
             </div>
             <div className="overflow-hidden">
-              <span className="text-xs font-semibold text-slate-800 dark:text-slate-200 block truncate">100% Repository</span>
+              <span className="text-xs font-semibold text-slate-800 dark:text-slate-200 block truncate">100% Menu Parity</span>
               <span className="text-[10px] text-slate-400 block truncate">v1.0.0 Ready</span>
             </div>
           </div>
         ) : (
           <div className="flex justify-center">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" title="100% Active" />
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" title="100% Parity" />
           </div>
         )}
       </div>
