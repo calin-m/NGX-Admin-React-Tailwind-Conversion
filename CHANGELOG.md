@@ -6,9 +6,9 @@
 
 ## [1.0.0] — 2026-08-04
 
-### 🚀 New Features
-- `feat(starter)`: initialize clean enterprise React + Tailwind v4 + Storybook 8 + Vitest platform
+### 🧹 Maintenance & Refactors
+- **[PHASE]: Dual-Stack Modernization Architecture, ADR-002 Scoped Governance & Package Setup | [WHY]: Establish a production-grade Dual-Stack Modernization Architecture for migrating an enterprise Angular 15 application (ngx-admin-master) to a modern React 18 + Vite 6 + Tailwind CSS v4 stack. Formally scope the migration focus to the Corporate Business Suite via ADR-002 in docs/DECISIONS.md to deliver 100% of real-world B2B analytics requirements (revenue, profit, traffic, country orders, user activity) with zero technical debt and 100% automated living documentation sync. Rename package to ngx-admin-react-tailwind-conversion. | [WHAT]: Created docs/LEGACY_BLUEPRINT.md master living blueprint; upgraded scripts/generate-legacy-docs.js with 100% fail-safe AST scanner; recorded ADR-002 in docs/DECISIONS.md; updated .agents/AGENTS.md Rule 11 protocol; updated README.md, DEVELOPMENT.md, docs/PIPELINE_GUIDE.md; updated scripts/verify-build.js and package.json; excluded old-src/** in eslint.config.js and .prettierignore. | [VERIFICATION]: Verified node scripts/generate-legacy-docs.js scans 430 files with 0 unclassified discrepancies and npm run docs:sync auto-syncs both active React docs and legacy Angular blueprint.** (`1d3dbdb`) *by Calin on 2026-08-04*
 
 ---
 
-*Last Auto-Generated: 2026-08-04T12:00:00.000Z*
+*Last Auto-Generated: 2026-08-04T15:10:29.479Z*

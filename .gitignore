@@ -1,14 +1,18 @@
 # Dependencies
 node_modules/
 .pnpm-store/
+old-src/**/node_modules/
+old-src/**/.angular/
 
-# Builds
+# Builds & Temporary Artifacts
 dist/
 build/
 storybook-static/
 .output/
+*.timestamp-*.mjs
+vite.config.js.timestamp-*
 
-# Testing
+# Testing & Coverage Reports
 coverage/
 test-results.json
 .vitest/
@@ -20,3 +24,4 @@ dev-all.log
 .env.local
 .DS_Store
 .vscode/
+.idea/
