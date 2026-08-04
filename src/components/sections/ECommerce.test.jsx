@@ -6,7 +6,7 @@ import ECommerce from './ECommerce.jsx';
 describe('ECommerce Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<ECommerce />);
-    expect(container).toBeDefined();
-    expect(screen.getByText('ECommerce')).toBeInTheDocument();
+    expect(container.firstChild).toBeDefined();
+    expect(screen.getByText(/Total Revenue/i)).toBeInTheDocument();
   });
 });

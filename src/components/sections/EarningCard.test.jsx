@@ -6,7 +6,7 @@ import EarningCard from './EarningCard.jsx';
 describe('EarningCard Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<EarningCard />);
-    expect(container).toBeDefined();
-    expect(screen.getByText('EarningCard')).toBeInTheDocument();
+    expect(container.firstChild).toBeDefined();
+    expect(screen.getByText(/Earning Live Stats/i)).toBeInTheDocument();
   });
 });

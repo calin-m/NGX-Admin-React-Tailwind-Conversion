@@ -15,8 +15,8 @@ async function runVerification() {
   // 0. Living Architecture Auto-Sync & Zero-Manual Auto-Scaffolding Sweeper
   console.log('🤖 [Pass 0/7] Running Living Architecture Auto-Sync & Auto-Scaffolder...');
   try {
-    execSync('node scripts/generate-architecture-matrix.js', { stdio: 'inherit' });
-    execSync('node scripts/generate-legacy-docs.js', { stdio: 'inherit' });
+    execSync('node scripts/generate-architecture-matrix.js', { stdio: 'inherit', shell: true });
+    execSync('node scripts/generate-legacy-docs.js', { stdio: 'inherit', shell: true });
   } catch (err) {
     console.warn('  ⚠️ Living Architecture sync warning:', err.message);
   }
@@ -200,13 +200,13 @@ async function runVerification() {
   function verifyVitestResults(theme) {
     const resultsFile = path.join(root, 'test-results.json');
     try {
-      execSync('npx vitest run --reporter=json --outputFile=test-results.json', {
+      execSync('npx vitest run --reporter=default --reporter=json --outputFile=test-results.json', {
         env: { ...process.env, VITE_TEST_THEME: theme },
-        encoding: 'utf8',
-        stdio: 'pipe'
+        stdio: 'inherit',
+        shell: true
       });
     } catch (err) {
-      // Vitest exits with code 1 if tests fail, but outputs JSON results file
+      // Vitest exits with code 1 if tests fail
     }
 
     if (fs.existsSync(resultsFile)) {
@@ -240,10 +240,10 @@ async function runVerification() {
   // 7. In-Process Production Vite Bundle Build Verification
   console.log('\n📦 [Pass 7/7] Validating Production Vite Bundle Build Compilation...');
   try {
-    execSync('npx vite build', { stdio: 'pipe' });
+    execSync('npx vite build', { stdio: 'inherit', shell: true });
     console.log('  ✔ Production Vite Bundle Build Compilation Passed.');
   } catch (err) {
-    console.error('  ❌ Production Vite Bundle Build Failed.');
+    console.error(`  ❌ Production Vite Bundle Build Failed: ${err.message}`);
     errorCount++;
   }
 

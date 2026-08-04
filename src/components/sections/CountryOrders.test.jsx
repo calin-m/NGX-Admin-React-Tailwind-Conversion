@@ -6,7 +6,7 @@ import CountryOrders from './CountryOrders.jsx';
 describe('CountryOrders Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<CountryOrders />);
-    expect(container).toBeDefined();
-    expect(screen.getByText('CountryOrders')).toBeInTheDocument();
+    expect(container.firstChild).toBeDefined();
+    expect(screen.getByText(/Global Country Orders/i)).toBeInTheDocument();
   });
 });

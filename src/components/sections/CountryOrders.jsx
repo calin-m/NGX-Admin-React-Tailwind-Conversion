@@ -1,24 +1,55 @@
 import React from 'react';
+import useCountryOrder from '../../hooks/useCountryOrder.js';
 
-/**
- * CountryOrders Component
- * Modernized React 18 + Tailwind CSS v4 Component
- * Source Reference: old-src/ngx-admin-master <ngx-country-orders>
- */
-export default function CountryOrders(props) {
+export default function CountryOrders() {
+  const { data } = useCountryOrder();
+
+  const countries = [
+    { name: 'United States', flag: '🇺🇸', orders: '42,500', share: '38%' },
+    { name: 'Germany', flag: '🇩🇪', orders: '28,100', share: '25%' },
+    { name: 'United Kingdom', flag: '🇬🇧', orders: '19,400', share: '17%' },
+    { name: 'France', flag: '🇫🇷', orders: '14,200', share: '12%' },
+    { name: 'Japan', flag: '🇯🇵', orders: '8,900', share: '8%' }
+  ];
+
   return (
-    <div className="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-xs border border-slate-200 dark:border-slate-700">
-      <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3 mb-4">
-        <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
-          CountryOrders
-        </h3>
-        <span className="text-xs px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 font-semibold">
-          Corporate &lt;ngx-country-orders&gt;
+    <div className="w-full min-h-[320px] rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 flex flex-col justify-between">
+      {/* Header */}
+      <div className="flex items-center justify-between">
+        <div className="flex items-center space-x-3">
+          <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-lg">
+            🌍
+          </div>
+          <div>
+            <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Global Country Orders</h3>
+            <p className="text-xs text-slate-500 dark:text-slate-400">Regional Distribution</p>
+          </div>
+        </div>
+        <span className="text-xs font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 px-2.5 py-1 rounded-lg">
+          5 Active Regions
         </span>
       </div>
-      <p className="text-sm text-slate-600 dark:text-slate-400">
-        Converted Corporate Component View.
-      </p>
+
+      {/* Country List Feed */}
+      <div className="space-y-3 py-4 flex-1">
+        {countries.map((c, idx) => (
+          <div key={idx} className="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-colors">
+            <div className="flex items-center space-x-3">
+              <span className="text-lg">{c.flag}</span>
+              <span className="text-xs font-semibold text-slate-800 dark:text-slate-200">{c.name}</span>
+            </div>
+            <div className="flex items-center space-x-3 text-xs">
+              <span className="font-bold text-slate-900 dark:text-slate-100">{c.orders}</span>
+              <span className="text-slate-400 font-medium w-8 text-right">{c.share}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Footer */}
+      <div className="text-xs text-center text-slate-400 pt-3 border-t border-slate-100 dark:border-slate-700/60">
+        Total International Orders: <span className="font-bold text-slate-800 dark:text-slate-200">113,100</span>
+      </div>
     </div>
   );
 }

@@ -6,7 +6,7 @@ import UserActivity from './UserActivity.jsx';
 describe('UserActivity Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<UserActivity />);
-    expect(container).toBeDefined();
-    expect(screen.getByText('UserActivity')).toBeInTheDocument();
+    expect(container.firstChild).toBeDefined();
+    expect(screen.getByText(/User Activity Stream/i)).toBeInTheDocument();
   });
 });

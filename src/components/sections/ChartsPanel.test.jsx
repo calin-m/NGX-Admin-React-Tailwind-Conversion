@@ -6,7 +6,7 @@ import ChartsPanel from './ChartsPanel.jsx';
 describe('ChartsPanel Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<ChartsPanel />);
-    expect(container).toBeDefined();
-    expect(screen.getByText('ChartsPanel')).toBeInTheDocument();
+    expect(container.firstChild).toBeDefined();
+    expect(screen.getByText(/Orders Chart/i)).toBeInTheDocument();
   });
 });

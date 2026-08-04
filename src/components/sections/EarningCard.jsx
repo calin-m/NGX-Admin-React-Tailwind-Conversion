@@ -1,24 +1,94 @@
-import React from 'react';
+import React, { useState } from 'react';
+import useEarning from '../../hooks/useEarning.js';
 
-/**
- * EarningCard Component
- * Modernized React 18 + Tailwind CSS v4 Component
- * Source Reference: old-src/ngx-admin-master <ngx-earning-card>
- */
-export default function EarningCard(props) {
+export default function EarningCard() {
+  const { data, loading, period, setPeriod } = useEarning('week');
+  const [selectedSegment, setSelectedSegment] = useState('Bitcoin');
+
   return (
-    <div className="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-xs border border-slate-200 dark:border-slate-700">
-      <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3 mb-4">
-        <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
-          EarningCard
-        </h3>
-        <span className="text-xs px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 font-semibold">
-          Corporate &lt;ngx-earning-card&gt;
-        </span>
+    <div className="w-full min-h-[320px] rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 flex flex-col justify-between overflow-hidden">
+      {/* Header */}
+      <div className="flex items-center justify-between">
+        <div className="flex items-center space-x-3">
+          <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-lg">
+            💰
+          </div>
+          <div>
+            <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Earning Live Stats</h3>
+            <p className="text-xs text-slate-500 dark:text-slate-400">Revenue & Portfolio Shares</p>
+          </div>
+        </div>
+        <div className="flex bg-slate-100 dark:bg-slate-700/60 p-1 rounded-lg text-xs font-medium">
+          {['week', 'month', 'year'].map(p => (
+            <button
+              key={p}
+              onClick={() => setPeriod(p)}
+              className={`px-2.5 py-1 rounded-md transition-all capitalize ${
+                period === p
+                  ? 'bg-white dark:bg-slate-800 text-amber-600 dark:text-amber-400 shadow-sm'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
+              }`}
+            >
+              {p}
+            </button>
+          ))}
+        </div>
       </div>
-      <p className="text-sm text-slate-600 dark:text-slate-400">
-        Converted Corporate Component View.
-      </p>
+
+      {/* SVG Pie / Donut Chart */}
+      <div className="flex items-center justify-around py-4">
+        <div className="relative w-36 h-36 flex items-center justify-center">
+          <svg className="w-full h-full -rotate-90" viewBox="0 0 36 36">
+            <path
+              className="text-slate-100 dark:text-slate-700 stroke-current"
+              strokeWidth="4"
+              fill="none"
+              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path
+              className="text-amber-500 stroke-current"
+              strokeWidth="4"
+              strokeDasharray="60, 100"
+              strokeLinecap="round"
+              fill="none"
+              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path
+              className="text-indigo-500 stroke-current"
+              strokeWidth="4"
+              strokeDasharray="25, 100"
+              strokeDashoffset="-60"
+              strokeLinecap="round"
+              fill="none"
+              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+          </svg>
+          <div className="absolute flex flex-col items-center justify-center">
+            <span className="text-xl font-extrabold text-slate-900 dark:text-slate-100">$64.2k</span>
+            <span className="text-[10px] text-slate-400 font-medium uppercase">Total Earnings</span>
+          </div>
+        </div>
+
+        <div className="space-y-2 text-xs">
+          <div className="flex items-center space-x-2">
+            <span className="w-3 h-3 rounded-full bg-amber-500" />
+            <span className="text-slate-600 dark:text-slate-300 font-medium">Bitcoin (60%)</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <span className="w-3 h-3 rounded-full bg-indigo-500" />
+            <span className="text-slate-600 dark:text-slate-300 font-medium">Tether (25%)</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <span className="w-3 h-3 rounded-full bg-slate-300 dark:bg-slate-600" />
+            <span className="text-slate-600 dark:text-slate-300 font-medium">USD Cash (15%)</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-between items-center text-xs pt-3 border-t border-slate-100 dark:border-slate-700/60 text-slate-500 dark:text-slate-400">
+        <span>Daily Earnings Rate: <strong className="text-emerald-500">$2,450 / day</strong></span>
+        <span className="text-emerald-600 font-bold bg-emerald-500/10 px-2 py-0.5 rounded-full">+18.2%</span>
+      </div>
     </div>
   );
 }
