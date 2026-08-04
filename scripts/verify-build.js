@@ -223,7 +223,7 @@ async function runVerification() {
   function verifyVitestResults(theme) {
     const resultsFile = path.join(root, 'test-results.json');
     try {
-      execSync('npx vitest run --reporter=json --outputFile=test-results.json', {
+      execSync('npx vitest run --reporter=verbose --reporter=json --outputFile=test-results.json', {
         env: { ...process.env, VITE_TEST_THEME: theme },
         stdio: 'inherit',
         shell: isWin

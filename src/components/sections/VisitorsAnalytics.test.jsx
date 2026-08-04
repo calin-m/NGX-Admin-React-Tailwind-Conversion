@@ -6,7 +6,7 @@ import VisitorsAnalytics from './VisitorsAnalytics.jsx';
 describe('VisitorsAnalytics Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<VisitorsAnalytics />);
-    expect(container).toBeDefined();
-    expect(screen.getByText('VisitorsAnalytics')).toBeInTheDocument();
+    expect(container.firstChild).toBeDefined();
+    expect(screen.getByText(/Visitors & Traffic Analytics/i)).toBeInTheDocument();
   });
 });

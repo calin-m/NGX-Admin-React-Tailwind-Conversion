@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import Header from './Header.jsx';
+import Sidebar from './Sidebar.jsx';
 
-describe('Header Corporate Component Suite', () => {
+describe('Sidebar Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
-    const { container } = render(<Header />);
+    const { container } = render(<Sidebar isCollapsed={false} activeTab="dashboard" />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Corporate Overview/i)).toBeInTheDocument();
+    expect(screen.getByText(/NGX Corporate/i)).toBeInTheDocument();
   });
 });

@@ -1,24 +1,43 @@
 import React from 'react';
 
-/**
- * Header Component
- * Modernized React 18 + Tailwind CSS v4 Component
- * Source Reference: old-src/ngx-admin-master <ngx-header>
- */
-export default function Header(props) {
+export default function Header({ isDarkMode, onToggleTheme, onToggleSidebar }) {
   return (
-    <div className="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-xs border border-slate-200 dark:border-slate-700">
-      <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3 mb-4">
-        <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
-          Header
-        </h3>
-        <span className="text-xs px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 font-semibold">
-          Corporate &lt;ngx-header&gt;
-        </span>
+    <header className="sticky top-0 z-30 w-full h-16 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-700/80 px-6 flex items-center justify-between transition-colors duration-200">
+      <div className="flex items-center space-x-4">
+        <button
+          onClick={onToggleSidebar}
+          className="p-2 rounded-xl text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-colors"
+          title="Toggle Navigation Menu"
+        >
+          ☰
+        </button>
+        <div className="hidden md:flex items-center space-x-2">
+          <span className="text-sm font-semibold text-slate-900 dark:text-slate-100">Corporate Overview</span>
+          <span className="text-xs text-slate-400">/ Dashboard</span>
+        </div>
       </div>
-      <p className="text-sm text-slate-600 dark:text-slate-400">
-        Converted Corporate Component View.
-      </p>
-    </div>
+
+      <div className="flex items-center space-x-3">
+        {/* Dark Mode Toggle Button */}
+        <button
+          onClick={onToggleTheme}
+          className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all text-sm"
+          title="Toggle Dark / Light Theme"
+        >
+          {isDarkMode ? '🌙 Dark' : '☀️ Light'}
+        </button>
+
+        {/* User Profile Badge */}
+        <div className="flex items-center space-x-3 pl-2 border-l border-slate-200 dark:border-slate-700/80">
+          <div className="w-9 h-9 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center text-sm shadow-sm">
+            AD
+          </div>
+          <div className="hidden sm:block text-left">
+            <span className="text-xs font-bold text-slate-900 dark:text-slate-100 block">Admin User</span>
+            <span className="text-[10px] text-slate-400 block">admin@ngx-corporate.io</span>
+          </div>
+        </div>
+      </div>
+    </header>
   );
 }

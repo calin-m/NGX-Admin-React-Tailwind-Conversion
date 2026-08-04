@@ -6,7 +6,7 @@ import ProgressSection from './ProgressSection.jsx';
 describe('ProgressSection Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<ProgressSection />);
-    expect(container).toBeDefined();
-    expect(screen.getByText('ProgressSection')).toBeInTheDocument();
+    expect(container.firstChild).toBeDefined();
+    expect(screen.getByText(/Corporate Targets/i)).toBeInTheDocument();
   });
 });

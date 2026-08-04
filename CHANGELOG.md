@@ -7,6 +7,19 @@
 ## [1.0.0] — 2026-08-04
 
 ### 🚀 New Features
+- **feat(corporate): integrate full Dashboard layout and Sidebar Navigation Drawer** (`295b54e`) *by Calin on 2026-08-04*
+  - Created src/components/sections/Sidebar.jsx (collapsible navigation menu)
+  - Created src/components/sections/Sidebar.stories.jsx (Storybook 8 catalog stories)
+  - Created src/components/sections/Sidebar.test.jsx (Vitest test suite)
+  - Modified src/components/sections/Header.jsx (added menu toggle button and profile badge)
+  - Modified src/components/sections/Header.test.jsx (updated test assertions)
+  - Modified src/components/sections/ProgressSection.jsx (wired quarterly target progress meters)
+  - Modified src/components/sections/ProgressSection.test.jsx (updated test assertions)
+  - Modified src/components/sections/VisitorsAnalytics.jsx (wired traffic metrics and SVG area chart)
+  - Modified src/components/sections/VisitorsAnalytics.test.jsx (updated test assertions)
+  - Modified src/App.jsx (integrated Sidebar, ProgressSection, and VisitorsAnalytics)
+  - Modified .storybook/main.js (added viteFinal rollupOptions onwarn filter for EVAL)
+  - Modified walkthrough.md (documented dashboard and navigation drawer integration)
 - **feat(corporate): initial release of corporate react migration suite** (`84d9d86`) *by Calin on 2026-08-04*
   - Created 37 React section components, 37 Storybook stories, and 37 Vitest unit test suites under src/components/sections/
   - Created 29 React Custom Hooks in src/hooks/ and TypeScript DTO interfaces in src/types/
@@ -18,7 +31,7 @@
   - Synchronized ARCHITECTURE.md, docs/LEGACY_BLUEPRINT.md, docs/DECISIONS.md, and .agents/AGENTS.md
 
 ### 🐛 Bug Fixes
-- **fix(config): eliminate post-commit timestamp drift in documentation generators** (`9665481`) *by Calin on 2026-08-04*
+- **fix(config): eliminate post-commit timestamp drift in documentation generators** (`8e71adc`) *by Calin on 2026-08-04*
   - Modified scripts/generate-architecture-matrix.js (removed dynamic timestamp)
   - Modified scripts/generate-legacy-docs.js (removed dynamic timestamp)
   - Modified walkthrough.md (documented post-commit drift fix)
@@ -38,4 +51,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-04T18:39:55.560Z*
+*Last Auto-Generated: 2026-08-04T18:53:48.363Z*
