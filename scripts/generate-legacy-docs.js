@@ -227,6 +227,9 @@ pipesAndDirectives.forEach(pd => {
   md += `| \`${pd.relPath}\` | ${cat} | Linked to Theme Utilities |\n`;
 });
 
+const finalProgressCount = Math.min(completedCount, inScopeCount);
+const progressPercent = Math.round((finalProgressCount / (inScopeCount || 1)) * 100);
+
 md += `\n---
 
 ## ⚖️ 5. Fail-Safe Reconciliation Ledger (Zero-Miss Verification)
@@ -240,7 +243,7 @@ md += `\n---
 - **Parsed Pipes & Directives**: ${pipesAndDirectives.length}
 - **Parsed Auxiliary Assets**: ${otherAssets.length}
 - **Unclassified Discrepancy Count**: 0 (100% Filesystem Coverage Verified)
-- **Corporate Migration Progress**: ${completedCount} / ${inScopeCount} Corporate Components Converted (${Math.round((completedCount / (inScopeCount || 1)) * 100)}%)
+- **Corporate Migration Progress**: ${finalProgressCount} / ${inScopeCount} Corporate Components Converted (${progressPercent}%)
 
 ---
 

@@ -2,30 +2,23 @@ import React from 'react';
 import Button from './Button.jsx';
 
 export default {
-  title: 'UI/Button',
+  title: 'Corporate/UI Primitives/Button',
   component: Button,
-  argTypes: {
-    variant: {
-      control: 'select',
-      options: ['primary', 'secondary', 'outline', 'ghost', 'danger']
-    },
-    size: {
-      control: 'select',
-      options: ['sm', 'md', 'lg']
-    }
-  }
+  parameters: {
+    layout: 'centered',
+  },
 };
 
 export const Primary = {
   args: {
-    children: 'Primary Button',
-    variant: 'primary'
-  }
+    children: 'Primary Action',
+    variant: 'primary',
+  },
 };
 
-export const Secondary = {
+export const Outline = {
   args: {
-    children: 'Secondary Button',
-    variant: 'secondary'
-  }
+    children: 'Secondary Action',
+    variant: 'outline',
+  },
 };

@@ -8,7 +8,7 @@ on:
 
 jobs:
   quality-gate:
-    name: 7-Gateway Quality Engine Audit
+    name: 7-Gateway Quality Engine & Build Audit
     runs-on: ubuntu-latest
 
     steps:
@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js Environment
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: 'npm'
 
       - name: Install Dependencies
@@ -29,3 +29,6 @@ jobs:
 
       - name: Compile Production Bundle
         run: npm run build
+
+      - name: Build Storybook Catalog
+        run: npm run build-storybook
