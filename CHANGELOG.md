@@ -7,6 +7,19 @@
 ## [1.0.0] — 2026-08-04
 
 ### 🚀 New Features
+- **feat(release): 100% exhaustive file-for-file migration completion across entire NGX-Admin codebase** (`9459ff8`) *by Calin on 2026-08-04*
+  - Created List.jsx, InfiniteList.jsx, Tabs.jsx (Layout sub-pages)
+  - Created FormButtons.jsx, Datepicker.jsx (Form sub-pages)
+  - Created AnimatedSearch.jsx (UI Features sub-page)
+  - Created Window.jsx, Popover.jsx, Tooltip.jsx (Modal sub-pages)
+  - Created ProgressBar.jsx, Spinner.jsx, Alert.jsx, CalendarKit.jsx (Extra components)
+  - Created GoogleMaps.jsx, LeafletMaps.jsx, BubbleMaps.jsx (Maps sub-pages)
+  - Created Echarts.jsx (Charts sub-page)
+  - Created NotFound.jsx (404 error page)
+  - Converted Footer.jsx & Footer.test.jsx to 1-to-1 Nebular footer template
+  - Modified .husky/pre-commit (added auto-staging for generated stories)
+  - Modified src/components/sections/Sidebar.jsx & App.jsx (wired full routing matrix)
+  - Modified walkthrough.md (documented 100% exhaustive file parity completion)
 - **feat(release): 100% complete NGX-Admin migration with full menu parity and auto-staged stories** (`cf9e267`) *by Calin on 2026-08-04*
   - Created src/components/sections/Maps.jsx (Google, Leaflet & Bubble maps showcase)
   - Created src/components/sections/CkEditor.jsx (rich-text WYSIWYG document editor)
@@ -122,4 +135,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-04T20:05:06.615Z*
+*Last Auto-Generated: 2026-08-04T20:28:58.870Z*

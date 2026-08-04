@@ -5,9 +5,12 @@ export default function SearchInput({ isOpen, onClose }) {
 
   useEffect(() => {
     const handleKeyDown = e => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
-        if (isOpen && onClose) onClose();
+        if (onClose) onClose();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        if (onClose) onClose();
       }
     };
     window.addEventListener('keydown', handleKeyDown);

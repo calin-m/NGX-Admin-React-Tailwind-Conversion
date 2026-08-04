@@ -1,31 +1,21 @@
 import React, { useState } from 'react';
 import useOrdersChart from '../../hooks/useOrdersChart.js';
-import useProfitChart from '../../hooks/useProfitChart.js';
 
 export default function ChartsPanel() {
   const [activeTab, setActiveTab] = useState('orders');
   const { data: ordersData, period, setPeriod } = useOrdersChart('week');
-  const { data: profitData } = useProfitChart('week');
 
-  const activeData = activeTab === 'orders' ? [
-    { label: 'Mon', val: 320 },
-    { label: 'Tue', val: 450 },
-    { label: 'Wed', val: 390 },
-    { label: 'Thu', val: 610 },
-    { label: 'Fri', val: 580 },
-    { label: 'Sat', val: 720 },
-    { label: 'Sun', val: 890 }
-  ] : [
-    { label: 'Mon', val: 1200 },
-    { label: 'Tue', val: 1900 },
-    { label: 'Wed', val: 1500 },
-    { label: 'Thu', val: 2400 },
-    { label: 'Fri', val: 2100 },
-    { label: 'Sat', val: 3100 },
-    { label: 'Sun', val: 4200 }
-  ];
+  const labels = ordersData.labels && ordersData.labels.length > 0 ? ordersData.labels : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const values = activeTab === 'orders'
+    ? (ordersData.orders && ordersData.orders.length > 0 ? ordersData.orders : [184, 267, 326, 366, 389, 399, 392])
+    : (ordersData.profit && ordersData.profit.length > 0 ? ordersData.profit : [158, 178, 193, 205, 212, 213, 204]);
 
-  const maxVal = Math.max(...activeData.map(d => d.val));
+  const activeData = labels.map((lbl, idx) => ({
+    label: lbl,
+    val: values[idx] || 100
+  }));
+
+  const maxVal = Math.max(...activeData.map(d => d.val), 1);
 
   return (
     <div className="w-full min-h-[320px] rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 flex flex-col justify-between">
@@ -85,15 +75,15 @@ export default function ChartsPanel() {
                 }`}
               />
             </div>
-            <span className="text-xs text-slate-400 dark:text-slate-500 font-medium">{item.label}</span>
+            <span className="text-[10px] sm:text-xs text-slate-400 dark:text-slate-500 font-medium truncate max-w-[40px] text-center">{item.label}</span>
           </div>
         ))}
       </div>
 
       {/* Footer stats */}
       <div className="flex justify-between items-center text-xs pt-3 border-t border-slate-100 dark:border-slate-700/60 text-slate-500">
-        <span>Peak {activeTab === 'orders' ? 'Orders' : 'Profit'}: <strong className="text-slate-900 dark:text-slate-100">{activeTab === 'orders' ? '890 Units' : '$4,200'}</strong></span>
-        <span className="text-indigo-600 font-bold bg-indigo-500/10 px-2 py-0.5 rounded-full">Updated Live</span>
+        <span>Peak {activeTab === 'orders' ? 'Orders' : 'Profit'}: <strong className="text-slate-900 dark:text-slate-100">{maxVal.toLocaleString()} {activeTab === 'orders' ? 'Units' : '$'}</strong></span>
+        <span className="text-indigo-600 font-bold bg-indigo-500/10 px-2 py-0.5 rounded-full capitalize">{period} View Active</span>
       </div>
     </div>
   );

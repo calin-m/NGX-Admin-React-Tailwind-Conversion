@@ -53,12 +53,15 @@ export default function App() {
   const [accentColor, setAccentColor] = useState('indigo');
 
   const toggleTheme = () => {
-    setIsDarkMode(prev => !prev);
-    if (!isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    setIsDarkMode(prev => {
+      const next = !prev;
+      if (next) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      return next;
+    });
   };
 
   const toggleSidebar = () => {
