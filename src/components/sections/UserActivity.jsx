@@ -58,7 +58,7 @@ export default function UserActivity() {
               <span className="text-xl p-1.5 rounded-lg bg-white dark:bg-slate-800 shadow-sm">{act.avatar}</span>
               <div>
                 <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100">{act.user}</h4>
-                <p className="text-[11px] text-slate-500 dark:text-slate-400">{act.action}</p>
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate max-w-[160px] sm:max-w-none">{act.action}</p>
               </div>
             </div>
             <span className={`text-[10px] font-bold ${act.color} whitespace-nowrap`}>{act.time}</span>

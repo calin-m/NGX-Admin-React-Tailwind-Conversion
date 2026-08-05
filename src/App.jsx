@@ -46,7 +46,12 @@ import CkEditor from './components/sections/CkEditor.jsx';
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 768;
+    }
+    return false;
+  });
   const [activeTab, setActiveTab] = useState('dashboard');
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -89,6 +94,7 @@ export default function App() {
           isCollapsed={isSidebarCollapsed}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
+          onToggleSidebar={toggleSidebar}
         />
 
         <main className="flex-1 p-4 sm:p-6 max-w-[1600px] mx-auto w-full space-y-6 overflow-x-hidden">

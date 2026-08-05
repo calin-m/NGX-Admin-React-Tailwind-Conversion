@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function ThemeCustomizer({ isOpen, onClose, accentColor, setAccentColor, isDarkMode, onToggleTheme }) {
-  if (!isOpen) return null;
-
   const accents = [
     { id: 'indigo', name: 'Indigo (Default)', class: 'bg-indigo-600' },
     { id: 'emerald', name: 'Emerald', class: 'bg-emerald-600' },
@@ -11,8 +9,21 @@ export default function ThemeCustomizer({ isOpen, onClose, accentColor, setAccen
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex justify-end bg-slate-900/40 backdrop-blur-xs">
-      <div className="w-full max-w-sm h-full bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 p-6 flex flex-col justify-between shadow-2xl animate-in slide-in-from-right duration-300">
+    <>
+      {/* Backdrop Overlay with Smooth Fade In / Out */}
+      <div
+        onClick={onClose}
+        className={`fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-xs transition-opacity duration-300 ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+      />
+
+      {/* Slide-over Drawer Panel with Smooth Slide In / Out on Right Edge */}
+      <div
+        className={`fixed top-0 right-0 bottom-0 z-50 w-full max-w-sm h-full bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 p-6 flex flex-col justify-between shadow-2xl transition-transform duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
         <div className="space-y-6">
           <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-4">
             <div>
@@ -41,7 +52,6 @@ export default function ThemeCustomizer({ isOpen, onClose, accentColor, setAccen
                   <span className={`w-3.5 h-3.5 rounded-full ${acc.class} shadow-xs`} />
                   <span className="truncate">{acc.name}</span>
                 </button>
-
               ))}
             </div>
           </div>
@@ -81,6 +91,6 @@ export default function ThemeCustomizer({ isOpen, onClose, accentColor, setAccen
           </button>
         </div>
       </div>
-    </div>
+    </>
   );
 }
