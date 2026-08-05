@@ -7,6 +7,14 @@
 ## [1.0.0] — 2026-08-05
 
 ### 🚀 New Features
+- **feat(tables-auth): complete Phase 5 conversion & Vitest test suite alignment** (`42136ad`) *by Calin on 2026-08-05*
+  - Modified src/components/sections/SmartTable.jsx (inline editing, add record modal, orders state fix)
+  - Modified src/components/sections/TreeGrid.jsx (3-level folder nesting, Expand/Collapse All triggers)
+  - Modified src/components/sections/Login.jsx (password visibility toggle, remember me checkbox, success alert)
+  - Modified src/components/sections/LeafletMaps.test.jsx (updated header matcher)
+  - Modified src/components/sections/Tabs.test.jsx (updated button matcher via getByRole)
+  - Modified vitest.config.js (added json reporter & outputFile configuration)
+  - Modified docs/LEGACY_BLUEPRINT.md (flipped 100% of 118 Angular components to Completed)
 - **feat(interactive): complete interactive polish pass (theme switcher, search Esc key, chart period datasets)** (`6d1bfdd`) *by Calin on 2026-08-04*
   - Fixed toggleTheme functional state updater in src/App.jsx (smooth Light/Dark switching)
   - Added Escape key listener in src/components/sections/SearchInput.jsx (Esc dismisses search modal)
@@ -146,4 +154,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-05T05:50:36.214Z*
+*Last Auto-Generated: 2026-08-05T08:41:38.908Z*
