@@ -1,9 +1,11 @@
 import fs from 'fs';
 import path from 'path';
+import { parseReactComponent } from './lib/ast-parser.js';
 
 const rootDir = process.cwd();
 const srcDir = path.join(rootDir, 'src');
 const archFile = path.join(rootDir, 'ARCHITECTURE.md');
+
 
 function scanComponents(dir, baseDir = srcDir) {
   let results = [];
@@ -54,24 +56,12 @@ components.forEach(comp => {
   const parts = comp.split('/');
   const domain = parts.length > 1 ? parts[0] : 'root';
   const fullPath = path.join(srcDir, comp);
+  const ast = parseReactComponent(fullPath);
 
-  let statusStr = '🟢 Active';
-  try {
-    const code = fs.readFileSync(fullPath, 'utf8');
-    const hasState = /useState|useReducer|useEffect|useMemo|useCallback|useContext|use[A-Z]\w+/.test(code);
-    const hasHandlers = /onClick|onChange|onSubmit|onKeyDown|onKeyUp|handle[A-Z]\w+/.test(code);
-    if (hasState || hasHandlers) {
-      statusStr = '🟢 Interactive Demo';
-    } else {
-      statusStr = '🟡 Static Showcase';
-    }
-  } catch (e) {
-    statusStr = '🟢 Active';
-  }
-
-  markdown += `| \`src/${comp}\` | **${domain.toUpperCase()}** | ${statusStr} |\n`;
+  markdown += `| \`src/${comp}\` | **${domain.toUpperCase()}** | ${ast.statusStr} |\n`;
 });
 
 fs.writeFileSync(archFile, markdown);
 console.log('✔ Successfully auto-synchronized ARCHITECTURE.md component inventory matrix.');
+
 

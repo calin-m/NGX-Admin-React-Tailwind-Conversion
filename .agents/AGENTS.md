@@ -2,11 +2,12 @@
 
 ## 1. Automated Documentation Synchronization
 - **Living Architecture**: Every code modification, component addition, or architectural refactor MUST automatically update `ARCHITECTURE.md` (including C4 Mermaid diagrams and component matrices) via `npm run docs:sync`.
-- **Zero-Bloat Rule**: Agents MUST NOT write manual JSDoc headers or documentation comments inside individual presentation components. All component indexing, diagramming, and changelog generation MUST remain 100% script-driven via AST file-tree parsing (`scripts/generate-architecture-matrix.js`).
+- **Zero-Bloat Rule**: Agents MUST NOT write manual JSDoc headers or documentation comments inside individual presentation components. All component indexing, diagramming, and changelog generation MUST remain 100% script-driven via AST file-tree parsing (`scripts/lib/ast-parser.js`, `scripts/generate-architecture-matrix.js`).
 - **Decision Tracking**: New technical decisions MUST automatically add a numbered Architectural Decision Record (ADR) to `docs/DECISIONS.md` via `npm run adr:new`.
 
 ## 2. Automated Script & Tooling Maintenance
-- Driver scripts (`scripts/verify-build.js`, `copy-assets.js`), test configs (`vitest.config.js`), linter configs (`eslint.config.js`), and CI workflows (`.github/workflows/ci.yml`) MUST be kept in sync automatically whenever codebase structure changes.
+- Driver scripts (`scripts/verify-build.js`, `scripts/lib/ast-parser.js`, `copy-assets.js`), test configs (`vitest.config.js`), linter configs (`eslint.config.js`), and CI workflows (`.github/workflows/ci.yml`) MUST be kept in sync automatically whenever codebase structure changes.
+
 
 ## 3. Streamlined Programmatic Code Verification
 - Perform direct AST code parsing, static syntax validation, and unit test execution for code changes.

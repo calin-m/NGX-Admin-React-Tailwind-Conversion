@@ -1,11 +1,13 @@
 import fs from 'fs';
 import path from 'path';
+import { parseAngularComponent, parseReactComponent, scanDirectory } from './lib/ast-parser.js';
 
 const rootDir = process.cwd();
 const oldSrcDir = path.join(rootDir, 'old-src');
 const ngxAdminDir = path.join(oldSrcDir, 'ngx-admin-master', 'src', 'app');
 const targetBlueprintFile = path.join(rootDir, 'docs', 'LEGACY_BLUEPRINT.md');
 const srcDir = path.join(rootDir, 'src');
+
 
 function scanDir(dir, fileList = []) {
   if (!fs.existsSync(dir)) return fileList;

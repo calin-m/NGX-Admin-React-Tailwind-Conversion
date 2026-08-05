@@ -7,6 +7,16 @@
 ## [1.0.0] — 2026-08-05
 
 ### 🚀 New Features
+- **feat(docs-sync): implement AST interactivity tracking & documentation synchronization** (`6d38440`) *by Calin on 2026-08-05*
+  - Modified scripts/generate-legacy-docs.js (added checkInteractivity helper & Interactivity Ledger)
+  - Modified scripts/generate-architecture-matrix.js (added AST interactivity status rendering)
+  - Modified docs/LEGACY_BLUEPRINT.md & ARCHITECTURE.md (updated matrices & ledger)
+  - Modified DEVELOPMENT.md (updated Pass 0 description for AST Interactivity Parity)
+  - Modified src/components/sections/SmartTable.jsx (inline editing, add record modal, orders state fix)
+  - Modified src/components/sections/TreeGrid.jsx (3-level folder nesting, Expand/Collapse All triggers)
+  - Modified src/components/sections/Login.jsx (password visibility toggle, remember me checkbox, success alert)
+  - Modified src/components/sections/LeafletMaps.test.jsx & Tabs.test.jsx (aligned Vitest text matchers)
+  - Modified vitest.config.js (added json reporter & outputFile configuration)
 - **feat(tables-auth): complete Phase 5 conversion & Vitest test suite alignment** (`efb73a3`) *by Calin on 2026-08-05*
   - Modified src/components/sections/SmartTable.jsx (inline editing, add record modal, orders state fix)
   - Modified src/components/sections/TreeGrid.jsx (3-level folder nesting, Expand/Collapse All triggers)
@@ -163,4 +173,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-05T08:53:16.181Z*
+*Last Auto-Generated: 2026-08-05T09:03:23.179Z*
