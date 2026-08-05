@@ -58,7 +58,31 @@ Every single page and underlying component across all **17 sidebar menu tabs** h
 
 ---
 
-## 🛠️ Framework Concept Translation Standard
+## 🛠️ Framework Concept Translation Standard & Stack Specifications
+
+### 🔴 FROM (Legacy Source Stack in `old-src/ngx-admin-master`)
+- **Core Framework**: **Angular 15.2** (`@angular/core` `^15.2.10`, `@angular/router`, `zone.js` `~0.11.4`)
+- **Language**: **TypeScript 4.9** (`typescript` `~4.9.5`)
+- **UI & Theme Engine**: **Nebular 11** (`@nebular/theme`, `@nebular/auth`, `@nebular/security`) + **Bootstrap 4** (`bootstrap` `4.3.1`)
+- **Styling**: **SASS/SCSS** (`node-sass` `^4.14.1`, Nebular `.scss` theme maps)
+- **State Management & Async Data**: **RxJS 6.6** (`rxjs` `6.6.2`, `@Injectable()` services)
+- **Icon Sets**: **Eva Icons**, Nebular Icons, Ionicons, FontAwesome
+- **Data Visualization & Charts**: **ECharts 4** (`ngx-echarts`), **Chart.js 2** (`angular2-chartjs`), **`@swimlane/ngx-charts`**
+- **Tables & Forms**: **`ng2-smart-table`** (`1.6.0`), `@angular/forms` (Reactive/Template forms), `ng2-ckeditor`
+- **Maps**: **Leaflet 1.2** (`@asymmetrik/ngx-leaflet`), `@angular/google-maps`
+- **Testing & Tooling**: Karma + Jasmine (`karma` `~6.3.19`), Protractor, Compodoc, TSLint/ESLint
+
+### 🟢 TO (Modern Target Stack in `src/`)
+- **Core Framework**: **React 18** (`react` `^18.3.1`, `react-dom` `^18.3.1`)
+- **Build Tooling & Server**: **Vite 6** (`vite` `^6.0.11`, `@vitejs/plugin-react`)
+- **Styling & Design System**: **Tailwind CSS v4** (`tailwindcss` `^4.0.0`, `@tailwindcss/vite`) + Native CSS Custom Properties (`[data-accent]` 0ms repaints)
+- **Language / Syntax**: **JavaScript (ESNext)** with standard controlled state / custom React Hooks
+- **Icon Set**: **Lucide React** (`lucide-react` `^0.460.0`)
+- **Component Workshop**: **Storybook 8** (`storybook` `^8.6.0`, CSF 3 format)
+- **Testing Suite**: **Vitest 3** (`vitest` `^3.0.5`, `@testing-library/react`, `jsdom`)
+- **Verification & Automation Engine**: AST File-Tree parsing via `@babel/parser` + custom Node.js 7-Gateway scripts in `scripts/`
+
+### 🔄 Summary of Conceptual Mapping
 
 | Legacy Angular 15 Pattern (`old-src/`) | Modern React 18 Equivalent (`src/`) | Verification & Catalog |
 | :--- | :--- | :--- |
@@ -67,6 +91,10 @@ Every single page and underlying component across all **17 sidebar menu tabs** h
 | **Nebular / Bootstrap SASS Styles (`.scss`)** | Tailwind CSS v4 Utility Classes & Design Tokens | `src/index.css` |
 | **Reactive Forms (`FormGroup`, `Validators`)** | React Hook Form / Standard Controlled State | Vitest Test Suite |
 | **Angular Input / Output (`@Input()`, `@Output()`)** | React Props (`props`, `onAction`) | Storybook Controls |
+| **Build Tooling (Angular CLI + Webpack)** | Vite 6 (`vite`) | `vite.config.js` |
+| **Iconography (Eva Icons / Nebular Icons)** | Lucide React (`lucide-react`) | `src/components/` |
+| **Testing Suite (Karma + Jasmine)** | Vitest 3 (`vitest`) | `vitest.config.js` |
+| **Quality Verification Engine** | AST 7-Gateway Verification Engine (`scripts/verify-build.js`) | `npm run verify` |
 
 ---
 

@@ -7,6 +7,14 @@
 ## [1.0.0] — 2026-08-05
 
 ### 🚀 New Features
+- **feat(theme): implement 100% theme accent parity engine and serialized json quality audit system** (`7238d56`) *by Calin on 2026-08-05*
+  - Modified src/index.css & App.jsx (bound data-accent attribute to CSS custom variables).
+  - Refactored 25 presentation components across Corporate Dashboard, IoT Smart Home, Chat, Calendar, Stepper, Accordion, Maps, Forms, TreeGrid, Grid, Typography, Auth, and Settings tabs.
+  - Created scripts/generate-quality-report.js, audit-theme-accents.js, audit-all-menu-pages.js, and audit-layout-density.js.
+  - Modified verify-build.js (Pass 0 quality report auto-gen & Pass 7.8 Bundle Size budget audit).
+  - Modified generate-architecture-matrix.js (adds C4 Level 3 Hook dependency graph to ARCHITECTURE.md).
+  - Created .husky/pre-commit hook for automated report generation & document staging.
+  - Updated package.json, README.md, DEVELOPMENT.md, PIPELINE_GUIDE.md, and .agents/AGENTS.md.
 - **feat(theme): implement 100% dynamic brand color accent engine across all 17 menu tabs** (`8c1b00a`) *by Calin on 2026-08-05*
   - Modified src/index.css (defined [data-accent] CSS custom variables for indigo, emerald, purple, teal and declared global utility classes).
   - Modified src/App.jsx (bound accentColor state directly to document.documentElement data-accent attribute).
@@ -179,6 +187,10 @@
   - Synchronized ARCHITECTURE.md, docs/LEGACY_BLUEPRINT.md, docs/DECISIONS.md, and .agents/AGENTS.md
 
 ### 🐛 Bug Fixes
+- **fix(test): align Maps.test.jsx matcher title and optimize Vitest UI timing pool config** (`f4e81bd`) *by Calin on 2026-08-05*
+  - Modified src/components/sections/Maps.test.jsx (updated text matcher to /Interactive Maps Showcase/i).
+  - Modified vite.config.js (configured pool: forks, maxForks: 4, and sequence.concurrent: false).
+  - Updated walkthrough.md documentation.
 - **fix(test): align Stepper.test.jsx step 2 text assertion to Personal Info matcher** (`51f4f64`) *by Calin on 2026-08-04*
   - Updated src/components/sections/Stepper.test.jsx (matched Personal Info on step 2 transition)
   - Updated test-results.json (100% pass rate recorded)
@@ -192,6 +204,9 @@
   - Modified walkthrough.md (documented import resolution fix)
 
 ### 🧹 Maintenance & Refactors
+- **chore(husky): modernize pre-commit hook with clean husky v9 syntax and full terminal streaming** (`37808bb`) *by Calin on 2026-08-05*
+  - Modified .husky/pre-commit (removed deprecated sh headers and configured live terminal streaming execution of node scripts/verify-build.js).
+  - Conducted full manual documentation audit across README.md, DEVELOPMENT.md, PIPELINE_GUIDE.md, and .agents/AGENTS.md.
 - **refactor(scripts): create unified dual-stack AST parser engine & synchronize pipeline** (`f2e6ffd`) *by Calin on 2026-08-05*
   - Created scripts/lib/ast-parser.js (shared Angular & React AST parser module)
   - Refactored scripts/generate-legacy-docs.js (imported shared AST parser)
@@ -210,4 +225,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-05T11:42:18.791Z*
+*Last Auto-Generated: 2026-08-05T12:11:31.277Z*
