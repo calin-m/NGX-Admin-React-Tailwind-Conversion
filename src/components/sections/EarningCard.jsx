@@ -9,10 +9,9 @@ export default function EarningCard() {
   const dailyRate = data?.dailyRate || '$2,450 / day';
   const growth = data?.growth || '+18.2%';
   const portfolio = data?.portfolio || [
-    { name: 'Bitcoin', value: 50, color: 'bg-amber-500', hex: '#f59e0b', strokeDash: '50, 100', strokeOffset: '0' },
-    { name: 'Tether', value: 25, color: 'bg-accent', hex: '#6366f1', strokeDash: '25, 100', strokeOffset: '-50' },
-
-    { name: 'Ethereum', value: 25, color: 'bg-emerald-500', hex: '#10b981', strokeDash: '25, 100', strokeOffset: '-75' },
+    { name: 'Bitcoin', value: 45, color: 'bg-amber-500', hex: '#f59e0b', strokeDash: '45 100', strokeOffset: '0' },
+    { name: 'Tether', value: 30, color: 'bg-accent', hex: 'var(--accent-text)', strokeDash: '30 100', strokeOffset: '-45' },
+    { name: 'Ethereum', value: 25, color: 'bg-emerald-500', hex: '#10b981', strokeDash: '25 100', strokeOffset: '-75' },
   ];
 
   return (
@@ -65,7 +64,7 @@ export default function EarningCard() {
                 strokeDashoffset={item.strokeOffset}
                 strokeLinecap="round"
                 fill="none"
-                className="transition-all duration-300 cursor-pointer"
+                className="transition-all duration-300 cursor-pointer hover:opacity-90"
                 onClick={() => setSelectedSegment(item.name)}
               />
             ))}

@@ -59,11 +59,11 @@ export default function ChartsPanel() {
             onClick={() => setActiveTab('profit')}
             className={`text-base font-bold transition-all border-b-2 pb-1 flex items-center space-x-2 ${
               activeTab === 'profit'
-                ? 'border-emerald-500 text-emerald-600 dark:text-emerald-400 font-extrabold'
+                ? 'border-accent text-accent font-extrabold'
                 : 'border-transparent text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'
             }`}
           >
-            <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" />
+            <span className="w-2 h-2 rounded-full bg-accent inline-block" />
             <span>Profit Chart</span>
           </button>
         </div>
@@ -102,27 +102,6 @@ export default function ChartsPanel() {
           ))}
         </div>
 
-        {/* SVG Bezier Area Curve Layer */}
-        <div className="absolute inset-0 pl-10 pb-5 pt-1">
-          <svg className="w-full h-full overflow-visible" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <defs>
-              <linearGradient id="chartAreaGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor={activeTab === 'orders' ? '#3b82f6' : '#10b981'} stopOpacity="0.3" />
-                <stop offset="100%" stopColor={activeTab === 'orders' ? '#3b82f6' : '#10b981'} stopOpacity="0.0" />
-              </linearGradient>
-            </defs>
-            <path d={areaD} fill="url(#chartAreaGrad)" className="transition-all duration-500" />
-            <path
-              d={pathD}
-              fill="none"
-              stroke={activeTab === 'orders' ? '#3b82f6' : '#10b981'}
-              strokeWidth="3"
-              strokeLinecap="round"
-              className="transition-all duration-500 drop-shadow-xs"
-            />
-          </svg>
-        </div>
-
         {/* Column Interactive Overlay Bars */}
         <div className="relative z-10 pl-10 h-full flex items-end justify-between gap-2 pb-5">
           {activeData.map((item, idx) => {
@@ -134,16 +113,17 @@ export default function ChartsPanel() {
                 onMouseLeave={() => setHoverIndex(null)}
                 className="flex-1 flex flex-col items-center h-full justify-end group relative cursor-pointer"
               >
-                {/* Tooltip Card */}
+                {/* 0ms Instant Zero-Delay Tooltip Card */}
                 {isHovered && (
-                  <div className="absolute bottom-full mb-2 z-30 pointer-events-none flex flex-col items-center animate-in fade-in duration-150">
-                    <div className="backdrop-blur-md bg-slate-900/90 text-white text-[11px] p-2 rounded-lg shadow-xl space-y-0.5 border border-slate-700 whitespace-nowrap">
-                      <p className="font-bold text-slate-400">{item.label}</p>
-                      <p className="font-extrabold text-xs text-white">
-                        {activeTab === 'orders' ? `${item.orders.toLocaleString()} Orders` : `$${item.profit.toLocaleString()} Profit`}
+                  <div className="absolute bottom-full mb-2 z-30 pointer-events-none flex flex-col items-center transition-none">
+                    <div className="backdrop-blur-md bg-slate-900/95 text-white text-[11px] px-2.5 py-1.5 rounded-xl shadow-2xl space-y-0.5 border border-slate-700 whitespace-nowrap">
+                      <p className="font-bold text-slate-400 text-[10px] uppercase tracking-wider">{item.label}</p>
+                      <p className="font-extrabold text-xs text-accent flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-accent" />
+                        <span>{activeTab === 'orders' ? `${item.orders.toLocaleString()} Orders` : `$${item.profit.toLocaleString()} Profit`}</span>
                       </p>
                     </div>
-                    <div className="w-1.5 h-1.5 bg-slate-900 transform rotate-45 -mt-1 border-r border-b border-slate-700" />
+                    <div className="w-2 h-2 bg-slate-900/95 transform rotate-45 -mt-1 border-r border-b border-slate-700" />
                   </div>
                 )}
 
@@ -152,13 +132,9 @@ export default function ChartsPanel() {
                   <div className="w-full max-w-[28px] h-full bg-slate-100/50 dark:bg-slate-700/30 rounded-t-lg absolute inset-0 mx-auto" />
                   <div
                     style={{ height: `${(item.val / maxVal) * 98}%` }}
-                    className={`w-full max-w-[28px] rounded-t-lg transition-all duration-500 relative z-10 ${
-                      isHovered ? 'scale-105 shadow-md' : ''
-                    } ${
-                      activeTab === 'orders'
-                        ? 'bg-gradient-to-t from-accent/90 to-blue-400'
-                        : 'bg-gradient-to-t from-emerald-600 to-emerald-400'
-                    }`}
+                    className={`w-full max-w-[28px] rounded-t-lg transition-all duration-300 relative z-10 ${
+                      isHovered ? 'scale-105 shadow-md brightness-110' : ''
+                    } bg-accent`}
                   />
                 </div>
               </div>

@@ -51,10 +51,15 @@ export default function StatsCardFront({ data, period, setPeriod, onFlip }) {
           <button
             type="button"
             onClick={onFlip}
-            className="p-2 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-colors"
+            className="p-2 rounded-xl text-slate-400 hover:text-accent hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-colors group"
             title="Flip to breakdown"
           >
-            🔄
+            <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M17 2.1l4 4-4 4" />
+              <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+              <path d="M7 21.9l-4-4 4-4" />
+              <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+            </svg>
           </button>
         </div>
       </div>
@@ -82,27 +87,30 @@ export default function StatsCardFront({ data, period, setPeriod, onFlip }) {
               onMouseLeave={() => setHoverIndex(null)}
               className="flex-1 flex flex-col items-center gap-1 group h-full justify-end relative cursor-pointer"
             >
-              {/* Tooltip Card */}
+              {/* 0ms Instant Tooltip Card */}
               {isHovered && (
-                <div className="absolute bottom-full mb-2 z-30 pointer-events-none flex flex-col items-center animate-in fade-in duration-150">
-                  <div className="backdrop-blur-md bg-slate-900/90 text-white text-[10px] p-2 rounded-lg shadow-xl space-y-0.5 border border-slate-700 whitespace-nowrap">
-                    <p className="font-bold text-slate-400">{item.label}</p>
-                    <p className="font-extrabold text-emerald-400">Profit pts: {item.profit}</p>
+                <div className="absolute bottom-full mb-2 z-30 pointer-events-none flex flex-col items-center transition-none">
+                  <div className="backdrop-blur-md bg-slate-900/95 text-white text-[10px] px-2.5 py-1.5 rounded-xl shadow-2xl space-y-0.5 border border-slate-700 whitespace-nowrap">
+                    <p className="font-bold text-slate-400 text-[9px] uppercase tracking-wider">{item.label}</p>
+                    <p className="font-extrabold text-accent flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-accent inline-block" />
+                      <span>Profit pts: {item.profit}</span>
+                    </p>
                   </div>
-                  <div className="w-1.5 h-1.5 bg-slate-900 transform rotate-45 -mt-1 border-r border-b border-slate-700" />
+                  <div className="w-2 h-2 bg-slate-900/95 transform rotate-45 -mt-1 border-r border-b border-slate-700" />
                 </div>
               )}
 
-              <div className="w-full flex justify-center items-end gap-1 h-32 relative">
+              <div className="w-full flex justify-center items-end gap-1.5 h-32 relative">
                 <div
                   style={{ height: `${(item.orders / maxVal) * 98}%` }}
-                  className="w-2.5 bg-slate-300 dark:bg-slate-600 rounded-t-sm group-hover:bg-slate-400 dark:group-hover:bg-slate-500 transition-all duration-300"
+                  className="w-2.5 bg-slate-300 dark:bg-slate-600 rounded-t-md group-hover:bg-slate-400 dark:group-hover:bg-slate-500 transition-all duration-300"
                 />
                 <div
                   style={{ height: `${(item.profit / maxVal) * 98}%` }}
-                  className={`w-4 sm:w-5 rounded-t-md transition-all duration-300 shadow-xs ${
-                    isHovered ? 'scale-105 shadow-emerald-500/30' : ''
-                  } bg-gradient-to-t from-emerald-600 to-emerald-400`}
+                  className={`w-4 sm:w-5 rounded-t-lg transition-all duration-300 shadow-xs ${
+                    isHovered ? 'scale-105 shadow-md brightness-110' : ''
+                  } bg-accent`}
                 />
               </div>
               <span className="text-[10px] text-slate-400 dark:text-slate-500 font-medium truncate max-w-[40px] text-center">{item.label}</span>

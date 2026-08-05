@@ -49,7 +49,7 @@ export default function SmartTable() {
       case 'Completed':
         return 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20';
       case 'Processing':
-        return 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20';
+        return 'bg-accent-light text-accent border-accent/20';
       case 'Pending':
         return 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20';
       case 'Refunded':
@@ -75,14 +75,14 @@ export default function SmartTable() {
               placeholder="Search orders, customers..."
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
-              className="w-56 pl-9 pr-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
+              className="w-56 pl-9 pr-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent transition-all"
             />
             <span className="absolute left-3 top-2.5 text-xs text-slate-400">🔍</span>
           </div>
 
           <button
             onClick={() => setShowAddModal(true)}
-            className="px-3.5 py-2 text-xs font-semibold bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl shadow-sm transition-all flex items-center space-x-1"
+            className="px-3.5 py-2 text-xs font-semibold bg-accent hover:bg-accent-hover text-white rounded-xl shadow-sm transition-all flex items-center space-x-1"
           >
             <span>➕ Add Record</span>
           </button>
@@ -137,7 +137,7 @@ export default function SmartTable() {
             {orders.length > 0 ? (
               orders.map(order => (
                 <tr key={order.id} className="hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
-                  <td className="py-3.5 px-4 font-bold text-indigo-600 dark:text-indigo-400">{order.id}</td>
+                  <td className="py-3.5 px-4 font-bold text-accent">{order.id}</td>
 
                   <td className="py-3.5 px-4">
                     {editingId === order.id ? (
@@ -189,7 +189,7 @@ export default function SmartTable() {
                     ) : (
                       <button
                         onClick={() => handleStartEdit(order)}
-                        className="text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold px-2 py-1 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
+                        className="text-slate-500 hover:text-accent font-semibold px-2 py-1 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
                       >
                         ✏️ Edit
                       </button>
@@ -238,7 +238,7 @@ export default function SmartTable() {
             </div>
             <div className="flex justify-end space-x-2 pt-2">
               <button onClick={() => setShowAddModal(false)} className="px-3 py-1.5 bg-slate-100 dark:bg-slate-700 text-xs font-semibold rounded-lg">Cancel</button>
-              <button onClick={() => setShowAddModal(false)} className="px-3 py-1.5 bg-indigo-600 text-white text-xs font-semibold rounded-lg">Save Record</button>
+              <button onClick={() => setShowAddModal(false)} className="px-3 py-1.5 bg-accent hover:bg-accent-hover text-white text-xs font-semibold rounded-lg">Save Record</button>
             </div>
           </div>
         </div>

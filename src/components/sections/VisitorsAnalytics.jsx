@@ -79,51 +79,61 @@ export default function VisitorsAnalytics() {
         </div>
       </div>
 
-      {/* Dual-Series Multi-Data Chart Section */}
-      <div className="h-64 w-full flex items-end justify-between gap-3 pt-2 border-t border-slate-100 dark:border-slate-700/60 relative">
-        {chartPoints.map((pt, idx) => {
-          const isHovered = hoverIndex === idx;
-          return (
-            <div
-              key={idx}
-              onMouseEnter={() => setHoverIndex(idx)}
-              onMouseLeave={() => setHoverIndex(null)}
-              className="flex-1 flex flex-col items-center gap-1 group h-full justify-end relative cursor-pointer"
-            >
-              {/* Floating Tooltip Card */}
-              {isHovered && (
-                <div className="absolute bottom-full mb-2 z-30 pointer-events-none flex flex-col items-center animate-in fade-in duration-150">
-                  <div className="backdrop-blur-md bg-slate-900/90 text-white text-[10px] p-2.5 rounded-lg shadow-xl space-y-0.5 border border-slate-700 whitespace-nowrap">
-                    <p className="font-bold text-slate-400">{pt.label}</p>
-                    <p className="font-extrabold text-accent">Page Views: {pt.pageViews.toLocaleString()}</p>
-                    <p className="text-[10px] text-emerald-400 font-semibold">Unique Visitors: {pt.uniqueVisitors.toLocaleString()}</p>
+      {/* Dual-Series Multi-Data Chart Section (Pure Profit Analytics Pill Bars) */}
+      <div className="relative h-64 w-full flex-1 flex flex-col justify-between pt-2 border-t border-slate-100 dark:border-slate-700/60">
+        {/* Dual Pillar Track Overlay */}
+        <div className="relative z-10 h-full flex items-end justify-between gap-2 pb-6">
+          {chartPoints.map((pt, idx) => {
+            const isHovered = hoverIndex === idx;
+            return (
+              <div
+                key={idx}
+                onMouseEnter={() => setHoverIndex(idx)}
+                onMouseLeave={() => setHoverIndex(null)}
+                className="flex-1 flex flex-col items-center gap-1 group h-full justify-end relative cursor-pointer"
+              >
+                {/* 0ms Instant Zero-Delay Tooltip */}
+                {isHovered && (
+                  <div className="absolute bottom-full mb-2 z-30 pointer-events-none flex flex-col items-center transition-none">
+                    <div className="backdrop-blur-md bg-slate-900/95 text-white text-[10px] px-2.5 py-1.5 rounded-xl shadow-2xl space-y-1 border border-slate-700 whitespace-nowrap">
+                      <p className="font-bold text-slate-400 uppercase tracking-wider text-[9px]">{pt.label}</p>
+                      <p className="font-extrabold text-accent flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-accent inline-block" />
+                        <span>Page Views: {pt.pageViews.toLocaleString()}</span>
+                      </p>
+                      <p className="font-semibold text-emerald-400 flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" />
+                        <span>Unique Visitors: {pt.uniqueVisitors.toLocaleString()}</span>
+                      </p>
+                    </div>
+                    <div className="w-2 h-2 bg-slate-900/95 transform rotate-45 -mt-1 border-r border-b border-slate-700" />
                   </div>
-                  <div className="w-1.5 h-1.5 bg-slate-900 transform rotate-45 -mt-1 border-r border-b border-slate-700" />
+                )}
+
+                {/* Track Column & Side-by-Side Dual Pillars */}
+                <div className="w-full flex justify-center items-end gap-1.5 h-full relative">
+                  <div className="w-full max-w-[36px] h-full bg-slate-100/50 dark:bg-slate-700/30 rounded-t-lg absolute inset-0 mx-auto" />
+                  {/* Page Views Pillar */}
+                  <div
+                    style={{ height: `${(pt.pageViews / maxVal) * 98}%` }}
+                    className={`w-3 sm:w-4 rounded-t-lg transition-all duration-300 relative z-10 ${
+                      isHovered ? 'scale-105 shadow-md brightness-110' : ''
+                    } bg-accent`}
+                  />
+                  {/* Unique Visitors Pillar */}
+                  <div
+                    style={{ height: `${(pt.uniqueVisitors / maxVal) * 98}%` }}
+                    className={`w-3 sm:w-4 rounded-t-lg transition-all duration-300 relative z-10 ${
+                      isHovered ? 'scale-105 shadow-md brightness-110' : ''
+                    } bg-emerald-500`}
+                  />
                 </div>
-              )}
 
-              {/* Side-by-Side Dual Pillars */}
-              <div className="w-full flex justify-center items-end gap-1.5 h-56 relative">
-                {/* Page Views Pillar */}
-                <div
-                  style={{ height: `${(pt.pageViews / maxVal) * 98}%` }}
-                  className={`w-3.5 sm:w-5 rounded-t-md transition-all duration-300 shadow-xs ${
-                    isHovered ? 'scale-105 shadow-accent/30' : ''
-                  } bg-gradient-to-t from-accent/90 to-blue-400`}
-                />
-                {/* Unique Visitors Pillar */}
-                <div
-                  style={{ height: `${(pt.uniqueVisitors / maxVal) * 98}%` }}
-                  className={`w-3.5 sm:w-5 rounded-t-md transition-all duration-300 shadow-xs ${
-                    isHovered ? 'scale-105 shadow-emerald-500/30' : ''
-                  } bg-gradient-to-t from-emerald-600 to-emerald-400`}
-                />
+                <span className="text-[10px] sm:text-xs text-slate-400 dark:text-slate-500 font-bold truncate max-w-[40px] text-center">{pt.label}</span>
               </div>
-
-              <span className="text-[10px] sm:text-xs text-slate-400 dark:text-slate-500 font-bold truncate max-w-[40px] text-center">{pt.label}</span>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

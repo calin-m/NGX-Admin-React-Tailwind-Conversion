@@ -20,13 +20,13 @@ export default function StatusCard() {
           onClick={() => toggleDevice(device.id)}
           className={`p-5 rounded-2xl border transition-all duration-300 cursor-pointer flex flex-col justify-between h-36 ${
             device.on
-              ? 'bg-white dark:bg-slate-800 border-indigo-500/40 shadow-lg shadow-indigo-500/5'
+              ? 'bg-white dark:bg-slate-800 border-accent/40 shadow-lg shadow-accent/5'
               : 'bg-slate-50/80 dark:bg-slate-800/40 border-slate-200 dark:border-slate-700/60 opacity-70'
           }`}
         >
           <div className="flex items-center justify-between">
             <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl ${
-              device.on ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400' : 'bg-slate-200 dark:bg-slate-700 text-slate-400'
+              device.on ? 'bg-accent-light text-accent' : 'bg-slate-200 dark:bg-slate-700 text-slate-400'
             }`}>
               {device.icon}
             </div>

@@ -5,8 +5,13 @@ export default function TrafficBackCard({ onFlip }) {
     <div className="flex flex-col h-full justify-between space-y-4">
       <div className="flex items-center justify-between">
         <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Traffic Source List</h3>
-        <button onClick={onFlip} className="p-2 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700/50" title="Flip to chart">
-          🔄
+        <button onClick={onFlip} className="p-2 rounded-xl text-slate-400 hover:text-accent hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-colors group" title="Flip to chart">
+          <svg className="w-4 h-4 transition-transform duration-300 group-hover:-rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M17 2.1l4 4-4 4" />
+            <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+            <path d="M7 21.9l-4-4 4-4" />
+            <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+          </svg>
         </button>
       </div>
 

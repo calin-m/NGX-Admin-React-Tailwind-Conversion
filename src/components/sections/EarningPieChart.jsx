@@ -6,7 +6,7 @@ export default function EarningPieChart({ onSelectPie }) {
   const slices = [
     { name: 'Bitcoin', pct: '45%', color: 'text-amber-500 bg-amber-500/10' },
     { name: 'Tether', pct: '30%', color: 'text-emerald-500 bg-emerald-500/10' },
-    { name: 'Ethereum', pct: '25%', color: 'text-indigo-500 bg-indigo-500/10' }
+    { name: 'Ethereum', pct: '25%', color: 'text-accent bg-accent-light' }
   ];
 
   const handleSelect = name => {
@@ -23,7 +23,7 @@ export default function EarningPieChart({ onSelectPie }) {
             key={s.name}
             onClick={() => handleSelect(s.name)}
             className={`px-3 py-2 rounded-xl text-xs font-bold transition-all flex flex-col items-center ${s.color} ${
-              selectedSlice === s.name ? 'ring-2 ring-indigo-500 scale-105' : 'opacity-80 hover:opacity-100'
+              selectedSlice === s.name ? 'ring-2 ring-accent scale-105' : 'opacity-80 hover:opacity-100'
             }`}
           >
             <span>{s.name}</span>

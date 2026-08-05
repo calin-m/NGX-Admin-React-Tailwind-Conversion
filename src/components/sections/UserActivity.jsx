@@ -19,7 +19,7 @@ export default function UserActivity() {
   ];
 
   return (
-    <div className="w-full min-h-[320px] rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 flex flex-col justify-between space-y-4">
+    <div className="w-full h-full min-h-[460px] rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 flex flex-col justify-between space-y-4">
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div className="flex items-center space-x-3">
@@ -51,7 +51,7 @@ export default function UserActivity() {
       </div>
 
       {/* Stream Feed */}
-      <div className="space-y-3 py-2 flex-1 h-[312px] overflow-y-auto scrollbar-thin pr-1">
+      <div className="space-y-3 py-2 flex-1 h-[315px] max-h-[315px] overflow-y-auto scrollbar-thin pr-1">
         {activityStream.map((act, idx) => (
           <div key={idx} className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-colors">
             <div className="flex items-center space-x-3">

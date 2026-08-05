@@ -43,7 +43,7 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab, onToggle
           isCollapsed
             ? 'w-20 max-md:-translate-x-full max-md:w-0'
             : 'w-64 max-md:fixed max-md:top-0 max-md:bottom-0 max-md:left-0 max-md:h-full max-md:shadow-2xl'
-        } md:sticky md:top-16 md:h-[calc(100vh-4rem)]`}
+        } md:fixed md:top-16 md:left-0 md:bottom-0 md:h-[calc(100vh-4rem)]`}
       >
         <div className="p-3 space-y-6 flex-1 overflow-y-auto relative scrollbar-collapsed-hover">
           {/* Logo Section & Mobile Close Button */}

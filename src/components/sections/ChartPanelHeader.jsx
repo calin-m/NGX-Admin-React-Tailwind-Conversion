@@ -47,7 +47,7 @@ export default function ChartPanelHeader({ type = 'Orders', period = 'week', onT
             onClick={() => handlePeriodSelect(p)}
             className={`px-2.5 py-1 rounded-md font-semibold capitalize transition-colors ${
               selectedPeriod === p
-                ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20'
+                ? 'bg-accent-light text-accent border border-accent/20'
                 : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
             }`}
           >

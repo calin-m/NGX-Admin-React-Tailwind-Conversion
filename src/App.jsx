@@ -97,7 +97,7 @@ export default function App() {
           onToggleSidebar={toggleSidebar}
         />
 
-        <main className="flex-1 p-4 sm:p-6 max-w-[1600px] mx-auto w-full space-y-6 overflow-x-hidden">
+        <main className={`flex-1 p-4 sm:p-6 max-w-[1600px] mx-auto w-full space-y-6 overflow-x-hidden transition-all duration-300 ${isSidebarCollapsed ? 'md:pl-24' : 'md:pl-72'}`}>
           {activeTab === 'maps' ? (
             <Maps />
           ) : activeTab === 'ckeditor' ? (
@@ -164,7 +164,7 @@ export default function App() {
               <div className="flex justify-end">
                 <button
                   onClick={() => setIsOrderModalOpen(true)}
-                  className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold rounded-xl shadow-sm transition-all flex items-center space-x-2"
+                  className="px-4 py-2 bg-accent hover:bg-accent-hover text-white text-xs font-semibold rounded-xl shadow-sm transition-all flex items-center space-x-2"
                 >
                   <span>➕ Create New Order</span>
                 </button>

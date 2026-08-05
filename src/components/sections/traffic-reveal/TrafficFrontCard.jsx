@@ -3,7 +3,7 @@ import React from 'react';
 export default function TrafficFrontCard({ data, period, setPeriod, onFlip }) {
   const totalSessions = data?.totalSessions || '142,850';
   const trafficCategories = data?.categories || [
-    { name: 'Direct Traffic', percentage: 42, color: 'bg-indigo-500' },
+    { name: 'Direct Traffic', percentage: 42, color: 'bg-accent' },
     { name: 'Search Engines', percentage: 35, color: 'bg-emerald-500' },
     { name: 'Social Networks', percentage: 15, color: 'bg-amber-500' },
     { name: 'Referrals', percentage: 8, color: 'bg-rose-500' }
@@ -13,7 +13,7 @@ export default function TrafficFrontCard({ data, period, setPeriod, onFlip }) {
     <div className="flex flex-col h-full justify-between space-y-4">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-lg">
+          <div className="w-10 h-10 rounded-xl bg-accent-light text-accent flex items-center justify-center font-bold text-lg">
             🚥
           </div>
           <div>
@@ -29,7 +29,7 @@ export default function TrafficFrontCard({ data, period, setPeriod, onFlip }) {
                 onClick={() => setPeriod && setPeriod(p)}
                 className={`px-2.5 py-1 rounded-md transition-all capitalize ${
                   period === p
-                    ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm font-semibold'
+                    ? 'bg-white dark:bg-slate-800 text-accent shadow-sm font-semibold'
                     : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
                 }`}
               >
@@ -37,8 +37,13 @@ export default function TrafficFrontCard({ data, period, setPeriod, onFlip }) {
               </button>
             ))}
           </div>
-          <button onClick={onFlip} className="p-2 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700/50" title="Flip to detail list">
-            🔄
+          <button onClick={onFlip} className="p-2 rounded-xl text-slate-400 hover:text-accent hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-colors group" title="Flip to detail list">
+            <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M17 2.1l4 4-4 4" />
+              <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+              <path d="M7 21.9l-4-4 4-4" />
+              <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+            </svg>
           </button>
         </div>
       </div>

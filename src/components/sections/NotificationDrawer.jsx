@@ -11,21 +11,21 @@ export default function NotificationDrawer({ isOpen, onClose }) {
   ];
 
   return (
-    <div className="absolute right-0 top-14 z-40 w-80 bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 rounded-2xl shadow-2xl p-4 space-y-4 animate-in fade-in slide-in-from-top-2 duration-200">
+    <div className="fixed top-16 right-3 left-3 sm:absolute sm:right-0 sm:left-auto sm:top-14 sm:w-80 z-40 bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 rounded-2xl shadow-2xl p-4 space-y-4 animate-in fade-in slide-in-from-top-2 duration-200">
       <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
         <div className="flex items-center space-x-2">
           <h3 className="font-bold text-slate-900 dark:text-slate-100 text-sm">Notifications</h3>
-          <span className="text-[10px] font-bold bg-indigo-600 text-white px-2 py-0.5 rounded-full">2 New</span>
+          <span className="text-[10px] font-bold bg-accent text-white px-2 py-0.5 rounded-full">2 New</span>
         </div>
         <button onClick={onClose} className="text-slate-400 hover:text-slate-600 text-xs font-semibold">Mark read</button>
       </div>
 
-      <div className="space-y-2.5 max-h-80 overflow-y-auto pr-1">
+      <div className="space-y-2.5 max-h-[70vh] sm:max-h-80 overflow-y-auto pr-1">
         {notifications.map(notif => (
           <div
             key={notif.id}
             className={`p-3 rounded-xl transition-all flex items-start space-x-3 ${
-              notif.unread ? 'bg-indigo-50/60 dark:bg-indigo-900/20 border border-indigo-500/20' : 'bg-slate-50 dark:bg-slate-700/30'
+              notif.unread ? 'bg-accent-light border border-accent/20' : 'bg-slate-50 dark:bg-slate-700/30'
             }`}
           >
             <span className="text-lg shrink-0">{notif.icon}</span>

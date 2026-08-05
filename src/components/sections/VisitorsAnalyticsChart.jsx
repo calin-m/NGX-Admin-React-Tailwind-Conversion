@@ -4,7 +4,7 @@ export default function VisitorsAnalyticsChart({ onChartClick }) {
   const [activeMetric, setActiveMetric] = useState('New Visitors');
 
   const metrics = [
-    { label: 'New Visitors', val: '43.8%', color: 'border-indigo-500 text-indigo-600 dark:text-indigo-400 bg-indigo-500/10' },
+    { label: 'New Visitors', val: '43.8%', color: 'border-accent text-accent bg-accent-light' },
     { label: 'Return Visitors', val: '56.2%', color: 'border-emerald-500 text-emerald-600 dark:text-emerald-400 bg-emerald-500/10' }
   ];
 
@@ -27,7 +27,7 @@ export default function VisitorsAnalyticsChart({ onChartClick }) {
             key={m.label}
             onClick={() => handleMetricSelect(m.label)}
             className={`p-2.5 rounded-xl border text-xs font-bold transition-all flex flex-col items-center justify-center ${m.color} ${
-              activeMetric === m.label ? 'ring-2 ring-indigo-500/40 shadow-xs' : 'opacity-70 hover:opacity-100'
+              activeMetric === m.label ? 'ring-2 ring-accent shadow-xs' : 'opacity-70 hover:opacity-100'
             }`}
           >
             <span>{m.label}</span>
