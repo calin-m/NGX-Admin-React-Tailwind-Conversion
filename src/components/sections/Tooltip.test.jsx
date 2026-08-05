@@ -7,6 +7,7 @@ describe('Tooltip Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<Tooltip />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Tooltip Component/i)).toBeInTheDocument();
+    expect(screen.getByText(/Tooltip Showcase/i)).toBeInTheDocument();
   });
 });
+

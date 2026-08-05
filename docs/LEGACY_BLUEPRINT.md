@@ -44,7 +44,7 @@ Below is the complete component inventory matrix automatically parsed from `old-
 | `old-src/ngx-admin-master/src/app/@theme/components/footer/footer.component.ts` | `<ngx-footer>` | **LAYOUT-THEME** | 🎯 Corporate In-Scope | None | `src/components/sections/Footer.jsx` | 🟡 Static Showcase |
 | `old-src/ngx-admin-master/src/app/@theme/components/header/header.component.ts` | `<ngx-header>` | **LAYOUT-THEME** | 🎯 Corporate In-Scope | `NbSidebarService`, `NbMenuService`, `NbThemeService`, `UserData`, `LayoutService`, `NbMediaBreakpointsService` | `src/components/sections/Header.jsx` | 🟢 Interactive Demo |
 | `old-src/ngx-admin-master/src/app/@theme/components/search-input/search-input.component.ts` | `<ngx-search-input>` | **LAYOUT-THEME** | 🎯 Corporate In-Scope | None | `src/components/sections/SearchInput.jsx` | 🟢 Interactive Demo |
-| `old-src/ngx-admin-master/src/app/@theme/components/tiny-mce/tiny-mce.component.ts` | `<ngx-tiny-mce>` | **LAYOUT-THEME** | 🎯 Corporate In-Scope | `ElementRef`, `LocationStrategy` | `src/components/sections/TinyMce.jsx` | 🟡 Static Showcase |
+| `old-src/ngx-admin-master/src/app/@theme/components/tiny-mce/tiny-mce.component.ts` | `<ngx-tiny-mce>` | **LAYOUT-THEME** | 🎯 Corporate In-Scope | `ElementRef`, `LocationStrategy` | `src/components/sections/TinyMce.jsx` | 🟢 Interactive Demo |
 | `old-src/ngx-admin-master/src/app/app.component.ts` | `<ngx-app>` | **GENERAL** | 📦 Secondary Demo | `AnalyticsService`, `SeoService` | `src/components/sections/App.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/charts/chartjs/chartjs-bar-horizontal.component.ts` | `<ngx-chartjs-bar-horizontal>` | **CHARTS** | 📦 Secondary Demo | `NbThemeService` | `src/components/sections/ChartjsBarHorizontal.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/charts/chartjs/chartjs-bar.component.ts` | `<ngx-chartjs-bar>` | **CHARTS** | 📦 Secondary Demo | `NbThemeService` | `src/components/sections/ChartjsBar.jsx` | 🔴 Pending |
@@ -87,8 +87,8 @@ Below is the complete component inventory matrix automatically parsed from `old-
 | `old-src/ngx-admin-master/src/app/pages/dashboard/weather/weather.component.ts` | `<ngx-weather>` | **DASHBOARD** | 📦 Secondary Demo | None | `src/components/sections/Weather.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/e-commerce/charts-panel/chart-panel-header/chart-panel-header.component.ts` | `<ngx-chart-panel-header>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `NbThemeService`, `NbMediaBreakpointsService` | `src/components/sections/ChartPanelHeader.jsx` | 🟡 Static Showcase |
 | `old-src/ngx-admin-master/src/app/pages/e-commerce/charts-panel/chart-panel-summary/chart-panel-summary.component.ts` | `<ngx-chart-panel-summary>` | **E-COMMERCE** | 🎯 Corporate In-Scope | None | `src/components/sections/ChartPanelSummary.jsx` | 🟡 Static Showcase |
-| `old-src/ngx-admin-master/src/app/pages/e-commerce/charts-panel/charts/orders-chart.component.ts` | `<ngx-orders-chart>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `NbThemeService`, `LayoutService` | `src/components/sections/OrdersChart.jsx` | 🟡 Static Showcase |
-| `old-src/ngx-admin-master/src/app/pages/e-commerce/charts-panel/charts/profit-chart.component.ts` | `<ngx-profit-chart>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `NbThemeService`, `LayoutService` | `src/components/sections/ProfitChart.jsx` | 🟡 Static Showcase |
+| `old-src/ngx-admin-master/src/app/pages/e-commerce/charts-panel/charts/orders-chart.component.ts` | `<ngx-orders-chart>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `NbThemeService`, `LayoutService` | `src/components/sections/OrdersChart.jsx` | 🟢 Interactive Demo |
+| `old-src/ngx-admin-master/src/app/pages/e-commerce/charts-panel/charts/profit-chart.component.ts` | `<ngx-profit-chart>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `NbThemeService`, `LayoutService` | `src/components/sections/ProfitChart.jsx` | 🟢 Interactive Demo |
 | `old-src/ngx-admin-master/src/app/pages/e-commerce/charts-panel/charts-panel.component.ts` | `<ngx-ecommerce-charts>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `OrdersProfitChartData` | `src/components/sections/ChartsPanel.jsx` | 🟢 Interactive Demo |
 | `old-src/ngx-admin-master/src/app/pages/e-commerce/country-orders/chart/country-orders-chart.component.ts` | `<ngx-country-orders-chart>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `NbThemeService`, `LayoutService` | `src/components/sections/CountryOrdersChart.jsx` | 🟡 Static Showcase |
 | `old-src/ngx-admin-master/src/app/pages/e-commerce/country-orders/country-orders.component.ts` | `<ngx-country-orders>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `NbThemeService`, `NbMediaBreakpointsService`, `CountryOrderData` | `src/components/sections/CountryOrders.jsx` | 🟢 Interactive Demo |
@@ -119,7 +119,7 @@ Below is the complete component inventory matrix automatically parsed from `old-
 | `old-src/ngx-admin-master/src/app/pages/e-commerce/visitors-analytics/visitors-statistics/visitors-statistics.component.ts` | `<ngx-visitors-statistics>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `NbThemeService`, `LayoutService` | `src/components/sections/VisitorsStatistics.jsx` | 🟡 Static Showcase |
 | `old-src/ngx-admin-master/src/app/pages/editors/ckeditor/ckeditor.component.ts` | `<ngx-ckeditor>` | **EDITORS** | 📦 Secondary Demo | None | `src/components/sections/Ckeditor.jsx` | 🟢 Interactive Demo |
 | `old-src/ngx-admin-master/src/app/pages/editors/editors.component.ts` | `<ngx-editors>` | **EDITORS** | 📦 Secondary Demo | None | `src/components/sections/Editors.jsx` | 🔴 Pending |
-| `old-src/ngx-admin-master/src/app/pages/editors/tiny-mce/tiny-mce.component.ts` | `<ngx-tiny-mce-page>` | **EDITORS** | 📦 Secondary Demo | None | `src/components/sections/TinyMce.jsx` | 🟡 Static Showcase |
+| `old-src/ngx-admin-master/src/app/pages/editors/tiny-mce/tiny-mce.component.ts` | `<ngx-tiny-mce-page>` | **EDITORS** | 📦 Secondary Demo | None | `src/components/sections/TinyMce.jsx` | 🟢 Interactive Demo |
 | `old-src/ngx-admin-master/src/app/pages/extra-components/alert/alert.component.ts` | `<ngx-alert>` | **EXTRA-COMPONENTS** | 📦 Secondary Demo | None | `src/components/sections/Alert.jsx` | 🟡 Static Showcase |
 | `old-src/ngx-admin-master/src/app/pages/extra-components/calendar/calendar.component.ts` | `<ngx-calendar>` | **EXTRA-COMPONENTS** | 📦 Secondary Demo | `NbDateServiceDate` | `src/components/sections/Calendar.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/extra-components/calendar/day-cell/day-cell.component.ts` | `<ngx-day-cell>` | **EXTRA-COMPONENTS** | 📦 Secondary Demo | None | `src/components/sections/DayCell.jsx` | 🔴 Pending |
@@ -165,7 +165,7 @@ Below is the complete component inventory matrix automatically parsed from `old-
 | `old-src/ngx-admin-master/src/app/pages/modal-overlays/popovers/popover-examples.component.ts` | `<ngx-popover-tabs>` | **MODAL-OVERLAYS** | 📦 Secondary Demo | None | `src/components/sections/PopoverExamples.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/modal-overlays/popovers/popovers.component.ts` | `<ngx-popovers>` | **MODAL-OVERLAYS** | 📦 Secondary Demo | None | `src/components/sections/Popovers.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/modal-overlays/toastr/toastr.component.ts` | `<ngx-toastr>` | **MODAL-OVERLAYS** | 📦 Secondary Demo | `NbToastrService` | `src/components/sections/Toastr.jsx` | 🟢 Interactive Demo |
-| `old-src/ngx-admin-master/src/app/pages/modal-overlays/tooltip/tooltip.component.ts` | `<ngx-tooltip>` | **MODAL-OVERLAYS** | 📦 Secondary Demo | None | `src/components/sections/Tooltip.jsx` | 🟡 Static Showcase |
+| `old-src/ngx-admin-master/src/app/pages/modal-overlays/tooltip/tooltip.component.ts` | `<ngx-tooltip>` | **MODAL-OVERLAYS** | 📦 Secondary Demo | None | `src/components/sections/Tooltip.jsx` | 🟢 Interactive Demo |
 | `old-src/ngx-admin-master/src/app/pages/modal-overlays/window/window-form/window-form.component.ts` | `n/a` | **MODAL-OVERLAYS** | 📦 Secondary Demo | `NbWindowRef` | `src/components/sections/WindowForm.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/modal-overlays/window/window.component.ts` | `<ngx-window>` | **MODAL-OVERLAYS** | 📦 Secondary Demo | `NbWindowService` | `src/components/sections/Window.jsx` | 🟢 Interactive Demo |
 | `old-src/ngx-admin-master/src/app/pages/pages.component.ts` | `<ngx-pages>` | **PAGES.COMPONENT.TS** | 📦 Secondary Demo | None | `src/components/sections/Pages.jsx` | 🔴 Pending |
@@ -276,7 +276,7 @@ Below are the SASS stylesheets, Angular Pipes, Directives, and DTO Models linked
 - **Parsed Pipes & Directives**: 5
 - **Parsed Auxiliary Assets**: 25
 - **Total Converted React Components**: 60 / 136 (100% Repository Conversion)
-- **🟢 Fully Interactive Demos (State, Hooks & Event Handlers)**: 30 Components
-- **🟡 Static Display Showcases (Design System Primitives)**: 30 Components
+- **🟢 Fully Interactive Demos (State, Hooks & Event Handlers)**: 35 Components
+- **🟡 Static Display Showcases (Design System Primitives)**: 25 Components
 - **Unclassified Discrepancy Count**: 0 (100% Filesystem & AST Coverage Verified)
 - **Corporate Migration Progress**: 36 / 36 Corporate Components Converted (100%)

@@ -7,6 +7,7 @@ describe('OrdersChart Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<OrdersChart />);
     expect(container).toBeDefined();
-    expect(screen.getByText('OrdersChart')).toBeInTheDocument();
+    expect(screen.getByText(/Orders Metrics Chart/i)).toBeInTheDocument();
   });
 });
+

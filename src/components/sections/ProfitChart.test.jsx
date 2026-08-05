@@ -7,6 +7,7 @@ describe('ProfitChart Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<ProfitChart />);
     expect(container).toBeDefined();
-    expect(screen.getByText('ProfitChart')).toBeInTheDocument();
+    expect(screen.getByText(/Corporate Profit Metrics/i)).toBeInTheDocument();
   });
 });
+

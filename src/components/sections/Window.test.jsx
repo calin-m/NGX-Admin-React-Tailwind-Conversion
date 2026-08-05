@@ -7,6 +7,7 @@ describe('Window Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<Window />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Floating Window Modal/i)).toBeInTheDocument();
+    expect(screen.getByText(/Floating Window/i)).toBeInTheDocument();
   });
 });
+

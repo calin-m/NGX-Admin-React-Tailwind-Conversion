@@ -45,7 +45,7 @@ graph TD
 | `src/components/sections/ECommerce.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/ElectricityCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Footer.jsx` | **COMPONENTS** | 🟡 Static Showcase |
-| `src/components/sections/FormButtons.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/FormButtons.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/FormInputs.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/FormLayouts.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/GoogleMaps.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
@@ -62,12 +62,12 @@ graph TD
 | `src/components/sections/NotFound.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/NotificationDrawer.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/OrderModal.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
-| `src/components/sections/OrdersChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/OrdersChart.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Popover.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/profit-card/StatsCardBack.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/profit-card/StatsCardFront.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/ProfitCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
-| `src/components/sections/ProfitChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/ProfitChart.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/ProgressBar.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/ProgressSection.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Register.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
@@ -88,9 +88,9 @@ graph TD
 | `src/components/sections/Tabs.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/TemperatureCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/ThemeCustomizer.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
-| `src/components/sections/TinyMce.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/TinyMce.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Toastr.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
-| `src/components/sections/Tooltip.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/Tooltip.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/traffic-reveal/TrafficBackCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/traffic-reveal/TrafficFrontCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/TrafficBar.jsx` | **COMPONENTS** | 🟡 Static Showcase |
@@ -104,7 +104,7 @@ graph TD
 | `src/components/sections/VisitorsAnalytics.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/VisitorsAnalyticsChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/VisitorsStatistics.jsx` | **COMPONENTS** | 🟡 Static Showcase |
-| `src/components/sections/WeatherCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/WeatherCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Window.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/ui/Badge.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/Button.jsx` | **COMPONENTS** | 🟡 Static Showcase |

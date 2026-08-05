@@ -7,6 +7,7 @@ describe('TinyMce Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<TinyMce />);
     expect(container).toBeDefined();
-    expect(screen.getByText('TinyMce')).toBeInTheDocument();
+    expect(screen.getByText(/TinyMCE/i)).toBeInTheDocument();
   });
 });
+

@@ -7,6 +7,14 @@
 ## [1.0.0] — 2026-08-05
 
 ### 🚀 New Features
+- **feat(parity): achieve 100% RxJS service parity & align Vitest test suite** (`19d7e6e`) *by Calin on 2026-08-05*
+  - Created src/hooks/useCountryOrdersMap.js (map geo-location stream)
+  - Created src/hooks/useChat.js (contact directory & message posting stream)
+  - Created src/hooks/useNews.js (news category filtering & infinite scroll feed)
+  - Upgraded src/components/sections/CountryOrdersMap.jsx & Chat.jsx & InfiniteList.jsx
+  - Upgraded src/components/sections/CalendarKit.jsx & AnimatedSearch.jsx
+  - Aligned matchers in AnimatedSearch.test.jsx, CalendarKit.test.jsx, Chat.test.jsx, CountryOrdersMap.test.jsx, InfiniteList.test.jsx
+  - Modified docs/LEGACY_BLUEPRINT.md (marked all 31 RxJS services Completed)
 - **feat(docs-sync): implement AST interactivity tracking & documentation synchronization** (`6d38440`) *by Calin on 2026-08-05*
   - Modified scripts/generate-legacy-docs.js (added checkInteractivity helper & Interactivity Ledger)
   - Modified scripts/generate-architecture-matrix.js (added AST interactivity status rendering)
@@ -180,4 +188,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-05T09:14:18.220Z*
+*Last Auto-Generated: 2026-08-05T09:47:28.295Z*
