@@ -1,17 +1,18 @@
 # ⚡ NGX ADMIN REACT TAILWIND CONVERSION
 
 > **Author & Repository**: Created with ♥ by **Calin M** ([GitHub Repository](https://github.com/calin-m/NGX-Admin-React-Tailwind-Conversion))  
+> **Original Angular Template**: Modernized conversion based on [akveo/ngx-admin](https://github.com/akveo/ngx-admin)  
 > **Active Target Architecture**: React 18 SPA + Vite 6 + Tailwind CSS v4 + Storybook 8 + Vitest (`src/`)  
 > **Legacy Reference Architecture**: Angular 15 + TypeScript + RxJS + Nebular / Bootstrap 4 (`old-src/`)  
 > **Living Documentation Network**: Auto-Synchronized via AST File-Tree Scanning (`ARCHITECTURE.md`, `docs/QUALITY_AUDIT_REPORT.md`, & `docs/LEGACY_BLUEPRINT.md`)
 
-Welcome to the **NGX Admin React Tailwind Conversion Platform**. This enterprise repository serves a dual purpose: it houses an active, production-grade **React 18 + Tailwind CSS v4** application alongside a fully indexed legacy **Angular 15** reference suite (`old-src/ngx-admin-master`), providing a structured, 100% deterministic workflow for converting legacy enterprise code into modern React components with **100% dynamic theme accent parity across all 17 sidebar menu tabs**.
+Welcome to the **NGX Admin React Tailwind Conversion Platform**. This enterprise repository serves a dual purpose: it houses an active, production-grade **React 18 + Tailwind CSS v4** application alongside a fully indexed legacy **Angular 15** reference suite (`old-src/ngx-admin-master`) derived from [akveo/ngx-admin](https://github.com/akveo/ngx-admin), providing a structured, 100% deterministic workflow for converting legacy enterprise code into modern React components with **100% dynamic theme accent parity across all 17 sidebar menu tabs**.
 
 ---
 
 ## 🏛️ Project Purpose & Scope
 
-This project is engineered to execute an **Enterprise Angular-to-React Modernization Strategy** using the industry-standard **Strangler Fig Pattern**:
+This project is engineered to execute an **Enterprise Angular-to-React Modernization Strategy** for the [akveo/ngx-admin](https://github.com/akveo/ngx-admin) platform using the industry-standard **Strangler Fig Pattern**:
 
 1. 📜 **Read-Only Legacy Reference (`old-src/`)**: Holds the complete **Angular 15 (`ngx-admin-master`)** codebase, containing 118 Angular components, 102 templates, and 18 RxJS data services. It is strictly read-only and isolated from all build and linting pipelines.
 2. 🚀 **Active Target Stack (`src/`)**: Holds the modern **React 18 + Tailwind CSS v4** architecture. Converted components are built here, isolated in Storybook 8, tested via Vitest, and validated through the 7-Gateway Quality Engine (`npm run verify`).

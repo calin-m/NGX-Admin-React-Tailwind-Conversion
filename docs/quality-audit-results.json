@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-05T16:21:14.477Z",
+  "timestamp": "2026-08-05T16:28:25.522Z",
   "healthScore": 100,
   "summary": {
     "totalComponents": 277,
@@ -397,13 +397,13 @@
             "fullName": "App Auto-Generated Test Suite renders without crashing",
             "status": "passed",
             "title": "renders without crashing",
-            "duration": 136.47680000000037,
+            "duration": 126.5640000000003,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946804520,
-        "endTime": 1785946804656.4768,
+        "startTime": 1785947247575,
+        "endTime": 1785947247701.564,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/App.test.jsx"
@@ -417,13 +417,13 @@
             "fullName": "AuthContext Auto-Generated Test Suite renders without crashing",
             "status": "passed",
             "title": "renders without crashing",
-            "duration": 8.592200000000048,
+            "duration": 11.105699999999842,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946813012,
-        "endTime": 1785946813020.5923,
+        "startTime": 1785947255872,
+        "endTime": 1785947255883.1057,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/context/AuthContext.test.jsx"
@@ -437,13 +437,13 @@
             "fullName": "ThemeContext Auto-Generated Test Suite renders without crashing",
             "status": "passed",
             "title": "renders without crashing",
-            "duration": 15.624199999999973,
+            "duration": 13.498900000000049,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946812904,
-        "endTime": 1785946812919.6243,
+        "startTime": 1785947255872,
+        "endTime": 1785947255885.4988,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/context/ThemeContext.test.jsx"
@@ -457,13 +457,13 @@
             "fullName": "Badge UI Component renders without crashing",
             "status": "passed",
             "title": "renders without crashing",
-            "duration": 26.87160000000017,
+            "duration": 30.10889999999995,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946811787,
-        "endTime": 1785946811813.8716,
+        "startTime": 1785947255723,
+        "endTime": 1785947255753.109,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/ui/Badge.test.jsx"
@@ -477,7 +477,7 @@
             "fullName": "Button UI Component renders correctly with children",
             "status": "passed",
             "title": "renders correctly with children",
-            "duration": 87.60249999999996,
+            "duration": 64.62900000000013,
             "failureMessages": [],
             "meta": {}
           },
@@ -488,13 +488,13 @@
             "fullName": "Button UI Component triggers onClick handler when clicked",
             "status": "passed",
             "title": "triggers onClick handler when clicked",
-            "duration": 15.660399999999981,
+            "duration": 14.829500000000053,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946802037,
-        "endTime": 1785946802140.6604,
+        "startTime": 1785947245056,
+        "endTime": 1785947245134.8296,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/ui/Button.test.jsx"
@@ -508,13 +508,13 @@
             "fullName": "Card UI Component renders children within container",
             "status": "passed",
             "title": "renders children within container",
-            "duration": 19.20979999999986,
+            "duration": 24.57619999999997,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946812776,
-        "endTime": 1785946812795.2097,
+        "startTime": 1785947255571,
+        "endTime": 1785947255595.5762,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/ui/Card.test.jsx"
@@ -528,13 +528,13 @@
             "fullName": "FlipCard UI Primitive Component renders front and back children content correctly",
             "status": "passed",
             "title": "renders front and back children content correctly",
-            "duration": 33.531499999999824,
+            "duration": 31.591300000000047,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946809714,
-        "endTime": 1785946809747.5315,
+        "startTime": 1785947253021,
+        "endTime": 1785947253052.5913,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/ui/FlipCard.test.jsx"
@@ -548,13 +548,13 @@
             "fullName": "GlassCard Auto-Generated Test Suite renders without crashing",
             "status": "passed",
             "title": "renders without crashing",
-            "duration": 12.332400000000007,
+            "duration": 13.935100000000148,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946813014,
-        "endTime": 1785946813026.3325,
+        "startTime": 1785947255799,
+        "endTime": 1785947255812.935,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/ui/GlassCard.test.jsx"
@@ -568,13 +568,13 @@
             "fullName": "RevealCard UI Primitive Component renders front and back children content correctly",
             "status": "passed",
             "title": "renders front and back children content correctly",
-            "duration": 32.553499999999985,
+            "duration": 31.625400000000127,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946810748,
-        "endTime": 1785946810780.5535,
+        "startTime": 1785947254549,
+        "endTime": 1785947254580.6255,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/ui/RevealCard.test.jsx"
@@ -588,13 +588,13 @@
             "fullName": "Accordion Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 39.38999999999987,
+            "duration": 38.01870000000008,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946804444,
-        "endTime": 1785946804483.39,
+        "startTime": 1785947248814,
+        "endTime": 1785947248852.0188,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Accordion.test.jsx"
@@ -608,13 +608,13 @@
             "fullName": "Alert Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 33.12850000000003,
+            "duration": 30.00369999999998,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946811488,
-        "endTime": 1785946811521.1284,
+        "startTime": 1785947254805,
+        "endTime": 1785947254835.0037,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Alert.test.jsx"
@@ -628,13 +628,13 @@
             "fullName": "AnimatedSearch Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 41.3617999999999,
+            "duration": 39.76240000000007,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946805794,
-        "endTime": 1785946805835.3618,
+        "startTime": 1785947250921,
+        "endTime": 1785947250960.7625,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/AnimatedSearch.test.jsx"
@@ -648,13 +648,13 @@
             "fullName": "BubbleMaps Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 39.65159999999992,
+            "duration": 38.783300000000054,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946810588,
-        "endTime": 1785946810627.6516,
+        "startTime": 1785947250787,
+        "endTime": 1785947250825.7832,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/BubbleMaps.test.jsx"
@@ -668,13 +668,13 @@
             "fullName": "CalendarApp Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 44.10290000000009,
+            "duration": 46.66859999999997,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946806247,
-        "endTime": 1785946806291.1028,
+        "startTime": 1785947246811,
+        "endTime": 1785947246857.6687,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/CalendarApp.test.jsx"
@@ -688,13 +688,13 @@
             "fullName": "CalendarKit Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 41.90689999999995,
+            "duration": 41.528699999999844,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946804250,
-        "endTime": 1785946804291.907,
+        "startTime": 1785947248454,
+        "endTime": 1785947248495.5288,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/CalendarKit.test.jsx"
@@ -708,13 +708,13 @@
             "fullName": "ChartPanelHeader Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 32.926099999999906,
+            "duration": 33.88609999999994,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946809696,
-        "endTime": 1785946809728.926,
+        "startTime": 1785947250723,
+        "endTime": 1785947250756.886,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ChartPanelHeader.test.jsx"
@@ -728,13 +728,13 @@
             "fullName": "ChartPanelSummary Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 33.44479999999999,
+            "duration": 31.108799999999974,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946811456,
-        "endTime": 1785946811489.4448,
+        "startTime": 1785947252212,
+        "endTime": 1785947252243.109,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ChartPanelSummary.test.jsx"
@@ -748,13 +748,13 @@
             "fullName": "ChartsPanel Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 80.17640000000006,
+            "duration": 72.09770000000003,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946802077,
-        "endTime": 1785946802157.1765,
+        "startTime": 1785947245147,
+        "endTime": 1785947245219.0977,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ChartsPanel.test.jsx"
@@ -768,7 +768,7 @@
             "fullName": "Chat Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 45.55020000000013,
+            "duration": 40.95589999999993,
             "failureMessages": [],
             "meta": {}
           },
@@ -779,13 +779,13 @@
             "fullName": "Chat Corporate Component Suite dispatches new user message into chat list on send click",
             "status": "passed",
             "title": "dispatches new user message into chat list on send click",
-            "duration": 239.53549999999996,
+            "duration": 126.16399999999999,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946801970,
-        "endTime": 1785946802255.5354,
+        "startTime": 1785947245111,
+        "endTime": 1785947245278.164,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Chat.test.jsx"
@@ -799,13 +799,13 @@
             "fullName": "CkEditor Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 45.94249999999988,
+            "duration": 36.09759999999983,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946806447,
-        "endTime": 1785946806492.9424,
+        "startTime": 1785947250731,
+        "endTime": 1785947250767.0977,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/CkEditor.test.jsx"
@@ -819,13 +819,13 @@
             "fullName": "CountryOrders Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 42.05030000000011,
+            "duration": 42.53590000000008,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946803965,
-        "endTime": 1785946804007.0503,
+        "startTime": 1785947249053,
+        "endTime": 1785947249095.536,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/CountryOrders.test.jsx"
@@ -839,13 +839,13 @@
             "fullName": "CountryOrdersChart Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 41.803899999999885,
+            "duration": 34.61760000000004,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946805656,
-        "endTime": 1785946805697.804,
+        "startTime": 1785947246970,
+        "endTime": 1785947247004.6177,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/CountryOrdersChart.test.jsx"
@@ -859,13 +859,13 @@
             "fullName": "CountryOrdersMap Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 57.21129999999994,
+            "duration": 55.77759999999989,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946802514,
-        "endTime": 1785946802571.2112,
+        "startTime": 1785947245553,
+        "endTime": 1785947245608.7776,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/CountryOrdersMap.test.jsx"
@@ -879,13 +879,13 @@
             "fullName": "Datepicker Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 39.76130000000012,
+            "duration": 39.09579999999983,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946809226,
-        "endTime": 1785946809265.7612,
+        "startTime": 1785947250460,
+        "endTime": 1785947250499.0957,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Datepicker.test.jsx"
@@ -899,13 +899,13 @@
             "fullName": "Dialogs Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 33.84400000000005,
+            "duration": 32.3614,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946809437,
-        "endTime": 1785946809470.844,
+        "startTime": 1785947251240,
+        "endTime": 1785947251272.3613,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Dialogs.test.jsx"
@@ -919,13 +919,13 @@
             "fullName": "EarningCard Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 53.36479999999983,
+            "duration": 53.51909999999998,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946805446,
-        "endTime": 1785946805499.3647,
+        "startTime": 1785947247315,
+        "endTime": 1785947247368.519,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/EarningCard.test.jsx"
@@ -939,13 +939,13 @@
             "fullName": "EarningCardBack Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 31.157699999999977,
+            "duration": 28.444499999999834,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946811779,
-        "endTime": 1785946811810.1577,
+        "startTime": 1785947252424,
+        "endTime": 1785947252452.4446,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/EarningCardBack.test.jsx"
@@ -959,13 +959,13 @@
             "fullName": "EarningCardFront Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 30.34940000000006,
+            "duration": 33.00260000000003,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946811455,
-        "endTime": 1785946811485.3494,
+        "startTime": 1785947254448,
+        "endTime": 1785947254481.0027,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/EarningCardFront.test.jsx"
@@ -979,13 +979,13 @@
             "fullName": "EarningLiveUpdateChart Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 31.560500000000047,
+            "duration": 33.31790000000001,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946809772,
-        "endTime": 1785946809803.5605,
+        "startTime": 1785947254118,
+        "endTime": 1785947254151.3179,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/EarningLiveUpdateChart.test.jsx"
@@ -999,13 +999,13 @@
             "fullName": "EarningPieChart Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 33.41470000000004,
+            "duration": 31.783500000000004,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946808039,
-        "endTime": 1785946808072.4148,
+        "startTime": 1785947252482,
+        "endTime": 1785947252513.7834,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/EarningPieChart.test.jsx"
@@ -1019,13 +1019,13 @@
             "fullName": "Echarts Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 47.48389999999995,
+            "duration": 46.192999999999984,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946805032,
-        "endTime": 1785946805079.484,
+        "startTime": 1785947247083,
+        "endTime": 1785947247129.193,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Echarts.test.jsx"
@@ -1039,13 +1039,13 @@
             "fullName": "ECommerce Corporate Component Suite renders complete corporate dashboard assembly without crashing",
             "status": "passed",
             "title": "renders complete corporate dashboard assembly without crashing",
-            "duration": 209.2176999999997,
+            "duration": 176.2195999999999,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946802935,
-        "endTime": 1785946803144.2178,
+        "startTime": 1785947246117,
+        "endTime": 1785947246293.2195,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ECommerce.test.jsx"
@@ -1059,13 +1059,13 @@
             "fullName": "ElectricityCard Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 42.021799999999985,
+            "duration": 35.152900000000045,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946804367,
-        "endTime": 1785946804409.0217,
+        "startTime": 1785947247020,
+        "endTime": 1785947247055.1528,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ElectricityCard.test.jsx"
@@ -1079,13 +1079,13 @@
             "fullName": "Footer Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 30.758100000000013,
+            "duration": 32.80809999999997,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946809325,
-        "endTime": 1785946809355.758,
+        "startTime": 1785947245160,
+        "endTime": 1785947245192.808,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Footer.test.jsx"
@@ -1099,13 +1099,13 @@
             "fullName": "FormButtons Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 35.8886,
+            "duration": 35.275499999999965,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946809328,
-        "endTime": 1785946809363.8887,
+        "startTime": 1785947250320,
+        "endTime": 1785947250355.2754,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/FormButtons.test.jsx"
@@ -1119,13 +1119,13 @@
             "fullName": "FormInputs Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 47.67549999999983,
+            "duration": 46.63090000000011,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946802518,
-        "endTime": 1785946802565.6755,
+        "startTime": 1785947245137,
+        "endTime": 1785947245183.6309,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/FormInputs.test.jsx"
@@ -1139,13 +1139,13 @@
             "fullName": "FormLayouts Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 47.4239,
+            "duration": 39.75619999999981,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946805998,
-        "endTime": 1785946806045.4238,
+        "startTime": 1785947247073,
+        "endTime": 1785947247112.756,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/FormLayouts.test.jsx"
@@ -1159,13 +1159,13 @@
             "fullName": "GoogleMaps Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 38.790500000000065,
+            "duration": 37.475400000000036,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946803982,
-        "endTime": 1785946804020.7905,
+        "startTime": 1785947248651,
+        "endTime": 1785947248688.4753,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/GoogleMaps.test.jsx"
@@ -1179,13 +1179,13 @@
             "fullName": "Grid Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 32.20209999999997,
+            "duration": 39.14210000000003,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946811082,
-        "endTime": 1785946811114.2021,
+        "startTime": 1785947252902,
+        "endTime": 1785947252941.142,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Grid.test.jsx"
@@ -1199,13 +1199,13 @@
             "fullName": "Header Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 37.85069999999996,
+            "duration": 50.77870000000007,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946807516,
-        "endTime": 1785946807553.8506,
+        "startTime": 1785947252156,
+        "endTime": 1785947252206.7788,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Header.test.jsx"
@@ -1219,13 +1219,13 @@
             "fullName": "Icons Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 40.84919999999988,
+            "duration": 36.2802999999999,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946806305,
-        "endTime": 1785946806345.849,
+        "startTime": 1785947248814,
+        "endTime": 1785947248850.2803,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Icons.test.jsx"
@@ -1239,13 +1239,13 @@
             "fullName": "InfiniteList Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 40.32639999999992,
+            "duration": 39.96250000000009,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946805995,
-        "endTime": 1785946806035.3264,
+        "startTime": 1785947247385,
+        "endTime": 1785947247424.9624,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/InfiniteList.test.jsx"
@@ -1259,13 +1259,13 @@
             "fullName": "KittenCard Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 30.66800000000012,
+            "duration": 28.029999999999973,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946809941,
-        "endTime": 1785946809971.668,
+        "startTime": 1785947252424,
+        "endTime": 1785947252452.03,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/KittenCard.test.jsx"
@@ -1279,13 +1279,13 @@
             "fullName": "LeafletMaps Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 38.447799999999916,
+            "duration": 35.52230000000009,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946805825,
-        "endTime": 1785946805863.4478,
+        "startTime": 1785947248651,
+        "endTime": 1785947248686.5222,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/LeafletMaps.test.jsx"
@@ -1299,13 +1299,13 @@
             "fullName": "LegendChart Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 30.577599999999848,
+            "duration": 29.810900000000174,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946809436,
-        "endTime": 1785946809466.5776,
+        "startTime": 1785947254829,
+        "endTime": 1785947254858.8108,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/LegendChart.test.jsx"
@@ -1319,13 +1319,13 @@
             "fullName": "List Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 34.222099999999955,
+            "duration": 35.97370000000001,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946807750,
-        "endTime": 1785946807784.2222,
+        "startTime": 1785947251684,
+        "endTime": 1785947251719.9736,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/List.test.jsx"
@@ -1339,13 +1339,13 @@
             "fullName": "Login Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 42.46620000000007,
+            "duration": 37.028099999999995,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946804304,
-        "endTime": 1785946804346.4663,
+        "startTime": 1785947247020,
+        "endTime": 1785947247057.028,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Login.test.jsx"
@@ -1359,13 +1359,13 @@
             "fullName": "Maps Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 43.19830000000002,
+            "duration": 47.85889999999995,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946805783,
-        "endTime": 1785946805826.1982,
+        "startTime": 1785947249788,
+        "endTime": 1785947249835.859,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Maps.test.jsx"
@@ -1379,13 +1379,13 @@
             "fullName": "NotFound Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 32.887500000000045,
+            "duration": 30.793499999999995,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946811750,
-        "endTime": 1785946811782.8875,
+        "startTime": 1785947254080,
+        "endTime": 1785947254110.7935,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/NotFound.test.jsx"
@@ -1399,13 +1399,13 @@
             "fullName": "NotificationDrawer Corporate Component Suite renders correctly when open",
             "status": "passed",
             "title": "renders correctly when open",
-            "duration": 36.19839999999999,
+            "duration": 40.02579999999989,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946805997,
-        "endTime": 1785946806033.1985,
+        "startTime": 1785947249318,
+        "endTime": 1785947249358.026,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/NotificationDrawer.test.jsx"
@@ -1419,13 +1419,13 @@
             "fullName": "OrderModal Corporate Component Suite renders correctly when open",
             "status": "passed",
             "title": "renders correctly when open",
-            "duration": 51.59500000000003,
+            "duration": 47.22860000000014,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946804042,
-        "endTime": 1785946804093.595,
+        "startTime": 1785947247956,
+        "endTime": 1785947248003.2285,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/OrderModal.test.jsx"
@@ -1439,13 +1439,13 @@
             "fullName": "OrdersChart Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 79.07809999999995,
+            "duration": 57.61609999999996,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946802264,
-        "endTime": 1785946802343.0781,
+        "startTime": 1785947245106,
+        "endTime": 1785947245163.6162,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/OrdersChart.test.jsx"
@@ -1459,13 +1459,13 @@
             "fullName": "Popover Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 36.62329999999997,
+            "duration": 32.859699999999975,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946809036,
-        "endTime": 1785946809072.6233,
+        "startTime": 1785947250449,
+        "endTime": 1785947250481.8596,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Popover.test.jsx"
@@ -1479,13 +1479,13 @@
             "fullName": "ProfitCard Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 45.761200000000144,
+            "duration": 50.51209999999992,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946802590,
-        "endTime": 1785946802635.7612,
+        "startTime": 1785947248803,
+        "endTime": 1785947248853.5122,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ProfitCard.test.jsx"
@@ -1499,13 +1499,13 @@
             "fullName": "ProfitChart Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 36.96340000000009,
+            "duration": 36.10789999999997,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946808597,
-        "endTime": 1785946808633.9634,
+        "startTime": 1785947250492,
+        "endTime": 1785947250528.108,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ProfitChart.test.jsx"
@@ -1519,13 +1519,13 @@
             "fullName": "ProgressBar Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 28.554399999999987,
+            "duration": 32.088399999999865,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946811255,
-        "endTime": 1785946811283.5544,
+        "startTime": 1785947254569,
+        "endTime": 1785947254601.0884,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ProgressBar.test.jsx"
@@ -1539,13 +1539,13 @@
             "fullName": "ProgressSection Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 36.61390000000006,
+            "duration": 40.42990000000009,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946805786,
-        "endTime": 1785946805822.614,
+        "startTime": 1785947248796,
+        "endTime": 1785947248836.43,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ProgressSection.test.jsx"
@@ -1559,13 +1559,13 @@
             "fullName": "Register Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 61.934400000000096,
+            "duration": 38.809999999999945,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946807951,
-        "endTime": 1785946808012.9343,
+        "startTime": 1785947250455,
+        "endTime": 1785947250493.81,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Register.test.jsx"
@@ -1579,13 +1579,13 @@
             "fullName": "ResetPassword Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 36.14339999999993,
+            "duration": 36.69869999999992,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946807523,
-        "endTime": 1785946807559.1433,
+        "startTime": 1785947254079,
+        "endTime": 1785947254115.6987,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ResetPassword.test.jsx"
@@ -1599,13 +1599,13 @@
             "fullName": "RoomsCard Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 42.1703,
+            "duration": 37.78690000000006,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946807411,
-        "endTime": 1785946807453.1704,
+        "startTime": 1785947248523,
+        "endTime": 1785947248560.7869,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/RoomsCard.test.jsx"
@@ -1619,13 +1619,13 @@
             "fullName": "SearchInput Corporate Component Suite renders correctly when open",
             "status": "passed",
             "title": "renders correctly when open",
-            "duration": 37.382499999999936,
+            "duration": 35.47659999999996,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946809169,
-        "endTime": 1785946809206.3826,
+        "startTime": 1785947252307,
+        "endTime": 1785947252342.4766,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/SearchInput.test.jsx"
@@ -1639,13 +1639,13 @@
             "fullName": "SecurityCameras Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 41.058700000000044,
+            "duration": 40.85360000000014,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946807741,
-        "endTime": 1785946807782.0586,
+        "startTime": 1785947251211,
+        "endTime": 1785947251251.8535,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/SecurityCameras.test.jsx"
@@ -1659,13 +1659,13 @@
             "fullName": "Settings Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 37.71759999999995,
+            "duration": 41.91729999999984,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946807554,
-        "endTime": 1785946807591.7175,
+        "startTime": 1785947249199,
+        "endTime": 1785947249240.9172,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Settings.test.jsx"
@@ -1679,13 +1679,13 @@
             "fullName": "Sidebar Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 45.0963999999999,
+            "duration": 41.10789999999997,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946804296,
-        "endTime": 1785946804341.0964,
+        "startTime": 1785947246812,
+        "endTime": 1785947246853.108,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Sidebar.test.jsx"
@@ -1699,13 +1699,13 @@
             "fullName": "SlideOut Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 29.61570000000006,
+            "duration": 28.65000000000009,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946807748,
-        "endTime": 1785946807777.6157,
+        "startTime": 1785947253952,
+        "endTime": 1785947253980.65,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/SlideOut.test.jsx"
@@ -1719,7 +1719,7 @@
             "fullName": "SmartTable Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 55.77859999999987,
+            "duration": 52.53430000000003,
             "failureMessages": [],
             "meta": {}
           },
@@ -1730,13 +1730,13 @@
             "fullName": "SmartTable Corporate Component Suite filters table rows dynamically on search input change",
             "status": "passed",
             "title": "filters table rows dynamically on search input change",
-            "duration": 25.184400000000096,
+            "duration": 49.293899999999894,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946802391,
-        "endTime": 1785946802472.1843,
+        "startTime": 1785947245110,
+        "endTime": 1785947245212.294,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/SmartTable.test.jsx"
@@ -1750,13 +1750,13 @@
             "fullName": "SolarCard Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 36.81470000000013,
+            "duration": 37.72409999999991,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946808010,
-        "endTime": 1785946808046.8147,
+        "startTime": 1785947250976,
+        "endTime": 1785947251013.724,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/SolarCard.test.jsx"
@@ -1770,13 +1770,13 @@
             "fullName": "Spinner Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 30.4063000000001,
+            "duration": 32.53619999999978,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946812577,
-        "endTime": 1785946812607.4062,
+        "startTime": 1785947254778,
+        "endTime": 1785947254810.5361,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Spinner.test.jsx"
@@ -1790,13 +1790,13 @@
             "fullName": "StatsAreaChart Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 30.039199999999937,
+            "duration": 33.32040000000006,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946810945,
-        "endTime": 1785946810975.0393,
+        "startTime": 1785947253535,
+        "endTime": 1785947253568.3203,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/StatsAreaChart.test.jsx"
@@ -1810,13 +1810,13 @@
             "fullName": "StatsBarAnimationChart Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 34.38499999999999,
+            "duration": 33.38310000000001,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946809657,
-        "endTime": 1785946809691.385,
+        "startTime": 1785947253037,
+        "endTime": 1785947253070.383,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/StatsBarAnimationChart.test.jsx"
@@ -1830,13 +1830,13 @@
             "fullName": "StatusCard Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 42.30520000000001,
+            "duration": 36.68899999999985,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946807236,
-        "endTime": 1785946807278.3052,
+        "startTime": 1785947247327,
+        "endTime": 1785947247363.689,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/StatusCard.test.jsx"
@@ -1850,7 +1850,7 @@
             "fullName": "Stepper Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 41.02710000000002,
+            "duration": 40.29790000000003,
             "failureMessages": [],
             "meta": {}
           },
@@ -1861,13 +1861,13 @@
             "fullName": "Stepper Corporate Component Suite navigates to next step on Next button click",
             "status": "passed",
             "title": "navigates to next step on Next button click",
-            "duration": 175.88210000000004,
+            "duration": 87.04909999999995,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946802091,
-        "endTime": 1785946802307.882,
+        "startTime": 1785947245126,
+        "endTime": 1785947245253.049,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Stepper.test.jsx"
@@ -1881,13 +1881,13 @@
             "fullName": "Tabs Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 127.78649999999993,
+            "duration": 115.6851999999999,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946801957,
-        "endTime": 1785946802084.7866,
+        "startTime": 1785947245113,
+        "endTime": 1785947245228.6853,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Tabs.test.jsx"
@@ -1901,7 +1901,7 @@
             "fullName": "TemperatureCard Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 38.10419999999999,
+            "duration": 39.359699999999975,
             "failureMessages": [],
             "meta": {}
           },
@@ -1912,13 +1912,13 @@
             "fullName": "TemperatureCard Corporate Component Suite increments target temperature when plus button is clicked",
             "status": "passed",
             "title": "increments target temperature when plus button is clicked",
-            "duration": 147.58400000000006,
+            "duration": 84.25069999999982,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946802190,
-        "endTime": 1785946802375.584,
+        "startTime": 1785947245133,
+        "endTime": 1785947245256.2507,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/TemperatureCard.test.jsx"
@@ -1932,13 +1932,13 @@
             "fullName": "ThemeCustomizer Corporate Component Suite renders correctly when open",
             "status": "passed",
             "title": "renders correctly when open",
-            "duration": 40.16879999999992,
+            "duration": 41.343900000000076,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946806209,
-        "endTime": 1785946806249.1687,
+        "startTime": 1785947249436,
+        "endTime": 1785947249477.344,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ThemeCustomizer.test.jsx"
@@ -1952,13 +1952,13 @@
             "fullName": "TinyMce Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 34.334299999999985,
+            "duration": 35.731700000000046,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946806050,
-        "endTime": 1785946806084.3342,
+        "startTime": 1785947250439,
+        "endTime": 1785947250474.7317,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/TinyMce.test.jsx"
@@ -1972,13 +1972,13 @@
             "fullName": "Toastr Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 36.118799999999965,
+            "duration": 35.441299999999956,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946807723,
-        "endTime": 1785946807759.119,
+        "startTime": 1785947250273,
+        "endTime": 1785947250308.4414,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Toastr.test.jsx"
@@ -1992,13 +1992,13 @@
             "fullName": "Tooltip Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 35.35630000000015,
+            "duration": 35.187400000000025,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946808162,
-        "endTime": 1785946808197.3562,
+        "startTime": 1785947252430,
+        "endTime": 1785947252465.1875,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Tooltip.test.jsx"
@@ -2012,13 +2012,13 @@
             "fullName": "TrafficBar Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 33.1849000000002,
+            "duration": 28.595199999999977,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946811104,
-        "endTime": 1785946811137.1848,
+        "startTime": 1785947252237,
+        "endTime": 1785947252265.5952,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/TrafficBar.test.jsx"
@@ -2032,13 +2032,13 @@
             "fullName": "TrafficBarChart Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 39.022699999999986,
+            "duration": 41.409999999999854,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946804464,
-        "endTime": 1785946804503.0227,
+        "startTime": 1785947248453,
+        "endTime": 1785947248494.41,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/TrafficBarChart.test.jsx"
@@ -2052,13 +2052,13 @@
             "fullName": "TrafficCardsHeader Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 30.661000000000058,
+            "duration": 31.50909999999999,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946811237,
-        "endTime": 1785946811267.661,
+        "startTime": 1785947254007,
+        "endTime": 1785947254038.509,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/TrafficCardsHeader.test.jsx"
@@ -2072,13 +2072,13 @@
             "fullName": "TrafficRevealCard Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 43.47880000000009,
+            "duration": 70.98949999999991,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946802515,
-        "endTime": 1785946802558.4788,
+        "startTime": 1785947246719,
+        "endTime": 1785947246789.9895,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/TrafficRevealCard.test.jsx"
@@ -2092,13 +2092,13 @@
             "fullName": "TreeGrid Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 45.05560000000014,
+            "duration": 46.72340000000008,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946804137,
-        "endTime": 1785946804182.0557,
+        "startTime": 1785947245126,
+        "endTime": 1785947245172.7234,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/TreeGrid.test.jsx"
@@ -2112,13 +2112,13 @@
             "fullName": "Typography Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 36.55399999999986,
+            "duration": 35.72960000000012,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946808368,
-        "endTime": 1785946808404.554,
+        "startTime": 1785947254253,
+        "endTime": 1785947254288.7295,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Typography.test.jsx"
@@ -2132,13 +2132,13 @@
             "fullName": "UserActivity Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 45.36389999999983,
+            "duration": 44.168300000000045,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946804166,
-        "endTime": 1785946804211.364,
+        "startTime": 1785947249018,
+        "endTime": 1785947249062.1682,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/UserActivity.test.jsx"
@@ -2152,13 +2152,13 @@
             "fullName": "UserManagement Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 47.689400000000205,
+            "duration": 48.95270000000005,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946803768,
-        "endTime": 1785946803815.6895,
+        "startTime": 1785947245519,
+        "endTime": 1785947245567.9526,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/UserManagement.test.jsx"
@@ -2172,13 +2172,13 @@
             "fullName": "VisitorsAnalytics Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 46.258800000000065,
+            "duration": 45.93709999999987,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946802243,
-        "endTime": 1785946802289.2588,
+        "startTime": 1785947246701,
+        "endTime": 1785947246746.937,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/VisitorsAnalytics.test.jsx"
@@ -2192,13 +2192,13 @@
             "fullName": "VisitorsAnalyticsChart Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 36.06449999999995,
+            "duration": 35.275100000000066,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946806799,
-        "endTime": 1785946806835.0645,
+        "startTime": 1785947252726,
+        "endTime": 1785947252761.2751,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/VisitorsAnalyticsChart.test.jsx"
@@ -2212,13 +2212,13 @@
             "fullName": "VisitorsStatistics Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 30.691499999999905,
+            "duration": 31.24929999999995,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946811456,
-        "endTime": 1785946811486.6914,
+        "startTime": 1785947254292,
+        "endTime": 1785947254323.2493,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/VisitorsStatistics.test.jsx"
@@ -2232,13 +2232,13 @@
             "fullName": "WeatherCard Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 42.673499999999876,
+            "duration": 35.69460000000004,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946803832,
-        "endTime": 1785946803874.6736,
+        "startTime": 1785947247027,
+        "endTime": 1785947247062.6946,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/WeatherCard.test.jsx"
@@ -2252,13 +2252,13 @@
             "fullName": "Window Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 31.652399999999943,
+            "duration": 32.63449999999989,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946809469,
-        "endTime": 1785946809500.6523,
+        "startTime": 1785947252241,
+        "endTime": 1785947252273.6345,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Window.test.jsx"
@@ -2272,13 +2272,13 @@
             "fullName": "StatsCardBack Auto-Generated Test Suite renders without crashing",
             "status": "passed",
             "title": "renders without crashing",
-            "duration": 16.030199999999923,
+            "duration": 17.900500000000193,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946813002,
-        "endTime": 1785946813018.0303,
+        "startTime": 1785947255823,
+        "endTime": 1785947255840.9004,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/profit-card/StatsCardBack.test.jsx"
@@ -2292,13 +2292,13 @@
             "fullName": "StatsCardFront Auto-Generated Test Suite renders without crashing",
             "status": "passed",
             "title": "renders without crashing",
-            "duration": 32.938899999999876,
+            "duration": 33.58860000000004,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946810043,
-        "endTime": 1785946810075.939,
+        "startTime": 1785947252719,
+        "endTime": 1785947252752.5886,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/profit-card/StatsCardFront.test.jsx"
@@ -2312,13 +2312,13 @@
             "fullName": "TrafficBackCard Auto-Generated Test Suite renders without crashing",
             "status": "passed",
             "title": "renders without crashing",
-            "duration": 20.362699999999904,
+            "duration": 25.6413,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946812737,
-        "endTime": 1785946812757.3628,
+        "startTime": 1785947255708,
+        "endTime": 1785947255733.6414,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/traffic-reveal/TrafficBackCard.test.jsx"
@@ -2332,13 +2332,13 @@
             "fullName": "TrafficFrontCard Auto-Generated Test Suite renders without crashing",
             "status": "passed",
             "title": "renders without crashing",
-            "duration": 27.867099999999937,
+            "duration": 30.41229999999996,
             "failureMessages": [],
             "meta": {}
           }
         ],
-        "startTime": 1785946810824,
-        "endTime": 1785946810851.8672,
+        "startTime": 1785947253950,
+        "endTime": 1785947253980.4124,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/traffic-reveal/TrafficFrontCard.test.jsx"
