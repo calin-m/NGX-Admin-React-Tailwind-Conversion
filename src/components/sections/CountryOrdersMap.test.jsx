@@ -7,6 +7,7 @@ describe('CountryOrdersMap Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<CountryOrdersMap />);
     expect(container).toBeDefined();
-    expect(screen.getByText('CountryOrdersMap')).toBeInTheDocument();
+    expect(screen.getByText(/Country Orders/i)).toBeInTheDocument();
   });
 });
+

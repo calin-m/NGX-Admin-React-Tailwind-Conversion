@@ -162,6 +162,13 @@
   - Modified walkthrough.md (documented import resolution fix)
 
 ### 🧹 Maintenance & Refactors
+- **refactor(scripts): create unified dual-stack AST parser engine & synchronize pipeline** (`f2e6ffd`) *by Calin on 2026-08-05*
+  - Created scripts/lib/ast-parser.js (shared Angular & React AST parser module)
+  - Refactored scripts/generate-legacy-docs.js (imported shared AST parser)
+  - Refactored scripts/generate-architecture-matrix.js (imported shared AST parser)
+  - Modified DEVELOPMENT.md (updated Pass 0 verification engine architecture)
+  - Modified .agents/AGENTS.md (updated Rule 1 & Rule 2 script references)
+  - Modified docs/LEGACY_BLUEPRINT.md & ARCHITECTURE.md (auto-synchronized matrices & ledger)
 - **refactor(corporate): complete Phase 5 sub-component decomposition** (`351b590`) *by Calin on 2026-08-04*
   - Created src/components/sections/profit-card/StatsCardFront.jsx (front analytics view)
   - Created src/components/sections/profit-card/StatsCardBack.jsx (back breakdown view)
@@ -173,4 +180,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-05T09:03:23.179Z*
+*Last Auto-Generated: 2026-08-05T09:14:18.220Z*

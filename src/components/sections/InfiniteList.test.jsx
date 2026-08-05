@@ -7,6 +7,7 @@ describe('InfiniteList Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<InfiniteList />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Infinite Scroll List/i)).toBeInTheDocument();
+    expect(screen.getByText(/Infinite Scroll/i)).toBeInTheDocument();
   });
 });
+

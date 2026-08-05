@@ -25,7 +25,7 @@ graph TD
 | `src/components/sections/AnimatedSearch.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/BubbleMaps.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/CalendarApp.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
-| `src/components/sections/CalendarKit.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/CalendarKit.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/ChartPanelHeader.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/ChartPanelSummary.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/ChartsPanel.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
@@ -33,7 +33,7 @@ graph TD
 | `src/components/sections/CkEditor.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/CountryOrders.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/CountryOrdersChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
-| `src/components/sections/CountryOrdersMap.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/CountryOrdersMap.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Datepicker.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Dialogs.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/EarningCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |

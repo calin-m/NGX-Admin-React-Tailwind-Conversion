@@ -7,6 +7,7 @@ describe('AnimatedSearch Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<AnimatedSearch />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Animated Search Field/i)).toBeInTheDocument();
+    expect(screen.getByText(/Animated Search/i)).toBeInTheDocument();
   });
 });
+

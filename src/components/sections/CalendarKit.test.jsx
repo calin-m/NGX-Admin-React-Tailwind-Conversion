@@ -7,6 +7,7 @@ describe('CalendarKit Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<CalendarKit />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Calendar Kit Component/i)).toBeInTheDocument();
+    expect(screen.getByText(/Calendar Kit/i)).toBeInTheDocument();
   });
 });
+

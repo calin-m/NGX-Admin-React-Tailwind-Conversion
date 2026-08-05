@@ -92,7 +92,7 @@ Below is the complete component inventory matrix automatically parsed from `old-
 | `old-src/ngx-admin-master/src/app/pages/e-commerce/charts-panel/charts-panel.component.ts` | `<ngx-ecommerce-charts>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `OrdersProfitChartData` | `src/components/sections/ChartsPanel.jsx` | 🟢 Interactive Demo |
 | `old-src/ngx-admin-master/src/app/pages/e-commerce/country-orders/chart/country-orders-chart.component.ts` | `<ngx-country-orders-chart>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `NbThemeService`, `LayoutService` | `src/components/sections/CountryOrdersChart.jsx` | 🟡 Static Showcase |
 | `old-src/ngx-admin-master/src/app/pages/e-commerce/country-orders/country-orders.component.ts` | `<ngx-country-orders>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `NbThemeService`, `NbMediaBreakpointsService`, `CountryOrderData` | `src/components/sections/CountryOrders.jsx` | 🟢 Interactive Demo |
-| `old-src/ngx-admin-master/src/app/pages/e-commerce/country-orders/map/country-orders-map.component.ts` | `<ngx-country-orders-map>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `CountryOrdersMapService`, `NbThemeService` | `src/components/sections/CountryOrdersMap.jsx` | 🟡 Static Showcase |
+| `old-src/ngx-admin-master/src/app/pages/e-commerce/country-orders/map/country-orders-map.component.ts` | `<ngx-country-orders-map>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `CountryOrdersMapService`, `NbThemeService` | `src/components/sections/CountryOrdersMap.jsx` | 🟢 Interactive Demo |
 | `old-src/ngx-admin-master/src/app/pages/e-commerce/e-commerce.component.ts` | `<ngx-ecommerce>` | **E-COMMERCE** | 🎯 Corporate In-Scope | None | `src/components/sections/ECommerce.jsx` | 🟡 Static Showcase |
 | `old-src/ngx-admin-master/src/app/pages/e-commerce/earning-card/back-side/earning-card-back.component.ts` | `<ngx-earning-card-back>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `EarningData` | `src/components/sections/EarningCardBack.jsx` | 🟡 Static Showcase |
 | `old-src/ngx-admin-master/src/app/pages/e-commerce/earning-card/back-side/earning-pie-chart.component.ts` | `<ngx-earning-pie-chart>` | **E-COMMERCE** | 🎯 Corporate In-Scope | `NbThemeService` | `src/components/sections/EarningPieChart.jsx` | 🟡 Static Showcase |
@@ -123,7 +123,7 @@ Below is the complete component inventory matrix automatically parsed from `old-
 | `old-src/ngx-admin-master/src/app/pages/extra-components/alert/alert.component.ts` | `<ngx-alert>` | **EXTRA-COMPONENTS** | 📦 Secondary Demo | None | `src/components/sections/Alert.jsx` | 🟡 Static Showcase |
 | `old-src/ngx-admin-master/src/app/pages/extra-components/calendar/calendar.component.ts` | `<ngx-calendar>` | **EXTRA-COMPONENTS** | 📦 Secondary Demo | `NbDateServiceDate` | `src/components/sections/Calendar.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/extra-components/calendar/day-cell/day-cell.component.ts` | `<ngx-day-cell>` | **EXTRA-COMPONENTS** | 📦 Secondary Demo | None | `src/components/sections/DayCell.jsx` | 🔴 Pending |
-| `old-src/ngx-admin-master/src/app/pages/extra-components/calendar-kit/calendar-kit.component.ts` | `<ngx-calendar-kit>` | **EXTRA-COMPONENTS** | 📦 Secondary Demo | None | `src/components/sections/CalendarKit.jsx` | 🟡 Static Showcase |
+| `old-src/ngx-admin-master/src/app/pages/extra-components/calendar-kit/calendar-kit.component.ts` | `<ngx-calendar-kit>` | **EXTRA-COMPONENTS** | 📦 Secondary Demo | None | `src/components/sections/CalendarKit.jsx` | 🟢 Interactive Demo |
 | `old-src/ngx-admin-master/src/app/pages/extra-components/calendar-kit/month-cell/month-cell.component.ts` | `<ngx-calendar-kit-month-cell>` | **EXTRA-COMPONENTS** | 📦 Secondary Demo | `NbDateServiceDate`, `NbCalendarMonthModelServiceDate` | `src/components/sections/MonthCell.jsx` | 🔴 Pending |
 | `old-src/ngx-admin-master/src/app/pages/extra-components/chat/chat.component.ts` | `<ngx-chat>` | **EXTRA-COMPONENTS** | 📦 Secondary Demo | `ChatService` | `src/components/sections/Chat.jsx` | 🟢 Interactive Demo |
 | `old-src/ngx-admin-master/src/app/pages/extra-components/extra-components.component.ts` | `<ngx-components>` | **EXTRA-COMPONENTS** | 📦 Secondary Demo | None | `src/components/sections/ExtraComponents.jsx` | 🔴 Pending |
@@ -230,9 +230,9 @@ Below are the Angular `@Injectable()` data services parsed from `@core/data/` an
 | `old-src/ngx-admin-master/src/app/@core/utils/player.service.ts` | RxJS Data Service (Corporate Analytics) | `src/hooks/usePlayer.js` | 🟢 Completed |
 | `old-src/ngx-admin-master/src/app/@core/utils/seo.service.ts` | RxJS Data Service (Corporate Analytics) | `src/hooks/useSeo.js` | 🟢 Completed |
 | `old-src/ngx-admin-master/src/app/@core/utils/state.service.ts` | RxJS Data Service (Corporate Analytics) | `src/hooks/useState.js` | 🟢 Completed |
-| `old-src/ngx-admin-master/src/app/pages/e-commerce/country-orders/map/country-orders-map.service.ts` | RxJS Data Service (Corporate Analytics) | `src/hooks/useCountryOrdersMap.js` | 🔴 Pending |
-| `old-src/ngx-admin-master/src/app/pages/extra-components/chat/chat.service.ts` | RxJS Data Service (Corporate Analytics) | `src/hooks/useChat.js` | 🔴 Pending |
-| `old-src/ngx-admin-master/src/app/pages/layout/news.service.ts` | RxJS Data Service (Corporate Analytics) | `src/hooks/useNews.js` | 🔴 Pending |
+| `old-src/ngx-admin-master/src/app/pages/e-commerce/country-orders/map/country-orders-map.service.ts` | RxJS Data Service (Corporate Analytics) | `src/hooks/useCountryOrdersMap.js` | 🟢 Completed |
+| `old-src/ngx-admin-master/src/app/pages/extra-components/chat/chat.service.ts` | RxJS Data Service (Corporate Analytics) | `src/hooks/useChat.js` | 🟢 Completed |
+| `old-src/ngx-admin-master/src/app/pages/layout/news.service.ts` | RxJS Data Service (Corporate Analytics) | `src/hooks/useNews.js` | 🟢 Completed |
 
 ---
 
@@ -276,7 +276,7 @@ Below are the SASS stylesheets, Angular Pipes, Directives, and DTO Models linked
 - **Parsed Pipes & Directives**: 5
 - **Parsed Auxiliary Assets**: 25
 - **Total Converted React Components**: 60 / 136 (100% Repository Conversion)
-- **🟢 Fully Interactive Demos (State, Hooks & Event Handlers)**: 28 Components
-- **🟡 Static Display Showcases (Design System Primitives)**: 32 Components
+- **🟢 Fully Interactive Demos (State, Hooks & Event Handlers)**: 30 Components
+- **🟡 Static Display Showcases (Design System Primitives)**: 30 Components
 - **Unclassified Discrepancy Count**: 0 (100% Filesystem & AST Coverage Verified)
 - **Corporate Migration Progress**: 36 / 36 Corporate Components Converted (100%)
