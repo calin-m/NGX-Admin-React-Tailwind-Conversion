@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react';
  * useSolar Custom Hook
  * Translated from Angular @Injectable() RxJS Service: @core/data/solar.ts
  */
-export function useSolar(initialPeriod = 'week') {
-  const [period, setPeriod] = useState(initialPeriod);
-  const [data, setData] = useState([]);
+export function useSolar(initialMode = 'solar') {
+  const [mode, setMode] = useState(initialMode);
+  const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,31 +14,50 @@ export function useSolar(initialPeriod = 'week') {
     let isMounted = true;
     setLoading(true);
 
-    // Simulate reactive data fetching
     const timer = setTimeout(() => {
       if (isMounted) {
-        setData([
-          { id: 1, title: 'Solar Metric A', value: 1250, period },
-          { id: 2, title: 'Solar Metric B', value: 3400, period },
-          { id: 3, title: 'Solar Metric C', value: 8900, period }
-        ]);
+        const modeData = {
+          solar: {
+            title: 'Solar Energy Output',
+            subtitle: 'Rooftop Solar Panel Production',
+            value: '84%',
+            label: 'Panel Efficiency',
+            energy: '4.2 kWh Generated',
+            subtext: 'Peak Sun Hours: 6.5 hrs',
+            progressColor: 'border-emerald-500',
+            textColor: 'text-emerald-600 dark:text-emerald-400'
+          },
+          battery: {
+            title: 'Battery Energy Storage',
+            subtitle: 'Home Battery Wall Capacity',
+            value: '92%',
+            label: 'Charge Level',
+            energy: '11.8 kWh Stored',
+            subtext: 'Backup Duration: 14 hrs',
+            progressColor: 'border-indigo-500',
+            textColor: 'text-indigo-600 dark:text-indigo-400'
+          }
+        };
+
+        setData(modeData[mode] || modeData.solar);
         setLoading(false);
       }
-    }, 150);
+    }, 100);
 
     return () => {
       isMounted = false;
       clearTimeout(timer);
     };
-  }, [period]);
+  }, [mode]);
 
   return {
     data,
     loading,
     error,
-    period,
-    setPeriod
+    mode,
+    setMode
   };
 }
 
 export default useSolar;
+

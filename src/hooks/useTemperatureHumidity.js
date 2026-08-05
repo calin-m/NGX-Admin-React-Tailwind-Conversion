@@ -4,9 +4,8 @@ import { useState, useEffect } from 'react';
  * useTemperatureHumidity Custom Hook
  * Translated from Angular @Injectable() RxJS Service: @core/data/temperature-humidity.ts
  */
-export function useTemperatureHumidity(initialPeriod = 'week') {
-  const [period, setPeriod] = useState(initialPeriod);
-  const [data, setData] = useState([]);
+export function useTemperatureHumidity() {
+  const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,31 +13,32 @@ export function useTemperatureHumidity(initialPeriod = 'week') {
     let isMounted = true;
     setLoading(true);
 
-    // Simulate reactive data fetching
     const timer = setTimeout(() => {
       if (isMounted) {
-        setData([
-          { id: 1, title: 'TemperatureHumidity Metric A', value: 1250, period },
-          { id: 2, title: 'TemperatureHumidity Metric B', value: 3400, period },
-          { id: 3, title: 'TemperatureHumidity Metric C', value: 8900, period }
-        ]);
+        setData({
+          targetTemp: 24,
+          humidity: '52%',
+          airQuality: 'Good (98 AQI)',
+          outdoorTemp: '18°C',
+          fanSpeed: 'Med',
+          modes: ['heat', 'cool', 'fan']
+        });
         setLoading(false);
       }
-    }, 150);
+    }, 100);
 
     return () => {
       isMounted = false;
       clearTimeout(timer);
     };
-  }, [period]);
+  }, []);
 
   return {
     data,
     loading,
-    error,
-    period,
-    setPeriod
+    error
   };
 }
 
 export default useTemperatureHumidity;
+

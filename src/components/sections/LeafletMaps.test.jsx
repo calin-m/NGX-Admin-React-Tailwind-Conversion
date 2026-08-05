@@ -7,6 +7,7 @@ describe('LeafletMaps Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<LeafletMaps />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Leaflet Maps OpenStreetMap/i)).toBeInTheDocument();
+    expect(screen.getByText(/Leaflet OpenStreetMap Layer/i)).toBeInTheDocument();
   });
 });
+

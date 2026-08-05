@@ -7,6 +7,8 @@ describe('Tabs Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<Tabs />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Tab 1: Overview/i)).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Overview/i })).toBeInTheDocument();
   });
 });
+
+

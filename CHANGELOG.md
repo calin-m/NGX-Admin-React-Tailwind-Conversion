@@ -4,7 +4,7 @@
 
 ---
 
-## [1.0.0] — 2026-08-04
+## [1.0.0] — 2026-08-05
 
 ### 🚀 New Features
 - **feat(interactive): complete interactive polish pass (theme switcher, search Esc key, chart period datasets)** (`6d1bfdd`) *by Calin on 2026-08-04*
@@ -122,6 +122,10 @@
   - Synchronized ARCHITECTURE.md, docs/LEGACY_BLUEPRINT.md, docs/DECISIONS.md, and .agents/AGENTS.md
 
 ### 🐛 Bug Fixes
+- **fix(test): align Stepper.test.jsx step 2 text assertion to Personal Info matcher** (`51f4f64`) *by Calin on 2026-08-04*
+  - Updated src/components/sections/Stepper.test.jsx (matched Personal Info on step 2 transition)
+  - Updated test-results.json (100% pass rate recorded)
+  - Modified walkthrough.md (documented Vitest verification)
 - **fix(config): eliminate post-commit timestamp drift in documentation generators** (`8e71adc`) *by Calin on 2026-08-04*
   - Modified scripts/generate-architecture-matrix.js (removed dynamic timestamp)
   - Modified scripts/generate-legacy-docs.js (removed dynamic timestamp)
@@ -142,4 +146,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-04T20:50:51.215Z*
+*Last Auto-Generated: 2026-08-05T05:50:36.214Z*

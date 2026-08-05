@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
  */
 export function useEarning(initialPeriod = 'week') {
   const [period, setPeriod] = useState(initialPeriod);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,17 +14,45 @@ export function useEarning(initialPeriod = 'week') {
     let isMounted = true;
     setLoading(true);
 
-    // Simulate reactive data fetching
     const timer = setTimeout(() => {
       if (isMounted) {
-        setData([
-          { id: 1, title: 'Earning Metric A', value: 1250, period },
-          { id: 2, title: 'Earning Metric B', value: 3400, period },
-          { id: 3, title: 'Earning Metric C', value: 8900, period }
-        ]);
+        const periodData = {
+          week: {
+            totalEarnings: '$64.2k',
+            dailyRate: '$2,450 / day',
+            growth: '+18.2%',
+            portfolio: [
+              { name: 'Bitcoin', value: 50, color: 'bg-amber-500', hex: '#f59e0b', strokeDash: '50, 100', strokeOffset: '0' },
+              { name: 'Tether', value: 25, color: 'bg-indigo-500', hex: '#6366f1', strokeDash: '25, 100', strokeOffset: '-50' },
+              { name: 'Ethereum', value: 25, color: 'bg-emerald-500', hex: '#10b981', strokeDash: '25, 100', strokeOffset: '-75' },
+            ]
+          },
+          month: {
+            totalEarnings: '$284.5k',
+            dailyRate: '$9,480 / day',
+            growth: '+24.6%',
+            portfolio: [
+              { name: 'Bitcoin', value: 55, color: 'bg-amber-500', hex: '#f59e0b', strokeDash: '55, 100', strokeOffset: '0' },
+              { name: 'Tether', value: 20, color: 'bg-indigo-500', hex: '#6366f1', strokeDash: '20, 100', strokeOffset: '-55' },
+              { name: 'Ethereum', value: 25, color: 'bg-emerald-500', hex: '#10b981', strokeDash: '25, 100', strokeOffset: '-75' },
+            ]
+          },
+          year: {
+            totalEarnings: '$1.42M',
+            dailyRate: '$3,890 / day',
+            growth: '+32.1%',
+            portfolio: [
+              { name: 'Bitcoin', value: 60, color: 'bg-amber-500', hex: '#f59e0b', strokeDash: '60, 100', strokeOffset: '0' },
+              { name: 'Tether', value: 25, color: 'bg-indigo-500', hex: '#6366f1', strokeDash: '25, 100', strokeOffset: '-60' },
+              { name: 'Ethereum', value: 15, color: 'bg-emerald-500', hex: '#10b981', strokeDash: '15, 100', strokeOffset: '-85' },
+            ]
+          }
+        };
+
+        setData(periodData[period] || periodData.week);
         setLoading(false);
       }
-    }, 150);
+    }, 100);
 
     return () => {
       isMounted = false;
@@ -42,3 +70,4 @@ export function useEarning(initialPeriod = 'week') {
 }
 
 export default useEarning;
+

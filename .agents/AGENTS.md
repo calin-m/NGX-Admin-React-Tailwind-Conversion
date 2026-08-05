@@ -52,3 +52,4 @@ git commit `
 - **Automated Legacy Blueprint Sync**: Legacy blueprint documentation MUST be automatically generated via `node scripts/generate-legacy-docs.js` into `docs/LEGACY_BLUEPRINT.md`.
 - **Governance & Corporate Scope (ADR-002)**: Migration activities MUST adhere strictly to [ADR-002](docs/DECISIONS.md#adr-002-corporate-dashboard-scoped-migration-strategy), targeting the Corporate Business Suite (`pages/e-commerce/`, `@theme/`, `@core/data/`) using the 4-Phase Migration Framework.
 - **Dual Documentation Inter-Referencing**: All component migration tasks MUST cross-reference `docs/LEGACY_BLUEPRINT.md` and automatically index newly converted components into `ARCHITECTURE.md`.
+

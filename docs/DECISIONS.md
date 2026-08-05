@@ -25,3 +25,18 @@ This document records key technical decisions made during the architecture and l
 - **Timeline (WHEN)**: Iterative component-by-component migration.
 - **Consequences**: Focused migration scope, zero bloat, high enterprise relevance, and 100% deterministic quality.
 
+---
+
+### ADR-003: Full System Migration Roadmap (Phased Scope Expansion)
+- **Status**: Approved
+- **Context**: ADR-002 focused initial conversion efforts on the Corporate Business Suite. The project mandate has expanded to achieve 100% full conversion across all 118 Angular components in `old-src/ngx-admin-master`.
+- **Scope**: Expand coverage to all remaining modules (IoT Dashboard, Forms & Steppers, Charts Suite, UI Features, Maps, Data Grids, Auth & Misc pages) with 100% interactive parity.
+- **Methodology (HOW)**: Executed in 5 structured phases:
+  1. *Phase 1*: Corporate Business Suite Interactivity & Feature Parity Polish.
+  2. *Phase 2*: IoT Dashboard Suite (`SolarCard`, `TemperatureCard`, `RoomsCard`, `Player`, `ElectricityCard`).
+  3. *Phase 3*: Forms, Stepper & UI Primitives (`FormInputs`, `FormLayouts`, `Datepicker`, `Stepper`, `Dialogs`, `Popover`, `Toastr`).
+  4. *Phase 4*: Complete Charting & Maps Suite (`Chartjs`, `D3`, `ECharts`, `Leaflet`, `Google Maps`, `Bubble Maps`).
+  5. *Phase 5*: Smart Tables CRUD, TreeGrid & Auth Pages (`SmartTable` full CRUD/filtering, `TreeGrid`, `Login`, `Register`, `ResetPassword`).
+- **Consequences**: 100% full repository conversion, complete interactive feature parity, and continuous quality verification via the 7-Gateway Engine.
+
+
