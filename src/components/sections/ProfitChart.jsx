@@ -44,8 +44,9 @@ export default function ProfitChart(props) {
               className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
                 quarter === q
                   ? 'bg-emerald-600 text-white shadow-xs'
-                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900'
+                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100'
               }`}
+
             >
               {q}
             </button>

@@ -53,8 +53,9 @@ export default function ChartsPanel() {
               className={`px-3 py-1 rounded-md transition-all capitalize ${
                 period === p
                   ? 'bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 shadow-sm font-semibold'
-                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
               }`}
+
             >
               {p}
             </button>

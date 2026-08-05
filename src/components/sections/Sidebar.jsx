@@ -23,11 +23,11 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
 
   return (
     <aside
-      className={`bg-white dark:bg-slate-800 border-r border-slate-200/80 dark:border-slate-700/80 transition-all duration-300 flex flex-col justify-between overflow-hidden z-20 ${
+      className={`bg-white dark:bg-slate-800 border-r border-slate-200/80 dark:border-slate-700/80 sticky top-16 h-[calc(100vh-4rem)] transition-[width] duration-300 ease-in-out flex flex-col justify-between overflow-hidden z-20 shrink-0 ${
         isCollapsed ? 'w-20' : 'w-64'
       }`}
     >
-      <div className="p-4 space-y-6 overflow-y-auto max-h-screen">
+      <div className="p-4 space-y-6 overflow-y-auto flex-1">
         <div className="flex items-center space-x-3 px-2">
           <div className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center font-black text-lg shadow-md shrink-0 transition-colors">
             N

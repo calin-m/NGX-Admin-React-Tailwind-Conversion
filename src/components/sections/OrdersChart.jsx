@@ -54,8 +54,9 @@ export default function OrdersChart(props) {
               className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
                 period === p
                   ? 'bg-accent text-white shadow-xs transition-colors'
-                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900'
+                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100'
               }`}
+
             >
               {p}
             </button>

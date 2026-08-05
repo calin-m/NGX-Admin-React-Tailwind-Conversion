@@ -25,7 +25,7 @@ export default function SolarCard() {
             className={`px-3 py-1 rounded-lg transition-all ${
               mode === 'solar'
                 ? 'bg-emerald-500 text-white font-bold shadow-sm'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
             }`}
           >
             ☀️ Solar
@@ -35,7 +35,7 @@ export default function SolarCard() {
             className={`px-3 py-1 rounded-lg transition-all ${
               mode === 'battery'
                 ? 'bg-indigo-600 text-white font-bold shadow-sm'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
             }`}
           >
             🔋 Battery

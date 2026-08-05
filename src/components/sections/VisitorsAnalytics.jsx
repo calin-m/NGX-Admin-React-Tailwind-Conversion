@@ -29,7 +29,7 @@ export default function VisitorsAnalytics() {
             className={`px-3 py-1.5 rounded-lg transition-all ${
               activeTab === 'pageViews'
                 ? 'bg-accent text-white font-semibold shadow-sm transition-colors'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
             }`}
           >
             Page Views
@@ -39,7 +39,7 @@ export default function VisitorsAnalytics() {
             className={`px-3 py-1.5 rounded-lg transition-all ${
               activeTab === 'uniqueVisitors'
                 ? 'bg-emerald-600 text-white font-semibold shadow-sm'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
             }`}
           >
             Unique Visitors

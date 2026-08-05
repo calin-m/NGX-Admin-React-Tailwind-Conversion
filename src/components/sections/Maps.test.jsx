@@ -7,6 +7,6 @@ describe('Maps Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<Maps />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Interactive Maps Suite/i)).toBeInTheDocument();
+    expect(screen.getByText(/Interactive Maps Showcase/i)).toBeInTheDocument();
   });
 });

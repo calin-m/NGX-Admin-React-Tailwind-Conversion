@@ -27,8 +27,9 @@ export default function LeafletMaps() {
               className={`px-2.5 py-1 rounded-lg transition-all ${
                 tileLayer === layer
                   ? 'bg-white dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-bold shadow-sm'
-                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-900'
+                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
               }`}
+
             >
               {layer}
             </button>

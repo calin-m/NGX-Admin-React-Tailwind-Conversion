@@ -32,8 +32,9 @@ export default function Echarts() {
                 className={`px-2.5 py-1 rounded-lg transition-all capitalize ${
                   chartType === type
                     ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 font-bold shadow-sm'
-                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-900'
+                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
                 }`}
+
               >
                 {type}
               </button>

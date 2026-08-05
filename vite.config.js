@@ -12,6 +12,16 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     include: ['src/**/*.test.{js,jsx}'],
-    exclude: ['old-src/**', 'node_modules/**']
+    exclude: ['old-src/**', 'node_modules/**'],
+    pool: 'forks',
+    poolOptions: {
+      forks: {
+        maxForks: 4,
+        minForks: 1
+      }
+    },
+    sequence: {
+      concurrent: false
+    }
   }
 });
