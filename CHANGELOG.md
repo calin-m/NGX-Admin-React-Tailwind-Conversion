@@ -7,6 +7,12 @@
 ## [1.0.0] — 2026-08-05
 
 ### 🚀 New Features
+- **feat(theme): implement 100% dynamic brand color accent engine across all 17 menu tabs** (`8c1b00a`) *by Calin on 2026-08-05*
+  - Modified src/index.css (defined [data-accent] CSS custom variables for indigo, emerald, purple, teal and declared global utility classes).
+  - Modified src/App.jsx (bound accentColor state directly to document.documentElement data-accent attribute).
+  - Modified ThemeCustomizer.jsx, Sidebar.jsx, Header.jsx, Footer.jsx (bound logo circle, badges, avatar, and active menu items).
+  - Refactored 25 page components across Corporate Dashboard, IoT Smart Home, Chat, Calendar, Stepper, Accordion, Maps, Forms, TreeGrid, Grid, Typography, Auth, and Settings tabs to use dynamic accent utilities.
+  - Created scripts/audit-theme-accents.js and scripts/audit-all-menu-pages.js (automated AST theme parity audit scripts).
 - **feat(dashboard): expand canvas, re-balance grids, and implement period-reactive data engine** (`5123a78`) *by Calin on 2026-08-05*
   - Modified src/index.css (added @custom-variant dark for Tailwind v4 class toggle)
   - Modified src/App.jsx (expanded canvas to max-w-[1600px] and re-balanced IoT grid)
@@ -204,4 +210,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-05T11:04:03.067Z*
+*Last Auto-Generated: 2026-08-05T11:42:18.791Z*
