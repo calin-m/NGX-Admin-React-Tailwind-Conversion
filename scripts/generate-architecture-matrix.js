@@ -53,8 +53,25 @@ graph TD
 components.forEach(comp => {
   const parts = comp.split('/');
   const domain = parts.length > 1 ? parts[0] : 'root';
-  markdown += `| \`src/${comp}\` | **${domain.toUpperCase()}** | 🟢 Active |\n`;
+  const fullPath = path.join(srcDir, comp);
+
+  let statusStr = '🟢 Active';
+  try {
+    const code = fs.readFileSync(fullPath, 'utf8');
+    const hasState = /useState|useReducer|useEffect|useMemo|useCallback|useContext|use[A-Z]\w+/.test(code);
+    const hasHandlers = /onClick|onChange|onSubmit|onKeyDown|onKeyUp|handle[A-Z]\w+/.test(code);
+    if (hasState || hasHandlers) {
+      statusStr = '🟢 Interactive Demo';
+    } else {
+      statusStr = '🟡 Static Showcase';
+    }
+  } catch (e) {
+    statusStr = '🟢 Active';
+  }
+
+  markdown += `| \`src/${comp}\` | **${domain.toUpperCase()}** | ${statusStr} |\n`;
 });
 
 fs.writeFileSync(archFile, markdown);
 console.log('✔ Successfully auto-synchronized ARCHITECTURE.md component inventory matrix.');
+

@@ -19,97 +19,97 @@ graph TD
 
 | Component Path | Domain Area | Status |
 | :--- | :--- | :---: |
-| `src/App.jsx` | **ROOT** | 🟢 Active |
-| `src/components/sections/Accordion.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Alert.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/AnimatedSearch.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/BubbleMaps.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/CalendarApp.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/CalendarKit.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/ChartPanelHeader.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/ChartPanelSummary.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/ChartsPanel.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Chat.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/CkEditor.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/CountryOrders.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/CountryOrdersChart.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/CountryOrdersMap.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Datepicker.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Dialogs.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/EarningCard.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/EarningCardBack.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/EarningCardFront.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/EarningLiveUpdateChart.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/EarningPieChart.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Echarts.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/ECommerce.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/ElectricityCard.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Footer.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/FormButtons.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/FormInputs.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/FormLayouts.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/GoogleMaps.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Grid.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Header.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Icons.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/InfiniteList.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/KittenCard.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/LeafletMaps.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/LegendChart.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/List.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Login.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Maps.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/NotFound.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/NotificationDrawer.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/OrderModal.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/OrdersChart.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Popover.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/profit-card/StatsCardBack.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/profit-card/StatsCardFront.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/ProfitCard.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/ProfitChart.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/ProgressBar.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/ProgressSection.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Register.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/ResetPassword.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/RoomsCard.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/SearchInput.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/SecurityCameras.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Settings.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Sidebar.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/SlideOut.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/SmartTable.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/SolarCard.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Spinner.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/StatsAreaChart.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/StatsBarAnimationChart.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/StatusCard.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Stepper.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Tabs.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/TemperatureCard.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/ThemeCustomizer.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/TinyMce.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Toastr.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Tooltip.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/traffic-reveal/TrafficBackCard.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/traffic-reveal/TrafficFrontCard.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/TrafficBar.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/TrafficBarChart.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/TrafficCardsHeader.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/TrafficRevealCard.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/TreeGrid.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Typography.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/UserActivity.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/UserManagement.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/VisitorsAnalytics.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/VisitorsAnalyticsChart.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/VisitorsStatistics.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/WeatherCard.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/sections/Window.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/ui/Badge.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/ui/Button.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/ui/Card.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/components/ui/GlassCard.jsx` | **COMPONENTS** | 🟢 Active |
-| `src/context/AuthContext.jsx` | **CONTEXT** | 🟢 Active |
-| `src/context/ThemeContext.jsx` | **CONTEXT** | 🟢 Active |
-| `src/main.jsx` | **ROOT** | 🟢 Active |
+| `src/App.jsx` | **ROOT** | 🟢 Interactive Demo |
+| `src/components/sections/Accordion.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Alert.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/AnimatedSearch.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/BubbleMaps.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/CalendarApp.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/CalendarKit.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/ChartPanelHeader.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/ChartPanelSummary.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/ChartsPanel.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Chat.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/CkEditor.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/CountryOrders.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/CountryOrdersChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/CountryOrdersMap.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/Datepicker.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Dialogs.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/EarningCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/EarningCardBack.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/EarningCardFront.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/EarningLiveUpdateChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/EarningPieChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/Echarts.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/ECommerce.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/ElectricityCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Footer.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/FormButtons.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/FormInputs.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/FormLayouts.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/GoogleMaps.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Grid.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/Header.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Icons.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/InfiniteList.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/KittenCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/LeafletMaps.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/LegendChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/List.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/Login.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Maps.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/NotFound.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/NotificationDrawer.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/OrderModal.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/OrdersChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/Popover.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/profit-card/StatsCardBack.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/profit-card/StatsCardFront.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/ProfitCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/ProfitChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/ProgressBar.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/ProgressSection.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Register.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/ResetPassword.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/RoomsCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/SearchInput.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/SecurityCameras.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Settings.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Sidebar.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/SlideOut.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/SmartTable.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/SolarCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Spinner.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/StatsAreaChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/StatsBarAnimationChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/StatusCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Stepper.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Tabs.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/TemperatureCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/ThemeCustomizer.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/TinyMce.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/Toastr.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Tooltip.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/traffic-reveal/TrafficBackCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/traffic-reveal/TrafficFrontCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/TrafficBar.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/TrafficBarChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/TrafficCardsHeader.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/TrafficRevealCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/TreeGrid.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/Typography.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/UserActivity.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/UserManagement.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/VisitorsAnalytics.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/VisitorsAnalyticsChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/VisitorsStatistics.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/WeatherCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/Window.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/ui/Badge.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/ui/Button.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/ui/Card.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/ui/GlassCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/context/AuthContext.jsx` | **CONTEXT** | 🟢 Interactive Demo |
+| `src/context/ThemeContext.jsx` | **CONTEXT** | 🟢 Interactive Demo |
+| `src/main.jsx` | **ROOT** | 🟡 Static Showcase |

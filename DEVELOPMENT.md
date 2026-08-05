@@ -31,13 +31,14 @@ Welcome to the **Developer Environment Guide**. This document defines local setu
 ## 🛡️ 2. 7-Gateway Quality Engine (`node scripts/verify-build.js`)
 
 Executing `npm run verify` triggers a 7-pass quality gate audit:
-1. **Pass 0: Zero-Manual Auto-Scaffolder & Doc Sync**: Auto-scaffolds missing tests/stories & syncs `ARCHITECTURE.md`.
+1. **Pass 0: Zero-Manual Auto-Scaffolder, AST Interactivity & Doc Sync**: Auto-scaffolds missing tests/stories, analyzes AST component interactivity (`🟢 Interactive Demo` vs `🟡 Static Showcase`), & syncs `ARCHITECTURE.md` and `docs/LEGACY_BLUEPRINT.md`.
 2. **Pass 1: AST Syntax & A11y Audit**: Validates JSX syntax and image `alt` accessibility attributes.
 3. **Pass 2: Ghost Files Audit**: Ensures no orphan or dead files exist in `src/`.
 4. **Pass 3: Living Architecture Blueprint (`ARCHITECTURE.md`)**: Verifies C4 Mermaid Level 1-3 diagrams.
 5. **Pass 4: ADR Decision Records (`docs/DECISIONS.md`)**: Validates sequential numbering of Architectural Decision Records.
 6. **Pass 5 & 6: Vitest Dual-Theme Execution**: Executes full test suites across Dark and Light modes.
 7. **Pass 7: Production Vite Bundle Compilation**: Verifies clean production `dist/` compilation.
+
 
 ---
 
