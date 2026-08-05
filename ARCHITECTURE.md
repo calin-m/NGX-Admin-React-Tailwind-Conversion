@@ -1,6 +1,6 @@
 # 📐 MASTER ARCHITECTURE & LIVING COMPONENT BLUEPRINT
 
-> **Status**: Auto-Synchronized | **Architecture**: Modular React SPA
+> **Status**: Auto-Synchronized | **Architecture**: Modular React 18 SPA + Custom Hook Data Layer
 
 ---
 
@@ -8,9 +8,36 @@
 
 ```mermaid
 graph TD
-    User["Athlete / Customer"] --> |Browses Showcase| WebApp["Enterprise Web Application"]
-    WebApp --> |Executes| ClientState["React State Engine"]
-    WebApp --> |Renders| UIPrimitives["Design System Primitives"]
+    User["Dashboard User / Manager"] --> |Interacts With| WebApp["NGX Admin React Application"]
+    WebApp --> |Executes State & Data Hooks| CustomHooks["Custom Data Hooks Layer"]
+    WebApp --> |Renders Dynamic Accents| DesignSystem["Tailwind v4 Theme Engine"]
+```
+
+---
+
+## 🔗 C4 Level 3: Custom Hook Data Dependency Graph
+
+```mermaid
+graph LR
+    subgraph DataHooks ["Custom Data Hooks (src/hooks/)"]
+        H1["useEarning.js"]
+        H2["useOrdersChart.js"]
+        H3["useSmartTableData.js"]
+    end
+
+    subgraph Components ["Presentation Components (src/components/)"]
+        C1["ECommerce.jsx"]
+        C2["EarningCard.jsx"]
+        C3["ChartsPanel.jsx"]
+        C4["OrdersChart.jsx"]
+        C5["SmartTable.jsx"]
+    end
+
+    H1 --> C1
+    H1 --> C2
+    H2 --> C3
+    H2 --> C4
+    H3 --> C5
 ```
 
 ---

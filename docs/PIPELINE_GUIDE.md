@@ -24,11 +24,16 @@ Executing `npm run verify` triggers a 7-pass quality gate audit:
 
 | Driver Script (`scripts/`) | Target Stack | Output Destination | Trigger Command |
 | :--- | :--- | :--- | :--- |
-| `generate-architecture-matrix.js` | 🚀 **Active React (`src/`)** | [**`ARCHITECTURE.md`**](file:///d:/Proiecte/Real%20Estate%20Demo/ARCHITECTURE.md) | `npm run docs:sync` / `npm run verify` |
-| `generate-legacy-docs.js` | 📜 **Legacy Angular (`old-src/`)** | [**`docs/LEGACY_BLUEPRINT.md`**](file:///d:/Proiecte/Real%20Estate%20Demo/docs/LEGACY_BLUEPRINT.md) | `npm run docs:legacy` / `npm run docs:sync` / `npm run verify` |
-| `generate-changelog.js` | 📜 **Release History** | [**`CHANGELOG.md`**](file:///d:/Proiecte/Real%20Estate%20Demo/CHANGELOG.md) | `npm run docs:sync` |
-| `verify-build.js` | 🛡️ **7-Gateway Engine** | Terminal Audit Output | `npm run verify` |
-| `new-adr.js` | 📜 **ADR Generator** | [**`docs/DECISIONS.md`**](file:///d:/Proiecte/Real%20Estate%20Demo/docs/DECISIONS.md) | `npm run adr:new` |
+| `generate-quality-report.js` | 🛡️ **In-Depth AST Quality Audit** | [**`docs/QUALITY_AUDIT_REPORT.md`**](docs/QUALITY_AUDIT_REPORT.md) | `npm run report` / `npm run verify` |
+| `audit-all-menu-pages.js` | 🎨 **17-Menu-Tab Parity Check** | Terminal Audit Output | `npm run audit:pages` |
+| `audit-theme-accents.js` | 🎨 **AST Accent Color Scanner** | Terminal Audit Output | `npm run audit:theme` |
+| `audit-layout-density.js` | 📐 **Layout Density Scanner** | Terminal Audit Output | `npm run audit:density` |
+| `generate-architecture-matrix.js` | 🚀 **Active React (`src/`)** | [**`ARCHITECTURE.md`**](ARCHITECTURE.md) | `npm run docs:sync` / `npm run verify` |
+| `generate-legacy-docs.js` | 📜 **Legacy Angular (`old-src/`)** | [**`docs/LEGACY_BLUEPRINT.md`**](docs/LEGACY_BLUEPRINT.md) | `npm run docs:legacy` / `npm run docs:sync` / `npm run verify` |
+| `generate-changelog.js` | 📜 **Release History** | [**`CHANGELOG.md`**](CHANGELOG.md) | `npm run docs:sync` |
+| `verify-build.js` | 🛡️ **7-Gateway Engine** | Terminal & Report Output | `npm run verify` |
+| `new-adr.js` | 📜 **ADR Generator** | [**`docs/DECISIONS.md`**](docs/DECISIONS.md) | `npm run adr:new` |
+
 
 ---
 

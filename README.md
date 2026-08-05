@@ -1,10 +1,11 @@
-# ⚡ ENTERPRISE REACT STARTER — Dual-Stack Modernization Platform
+# ⚡ NGX ADMIN REACT TAILWIND CONVERSION
 
+> **Author & Repository**: Created with ♥ by **Calin M** ([GitHub Repository](https://github.com/calin-m/NGX-Admin-React-Tailwind-Conversion))  
 > **Active Target Architecture**: React 18 SPA + Vite 6 + Tailwind CSS v4 + Storybook 8 + Vitest (`src/`)  
 > **Legacy Reference Architecture**: Angular 15 + TypeScript + RxJS + Nebular / Bootstrap 4 (`old-src/`)  
-> **Living Documentation**: Auto-Synchronized via AST File-Tree Scanning (`ARCHITECTURE.md` & `docs/LEGACY_BLUEPRINT.md`)
+> **Living Documentation Network**: Auto-Synchronized via AST File-Tree Scanning (`ARCHITECTURE.md`, `docs/QUALITY_AUDIT_REPORT.md`, & `docs/LEGACY_BLUEPRINT.md`)
 
-Welcome to the **Enterprise React Modernization Platform**. This repository serves a dual purpose: it houses an active, production-grade React 18 + Tailwind CSS v4 application alongside a fully indexed legacy Angular 15 reference suite (`old-src/ngx-admin-master`), providing a structured, 100% deterministic workflow for converting legacy enterprise code into modern React components.
+Welcome to the **NGX Admin React Tailwind Conversion Platform**. This enterprise repository serves a dual purpose: it houses an active, production-grade **React 18 + Tailwind CSS v4** application alongside a fully indexed legacy **Angular 15** reference suite (`old-src/ngx-admin-master`), providing a structured, 100% deterministic workflow for converting legacy enterprise code into modern React components with **100% dynamic theme accent parity across all 17 sidebar menu tabs**.
 
 ---
 
@@ -14,13 +15,50 @@ This project is engineered to execute an **Enterprise Angular-to-React Moderniza
 
 1. 📜 **Read-Only Legacy Reference (`old-src/`)**: Holds the complete **Angular 15 (`ngx-admin-master`)** codebase, containing 118 Angular components, 102 templates, and 18 RxJS data services. It is strictly read-only and isolated from all build and linting pipelines.
 2. 🚀 **Active Target Stack (`src/`)**: Holds the modern **React 18 + Tailwind CSS v4** architecture. Converted components are built here, isolated in Storybook 8, tested via Vitest, and validated through the 7-Gateway Quality Engine (`npm run verify`).
-3. 🔄 **Automated Living Documentation**: Automatically tracks migration progress, dynamically flipping legacy component status from `🔴 Pending` ➡️ `🟢 Completed` in [`docs/LEGACY_BLUEPRINT.md`](docs/LEGACY_BLUEPRINT.md) while indexing active React components in [`ARCHITECTURE.md`](ARCHITECTURE.md).
+3. 🔄 **Automated Living Documentation**: Automatically tracks migration progress, dynamically flipping legacy component status from `🔴 Pending` ➡️ `🟢 Completed` in [`docs/LEGACY_BLUEPRINT.md`](docs/LEGACY_BLUEPRINT.md) while indexing active React components in [`ARCHITECTURE.md`](ARCHITECTURE.md) and [`docs/QUALITY_AUDIT_REPORT.md`](docs/QUALITY_AUDIT_REPORT.md).
+
+---
+
+## 🎨 100% Dynamic Brand Color Accent Engine
+
+The application features a 0ms instant-repaint dynamic brand accent engine. Selecting a brand color palette in **`ThemeCustomizer`** dynamically recolors 100% of interactive element groups across all 17 menu tabs:
+
+- **Indigo Palette** (`#6366f1` / `#4f46e5`): Corporate default primary accent.
+- **Emerald Palette** (`#10b981` / `#059669`): Vibrant energetic eco/finance accent.
+- **Purple Palette** (`#a855f7` / `#9333ea`): Sleek modern luxury accent.
+- **Teal Palette** (`#14b8a6` / `#0d9488`): Professional tech/data accent.
+
+All presentation components bind to CSS custom properties (`[data-accent]`) using dynamic utility classes (`.bg-accent`, `.hover:bg-accent-hover`, `.text-accent`, `.border-accent`, `.bg-accent-light`, `.focus:ring-accent`).
+
+---
+
+## 📌 17 / 17 Sidebar Menu Tab Parity Matrix
+
+Every single page and underlying component across all **17 sidebar menu tabs** has achieved 100% dynamic theme accent parity:
+
+| Menu Tab ID | Menu Label | Page Components | Dynamic Theme Status |
+| :--- | :--- | :--- | :---: |
+| `dashboard` | **Corporate Dashboard** | `ECommerce.jsx`, `ChartsPanel.jsx`, `OrdersChart.jsx`, `EarningCard.jsx`, `VisitorsAnalytics.jsx`, `UserActivity.jsx`, `CountryOrders.jsx`, `ProfitCard.jsx`, `TrafficRevealCard.jsx`, `ProgressSection.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `iot` | **IoT Smart Home** | `ElectricityCard.jsx`, `SecurityCameras.jsx`, `RoomsCard.jsx`, `TemperatureCard.jsx`, `SolarWeather.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `orders` | **Orders & Invoices** | `OrdersChart.jsx`, `OrderModal.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `users` | **User Management** | `UserManagement.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `chat` | **Support Chat App** | `Chat.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `calendar` | **Calendar Scheduler** | `CalendarApp.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `maps` | **Maps Showcase** | `Maps.jsx`, `BubbleMaps.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `ckeditor` | **CKEditor Text Format** | `CKEditorApp.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `stepper` | **Multi-Step Stepper** | `Stepper.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `accordion` | **Accordion List** | `Accordion.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `grid` | **Responsive Grid** | `Grid.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `typography` | **Typography Scale** | `Typography.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `icons` | **Icon Gallery** | `IconGallery.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `treegrid` | **Tree Grid Table** | `TreeGrid.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `forms` | **Form Controls** | `FormInputs.jsx`, `FormLayouts.jsx`, `FormButtons.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `auth` | **Authentication** | `Login.jsx`, `Register.jsx`, `ResetPassword.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
+| `settings` | **Settings** | `Settings.jsx` | 🟢 **100% Fully Dynamic Theme Accents** |
 
 ---
 
 ## 🛠️ Framework Concept Translation Standard
-
-Below is the established engineering standard for translating legacy Angular patterns into modern React + Tailwind CSS v4 equivalents:
 
 | Legacy Angular 15 Pattern (`old-src/`) | Modern React 18 Equivalent (`src/`) | Verification & Catalog |
 | :--- | :--- | :--- |
@@ -32,13 +70,16 @@ Below is the established engineering standard for translating legacy Angular pat
 
 ---
 
-## 📖 Complete Documentation Network
+## 📖 Master Documentation Network
 
 | Documentation Portal | Purpose / Description | Link |
 | :--- | :--- | :---: |
-| 🛠️ **Developer Environment Blueprint** | Local Setup, Commands (`dev:all`), Storybook & Quality Gates | [**DEVELOPMENT.md**](DEVELOPMENT.md) |
-| 📐 **Master Active Architecture** | Active React C4 Level 1-3 System Diagrams & Component Inventory | [**ARCHITECTURE.md**](ARCHITECTURE.md) |
+| 🛡️ **In-Depth Quality Audit Report** | Full Line-by-Line AST Audit, Theme Parity & Test Case Breakdown | [**docs/QUALITY_AUDIT_REPORT.md**](docs/QUALITY_AUDIT_REPORT.md) |
+| 📊 **Machine-Readable Audit JSON** | Serialized AST audit, test results, layout density & bundle size metrics | [**docs/quality-audit-results.json**](docs/quality-audit-results.json) |
+| 📐 **Master Active Architecture** | Active React C4 Level 1-3 System Diagrams & Hook Dependency Graph | [**ARCHITECTURE.md**](ARCHITECTURE.md) |
+
 | 📜 **Master Legacy Blueprint** | Legacy Angular C4 Diagram, 118-Component & RxJS Data Services Inventory | [**docs/LEGACY_BLUEPRINT.md**](docs/LEGACY_BLUEPRINT.md) |
+| 🛠️ **Developer Environment Blueprint** | Local Setup, Commands (`dev:all`), Storybook & Quality Gates | [**DEVELOPMENT.md**](DEVELOPMENT.md) |
 | 📜 **Release Changelog** | Keep a Changelog v1.1.0 Automated Log | [**CHANGELOG.md**](CHANGELOG.md) |
 | 🧩 **Component & Storybook Guide** | Component Decomposition, Storybook CSF 3 & Vitest Standards | [**docs/COMPONENT_GUIDE.md**](docs/COMPONENT_GUIDE.md) |
 | ⚡ **Automation & Pipeline Guide** | 7-Gateway Engine, Dual-Stack Script Registry & CI/CD Pipelines | [**docs/PIPELINE_GUIDE.md**](docs/PIPELINE_GUIDE.md) |
@@ -47,28 +88,77 @@ Below is the established engineering standard for translating legacy Angular pat
 
 ---
 
-## 🚦 Master CLI Development Commands
+## 🚦 Comprehensive CLI Command Registry
 
+Below is the complete suite of development, testing, auditing, documentation, and build commands available in the project:
+
+### 1. 💻 Development & Workshop Servers
 ```bash
-# 1. Install dependencies for the active React application
-npm install
+# Launch Vite Dev Server (:5173) standalone
+npm run dev
 
-# 2. Launch Vite Dev Server (:5173) & Storybook (:6006) concurrently
+# Launch Vite Dev Server (:5173) & Storybook (:6006) concurrently
 npm run dev:all
 
-# 3. Run the Vitest unit test suite
-npm test
-
-# 4. Run the 7-Gateway Quality Engine audit & auto-sync living docs
-npm run verify
-
-# 5. Manually synchronize documentation across both stacks
-npm run docs:sync
+# Launch Storybook Component Workshop (:6006) standalone
+npm run storybook
 ```
 
-For complete developer onboarding, script references, and testing standards, please refer to **[DEVELOPMENT.md](DEVELOPMENT.md)**.
+### 2. 🧪 Unit Testing & Quality Verification
+```bash
+# Execute full Vitest unit test suite
+npm test
+
+# Run Vitest unit tests in interactive watch mode
+npm run test:watch
+
+# Collect LCOV unit test coverage report
+npm run test:coverage
+
+# Generate the in-depth quality audit report (docs/QUALITY_AUDIT_REPORT.md)
+npm run report
+
+# Execute the master 7-Gateway Quality Verification Engine audit
+npm run verify
+```
+
+### 3. 🔍 AST Audit Tools
+```bash
+# Run AST brand color accent coverage audit
+node scripts/audit-theme-accents.js
+
+# Run AST 17-menu-tab page audit runner
+node scripts/audit-all-menu-pages.js
+
+# Run AST layout density & flex collision scanner
+node scripts/audit-layout-density.js
+```
+
+### 4. 📚 Documentation & Architectural Decision Tools
+```bash
+# Synchronize Living Architecture (ARCHITECTURE.md) & C4 Mermaid diagrams
+npm run docs:sync
+
+# Synchronize Legacy Angular Migration Blueprint (docs/LEGACY_BLUEPRINT.md)
+node scripts/generate-legacy-docs.js
+
+# Create a new numbered Architectural Decision Record (docs/DECISIONS.md)
+npm run adr:new
+```
+
+### 5. 📦 Production Build & Distribution
+```bash
+# Compile optimized React + Tailwind v4 production bundle (dist/)
+npm run build
+
+# Build static Storybook documentation website (storybook-static/)
+npm run build-storybook
+
+# Preview local production build
+npm run preview
+```
 
 ---
 
-## 🛡️ License
-Copyright © 2026 Calin M. All rights reserved.
+## 🛡️ License & Author Attribution
+Created with ♥ by **Calin M** ([Repository URL](https://github.com/calin-m/NGX-Admin-React-Tailwind-Conversion)). All rights reserved.

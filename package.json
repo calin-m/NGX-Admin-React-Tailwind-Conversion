@@ -17,7 +17,12 @@
     "lint": "eslint src",
     "copy-assets": "node scripts/copy-public-assets.js",
     "verify": "node scripts/verify-build.js",
+    "report": "node scripts/generate-quality-report.js",
+    "audit:theme": "node scripts/audit-theme-accents.js",
+    "audit:pages": "node scripts/audit-all-menu-pages.js",
+    "audit:density": "node scripts/audit-layout-density.js",
     "docs:sync": "node scripts/generate-architecture-matrix.js && node scripts/generate-legacy-docs.js && node scripts/generate-changelog.js",
+
     "docs:legacy": "node scripts/generate-legacy-docs.js",
     "convert": "node scripts/convert-component.js",
     "convert:hooks": "node scripts/convert-hooks.js",

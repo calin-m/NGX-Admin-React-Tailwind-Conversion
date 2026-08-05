@@ -1,3 +1,9 @@
-node scripts/verify-build.js
-node scripts/generate-changelog.js
-git add ARCHITECTURE.md CHANGELOG.md docs/LEGACY_BLUEPRINT.md docs/DECISIONS.md src/components/**/*.stories.jsx
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🤖 Executing Pre-Commit Automated Verification Engine..."
+node scripts/generate-quality-report.js
+npm run docs:sync
+
+git add docs/QUALITY_AUDIT_REPORT.md docs/quality-audit-results.json ARCHITECTURE.md
+echo "✅ Pre-Commit Verification & Staging Complete!"

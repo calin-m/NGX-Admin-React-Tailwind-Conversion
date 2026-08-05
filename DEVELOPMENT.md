@@ -19,12 +19,17 @@ Welcome to the **Developer Environment Guide**. This document defines local setu
 | `npm run dev:all` | **Master Concurrent Suite**: Spawns Vite Dev Server & Storybook concurrently | Vite `:5173` & Storybook `:6006` |
 | `npm run dev` | Launches local Vite development server | `http://localhost:5173` |
 | `npm run storybook` | Launches Storybook Design System Catalog | `http://localhost:6006` |
-| `git commit` | **Standard Enterprise Commit**: High-context commit using `.gitmessage` template | Git Commit History |
 | `npm test` | Runs Vitest unit test suite once in terminal | Terminal Output |
 | `npm run test:watch` | Runs Vitest in interactive watch mode | Terminal Output |
+| `npm run report` | **In-Depth Quality Report**: Generates full AST quality report | `docs/QUALITY_AUDIT_REPORT.md` |
+| `npm run audit:pages` | **17-Menu-Tab Parity Check**: Runs 100% menu tab accent check | Terminal Output |
+| `npm run audit:theme` | **AST Accent Scanner**: Scans components for hardcoded colors | Terminal Output |
+| `npm run audit:density` | **Layout Density Scanner**: Scans flex container wrap risks | Terminal Output |
 | `npm run verify` | Runs programmatic 7-Gateway Quality Engine + Dual-Stack Doc Sync | Terminal Output |
 | `npm run docs:sync` | Auto-synchronizes active React architecture, legacy blueprint & release changelog | `ARCHITECTURE.md`, `docs/LEGACY_BLUEPRINT.md` & `CHANGELOG.md` |
 | `npm run docs:legacy` | Auto-synchronizes legacy Angular reference blueprint & conversion tracking | `docs/LEGACY_BLUEPRINT.md` |
+| `npm run adr:new` | Generates a new numbered Architectural Decision Record | `docs/DECISIONS.md` |
+
 
 ---
 
