@@ -59,7 +59,7 @@ export default function Stepper() {
       </div>
 
       {!isCompleted ? (
-        <div className="p-6 bg-slate-50 dark:bg-slate-700/40 rounded-xl border border-slate-200/60 dark:border-slate-600/60 text-xs space-y-3 max-w-md mx-auto">
+        <div key={step} className="p-6 bg-slate-50 dark:bg-slate-700/40 rounded-xl border border-slate-200/60 dark:border-slate-600/60 text-xs space-y-3 max-w-md mx-auto transition-all duration-300 transform opacity-100 translate-x-0">
           <h4 className="font-bold text-slate-800 dark:text-slate-200">{steps[step - 1].title}</h4>
           <p className="text-slate-500">{steps[step - 1].desc}</p>
           <input
@@ -67,11 +67,11 @@ export default function Stepper() {
             value={formData[steps[step - 1].key]}
             onChange={e => handleInputChange(steps[step - 1].key, e.target.value)}
             placeholder={`Enter ${steps[step - 1].title}...`}
-            className="w-full px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
+            className="w-full px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-200"
           />
         </div>
       ) : (
-        <div className="p-6 bg-emerald-500/10 rounded-xl border border-emerald-500/30 text-xs space-y-2 max-w-md mx-auto text-slate-800 dark:text-slate-200">
+        <div className="p-6 bg-emerald-500/10 rounded-xl border border-emerald-500/30 text-xs space-y-2 max-w-md mx-auto text-slate-800 dark:text-slate-200 transition-all duration-300 transform scale-100 opacity-100">
           <h4 className="font-extrabold text-emerald-600 dark:text-emerald-400 text-sm">🎉 Setup Complete!</h4>
           <p><strong>Email:</strong> {formData.email}</p>
           <p><strong>Name:</strong> {formData.name}</p>

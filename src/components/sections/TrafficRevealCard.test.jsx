@@ -7,6 +7,6 @@ describe('TrafficRevealCard Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<TrafficRevealCard />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Traffic Source/i)).toBeInTheDocument();
+    expect(screen.getByText(/Traffic Source Reveal/i)).toBeInTheDocument();
   });
 });

@@ -22,67 +22,85 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
   ];
 
   return (
-    <aside
-      className={`bg-white dark:bg-slate-800 border-r border-slate-200/80 dark:border-slate-700/80 sticky top-16 h-[calc(100vh-4rem)] transition-[width] duration-300 ease-in-out flex flex-col justify-between overflow-hidden z-20 shrink-0 ${
-        isCollapsed ? 'w-20' : 'w-64'
-      }`}
-    >
-      <div className="p-4 space-y-6 overflow-y-auto flex-1">
-        <div className="flex items-center space-x-3 px-2">
-          <div className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center font-black text-lg shadow-md shrink-0 transition-colors">
-            N
-          </div>
-          {!isCollapsed && (
-            <div className="overflow-hidden whitespace-nowrap">
-              <h2 className="font-bold text-slate-900 dark:text-slate-100 text-base tracking-tight">NGX Admin</h2>
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-accent bg-accent-light px-2 py-0.5 rounded-full transition-colors">
-                100% Converted
-              </span>
-            </div>
-          )}
+    <>
+      {/* Mobile Backdrop Overlay when Drawer is Open on Mobile */}
+      {!isCollapsed && (
+        <div
+          className="md:hidden fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-30 transition-opacity"
+          onClick={() => setActiveTab && setActiveTab(activeTab)}
+        />
+      )}
 
+      <aside
+        className={`bg-white dark:bg-slate-800 border-r border-slate-200/80 dark:border-slate-700/80 flex flex-col justify-between overflow-hidden z-40 shrink-0 transition-all duration-300 ease-in-out ${
+          isCollapsed
+            ? 'w-20 max-md:-translate-x-full max-md:w-0'
+            : 'w-64 max-md:fixed max-md:top-0 max-md:bottom-0 max-md:left-0 max-md:h-full max-md:shadow-2xl'
+        } md:sticky md:top-16 md:h-[calc(100vh-4rem)]`}
+      >
+        <div className={`p-3 space-y-6 flex-1 overflow-y-auto relative ${isCollapsed ? 'scrollbar-collapsed-hover' : 'scrollbar-thin'}`}>
+          {/* Logo Section */}
+          <div className={`flex items-center space-x-3 px-1 ${isCollapsed ? 'justify-center px-0' : ''}`}>
+            <div className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center font-black text-lg shadow-md shrink-0 transition-colors">
+              N
+            </div>
+            {!isCollapsed && (
+              <div className="overflow-hidden whitespace-nowrap">
+                <h2 className="font-bold text-slate-900 dark:text-slate-100 text-base tracking-tight">NGX Admin</h2>
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-accent bg-accent-light px-2 py-0.5 rounded-full transition-colors">
+                  100% Converted
+                </span>
+              </div>
+            )}
+          </div>
+
+          {/* Navigation Menu */}
+          <nav className="space-y-1 relative">
+            {menuItems.map(item => {
+              const isActive = activeTab === item.id;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => setActiveTab && setActiveTab(item.id)}
+                  className={`w-full flex items-center rounded-xl text-xs font-medium transition-all ${
+                    isActive
+                      ? 'bg-accent text-white shadow-md transition-colors'
+                      : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-slate-900 dark:hover:text-slate-100'
+                  } ${isCollapsed ? 'justify-center p-0' : 'space-x-3 px-1 py-0.5'}`}
+                  title={isCollapsed ? item.label : undefined}
+                >
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-base">
+                    {item.icon}
+                  </div>
+                  {!isCollapsed && <span className="truncate pr-2">{item.label}</span>}
+                </button>
+              );
+            })}
+          </nav>
         </div>
 
-        <nav className="space-y-1">
-          {menuItems.map(item => {
-            const isActive = activeTab === item.id;
-            return (
-              <button
-                key={item.id}
-                onClick={() => setActiveTab && setActiveTab(item.id)}
-                className={`w-full flex items-center space-x-3.5 px-3 py-2 rounded-xl text-xs font-medium transition-all ${
-                  isActive
-                    ? 'bg-accent text-white shadow-md transition-colors'
-                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-slate-900 dark:hover:text-slate-100'
-                } ${isCollapsed ? 'justify-center px-0' : ''}`}
-
-                title={isCollapsed ? item.label : undefined}
-              >
-                <span className="text-base shrink-0">{item.icon}</span>
-                {!isCollapsed && <span className="truncate">{item.label}</span>}
-              </button>
-            );
-          })}
-        </nav>
-      </div>
-
-      <div className="p-4 border-t border-slate-100 dark:border-slate-700/60">
-        {!isCollapsed ? (
-          <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-700/40 flex items-center space-x-3">
-            <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold flex items-center justify-center text-xs">
-              PRO
+        {/* Footer Badge Section with Collapsed Scroll Indicator Fade */}
+        <div className="p-3 border-t border-slate-100 dark:border-slate-700/60 relative">
+          {isCollapsed && (
+            <div className="absolute -top-6 left-0 right-0 h-6 bg-gradient-to-t from-white dark:from-slate-800 to-transparent pointer-events-none opacity-80" />
+          )}
+          {!isCollapsed ? (
+            <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-700/40 flex items-center space-x-3">
+              <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold flex items-center justify-center text-xs shrink-0">
+                PRO
+              </div>
+              <div className="overflow-hidden">
+                <span className="text-xs font-semibold text-slate-800 dark:text-slate-200 block truncate">100% Menu Parity</span>
+                <span className="text-[10px] text-slate-400 block truncate">v1.0.0 Ready</span>
+              </div>
             </div>
-            <div className="overflow-hidden">
-              <span className="text-xs font-semibold text-slate-800 dark:text-slate-200 block truncate">100% Menu Parity</span>
-              <span className="text-[10px] text-slate-400 block truncate">v1.0.0 Ready</span>
+          ) : (
+            <div className="flex justify-center py-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" title="100% Parity" />
             </div>
-          </div>
-        ) : (
-          <div className="flex justify-center">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" title="100% Parity" />
-          </div>
-        )}
-      </div>
-    </aside>
+          )}
+        </div>
+      </aside>
+    </>
   );
 }

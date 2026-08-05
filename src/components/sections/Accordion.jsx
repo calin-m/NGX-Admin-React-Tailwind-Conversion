@@ -45,19 +45,23 @@ export default function Accordion() {
         {items.map((item, idx) => {
           const isOpen = openIndexes.includes(idx);
           return (
-            <div key={idx} className="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
+            <div key={idx} className="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden transition-all duration-300">
               <button
                 onClick={() => toggleIndex(idx)}
                 className="w-full p-4 text-left font-bold text-xs text-slate-800 dark:text-slate-200 flex justify-between items-center bg-slate-50/50 dark:bg-slate-700/40 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
               >
                 <span>{item.title}</span>
-                <span className="text-slate-400">{isOpen ? '▲' : '▼'}</span>
+                <span className={`text-slate-400 transition-transform duration-300 ${isOpen ? 'rotate-180 text-accent' : 'rotate-0'}`}>
+                  ▼
+                </span>
               </button>
-              {isOpen && (
-                <div className="p-4 text-xs text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 animate-in fade-in duration-150">
-                  {item.content}
+              <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                <div className="overflow-hidden">
+                  <div className="p-4 text-xs text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+                    {item.content}
+                  </div>
                 </div>
-              )}
+              </div>
             </div>
           );
         })}

@@ -46,6 +46,60 @@
   .border-accent { border-color: var(--accent-text); }
   .bg-accent-light { background-color: var(--accent-light); }
   .focus\:ring-accent:focus { --tw-ring-color: var(--accent-bg); border-color: var(--accent-text); }
+
+  /* Custom scrollbar utilities */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.3);
+    border-radius: 9999px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.5);
+  }
+
+  /* Ultra-thin 3px scrollbar for collapsed mode (permanently visible) */
+  .scrollbar-collapsed-hover::-webkit-scrollbar {
+    width: 3px;
+  }
+  .scrollbar-collapsed-hover::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-collapsed-hover::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.35);
+    border-radius: 9999px;
+  }
+  .scrollbar-collapsed-hover:hover::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.6);
+  }
+
+  /* 3D Perspective & Flip Card Utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
 }
 
 
