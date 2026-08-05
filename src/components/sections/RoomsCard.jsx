@@ -31,7 +31,7 @@ export default function RoomsCard() {
         </span>
       </div>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {rooms.map(room => (
           <button
             key={room.name}
@@ -44,12 +44,13 @@ export default function RoomsCard() {
           >
             <span className="text-xl block mb-1">{room.icon}</span>
             <span className="text-xs font-bold block truncate">{room.name}</span>
-            <span className="text-[10px] opacity-80 block">
+            <span className="text-[10px] opacity-80 block truncate">
               {room.temp}°C • {room.lightsOn ? '💡 Lights On' : '🌑 Off'}
             </span>
           </button>
         ))}
       </div>
+
 
       {/* Interactive Controls for Selected Room */}
       <div className="pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-xs">

@@ -2,9 +2,15 @@ import React from 'react';
 import useUserActivity from '../../hooks/useUserActivity.js';
 
 export default function UserActivity() {
-  const { data } = useUserActivity();
+  const { data, period, setPeriod } = useUserActivity('week');
 
-  const activityStream = [
+  const activityStream = (data && data.length > 0) ? data.map(item => ({
+    user: `User ${item.date}`,
+    avatar: item.deltaUp ? '📈' : '📉',
+    action: `Visits: ${item.pagesVisitCount} • New: ${item.newVisits}`,
+    time: item.deltaUp ? 'Growth' : 'Steady',
+    color: item.deltaUp ? 'text-emerald-500' : 'text-amber-500'
+  })) : [
     { user: 'Alan Vance', avatar: '👨‍💻', action: 'Purchased Enterprise Pro License', time: '2 mins ago', color: 'text-emerald-500' },
     { user: 'Sarah Connor', avatar: '👩‍💼', action: 'Upgraded Subscription Tier', time: '15 mins ago', color: 'text-indigo-500' },
     { user: 'Michael Scott', avatar: '👔', action: 'Submitted Support Ticket #402', time: '42 mins ago', color: 'text-amber-500' },
@@ -12,26 +18,38 @@ export default function UserActivity() {
   ];
 
   return (
-    <div className="w-full min-h-[320px] rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 flex flex-col justify-between">
+    <div className="w-full min-h-[320px] rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 flex flex-col justify-between space-y-4">
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold text-lg">
             👥
           </div>
           <div>
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">User Activity Stream</h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400">Live User Actions Feed</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400 capitalize">{period} Activity Summary</p>
           </div>
         </div>
-        <span className="flex items-center space-x-1.5 text-xs text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-500/10 px-2.5 py-1 rounded-lg">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span>Live Stream</span>
-        </span>
+
+        <div className="flex bg-slate-100 dark:bg-slate-700/60 p-1 rounded-lg text-xs font-medium">
+          {['week', 'month', 'year'].map(p => (
+            <button
+              key={p}
+              onClick={() => setPeriod && setPeriod(p)}
+              className={`px-2.5 py-1 rounded-md transition-all capitalize ${
+                period === p
+                  ? 'bg-white dark:bg-slate-800 text-purple-600 dark:text-purple-400 shadow-sm font-semibold'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
+              }`}
+            >
+              {p}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Stream Feed */}
-      <div className="space-y-3 py-4 flex-1">
+      <div className="space-y-3 py-2 flex-1">
         {activityStream.map((act, idx) => (
           <div key={idx} className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-colors">
             <div className="flex items-center space-x-3">
@@ -41,7 +59,7 @@ export default function UserActivity() {
                 <p className="text-[11px] text-slate-500 dark:text-slate-400">{act.action}</p>
               </div>
             </div>
-            <span className="text-[10px] font-medium text-slate-400 whitespace-nowrap">{act.time}</span>
+            <span className={`text-[10px] font-bold ${act.color} whitespace-nowrap`}>{act.time}</span>
           </div>
         ))}
       </div>
@@ -53,3 +71,4 @@ export default function UserActivity() {
     </div>
   );
 }
+

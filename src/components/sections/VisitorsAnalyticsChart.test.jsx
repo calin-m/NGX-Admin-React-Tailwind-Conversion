@@ -7,6 +7,7 @@ describe('VisitorsAnalyticsChart Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<VisitorsAnalyticsChart />);
     expect(container).toBeDefined();
-    expect(screen.getByText('VisitorsAnalyticsChart')).toBeInTheDocument();
+    expect(screen.getByText(/Visitor Analytics Graph/i)).toBeInTheDocument();
   });
 });
+

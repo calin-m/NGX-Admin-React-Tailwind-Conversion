@@ -1,24 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-/**
- * VisitorsAnalyticsChart Component
- * Modernized React 18 + Tailwind CSS v4 Component
- * Source Reference: old-src/ngx-admin-master <ngx-visitors-analytics-chart>
- */
-export default function VisitorsAnalyticsChart(props) {
+export default function VisitorsAnalyticsChart({ onChartClick }) {
+  const [activeMetric, setActiveMetric] = useState('New Visitors');
+
+  const metrics = [
+    { label: 'New Visitors', val: '43.8%', color: 'border-indigo-500 text-indigo-600 dark:text-indigo-400 bg-indigo-500/10' },
+    { label: 'Return Visitors', val: '56.2%', color: 'border-emerald-500 text-emerald-600 dark:text-emerald-400 bg-emerald-500/10' }
+  ];
+
+  const handleMetricSelect = m => {
+    setActiveMetric(m);
+    if (onChartClick) onChartClick(m);
+  };
+
   return (
-    <div className="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-xs border border-slate-200 dark:border-slate-700">
-      <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3 mb-4">
-        <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
-          VisitorsAnalyticsChart
-        </h3>
-        <span className="text-xs px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 font-semibold">
-          Corporate &lt;ngx-visitors-analytics-chart&gt;
-        </span>
+    <div className="p-4 bg-white dark:bg-slate-800 rounded-xl shadow-xs border border-slate-200 dark:border-slate-700 space-y-3">
+      <div className="flex items-center justify-between">
+        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Visitor Analytics Graph</h4>
+        <span className="text-xs font-semibold text-slate-700 dark:text-slate-300">View: {activeMetric}</span>
       </div>
-      <p className="text-sm text-slate-600 dark:text-slate-400">
-        Converted Corporate Component View.
-      </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+
+        {metrics.map(m => (
+          <button
+            key={m.label}
+            onClick={() => handleMetricSelect(m.label)}
+            className={`p-2.5 rounded-xl border text-xs font-bold transition-all flex flex-col items-center justify-center ${m.color} ${
+              activeMetric === m.label ? 'ring-2 ring-indigo-500/40 shadow-xs' : 'opacity-70 hover:opacity-100'
+            }`}
+          >
+            <span>{m.label}</span>
+            <span className="text-base font-extrabold">{m.val}</span>
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
+

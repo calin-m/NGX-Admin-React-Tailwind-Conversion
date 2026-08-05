@@ -7,6 +7,7 @@ describe('EarningPieChart Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<EarningPieChart />);
     expect(container).toBeDefined();
-    expect(screen.getByText('EarningPieChart')).toBeInTheDocument();
+    expect(screen.getByText(/Crypto Earning Breakdown/i)).toBeInTheDocument();
   });
 });
+

@@ -7,6 +7,7 @@ describe('Footer Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<Footer />);
     expect(container.firstChild).toBeDefined();
-    expect(screen.getByText(/Akveo/i)).toBeInTheDocument();
+    expect(screen.getByText(/Calin M/i)).toBeInTheDocument();
+
   });
 });

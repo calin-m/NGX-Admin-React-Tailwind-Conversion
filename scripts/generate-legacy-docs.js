@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { parseAngularComponent, parseReactComponent, scanDirectory } from './lib/ast-parser.js';
+import { parseAngularComponent, parseReactComponent, calculateFunctionalityParity, scanDirectory } from './lib/ast-parser.js';
 
 const rootDir = process.cwd();
 const oldSrcDir = path.join(rootDir, 'old-src');
@@ -8,26 +8,8 @@ const ngxAdminDir = path.join(oldSrcDir, 'ngx-admin-master', 'src', 'app');
 const targetBlueprintFile = path.join(rootDir, 'docs', 'LEGACY_BLUEPRINT.md');
 const srcDir = path.join(rootDir, 'src');
 
-
-function scanDir(dir, fileList = []) {
-  if (!fs.existsSync(dir)) return fileList;
-  const files = fs.readdirSync(dir);
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    if (stat.isDirectory()) {
-      if (file === 'node_modules' || file === '.git') return;
-      scanDir(filePath, fileList);
-    } else {
-      const relPath = path.relative(rootDir, filePath).replace(/\\/g, '/');
-      fileList.push({ relPath, fullPath: filePath, ext: path.extname(file), fileName: file });
-    }
-  });
-  return fileList;
-}
-
 const targetDir = fs.existsSync(ngxAdminDir) ? ngxAdminDir : oldSrcDir;
-const allFiles = scanDir(targetDir);
+const allFiles = scanDirectory(targetDir, [], rootDir);
 
 const components = allFiles.filter(f => f.relPath.endsWith('.component.ts'));
 const templates = allFiles.filter(f => f.relPath.endsWith('.component.html'));
@@ -43,50 +25,6 @@ const otherAssets = allFiles.filter(f =>
   !styles.includes(f) && 
   !pipesAndDirectives.includes(f)
 );
-
-// Helper to extract selector, inputs, outputs, and injected services from component.ts
-function parseComponentMetadata(filePath) {
-  let selector = 'n/a';
-  let injectedServices = [];
-  let inputs = [];
-  let outputs = [];
-
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-
-    // Selector
-    const selMatch = content.match(/selector\s*:\s*['"]([^'"]+)['"]/);
-    if (selMatch) selector = `<${selMatch[1]}>`;
-
-    // Injected Services in Constructor
-    const ctorMatch = content.match(/constructor\s*\(([^)]*)\)/s);
-    if (ctorMatch && ctorMatch[1]) {
-      const params = ctorMatch[1].split(',');
-      params.forEach(p => {
-        const parts = p.trim().split(':');
-        if (parts.length > 1) {
-          const typeName = parts[1].trim().replace(/[^a-zA-Z0-9_]/g, '');
-          if (typeName && typeName !== 'void' && typeName !== 'any') {
-            injectedServices.push(typeName);
-          }
-        }
-      });
-    }
-
-    // @Input()
-    const inputMatches = [...content.matchAll(/@Input\(\)\s*([a-zA-Z0-9_]+)/g)];
-    inputs = inputMatches.map(m => m[1]);
-
-    // @Output()
-    const outputMatches = [...content.matchAll(/@Output\(\)\s*([a-zA-Z0-9_]+)/g)];
-    outputs = outputMatches.map(m => m[1]);
-
-  } catch (e) {
-    // Ignore parse errors
-  }
-
-  return { selector, injectedServices, inputs, outputs };
-}
 
 // Helper to extract rendered child custom tags from component.html
 function parseChildTags(templatePath) {
@@ -152,9 +90,8 @@ let inScopeCount = 0;
 let interactiveCount = 0;
 let staticCount = 0;
 
-
 components.forEach(comp => {
-  const meta = parseComponentMetadata(comp.fullPath);
+  const meta = parseAngularComponent(comp.fullPath);
   const templatePath = comp.fullPath.replace('.component.ts', '.component.html');
   const childTags = parseChildTags(templatePath);
 
@@ -185,22 +122,18 @@ components.forEach(comp => {
   }
   const reactTarget = fs.existsSync(targetPath) ? path.relative(rootDir, targetPath).replace(/\\/g, '/') : `src/components/sections/${pascalName}.jsx`;
 
+  const reactMeta = parseReactComponent(targetPath);
+  const parityInfo = calculateFunctionalityParity(meta, reactMeta);
+
   let statusStr = '🔴 Pending';
-  if (fs.existsSync(targetPath)) {
+  if (reactMeta.exists) {
     completedCount++;
-    try {
-      const code = fs.readFileSync(targetPath, 'utf8');
-      const hasState = /useState|useReducer|useEffect|useMemo|useCallback|useContext|use[A-Z]\w+/.test(code);
-      const hasHandlers = /onClick|onChange|onSubmit|onKeyDown|onKeyUp|handle[A-Z]\w+/.test(code);
-      if (hasState || hasHandlers) {
-        statusStr = '🟢 Interactive Demo';
-        interactiveCount++;
-      } else {
-        statusStr = '🟡 Static Showcase';
-        staticCount++;
-      }
-    } catch (e) {
-      statusStr = '🟢 Completed';
+    if (reactMeta.isInteractive) {
+      statusStr = `🟢 Interactive Demo (${parityInfo.score}% Parity)`;
+      interactiveCount++;
+    } else {
+      statusStr = '🟡 Static Showcase';
+      staticCount++;
     }
   }
 
@@ -208,6 +141,7 @@ components.forEach(comp => {
 
   md += `| \`${comp.relPath}\` | \`${meta.selector}\` | **${domain.toUpperCase()}** | ${scopeTag} | ${servicesStr} | \`${reactTarget}\` | ${statusStr} |\n`;
 });
+
 
 md += `\n---
 
@@ -272,6 +206,39 @@ md += `\n---
 - **Corporate Migration Progress**: ${finalProgressCount} / ${inScopeCount} Corporate Components Converted (${progressPercent}%)
 `;
 
+let contractTableMd = `\n---
+
+## ⚡ 6. Detailed Event Contract & 1-to-1 Parity Breakdown
+
+Below is the detailed 1-to-1 event contract parity breakdown automatically parsed from Angular \`.component.html\` templates vs React \`.jsx\` templates:
+
+| Component Name | Parsed Angular Template Events | Matched React Handlers / State | Parity Score | Missing Events |
+| :--- | :--- | :--- | :---: | :--- |
+`;
+
+components.forEach(comp => {
+  const meta = parseAngularComponent(comp.fullPath);
+  const compBaseName = path.basename(comp.fileName, '.component.ts');
+  const pascalName = compBaseName.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join('');
+  let targetPath = path.join(rootDir, 'src', 'components', 'sections', `${pascalName}.jsx`);
+  if (!fs.existsSync(targetPath)) {
+    targetPath = path.join(rootDir, 'src', 'components', 'ui', `${pascalName}.jsx`);
+  }
+  const reactMeta = parseReactComponent(targetPath);
+  const parityInfo = calculateFunctionalityParity(meta, reactMeta);
+
+  if (reactMeta.exists && meta.templateEvents.length > 0) {
+    const angularEventsStr = meta.templateEvents.map(e => `\`(${e})\``).join(', ');
+    const reactHandlersStr = (reactMeta.jsxHandlers.length > 0 ? reactMeta.jsxHandlers.map(h => `\`${h}\``).join(', ') : 'State Engine') + (reactMeta.hasState ? ' + `useState`' : '');
+    const missingStr = parityInfo.missingEvents.length > 0 ? parityInfo.missingEvents.map(m => `\`${m}\``).join(', ') : 'None';
+    contractTableMd += `| \`${pascalName}\` | ${angularEventsStr} | ${reactHandlersStr} | **${parityInfo.score}%** | ${missingStr} |\n`;
+  }
+});
+
+md += contractTableMd;
+
 fs.writeFileSync(targetBlueprintFile, md);
 console.log(`✔ Successfully generated interconnected docs/LEGACY_BLUEPRINT.md with AST Interactivity Parity Ledger.`);
+
+
 

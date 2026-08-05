@@ -14,10 +14,11 @@ export default function TrafficRevealCard() {
   return (
     <div className="relative w-full min-h-[320px] rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 flex flex-col justify-between overflow-hidden transition-all duration-300">
       {!isFlipped ? (
-        <TrafficFrontCard period={period} setPeriod={setPeriod} onFlip={toggleFlip} />
+        <TrafficFrontCard data={chartData} period={period} setPeriod={setPeriod} onFlip={toggleFlip} />
       ) : (
         <TrafficBackCard onFlip={toggleFlip} />
       )}
+
     </div>
   );
 }

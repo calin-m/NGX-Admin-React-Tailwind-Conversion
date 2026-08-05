@@ -7,6 +7,7 @@ describe('CountryOrdersChart Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<CountryOrdersChart />);
     expect(container).toBeDefined();
-    expect(screen.getByText('CountryOrdersChart')).toBeInTheDocument();
+    expect(screen.getByText(/Country Orders Breakdown/i)).toBeInTheDocument();
   });
 });
+

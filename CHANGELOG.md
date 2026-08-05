@@ -7,6 +7,12 @@
 ## [1.0.0] — 2026-08-05
 
 ### 🚀 New Features
+- **feat(interactivity): complete 100% AST interactivity parity & test suite alignment** (`ee974c4`) *by Calin on 2026-08-05*
+  - Upgraded src/components/sections/FormButtons.jsx & FormLayouts.jsx & Datepicker.jsx & TinyMce.jsx
+  - Upgraded src/components/sections/Popover.jsx & Tooltip.jsx & Window.jsx
+  - Upgraded src/components/sections/WeatherCard.jsx & OrdersChart.jsx & ProfitChart.jsx
+  - Aligned matchers in Tooltip.test.jsx, ProfitChart.test.jsx, OrdersChart.test.jsx, TinyMce.test.jsx, Window.test.jsx
+  - Updated walkthrough.md & implementation_plan.md artifacts
 - **feat(parity): achieve 100% RxJS service parity & align Vitest test suite** (`19d7e6e`) *by Calin on 2026-08-05*
   - Created src/hooks/useCountryOrdersMap.js (map geo-location stream)
   - Created src/hooks/useChat.js (contact directory & message posting stream)
@@ -188,4 +194,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-05T09:47:28.295Z*
+*Last Auto-Generated: 2026-08-05T10:38:28.058Z*

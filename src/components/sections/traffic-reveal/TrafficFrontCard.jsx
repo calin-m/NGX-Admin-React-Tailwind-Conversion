@@ -1,7 +1,8 @@
 import React from 'react';
 
-export default function TrafficFrontCard({ period, setPeriod, onFlip }) {
-  const trafficCategories = [
+export default function TrafficFrontCard({ data, period, setPeriod, onFlip }) {
+  const totalSessions = data?.totalSessions || '142,850';
+  const trafficCategories = data?.categories || [
     { name: 'Direct Traffic', percentage: 42, color: 'bg-indigo-500' },
     { name: 'Search Engines', percentage: 35, color: 'bg-emerald-500' },
     { name: 'Social Networks', percentage: 15, color: 'bg-amber-500' },
@@ -10,14 +11,14 @@ export default function TrafficFrontCard({ period, setPeriod, onFlip }) {
 
   return (
     <div className="flex flex-col h-full justify-between space-y-4">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-lg">
             🚥
           </div>
           <div>
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Traffic Source Reveal</h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400">Visitor Acquisition Channels</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400 capitalize">{period} Visitor Channels</p>
           </div>
         </div>
         <div className="flex items-center space-x-2">
@@ -26,10 +27,10 @@ export default function TrafficFrontCard({ period, setPeriod, onFlip }) {
               <button
                 key={p}
                 onClick={() => setPeriod && setPeriod(p)}
-                className={`px-2 py-0.5 rounded-md transition-all capitalize ${
+                className={`px-2.5 py-1 rounded-md transition-all capitalize ${
                   period === p
-                    ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm'
-                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
+                    ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm font-semibold'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
                 }`}
               >
                 {p}
@@ -57,8 +58,9 @@ export default function TrafficFrontCard({ period, setPeriod, onFlip }) {
       </div>
 
       <div className="text-xs text-center text-slate-400 pt-2 border-t border-slate-100 dark:border-slate-700/60">
-        Total Unique Sessions: <span className="font-semibold text-slate-700 dark:text-slate-300">142,850</span>
+        Total Unique Sessions: <span className="font-semibold text-slate-700 dark:text-slate-300">{totalSessions}</span>
       </div>
     </div>
   );
 }
+

@@ -1,24 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-/**
- * TrafficBarChart Component
- * Modernized React 18 + Tailwind CSS v4 Component
- * Source Reference: old-src/ngx-admin-master <ngx-traffic-bar-chart>
- */
-export default function TrafficBarChart(props) {
+export default function TrafficBarChart({ onBarSelect }) {
+  const [activeDay, setActiveDay] = useState('Wed');
+
+  const days = [
+    { day: 'Mon', val: 42 },
+    { day: 'Tue', val: 68 },
+    { day: 'Wed', val: 89 },
+    { day: 'Thu', val: 75 },
+    { day: 'Fri', val: 94 },
+    { day: 'Sat', val: 56 },
+    { day: 'Sun', val: 38 }
+  ];
+
+  const handleSelectDay = d => {
+    setActiveDay(d);
+    if (onBarSelect) onBarSelect(d);
+  };
+
   return (
-    <div className="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-xs border border-slate-200 dark:border-slate-700">
-      <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3 mb-4">
-        <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
-          TrafficBarChart
-        </h3>
-        <span className="text-xs px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 font-semibold">
-          Corporate &lt;ngx-traffic-bar-chart&gt;
+    <div className="p-4 bg-white dark:bg-slate-800 rounded-xl shadow-xs border border-slate-200 dark:border-slate-700 space-y-3">
+      <div className="flex items-center justify-between text-xs font-bold">
+        <span className="text-slate-900 dark:text-slate-100">Daily Traffic Flow</span>
+        <span className="text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded-full">
+          Day: {activeDay}
         </span>
       </div>
-      <p className="text-sm text-slate-600 dark:text-slate-400">
-        Converted Corporate Component View.
-      </p>
+
+      <div className="h-28 flex items-end justify-between gap-1.5 pt-2">
+        {days.map(d => (
+          <button
+            key={d.day}
+            onClick={() => handleSelectDay(d.day)}
+            className="flex-1 flex flex-col items-center gap-1 group h-full justify-end"
+          >
+            <div className="w-full flex justify-center items-end h-20">
+              <div
+                style={{ height: `${d.val}%` }}
+                className={`w-full max-w-[16px] rounded-t transition-all ${
+                  activeDay === d.day ? 'bg-indigo-600 dark:bg-indigo-400 scale-105' : 'bg-slate-200 dark:bg-slate-700 group-hover:bg-indigo-400/50'
+                }`}
+              />
+            </div>
+            <span className="text-[10px] font-semibold text-slate-400">{d.day}</span>
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
+

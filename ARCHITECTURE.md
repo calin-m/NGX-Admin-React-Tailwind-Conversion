@@ -26,13 +26,13 @@ graph TD
 | `src/components/sections/BubbleMaps.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/CalendarApp.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/CalendarKit.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
-| `src/components/sections/ChartPanelHeader.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/ChartPanelHeader.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/ChartPanelSummary.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/ChartsPanel.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Chat.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/CkEditor.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/CountryOrders.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
-| `src/components/sections/CountryOrdersChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/CountryOrdersChart.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/CountryOrdersMap.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Datepicker.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Dialogs.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
@@ -40,7 +40,7 @@ graph TD
 | `src/components/sections/EarningCardBack.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/EarningCardFront.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/EarningLiveUpdateChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
-| `src/components/sections/EarningPieChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/EarningPieChart.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Echarts.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/ECommerce.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/ElectricityCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
@@ -94,7 +94,7 @@ graph TD
 | `src/components/sections/traffic-reveal/TrafficBackCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/traffic-reveal/TrafficFrontCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/TrafficBar.jsx` | **COMPONENTS** | 🟡 Static Showcase |
-| `src/components/sections/TrafficBarChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/TrafficBarChart.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/TrafficCardsHeader.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/TrafficRevealCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/TreeGrid.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
@@ -102,7 +102,7 @@ graph TD
 | `src/components/sections/UserActivity.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/UserManagement.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/VisitorsAnalytics.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
-| `src/components/sections/VisitorsAnalyticsChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/VisitorsAnalyticsChart.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/VisitorsStatistics.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/WeatherCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Window.jsx` | **COMPONENTS** | 🟢 Interactive Demo |

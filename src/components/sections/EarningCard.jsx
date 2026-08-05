@@ -17,7 +17,7 @@ export default function EarningCard() {
   return (
     <div className="w-full min-h-[320px] rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 flex flex-col justify-between overflow-hidden">
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-lg">
             💰
@@ -45,7 +45,8 @@ export default function EarningCard() {
       </div>
 
       {/* SVG Pie / Donut Chart */}
-      <div className="flex items-center justify-around py-4">
+      <div className="flex flex-col sm:flex-row items-center justify-around py-4 gap-4">
+
         <div className="relative w-36 h-36 flex items-center justify-center">
           <svg className="w-full h-full -rotate-90" viewBox="0 0 36 36">
             <path

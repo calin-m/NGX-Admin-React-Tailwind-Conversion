@@ -7,6 +7,7 @@ describe('ChartPanelHeader Corporate Component Suite', () => {
   it('renders correctly without crashing', () => {
     const { container } = render(<ChartPanelHeader />);
     expect(container).toBeDefined();
-    expect(screen.getByText('ChartPanelHeader')).toBeInTheDocument();
+    expect(screen.getByText(/Orders/i)).toBeInTheDocument();
   });
 });
+

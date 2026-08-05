@@ -85,7 +85,7 @@ export default function App() {
           setActiveTab={setActiveTab}
         />
 
-        <main className="flex-1 p-6 max-w-7xl mx-auto w-full space-y-6 overflow-x-hidden">
+        <main className="flex-1 p-4 sm:p-6 max-w-[1600px] mx-auto w-full space-y-6 overflow-x-hidden">
           {activeTab === 'maps' ? (
             <Maps />
           ) : activeTab === 'ckeditor' ? (
@@ -120,28 +120,33 @@ export default function App() {
           ) : activeTab === 'iot' ? (
             <div className="space-y-6">
               <StatusCard />
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div>
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                <div className="lg:col-span-4 flex">
                   <TemperatureCard />
                 </div>
-                <div className="lg:col-span-2">
+                <div className="lg:col-span-8 flex">
                   <ElectricityCard />
                 </div>
               </div>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div className="lg:col-span-2">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                <div className="lg:col-span-8 flex">
                   <SecurityCameras />
                 </div>
-                <div className="space-y-6">
+                <div className="lg:col-span-4 flex flex-col space-y-6">
                   <SolarCard />
                   <WeatherCard />
                 </div>
               </div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <RoomsCard />
-                <KittenCard />
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                <div className="lg:col-span-8 flex">
+                  <RoomsCard />
+                </div>
+                <div className="lg:col-span-4 flex">
+                  <KittenCard />
+                </div>
               </div>
             </div>
+
           ) : activeTab === 'orders' ? (
             <div className="space-y-4">
               <div className="flex justify-end">
@@ -168,54 +173,9 @@ export default function App() {
               <Dialogs />
             </div>
           ) : (
-            <>
-              <ECommerce />
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <ProfitCard />
-                <TrafficRevealCard />
-                <EarningCard />
-              </div>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div className="lg:col-span-2">
-                  <ChartsPanel />
-                </div>
-                <div>
-                  <CountryOrders />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div>
-                  <ProgressSection />
-                </div>
-                <div className="lg:col-span-2">
-                  <VisitorsAnalytics />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div className="lg:col-span-2">
-                  <UserActivity />
-                </div>
-                <div>
-                  <div className="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-lg space-y-4">
-                    <h4 className="font-bold text-slate-900 dark:text-slate-100">100% Menu Parity</h4>
-                    <p className="text-xs text-slate-500">Every link from legacy pages-menu.ts fully converted.</p>
-                    <button
-                      onClick={() => setActiveTab('maps')}
-                      className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-sm transition-all"
-                    >
-                      🗺️ Open Maps Showcase
-                    </button>
-                    <button
-                      onClick={() => setActiveTab('ckeditor')}
-                      className="w-full py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl text-xs font-semibold hover:bg-slate-200 dark:hover:bg-slate-600 transition-all"
-                    >
-                      ✍️ Open CKEditor Format
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </>
+            <ECommerce />
           )}
+
         </main>
       </div>
 

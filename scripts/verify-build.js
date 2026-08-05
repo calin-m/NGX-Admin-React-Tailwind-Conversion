@@ -40,9 +40,11 @@ async function runVerification() {
   try {
     execSync('node scripts/generate-architecture-matrix.js', { stdio: 'inherit', shell: isWin });
     execSync('node scripts/generate-legacy-docs.js', { stdio: 'inherit', shell: isWin });
+    execSync('node scripts/audit-layout-density.js', { stdio: 'inherit', shell: isWin });
   } catch (err) {
     console.warn('  ⚠️ Living Architecture sync warning:', err.message);
   }
+
 
   // 0.5 Pre-Commit Secret & Security Scanner Pass
   console.log('\n🔑 [Pass 0.5/7] Running Pre-Commit Secret & Security Scanner...');
@@ -106,8 +108,9 @@ async function runVerification() {
   }
   autoScaffoldDir(path.join(root, 'src'));
 
-  // 1. AST Syntax & A11y Validation
-  console.log('\n🔍 [Pass 1/7] Running AST Syntax & A11y Audits across src/...');
+  // 1. AST Syntax & WCAG 2.1 AA Accessibility Validation
+  console.log('\n🔍 [Pass 1/7] Running AST Syntax & WCAG 2.1 AA Accessibility Audits across src/...');
+  let a11yWarnings = 0;
   function scanDir(dir) {
     const entries = fs.readdirSync(dir, { withFileTypes: true });
     for (const entry of entries) {
@@ -126,19 +129,38 @@ async function runVerification() {
           errorCount++;
         }
 
+        // Image alt check
         const imgRegex = /<img\s+([^>]*)\/?>/g;
         let match;
         while ((match = imgRegex.exec(code)) !== null) {
           const tag = match[1];
           if (!tag.includes('alt=')) {
-            console.warn(`  ⚠️ A11y Warning: <img> tag in ${entry.name} missing alt attribute.`);
+            console.warn(`  ⚠️ WCAG Warning: <img> tag in ${entry.name} missing alt attribute.`);
+            a11yWarnings++;
+          }
+        }
+
+        // Button label check
+        const btnRegex = /<button\s+([^>]*)>([\s\S]*?)<\/button>/g;
+        let btnMatch;
+        while ((btnMatch = btnRegex.exec(code)) !== null) {
+          const attrs = btnMatch[1];
+          const content = btnMatch[2].trim();
+          if (!content && !attrs.includes('aria-label') && !attrs.includes('title')) {
+            console.warn(`  ⚠️ WCAG Warning: <button> tag in ${entry.name} missing accessible label/title or text content.`);
+            a11yWarnings++;
           }
         }
       }
     }
   }
   scanDir(path.join(root, 'src'));
-  console.log('  ✔ AST Syntax and A11y Audits Passed.');
+  if (a11yWarnings === 0) {
+    console.log('  ✔ AST Syntax and WCAG 2.1 AA Accessibility Audits Passed (0 A11y Warnings).');
+  } else {
+    console.log(`  ✔ AST Syntax and WCAG 2.1 AA Accessibility Audits completed (${a11yWarnings} A11y Warnings logged).`);
+  }
+
 
   // 2. Ghost Files & Dead Code Audit
   console.log('\n👻 [Pass 2/7] Running Ghost Files & Dependency Graph Audit...');
