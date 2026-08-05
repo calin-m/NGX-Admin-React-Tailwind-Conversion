@@ -28,7 +28,7 @@ export default function VisitorsAnalytics() {
             onClick={() => setActiveTab('pageViews')}
             className={`px-3 py-1.5 rounded-lg transition-all ${
               activeTab === 'pageViews'
-                ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 font-semibold shadow-sm'
+                ? 'bg-accent text-white font-semibold shadow-sm transition-colors'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
             }`}
           >
@@ -38,7 +38,7 @@ export default function VisitorsAnalytics() {
             onClick={() => setActiveTab('uniqueVisitors')}
             className={`px-3 py-1.5 rounded-lg transition-all ${
               activeTab === 'uniqueVisitors'
-                ? 'bg-white dark:bg-slate-800 text-teal-600 dark:text-teal-400 font-semibold shadow-sm'
+                ? 'bg-emerald-600 text-white font-semibold shadow-sm'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
             }`}
           >
@@ -62,7 +62,7 @@ export default function VisitorsAnalytics() {
         </div>
         <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-700/40">
           <span className="text-xs text-slate-500 dark:text-slate-400 block">New Users</span>
-          <span className="text-xl font-bold text-indigo-600 dark:text-indigo-400">68.2%</span>
+          <span className="text-xl font-bold text-accent transition-colors">68.2%</span>
         </div>
       </div>
 
@@ -76,10 +76,11 @@ export default function VisitorsAnalytics() {
                 <div
                   style={{ height: `${heightPct}%` }}
                   className={`w-full max-w-[28px] rounded-t-md transition-all duration-500 ${
-                    activeTab === 'pageViews' ? 'bg-indigo-500 dark:bg-indigo-400 group-hover:bg-indigo-600' : 'bg-teal-500 dark:bg-teal-400 group-hover:bg-teal-600'
+                    activeTab === 'pageViews' ? 'bg-accent opacity-90 group-hover:opacity-100' : 'bg-teal-500 dark:bg-teal-400 group-hover:bg-teal-600'
                   }`}
                 />
               </div>
+
               <span className="text-xs text-slate-400 dark:text-slate-500 font-medium">{pt.day}</span>
             </div>
           );

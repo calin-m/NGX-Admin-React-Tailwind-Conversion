@@ -70,7 +70,7 @@ export default function TreeGrid() {
         <div className="flex items-center space-x-2 text-xs">
           <button
             onClick={expandAll}
-            className="px-3 py-1 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/20"
+            className="px-3 py-1 bg-accent-light text-accent font-semibold rounded-lg hover:opacity-80 transition-colors"
           >
             📂 Expand All
           </button>
@@ -99,7 +99,7 @@ export default function TreeGrid() {
                 <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
                   <td className="py-3 px-4 flex items-center space-x-2">
                     {node.children ? (
-                      <button onClick={() => toggleExpand(node.id)} className="w-5 h-5 font-bold text-slate-500 hover:text-indigo-600">
+                      <button onClick={() => toggleExpand(node.id)} className="w-5 h-5 font-bold text-slate-500 hover:text-accent transition-colors">
                         {expanded[node.id] ? '▼' : '▶'}
                       </button>
                     ) : (
@@ -117,9 +117,10 @@ export default function TreeGrid() {
                     <tr className="bg-slate-50/40 dark:bg-slate-700/20 hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
                       <td className="py-2.5 px-4 pl-10 flex items-center space-x-2 text-slate-700 dark:text-slate-200 font-semibold">
                         {child.children ? (
-                          <button onClick={() => toggleExpand(child.id)} className="w-5 h-5 font-bold text-slate-500 hover:text-indigo-600">
+                          <button onClick={() => toggleExpand(child.id)} className="w-5 h-5 font-bold text-slate-500 hover:text-accent transition-colors">
                             {expanded[child.id] ? '▼' : '▶'}
                           </button>
+
                         ) : (
                           <span className="w-5 text-slate-400">📄</span>
                         )}

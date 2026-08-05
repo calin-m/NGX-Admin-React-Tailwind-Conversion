@@ -9,9 +9,10 @@ export default function Grid() {
       </div>
 
       <div className="grid grid-cols-12 gap-3 text-center text-xs font-bold">
-        <div className="col-span-12 p-3 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 rounded-xl border border-indigo-500/20">
+        <div className="col-span-12 p-3 bg-accent-light text-accent rounded-xl border border-accent/20 transition-colors">
           col-span-12 (Full Width)
         </div>
+
         <div className="col-span-6 p-3 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-xl border border-emerald-500/20">
           col-span-6 (Half Width)
         </div>

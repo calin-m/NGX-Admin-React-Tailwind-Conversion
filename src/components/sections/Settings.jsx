@@ -21,7 +21,7 @@ export default function Settings() {
           </div>
           <button
             onClick={() => setEmailNotifs(prev => !prev)}
-            className={`w-11 h-6 rounded-full transition-colors relative p-0.5 ${emailNotifs ? 'bg-indigo-600' : 'bg-slate-300 dark:bg-slate-600'}`}
+            className={`w-11 h-6 rounded-full transition-colors relative p-0.5 ${emailNotifs ? 'bg-accent' : 'bg-slate-300 dark:bg-slate-600'}`}
           >
             <div className={`w-5 h-5 rounded-full bg-white transition-transform ${emailNotifs ? 'translate-x-5' : 'translate-x-0'}`} />
           </button>
@@ -35,7 +35,7 @@ export default function Settings() {
           </div>
           <button
             onClick={() => setCompactView(prev => !prev)}
-            className={`w-11 h-6 rounded-full transition-colors relative p-0.5 ${compactView ? 'bg-indigo-600' : 'bg-slate-300 dark:bg-slate-600'}`}
+            className={`w-11 h-6 rounded-full transition-colors relative p-0.5 ${compactView ? 'bg-accent' : 'bg-slate-300 dark:bg-slate-600'}`}
           >
             <div className={`w-5 h-5 rounded-full bg-white transition-transform ${compactView ? 'translate-x-5' : 'translate-x-0'}`} />
           </button>
@@ -53,8 +53,9 @@ export default function Settings() {
             />
             <button
               onClick={() => alert('API Key copied to clipboard!')}
-              className="px-3 py-2 bg-indigo-600 text-white rounded-lg text-xs font-semibold hover:bg-indigo-700 transition-colors"
+              className="px-3 py-2 bg-accent hover:bg-accent-hover text-white rounded-lg text-xs font-semibold transition-colors"
             >
+
               Copy
             </button>
           </div>

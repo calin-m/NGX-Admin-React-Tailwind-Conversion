@@ -26,7 +26,7 @@ export default function FormButtons() {
           <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Button Showcase & Controls</h3>
           <p className="text-xs text-slate-500 dark:text-slate-400">Interactive Button Variants & Size Switcher</p>
         </div>
-        <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 font-semibold">
+        <span className="text-xs px-2.5 py-0.5 rounded-full bg-accent-light text-accent font-semibold transition-colors">
           &lt;ngx-button&gt;
         </span>
       </div>
@@ -40,7 +40,7 @@ export default function FormButtons() {
             onClick={() => setSize(s)}
             className={`px-3 py-1 rounded-lg text-xs font-bold uppercase transition-all ${
               size === s
-                ? 'bg-indigo-600 text-white shadow-xs'
+                ? 'bg-accent text-white shadow-xs'
                 : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'
             }`}
           >
@@ -54,8 +54,9 @@ export default function FormButtons() {
         <button
           onClick={triggerLoading}
           disabled={isLoading}
-          className={`${sizeClasses[size]} bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold shadow-sm transition-all disabled:opacity-60`}
+          className={`${sizeClasses[size]} bg-accent hover:bg-accent-hover text-white rounded-xl font-bold shadow-sm transition-all disabled:opacity-60`}
         >
+
           {isLoading ? 'Loading...' : `Primary (Clicked ${clickCount})`}
         </button>
         <button onClick={() => setClickCount(prev => prev + 1)} className={`${sizeClasses[size]} bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold shadow-sm transition-all`}>

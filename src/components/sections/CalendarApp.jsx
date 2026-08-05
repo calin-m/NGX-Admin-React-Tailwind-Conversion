@@ -16,7 +16,7 @@ export default function CalendarApp() {
           <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Calendar Scheduler</h3>
           <p className="text-xs text-slate-500 dark:text-slate-400">August 2026</p>
         </div>
-        <button className="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold rounded-xl transition-all">
+        <button className="px-3 py-1.5 bg-accent hover:bg-accent-hover text-white text-xs font-semibold rounded-xl transition-all">
           ➕ New Event
         </button>
       </div>
@@ -31,7 +31,7 @@ export default function CalendarApp() {
             onClick={() => setSelectedDay(day)}
             className={`py-2.5 rounded-xl font-semibold transition-all ${
               selectedDay === day
-                ? 'bg-indigo-600 text-white shadow-md'
+                ? 'bg-accent text-white shadow-md transition-colors'
                 : 'hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200'
             }`}
           >
@@ -45,9 +45,10 @@ export default function CalendarApp() {
         {events.map(ev => (
           <div key={ev.id} className="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-700/40 rounded-xl border border-slate-200/60 dark:border-slate-600/60 text-xs">
             <span className="font-semibold text-slate-800 dark:text-slate-200">{ev.title}</span>
-            <span className="text-indigo-600 dark:text-indigo-400 font-bold">{ev.time}</span>
+            <span className="text-accent font-bold transition-colors">{ev.time}</span>
           </div>
         ))}
+
       </div>
     </div>
   );

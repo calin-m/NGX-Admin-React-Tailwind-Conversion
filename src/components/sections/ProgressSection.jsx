@@ -6,7 +6,8 @@ export default function ProgressSection() {
 
   const progressItems = [
     { title: 'Order Target', value: 78, max: 100, color: 'bg-emerald-500', note: '780 / 1,000 Orders' },
-    { title: 'Profit Goal', value: 85, max: 100, color: 'bg-indigo-500', note: '$85,000 / $100,000' },
+    { title: 'Profit Goal', value: 85, max: 100, color: 'bg-accent', note: '$85,000 / $100,000' },
+
     { title: 'Customer Retention', value: 62, max: 100, color: 'bg-amber-500', note: '62% Loyal Returning' },
     { title: 'System Uptime', value: 99.8, max: 100, color: 'bg-teal-500', note: '99.8% High Availability' }
   ];

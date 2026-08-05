@@ -24,9 +24,10 @@ export default function Chat() {
               onClick={() => setActiveContactId(c.id)}
               className={`w-full p-2.5 rounded-xl flex items-center space-x-3 text-left transition-all ${
                 activeContact.id === c.id
-                  ? 'bg-indigo-50 dark:bg-indigo-900/40 border border-indigo-200 dark:border-indigo-800'
+                  ? 'bg-accent-light border border-accent/30 transition-colors font-semibold'
                   : 'hover:bg-slate-100 dark:hover:bg-slate-800'
               }`}
+
             >
               <img src={c.avatar} alt={c.name} className="w-9 h-9 rounded-full object-cover" />
               <div className="min-w-0 flex-1">
@@ -53,7 +54,7 @@ export default function Chat() {
             <div key={msg.id} className={`flex flex-col ${msg.sender === 'me' ? 'items-end' : 'items-start'}`}>
               <div className={`max-w-xs px-4 py-2.5 rounded-2xl text-xs shadow-xs ${
                 msg.sender === 'me'
-                  ? 'bg-indigo-600 text-white rounded-br-none'
+                  ? 'bg-accent text-white rounded-br-none transition-colors'
                   : 'bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-600 rounded-bl-none'
               }`}>
                 {msg.text}
@@ -71,9 +72,10 @@ export default function Chat() {
             onChange={e => setInput(e.target.value)}
             className="flex-1 px-4 py-2 text-xs rounded-xl bg-slate-100 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none"
           />
-          <button type="submit" className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-xl transition-all">
+          <button type="submit" className="px-4 py-2 bg-accent hover:bg-accent-hover text-white font-bold text-xs rounded-xl transition-all">
             Send
           </button>
+
         </form>
       </div>
     </div>

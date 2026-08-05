@@ -25,7 +25,7 @@ export default function FormInputs() {
                 value={text}
                 onChange={e => setText(e.target.value)}
                 placeholder="Enter text..."
-                className="w-full pl-9 pr-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+                className="w-full pl-9 pr-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
               />
             </div>
           </div>
@@ -35,8 +35,9 @@ export default function FormInputs() {
             <select
               value={select}
               onChange={e => setSelect(e.target.value)}
-              className="w-full px-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+              className="w-full px-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
             >
+
               <option value="Option 1">Option 1 - Enterprise SaaS</option>
               <option value="Option 2">Option 2 - Corporate Analytics</option>
               <option value="Option 3">Option 3 - Developer Tooling</option>
@@ -63,7 +64,7 @@ export default function FormInputs() {
               <button
                 onClick={() => setToggleState(prev => !prev)}
                 className={`w-12 h-6 rounded-full p-1 transition-colors duration-300 ${
-                  toggleState ? 'bg-indigo-600' : 'bg-slate-300 dark:bg-slate-600'
+                  toggleState ? 'bg-accent' : 'bg-slate-300 dark:bg-slate-600'
                 }`}
               >
                 <div className={`w-4 h-4 rounded-full bg-white transition-transform duration-300 ${
@@ -88,8 +89,9 @@ export default function FormInputs() {
                     value={opt}
                     checked={selectedRadio === opt}
                     onChange={() => setSelectedRadio(opt)}
-                    className="text-indigo-600 focus:ring-indigo-500"
+                    className="text-accent focus:ring-accent"
                   />
+
                   <span>{opt}</span>
                 </label>
               ))}

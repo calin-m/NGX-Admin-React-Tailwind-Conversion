@@ -10,7 +10,8 @@ export default function EarningCard() {
   const growth = data?.growth || '+18.2%';
   const portfolio = data?.portfolio || [
     { name: 'Bitcoin', value: 50, color: 'bg-amber-500', hex: '#f59e0b', strokeDash: '50, 100', strokeOffset: '0' },
-    { name: 'Tether', value: 25, color: 'bg-indigo-500', hex: '#6366f1', strokeDash: '25, 100', strokeOffset: '-50' },
+    { name: 'Tether', value: 25, color: 'bg-accent', hex: '#6366f1', strokeDash: '25, 100', strokeOffset: '-50' },
+
     { name: 'Ethereum', value: 25, color: 'bg-emerald-500', hex: '#10b981', strokeDash: '25, 100', strokeOffset: '-75' },
   ];
 

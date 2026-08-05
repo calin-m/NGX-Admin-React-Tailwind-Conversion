@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
 import Header from './components/sections/Header.jsx';
 import Footer from './components/sections/Footer.jsx';
 import Sidebar from './components/sections/Sidebar.jsx';
@@ -51,6 +52,11 @@ export default function App() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isCustomizerOpen, setIsCustomizerOpen] = useState(false);
   const [accentColor, setAccentColor] = useState('indigo');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-accent', accentColor);
+  }, [accentColor]);
+
 
   const toggleTheme = () => {
     setIsDarkMode(prev => {

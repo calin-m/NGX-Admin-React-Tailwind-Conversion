@@ -17,7 +17,7 @@ export default function Maps() {
               key={m}
               onClick={() => setActiveMap(m)}
               className={`px-3 py-1.5 rounded-lg capitalize transition-all ${
-                activeMap === m ? 'bg-indigo-600 text-white font-bold shadow-sm' : 'text-slate-600 dark:text-slate-400'
+                activeMap === m ? 'bg-accent text-white font-bold shadow-sm transition-colors' : 'text-slate-600 dark:text-slate-400'
               }`}
             >
               {m} Maps
@@ -27,9 +27,10 @@ export default function Maps() {
       </div>
 
       <div className="h-80 rounded-xl bg-slate-900 text-slate-300 flex items-center justify-center font-mono text-xs font-bold relative overflow-hidden">
-        <span className="absolute top-3 left-3 text-[10px] bg-indigo-600 text-white px-2 py-0.5 rounded-md uppercase font-bold">
+        <span className="absolute top-3 left-3 text-[10px] bg-accent text-white px-2 py-0.5 rounded-md uppercase font-bold transition-colors">
           {activeMap} View Active
         </span>
+
         🗺️ Interactive {activeMap.toUpperCase()} Map Stream - Lat: 37.7749, Lng: -122.4194
       </div>
     </div>

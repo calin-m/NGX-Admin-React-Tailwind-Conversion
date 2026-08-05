@@ -12,9 +12,10 @@ export default function UserActivity() {
     color: item.deltaUp ? 'text-emerald-500' : 'text-amber-500'
   })) : [
     { user: 'Alan Vance', avatar: '👨‍💻', action: 'Purchased Enterprise Pro License', time: '2 mins ago', color: 'text-emerald-500' },
-    { user: 'Sarah Connor', avatar: '👩‍💼', action: 'Upgraded Subscription Tier', time: '15 mins ago', color: 'text-indigo-500' },
+    { user: 'Sarah Connor', avatar: '👩‍💼', action: 'Upgraded Subscription Tier', time: '15 mins ago', color: 'text-accent' },
     { user: 'Michael Scott', avatar: '👔', action: 'Submitted Support Ticket #402', time: '42 mins ago', color: 'text-amber-500' },
-    { user: 'Elena Rostova', avatar: '👩‍🔬', action: 'Exported Monthly Financial CSV', time: '1 hr ago', color: 'text-blue-500' }
+    { user: 'Elena Rostova', avatar: '👩‍🔬', action: 'Exported Monthly Financial CSV', time: '1 hr ago', color: 'text-accent' }
+
   ];
 
   return (

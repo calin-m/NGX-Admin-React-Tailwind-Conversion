@@ -16,7 +16,7 @@ export default function Login({ onLoginSuccess }) {
   return (
     <div className="w-full max-w-md mx-auto p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-2xl space-y-6">
       <div className="text-center space-y-2">
-        <div className="w-12 h-12 rounded-2xl bg-indigo-600 text-white font-black text-2xl flex items-center justify-center mx-auto shadow-md">
+        <div className="w-12 h-12 rounded-2xl bg-accent text-white font-black text-2xl flex items-center justify-center mx-auto shadow-md transition-colors">
           N
         </div>
         <h3 className="font-extrabold text-slate-900 dark:text-slate-100 text-xl">Sign In to NGX Admin</h3>
@@ -38,7 +38,7 @@ export default function Login({ onLoginSuccess }) {
             value={email}
             onChange={e => setEmail(e.target.value)}
             placeholder="admin@ngx-corporate.io"
-            className="w-full px-4 py-2.5 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+            className="w-full px-4 py-2.5 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
           />
         </div>
 
@@ -51,7 +51,7 @@ export default function Login({ onLoginSuccess }) {
               value={password}
               onChange={e => setPassword(e.target.value)}
               placeholder="••••••••"
-              className="w-full px-4 py-2.5 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+              className="w-full px-4 py-2.5 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
             />
             <button
               type="button"
@@ -69,16 +69,17 @@ export default function Login({ onLoginSuccess }) {
               type="checkbox"
               checked={rememberMe}
               onChange={e => setRememberMe(e.target.checked)}
-              className="rounded text-indigo-600 focus:ring-indigo-500"
+              className="rounded text-accent focus:ring-accent"
             />
             <span>Remember me</span>
           </label>
-          <a href="#reset" className="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline">Forgot password?</a>
+          <a href="#reset" className="text-accent font-semibold hover:underline transition-colors">Forgot password?</a>
         </div>
 
-        <button type="submit" className="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-xl shadow-md transition-all">
+        <button type="submit" className="w-full py-2.5 bg-accent hover:bg-accent-hover text-white font-bold text-xs rounded-xl shadow-md transition-all">
           Sign In
         </button>
+
       </form>
     </div>
   );

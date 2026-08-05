@@ -33,7 +33,7 @@ export default function OrderModal({ isOpen, onClose, onSubmit }) {
               placeholder="e.g. Sarah Jenkins"
               value={customer}
               onChange={e => setCustomer(e.target.value)}
-              className="w-full px-3.5 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+              className="w-full px-3.5 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
             />
           </div>
 
@@ -46,8 +46,9 @@ export default function OrderModal({ isOpen, onClose, onSubmit }) {
               placeholder="e.g. 1250.00"
               value={amount}
               onChange={e => setAmount(e.target.value)}
-              className="w-full px-3.5 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+              className="w-full px-3.5 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
             />
+
           </div>
 
           <div className="space-y-1">
@@ -74,7 +75,8 @@ export default function OrderModal({ isOpen, onClose, onSubmit }) {
             </button>
             <button
               type="submit"
-              className="px-4 py-2 text-xs font-semibold bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl shadow-sm transition-colors"
+              className="px-4 py-2 text-xs font-semibold bg-accent hover:bg-accent-hover text-white rounded-xl shadow-sm transition-colors"
+
             >
               Create Order
             </button>

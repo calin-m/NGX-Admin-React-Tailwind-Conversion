@@ -26,9 +26,10 @@ export default function ChartsPanel() {
             onClick={() => setActiveTab('orders')}
             className={`text-base font-bold transition-colors border-b-2 pb-1 ${
               activeTab === 'orders'
-                ? 'border-indigo-500 text-indigo-600 dark:text-indigo-400'
+                ? 'border-accent text-accent font-extrabold'
                 : 'border-transparent text-slate-400 hover:text-slate-600'
             }`}
+
           >
             Orders Chart
           </button>
@@ -70,7 +71,7 @@ export default function ChartsPanel() {
                 style={{ height: `${(item.val / maxVal) * 100}%` }}
                 className={`w-full max-w-[28px] rounded-t-lg transition-all duration-500 ${
                   activeTab === 'orders'
-                    ? 'bg-gradient-to-t from-indigo-500/80 to-indigo-400 group-hover:from-indigo-600 group-hover:to-indigo-300'
+                    ? 'bg-accent opacity-90 group-hover:opacity-100'
                     : 'bg-gradient-to-t from-emerald-500/80 to-emerald-400 group-hover:from-emerald-600 group-hover:to-emerald-300'
                 }`}
               />
@@ -83,8 +84,9 @@ export default function ChartsPanel() {
       {/* Footer stats */}
       <div className="flex justify-between items-center text-xs pt-3 border-t border-slate-100 dark:border-slate-700/60 text-slate-500">
         <span>Peak {activeTab === 'orders' ? 'Orders' : 'Profit'}: <strong className="text-slate-900 dark:text-slate-100">{maxVal.toLocaleString()} {activeTab === 'orders' ? 'Units' : '$'}</strong></span>
-        <span className="text-indigo-600 font-bold bg-indigo-500/10 px-2 py-0.5 rounded-full capitalize">{period} View Active</span>
+        <span className="text-accent font-bold bg-accent-light px-2 py-0.5 rounded-full capitalize transition-colors">{period} View Active</span>
       </div>
+
     </div>
   );
 }

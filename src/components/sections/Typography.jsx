@@ -15,9 +15,10 @@ export default function Typography() {
         <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
           Lead Paragraph: NGX Admin React Tailwind provides a sleek, responsive, and modular architecture designed for high-performance enterprise web applications.
         </p>
-        <blockquote className="p-4 border-l-4 border-indigo-600 bg-slate-50 dark:bg-slate-700/40 text-xs italic text-slate-700 dark:text-slate-300 rounded-r-xl">
+        <blockquote className="p-4 border-l-4 border-accent bg-slate-50 dark:bg-slate-700/40 text-xs italic text-slate-700 dark:text-slate-300 rounded-r-xl transition-colors">
           "Design is not just what it looks like and feels like. Design is how it works."
         </blockquote>
+
       </div>
     </div>
   );

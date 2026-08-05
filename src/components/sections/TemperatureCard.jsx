@@ -32,7 +32,7 @@ export default function TemperatureCard() {
           <button
             onClick={() => setMode('cool')}
             className={`px-2.5 py-1.5 rounded-lg transition-all ${
-              mode === 'cool' ? 'bg-indigo-600 text-white font-bold shadow-sm' : 'text-slate-600 dark:text-slate-400'
+              mode === 'cool' ? 'bg-accent text-white font-bold shadow-sm transition-colors' : 'text-slate-600 dark:text-slate-400'
             }`}
           >
             ❄️ Cool
@@ -51,8 +51,9 @@ export default function TemperatureCard() {
       <div className="flex flex-col items-center justify-center py-2 space-y-4">
         {/* Thermostat Dial Circle */}
         <div className={`relative w-44 h-44 rounded-full border-8 ${
-          mode === 'heat' ? 'border-amber-500/30' : mode === 'cool' ? 'border-indigo-500/30' : 'border-emerald-500/30'
+          mode === 'heat' ? 'border-amber-500/30' : mode === 'cool' ? 'border-accent' : 'border-emerald-500/30'
         } flex items-center justify-center shadow-inner transition-colors duration-300`}>
+
           <div className="text-center">
             <span className="text-4xl font-extrabold text-slate-900 dark:text-slate-100">{temp}°C</span>
             <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider block mt-1">

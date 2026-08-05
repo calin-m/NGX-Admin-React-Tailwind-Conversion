@@ -48,8 +48,9 @@ export default function Header({ isDarkMode, onToggleTheme, onToggleSidebar, onO
             title="System Notifications"
           >
             🔔
-            <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-indigo-600 animate-ping" />
-            <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-indigo-600" />
+            <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-accent animate-ping" />
+            <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-accent" />
+
           </button>
 
           <NotificationDrawer isOpen={isNotifOpen} onClose={() => setIsNotifOpen(false)} />
@@ -66,7 +67,8 @@ export default function Header({ isDarkMode, onToggleTheme, onToggleSidebar, onO
 
         {/* User Profile Badge */}
         <div className="flex items-center space-x-3 pl-2 border-l border-slate-200 dark:border-slate-700/80">
-          <div className="w-9 h-9 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center text-sm shadow-sm">
+          <div className="w-9 h-9 rounded-xl bg-accent text-white font-bold flex items-center justify-center text-sm shadow-sm transition-colors">
+
             AD
           </div>
           <div className="hidden sm:block text-left">

@@ -40,7 +40,7 @@ export default function UserManagement() {
             placeholder="Search users..."
             value={searchTerm}
             onChange={e => setSearchTerm(e.target.value)}
-            className="w-56 px-3.5 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+            className="w-56 px-3.5 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent"
           />
 
           <select
@@ -58,10 +58,11 @@ export default function UserManagement() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredUsers.map(user => (
-          <div key={user.id} className="p-4 rounded-xl border border-slate-100 dark:border-slate-700/60 bg-slate-50/50 dark:bg-slate-700/30 flex items-center justify-between hover:border-indigo-500/30 transition-all">
+          <div key={user.id} className="p-4 rounded-xl border border-slate-100 dark:border-slate-700/60 bg-slate-50/50 dark:bg-slate-700/30 flex items-center justify-between hover:border-accent transition-all">
+
             <div className="flex items-center space-x-3">
               <div className="relative">
-                <div className="w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center text-xs shadow-sm">
+                <div className="w-10 h-10 rounded-full bg-accent text-white font-bold flex items-center justify-center text-xs shadow-sm transition-colors">
                   {user.avatar}
                 </div>
                 <span className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-white dark:border-slate-800 ${getStatusColor(user.status)}`} />
@@ -70,9 +71,10 @@ export default function UserManagement() {
               <div>
                 <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100">{user.name}</h4>
                 <span className="text-[10px] text-slate-400 block">{user.email}</span>
-                <span className="text-[10px] font-semibold text-indigo-600 dark:text-indigo-400 block mt-0.5">{user.dept}</span>
+                <span className="text-[10px] font-semibold text-accent block mt-0.5 transition-colors">{user.dept}</span>
               </div>
             </div>
+
 
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-200/80 dark:bg-slate-700 text-slate-700 dark:text-slate-300">
               {user.role}

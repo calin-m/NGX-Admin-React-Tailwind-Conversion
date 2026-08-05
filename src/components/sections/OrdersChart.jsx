@@ -53,7 +53,7 @@ export default function OrdersChart(props) {
               onClick={() => setPeriod(p)}
               className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
                 period === p
-                  ? 'bg-indigo-600 text-white shadow-xs'
+                  ? 'bg-accent text-white shadow-xs transition-colors'
                   : 'text-slate-600 dark:text-slate-300 hover:text-slate-900'
               }`}
             >
@@ -75,9 +75,10 @@ export default function OrdersChart(props) {
               <div className="w-full bg-slate-100 dark:bg-slate-700 rounded-t-xl h-36 flex items-end overflow-hidden">
                 <div
                   style={{ height: `${heightPercent}%` }}
-                  className="w-full bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t-xl group-hover:from-indigo-500 group-hover:to-indigo-300 transition-all duration-500"
+                  className="w-full bg-accent rounded-t-xl opacity-90 group-hover:opacity-100 transition-all duration-500"
                 />
               </div>
+
               <span className="text-[11px] font-bold text-slate-600 dark:text-slate-400">{item.label}</span>
             </div>
           );

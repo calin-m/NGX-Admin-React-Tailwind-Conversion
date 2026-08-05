@@ -30,7 +30,7 @@ export default function ElectricityCard() {
               key={y}
               onClick={() => setYear(y)}
               className={`px-3 py-1 rounded-lg transition-all ${
-                year === y ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 font-bold shadow-sm' : 'text-slate-500 dark:text-slate-400'
+                year === y ? 'bg-accent text-white font-bold shadow-sm transition-colors' : 'text-slate-500 dark:text-slate-400'
               }`}
             >
               {y}
@@ -45,8 +45,9 @@ export default function ElectricityCard() {
             <div className="w-full flex justify-center items-end h-32 relative">
               <div
                 style={{ height: `${(pt.kwh / 650) * 100}%` }}
-                className="w-full max-w-[24px] bg-indigo-500 dark:bg-indigo-400 rounded-t-md group-hover:bg-indigo-600 transition-all duration-300 shadow-sm"
+                className="w-full max-w-[24px] bg-accent rounded-t-md opacity-90 group-hover:opacity-100 transition-all duration-300 shadow-sm"
               />
+
               {/* Tooltip on hover */}
               <div className="absolute -top-7 opacity-0 group-hover:opacity-100 transition-opacity bg-slate-900 text-white text-[10px] py-0.5 px-1.5 rounded-md pointer-events-none whitespace-nowrap shadow-md z-10">
                 {pt.kwh} kWh

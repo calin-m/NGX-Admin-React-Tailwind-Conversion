@@ -3,6 +3,34 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
+  :root {
+    --accent-bg: #4f46e5;
+    --accent-hover: #4338ca;
+    --accent-text: #6366f1;
+    --accent-light: rgba(99, 102, 241, 0.1);
+  }
+
+  [data-accent="emerald"] {
+    --accent-bg: #059669;
+    --accent-hover: #047857;
+    --accent-text: #10b981;
+    --accent-light: rgba(16, 185, 129, 0.1);
+  }
+
+  [data-accent="purple"] {
+    --accent-bg: #9333ea;
+    --accent-hover: #7e22ce;
+    --accent-text: #a855f7;
+    --accent-light: rgba(168, 85, 247, 0.1);
+  }
+
+  [data-accent="teal"] {
+    --accent-bg: #0d9488;
+    --accent-hover: #0f766e;
+    --accent-text: #14b8a6;
+    --accent-light: rgba(20, 184, 166, 0.1);
+  }
+
   * {
     box-sizing: border-box;
   }
@@ -10,4 +38,16 @@
     @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50 min-h-screen antialiased transition-colors duration-200;
   }
 }
+
+@layer utilities {
+  .bg-accent { background-color: var(--accent-bg); }
+  .hover\:bg-accent-hover:hover { background-color: var(--accent-hover); }
+  .text-accent { color: var(--accent-text); }
+  .border-accent { border-color: var(--accent-text); }
+  .bg-accent-light { background-color: var(--accent-light); }
+  .focus\:ring-accent:focus { --tw-ring-color: var(--accent-bg); border-color: var(--accent-text); }
+}
+
+
+
 

@@ -29,17 +29,18 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
     >
       <div className="p-4 space-y-6 overflow-y-auto max-h-screen">
         <div className="flex items-center space-x-3 px-2">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-indigo-400 text-white flex items-center justify-center font-black text-lg shadow-md shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center font-black text-lg shadow-md shrink-0 transition-colors">
             N
           </div>
           {!isCollapsed && (
             <div className="overflow-hidden whitespace-nowrap">
               <h2 className="font-bold text-slate-900 dark:text-slate-100 text-base tracking-tight">NGX Admin</h2>
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded-full">
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-accent bg-accent-light px-2 py-0.5 rounded-full transition-colors">
                 100% Converted
               </span>
             </div>
           )}
+
         </div>
 
         <nav className="space-y-1">
@@ -51,9 +52,10 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
                 onClick={() => setActiveTab && setActiveTab(item.id)}
                 className={`w-full flex items-center space-x-3.5 px-3 py-2 rounded-xl text-xs font-medium transition-all ${
                   isActive
-                    ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/20'
+                    ? 'bg-accent text-white shadow-md transition-colors'
                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-slate-900 dark:hover:text-slate-100'
                 } ${isCollapsed ? 'justify-center px-0' : ''}`}
+
                 title={isCollapsed ? item.label : undefined}
               >
                 <span className="text-base shrink-0">{item.icon}</span>

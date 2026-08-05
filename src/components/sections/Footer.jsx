@@ -9,7 +9,8 @@ export default function Footer() {
           href="https://github.com/calin-m/NGX-Admin-React-Tailwind-Conversion"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+          className="font-bold text-accent hover:underline transition-colors"
+
         >
           Calin M
         </a>

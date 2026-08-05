@@ -32,8 +32,9 @@ export default function Accordion() {
           <button
             onClick={() => setMultiExpand(prev => !prev)}
             className={`px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all ${
-              multiExpand ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400'
+              multiExpand ? 'bg-accent text-white transition-colors' : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400'
             }`}
+
           >
             {multiExpand ? 'ON' : 'OFF'}
           </button>

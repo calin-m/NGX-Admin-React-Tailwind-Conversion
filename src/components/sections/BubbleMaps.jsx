@@ -4,7 +4,7 @@ export default function BubbleMaps() {
   const [activeRegion, setActiveRegion] = useState('North America');
 
   const regions = [
-    { name: 'North America', density: '4,850 Orders', size: 'w-24 h-24', color: 'bg-indigo-500/30 border-indigo-500' },
+    { name: 'North America', density: '4,850 Orders', size: 'w-24 h-24', color: 'bg-accent-light border-accent' },
     { name: 'Europe', density: '3,420 Orders', size: 'w-20 h-20', color: 'bg-amber-500/30 border-amber-500' },
     { name: 'Asia-Pacific', density: '5,910 Orders', size: 'w-28 h-28', color: 'bg-emerald-500/30 border-emerald-500' },
     { name: 'Latin America', density: '1,280 Orders', size: 'w-16 h-16', color: 'bg-rose-500/30 border-rose-500' }
@@ -20,7 +20,7 @@ export default function BubbleMaps() {
           <p className="text-xs text-slate-500 dark:text-slate-400">Order Density & Regional Bubble Heatmap</p>
         </div>
 
-        <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full">
+        <span className="text-xs font-bold text-accent bg-accent-light px-3 py-1 rounded-full transition-colors">
           Total Global Density: 15.4k
         </span>
       </div>
@@ -50,10 +50,11 @@ export default function BubbleMaps() {
             onClick={() => setActiveRegion(r.name)}
             className={`px-3 py-1 rounded-lg transition-all ${
               activeRegion === r.name
-                ? 'bg-indigo-600 text-white font-bold shadow-sm'
+                ? 'bg-accent text-white font-bold shadow-sm transition-colors'
                 : 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200'
             }`}
           >
+
             🌐 {r.name} ({r.density})
           </button>
         ))}

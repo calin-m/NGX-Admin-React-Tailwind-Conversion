@@ -17,7 +17,7 @@ export default function CountryOrders() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-lg">
+          <div className="w-10 h-10 rounded-xl bg-accent-light text-accent flex items-center justify-center font-bold text-lg transition-colors">
             🌍
           </div>
           <div>
@@ -25,9 +25,10 @@ export default function CountryOrders() {
             <p className="text-xs text-slate-500 dark:text-slate-400">Regional Distribution</p>
           </div>
         </div>
-        <span className="text-xs font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 px-2.5 py-1 rounded-lg">
+        <span className="text-xs font-bold bg-accent-light text-accent px-2.5 py-1 rounded-lg transition-colors">
           5 Active Regions
         </span>
+
       </div>
 
       {/* Country List Feed */}

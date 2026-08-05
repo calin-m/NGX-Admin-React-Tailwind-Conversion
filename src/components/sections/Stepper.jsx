@@ -32,7 +32,7 @@ export default function Stepper() {
         {isCompleted && (
           <button
             onClick={() => setStep(1)}
-            className="px-3 py-1 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-bold rounded-lg"
+            className="px-3 py-1 bg-accent-light text-accent text-xs font-bold rounded-lg transition-colors"
           >
             🔄 Reset Wizard
           </button>
@@ -48,7 +48,7 @@ export default function Stepper() {
           return (
             <div key={idx} className="relative z-10 flex flex-col items-center space-y-1">
               <div className={`w-9 h-9 rounded-full font-extrabold text-xs flex items-center justify-center transition-all ${
-                isCurrent ? 'bg-indigo-600 text-white ring-4 ring-indigo-500/20 shadow-md' : isDone ? 'bg-emerald-500 text-white' : 'bg-slate-200 dark:bg-slate-700 text-slate-500'
+                isCurrent ? 'bg-accent text-white ring-4 ring-accent shadow-md' : isDone ? 'bg-emerald-500 text-white' : 'bg-slate-200 dark:bg-slate-700 text-slate-500'
               }`}>
                 {isDone ? '✓' : stepNum}
               </div>
@@ -67,7 +67,7 @@ export default function Stepper() {
             value={formData[steps[step - 1].key]}
             onChange={e => handleInputChange(steps[step - 1].key, e.target.value)}
             placeholder={`Enter ${steps[step - 1].title}...`}
-            className="w-full px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+            className="w-full px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
           />
         </div>
       ) : (
@@ -90,8 +90,9 @@ export default function Stepper() {
         <button
           disabled={isCompleted}
           onClick={() => setStep(prev => prev + 1)}
-          className="px-4 py-2 bg-indigo-600 text-white text-xs font-semibold rounded-xl disabled:opacity-40 shadow-sm hover:bg-indigo-700 transition-colors"
+          className="px-4 py-2 bg-accent hover:bg-accent-hover text-white text-xs font-semibold rounded-xl disabled:opacity-40 shadow-sm transition-colors"
         >
+
           {step === 3 ? 'Complete Setup ✓' : 'Next Step ▶'}
         </button>
       </div>

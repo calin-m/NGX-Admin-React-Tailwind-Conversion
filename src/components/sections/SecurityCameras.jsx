@@ -32,9 +32,10 @@ export default function SecurityCameras() {
             onClick={() => setSelectedCam(cam.id)}
             className={`p-4 rounded-xl border transition-all cursor-pointer space-y-3 ${
               selectedCam === cam.id
-                ? 'border-indigo-500 bg-indigo-50/30 dark:bg-indigo-900/20 shadow-md'
+                ? 'border-accent bg-accent-light shadow-md transition-colors'
                 : 'border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-700/30'
             }`}
+
           >
             <div className="h-32 rounded-lg bg-slate-900 text-slate-400 flex items-center justify-center font-mono text-xs font-semibold relative overflow-hidden">
               <span className="absolute top-2 left-2 text-[10px] bg-red-600 text-white px-1.5 py-0.5 rounded-sm font-bold">REC</span>

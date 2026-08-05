@@ -26,7 +26,7 @@ export default function RoomsCard() {
           <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Smart Room Selector</h3>
           <p className="text-xs text-slate-500 dark:text-slate-400">Ambient Control by Zone</p>
         </div>
-        <span className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 px-2.5 py-1 rounded-full">
+        <span className="text-xs font-semibold text-accent bg-accent-light px-2.5 py-1 rounded-full transition-colors">
           {rooms.filter(r => r.lightsOn).length} / {rooms.length} Active
         </span>
       </div>
@@ -38,10 +38,11 @@ export default function RoomsCard() {
             onClick={() => setActiveRoom(room.name)}
             className={`p-3.5 rounded-xl border text-left transition-all ${
               activeRoom === room.name
-                ? 'border-indigo-600 bg-indigo-600 text-white shadow-md'
+                ? 'border-accent bg-accent text-white shadow-md'
                 : 'border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-700/40 text-slate-800 dark:text-slate-200'
             }`}
           >
+
             <span className="text-xl block mb-1">{room.icon}</span>
             <span className="text-xs font-bold block truncate">{room.name}</span>
             <span className="text-[10px] opacity-80 block truncate">

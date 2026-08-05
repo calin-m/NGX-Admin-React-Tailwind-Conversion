@@ -18,7 +18,7 @@ export default function FormLayouts() {
           <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Form Layout Templates</h3>
           <p className="text-xs text-slate-500 dark:text-slate-400">Horizontal & Grid Layout Form Cards</p>
         </div>
-        <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 font-semibold">
+        <span className="text-xs px-2.5 py-0.5 rounded-full bg-accent-light text-accent font-semibold transition-colors">
           &lt;ngx-form-layouts&gt;
         </span>
       </div>
@@ -38,7 +38,7 @@ export default function FormLayouts() {
               placeholder="John"
               value={formData.firstName}
               onChange={e => setFormData({ ...formData, firstName: e.target.value })}
-              className="w-full px-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
               required
             />
           </div>
@@ -49,7 +49,7 @@ export default function FormLayouts() {
               placeholder="Doe"
               value={formData.lastName}
               onChange={e => setFormData({ ...formData, lastName: e.target.value })}
-              className="w-full px-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
             />
           </div>
         </div>
@@ -61,14 +61,15 @@ export default function FormLayouts() {
             placeholder="john.doe@example.com"
             value={formData.email}
             onChange={e => setFormData({ ...formData, email: e.target.value })}
-            className="w-full px-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
             required
           />
         </div>
 
-        <button type="submit" className="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl shadow-sm transition-all">
+        <button type="submit" className="px-4 py-2.5 bg-accent hover:bg-accent-hover text-white text-xs font-bold rounded-xl shadow-sm transition-all">
           Submit Form
         </button>
+
       </form>
     </div>
   );

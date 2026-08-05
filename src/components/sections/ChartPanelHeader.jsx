@@ -21,7 +21,8 @@ export default function ChartPanelHeader({ type = 'Orders', period = 'week', onT
           onClick={() => handleTypeSelect('Orders')}
           className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all ${
             selectedType === 'Orders'
-              ? 'bg-indigo-600 text-white shadow-xs'
+              ? 'bg-accent text-white shadow-xs transition-colors'
+
               : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'
           }`}
         >

@@ -7,6 +7,16 @@
 ## [1.0.0] — 2026-08-05
 
 ### 🚀 New Features
+- **feat(dashboard): expand canvas, re-balance grids, and implement period-reactive data engine** (`5123a78`) *by Calin on 2026-08-05*
+  - Modified src/index.css (added @custom-variant dark for Tailwind v4 class toggle)
+  - Modified src/App.jsx (expanded canvas to max-w-[1600px] and re-balanced IoT grid)
+  - Modified src/components/sections/ECommerce.jsx (stacked left panel cards for 520px+ width and re-balanced row splits)
+  - Modified src/components/sections/Footer.jsx & Footer.test.jsx (updated attribution to Calin M and removed social links)
+  - Modified src/hooks/useOrdersProfitChart.js & StatsCardFront.jsx (wired reactive period datasets for Profit Analytics)
+  - Modified src/hooks/useTrafficChart.js & TrafficFrontCard.jsx (wired reactive period datasets and upgraded pill buttons)
+  - Modified src/components/sections/UserActivity.jsx (added period switcher tabs and wired to useUserActivity)
+  - Modified src/components/sections/EarningCard.jsx, TemperatureCard.jsx, VisitorsAnalyticsChart.jsx, RoomsCard.jsx (responsive flex/grid upgrades)
+  - Created scripts/audit-layout-density.js & updated scripts/verify-build.js (integrated AST layout density checks)
 - **feat(interactivity): complete 100% AST interactivity parity & test suite alignment** (`ee974c4`) *by Calin on 2026-08-05*
   - Upgraded src/components/sections/FormButtons.jsx & FormLayouts.jsx & Datepicker.jsx & TinyMce.jsx
   - Upgraded src/components/sections/Popover.jsx & Tooltip.jsx & Window.jsx
@@ -194,4 +204,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-05T10:38:28.058Z*
+*Last Auto-Generated: 2026-08-05T11:04:03.067Z*

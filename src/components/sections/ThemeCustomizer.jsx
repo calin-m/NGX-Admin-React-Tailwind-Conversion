@@ -34,13 +34,14 @@ export default function ThemeCustomizer({ isOpen, onClose, accentColor, setAccen
                   onClick={() => setAccentColor && setAccentColor(acc.id)}
                   className={`flex items-center space-x-2.5 p-2.5 rounded-xl border text-xs font-semibold transition-all ${
                     accentColor === acc.id
-                      ? 'border-indigo-600 bg-indigo-50/50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400'
+                      ? 'border-current bg-slate-100 dark:bg-slate-700/60 font-bold shadow-xs'
                       : 'border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/40'
                   }`}
                 >
-                  <span className={`w-3.5 h-3.5 rounded-full ${acc.class}`} />
+                  <span className={`w-3.5 h-3.5 rounded-full ${acc.class} shadow-xs`} />
                   <span className="truncate">{acc.name}</span>
                 </button>
+
               ))}
             </div>
           </div>

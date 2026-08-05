@@ -10,7 +10,8 @@ import UserActivity from './UserActivity.jsx';
 
 export default function ECommerce() {
   const stats = [
-    { title: 'Total Revenue', val: '$248,500', change: '+12.4%', icon: '💎', color: 'text-indigo-500 bg-indigo-500/10' },
+    { title: 'Total Revenue', val: '$248,500', change: '+12.4%', icon: '💎', color: 'text-accent bg-accent-light' },
+
     { title: 'Total Orders', val: '14,820', change: '+8.1%', icon: '📦', color: 'text-emerald-500 bg-emerald-500/10' },
     { title: 'Conversion Rate', val: '3.42%', change: '+0.6%', icon: '🎯', color: 'text-amber-500 bg-amber-500/10' },
     { title: 'Avg Order Value', val: '$167.50', change: '+4.2%', icon: '💳', color: 'text-purple-500 bg-purple-500/10' }
