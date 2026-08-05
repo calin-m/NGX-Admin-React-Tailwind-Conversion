@@ -51,7 +51,7 @@ export default function App() {
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isCustomizerOpen, setIsCustomizerOpen] = useState(false);
-  const [accentColor, setAccentColor] = useState('indigo');
+  const [accentColor, setAccentColor] = useState('teal');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-accent', accentColor);
@@ -84,7 +84,7 @@ export default function App() {
         onOpenThemeCustomizer={() => setIsCustomizerOpen(true)}
       />
 
-      <div className="flex-1 flex w-full">
+      <div className="flex-1 flex w-full items-start">
         <Sidebar
           isCollapsed={isSidebarCollapsed}
           activeTab={activeTab}

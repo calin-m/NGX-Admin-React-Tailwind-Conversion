@@ -36,6 +36,7 @@ export default function UserActivity() {
           {['week', 'month', 'year'].map(p => (
             <button
               key={p}
+              type="button"
               onClick={() => setPeriod && setPeriod(p)}
               className={`px-2.5 py-1 rounded-md transition-all capitalize ${
                 period === p
@@ -50,7 +51,7 @@ export default function UserActivity() {
       </div>
 
       {/* Stream Feed */}
-      <div className="space-y-3 py-2 flex-1">
+      <div className="space-y-3 py-2 flex-1 h-[312px] overflow-y-auto scrollbar-thin pr-1">
         {activityStream.map((act, idx) => (
           <div key={idx} className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-colors">
             <div className="flex items-center space-x-3">

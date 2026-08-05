@@ -294,9 +294,9 @@ Below is the detailed 1-to-1 event contract parity breakdown automatically parse
 | `SecurityCameras` | `(click)` | `onClick` + `useState` | **100%** | None |
 | `StatusCard` | `(click)` | `onClick` + `useState` | **100%** | None |
 | `ChartPanelHeader` | `(selectedChange)` | `onClick` + `useState` | **100%** | None |
-| `OrdersChart` | `(chartInit)`, `(params)` | `onClick` + `useState` | **100%** | None |
+| `OrdersChart` | `(chartInit)`, `(params)` | `onClick`, `onMouseEnter`, `onMouseLeave` + `useState` | **100%** | None |
 | `ProfitChart` | `(chartInit)` | `onClick` + `useState` | **100%** | None |
-| `ChartsPanel` | `(changeTab)`, `(periodChange)` | `onClick` + `useState` | **100%** | None |
+| `ChartsPanel` | `(changeTab)`, `(periodChange)` | `onClick`, `onMouseEnter`, `onMouseLeave` + `useState` | **100%** | None |
 | `CountryOrdersChart` | `(chartInit)` | `onClick` + `useState` | **100%** | None |
 | `CountryOrders` | `(selectEvent)`, `(countriesCategories)`, `(countryData)` | State Engine + `useState` | **100%** | None |
 | `CountryOrdersMap` | `(leafletMapReady)`, `(e)` | `onClick` + `useState` | **100%** | None |

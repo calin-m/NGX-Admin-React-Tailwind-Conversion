@@ -38,7 +38,7 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab }) {
             : 'w-64 max-md:fixed max-md:top-0 max-md:bottom-0 max-md:left-0 max-md:h-full max-md:shadow-2xl'
         } md:sticky md:top-16 md:h-[calc(100vh-4rem)]`}
       >
-        <div className={`p-3 space-y-6 flex-1 overflow-y-auto relative ${isCollapsed ? 'scrollbar-collapsed-hover' : 'scrollbar-thin'}`}>
+        <div className="p-3 space-y-6 flex-1 overflow-y-auto relative scrollbar-collapsed-hover">
           {/* Logo Section */}
           <div className={`flex items-center space-x-3 px-1 ${isCollapsed ? 'justify-center px-0' : ''}`}>
             <div className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center font-black text-lg shadow-md shrink-0 transition-colors">
