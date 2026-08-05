@@ -37,30 +37,33 @@ export default function ECommerce() {
         ))}
       </div>
 
-      {/* Row 1: col-xxl-5 (ProfitCard + EarningCard + TrafficRevealCard) & col-xxl-7 (ChartsPanel) */}
+      {/* Row 1: Profit Analytics + Earning Live Stats paired directly with ChartsPanel */}
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-stretch">
-        <div className="xl:col-span-5 flex flex-col space-y-6 justify-between">
+        <div className="xl:col-span-5 flex flex-col space-y-6">
           <ProfitCard />
           <EarningCard />
-          <TrafficRevealCard />
         </div>
         <div className="xl:col-span-7 flex">
           <ChartsPanel />
         </div>
       </div>
 
-
-      {/* Row 2: xl:col-span-8 (CountryOrders) & xl:col-span-4 (ProgressSection) */}
-      <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-stretch">
-        <div className="xl:col-span-8 flex">
-          <CountryOrders />
+      {/* Row 2: Traffic Source Reveal paired side-by-side with Corporate Targets */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+        <div className="lg:col-span-6 flex">
+          <TrafficRevealCard />
         </div>
-        <div className="xl:col-span-4 flex">
+        <div className="lg:col-span-6 flex">
           <ProgressSection />
         </div>
       </div>
 
-      {/* Row 3: xl:col-span-8 (VisitorsAnalytics) & xl:col-span-4 (UserActivity) */}
+      {/* Row 3: Full-Width Global Country Orders & World Map (12 Columns) */}
+      <div className="w-full">
+        <CountryOrders />
+      </div>
+
+      {/* Bottom Section: xl:col-span-8 (VisitorsAnalytics) & xl:col-span-4 (UserActivity) */}
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-stretch">
         <div className="xl:col-span-8 flex">
           <VisitorsAnalytics />

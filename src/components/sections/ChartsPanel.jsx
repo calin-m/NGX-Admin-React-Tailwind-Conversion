@@ -38,7 +38,7 @@ export default function ChartsPanel() {
   const areaD = `${pathD} L 100 100 L 0 100 Z`;
 
   return (
-    <div className="w-full min-h-[320px] rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 flex flex-col justify-between space-y-4">
+    <div className="w-full h-full rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 flex flex-col justify-between space-y-4">
       {/* Header Tabs & Period Selectors */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-3 gap-3">
         <div className="flex items-center space-x-4">
@@ -86,8 +86,8 @@ export default function ChartsPanel() {
         </div>
       </div>
 
-      {/* SVG Canvas & Compact Y-Axis Area */}
-      <div className="relative h-44 w-full flex-1 flex flex-col justify-between pt-1">
+      {/* SVG Canvas & Y-Axis Area (2-Card Height Viewport) */}
+      <div className="relative h-80 w-full flex-1 flex flex-col justify-between pt-1">
         {/* Horizontal Dashed Y-Axis Gridlines */}
         <div className="absolute inset-0 flex flex-col justify-between pointer-events-none pb-5">
           {gridSteps.map((step, idx) => (
