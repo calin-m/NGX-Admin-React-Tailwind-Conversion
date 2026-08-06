@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useChat from '../../hooks/useChat.js';
+import ClearableInput from '../ui/ClearableInput.jsx';
 
 export default function Chat() {
   const { contacts, activeContact, setActiveContactId, activeMessages, sendMessage } = useChat();
@@ -18,34 +19,58 @@ export default function Chat() {
       <div className="w-1/3 border-r border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-900/50 p-3 flex flex-col">
         <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3 px-2">Contacts</h4>
         <div className="space-y-1 overflow-y-auto flex-1">
-          {contacts.map(c => (
-            <button
-              key={c.id}
-              onClick={() => setActiveContactId(c.id)}
-              className={`w-full p-2.5 rounded-xl flex items-center space-x-3 text-left transition-all ${
-                activeContact.id === c.id
-                  ? 'bg-accent-light border border-accent/30 transition-colors font-semibold'
-                  : 'hover:bg-slate-100 dark:hover:bg-slate-800'
-              }`}
-
-            >
-              <img src={c.avatar} alt={c.name} className="w-9 h-9 rounded-full object-cover" />
-              <div className="min-w-0 flex-1">
-                <h5 className="text-xs font-bold text-slate-900 dark:text-slate-100 truncate">{c.name}</h5>
-                <p className="text-[10px] text-slate-500 truncate">{c.role}</p>
-              </div>
-            </button>
-          ))}
+          {contacts.map(c => {
+            const isSelected = activeContact.id === c.id;
+            const isOnline = c.status?.toLowerCase() === 'online';
+            return (
+              <button
+                key={c.id}
+                type="button"
+                onClick={() => setActiveContactId(c.id)}
+                className={`w-full p-2.5 rounded-xl flex items-center space-x-3 text-left transition-all border ${
+                  isSelected
+                    ? 'bg-accent-light border-accent text-slate-900 dark:text-slate-100 shadow-xs'
+                    : 'border-transparent text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/60'
+                }`}
+              >
+                <div className="relative shrink-0">
+                  <img src={c.avatar} alt={c.name} className="w-9 h-9 rounded-full object-cover" />
+                  <span
+                    className={`absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full ring-2 ring-white dark:ring-slate-800 ${
+                      isOnline ? 'bg-emerald-500' : 'bg-slate-300 dark:bg-slate-600'
+                    }`}
+                  />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <h5 className="text-xs font-semibold text-slate-900 dark:text-slate-100 truncate">{c.name}</h5>
+                  <p className="text-[10px] text-slate-500 truncate">{c.role}</p>
+                </div>
+              </button>
+            );
+          })}
         </div>
       </div>
 
       {/* Chat Messages Panel */}
       <div className="flex-1 flex flex-col">
         <div className="p-4 bg-slate-50 dark:bg-slate-700/50 border-b border-slate-200 dark:border-slate-700 flex items-center space-x-3">
-          <img src={activeContact.avatar} alt={activeContact.name} className="w-9 h-9 rounded-full object-cover shadow-sm" />
+          <div className="relative shrink-0">
+            <img src={activeContact.avatar} alt={activeContact.name} className="w-9 h-9 rounded-full object-cover shadow-sm" />
+            <span
+              className={`absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full ring-2 ring-white dark:ring-slate-700 ${
+                activeContact.status?.toLowerCase() === 'online' ? 'bg-emerald-500' : 'bg-slate-300 dark:bg-slate-600'
+              }`}
+            />
+          </div>
           <div>
-            <h3 className="font-bold text-slate-900 dark:text-slate-100 text-sm">{activeContact.name}</h3>
-            <span className="text-[10px] text-emerald-500 font-semibold">● {activeContact.status}</span>
+            <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-sm">{activeContact.name}</h3>
+            <span
+              className={`text-[10px] font-semibold capitalize ${
+                activeContact.status?.toLowerCase() === 'online' ? 'text-emerald-500' : 'text-slate-400 dark:text-slate-500'
+              }`}
+            >
+              ● {activeContact.status}
+            </span>
           </div>
         </div>
 
@@ -65,17 +90,17 @@ export default function Chat() {
         </div>
 
         <form onSubmit={handleSend} className="p-3 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 flex items-center space-x-2">
-          <input
-            type="text"
-            placeholder={`Message ${activeContact.name}...`}
-            value={input}
-            onChange={e => setInput(e.target.value)}
-            className="flex-1 px-4 py-2 text-xs rounded-xl bg-slate-100 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none"
-          />
+          <div className="flex-1">
+            <ClearableInput
+              value={input}
+              onChange={e => setInput(e.target.value)}
+              onClear={() => setInput('')}
+              placeholder={`Message ${activeContact.name}...`}
+            />
+          </div>
           <button type="submit" className="px-4 py-2 bg-accent hover:bg-accent-hover text-white font-bold text-xs rounded-xl transition-all">
             Send
           </button>
-
         </form>
       </div>
     </div>

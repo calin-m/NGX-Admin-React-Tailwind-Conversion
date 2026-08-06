@@ -38,7 +38,7 @@ export default function Icons() {
           <div
             key={item.name}
             onClick={() => handleCopy(item.name)}
-            className="p-4 rounded-xl border border-slate-200/70 dark:border-slate-700/70 bg-slate-50/50 dark:bg-slate-700/30 hover:bg-indigo-50 dark:hover:bg-slate-700 transition-all cursor-pointer text-center space-y-2"
+            className="p-4 rounded-xl border border-slate-200/70 dark:border-slate-700/70 bg-slate-50/50 dark:bg-slate-700/30 hover:bg-accent-light hover:border-accent/40 hover:-translate-y-1 hover:shadow-md active:scale-95 transition-all duration-200 cursor-pointer text-center space-y-2"
           >
             <span className="text-2xl block">{item.icon}</span>
             <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300 block truncate">{item.name}</span>

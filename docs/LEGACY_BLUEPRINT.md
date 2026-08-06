@@ -290,7 +290,7 @@ Below is the detailed 1-to-1 event contract parity breakdown automatically parse
 | Component Name | Parsed Angular Template Events | Matched React Handlers / State | Parity Score | Missing Events |
 | :--- | :--- | :--- | :---: | :--- |
 | `Header` | `(click)`, `(selectedChange)` | `onClick`, `onClose` + `useState` | **100%** | None |
-| `SearchInput` | `(click)`, `(blur)`, `(input)` | `onChange`, `onClick` + `useState` | **100%** | None |
+| `SearchInput` | `(click)`, `(blur)`, `(input)` | `onClick`, `onChange`, `onClear` + `useState` | **100%** | None |
 | `SecurityCameras` | `(click)` | `onBgColor`, `onTextColor`, `onClick` + `useState` | **100%** | None |
 | `StatusCard` | `(click)` | `onToggle` + `useState` | **100%** | None |
 | `ChartPanelHeader` | `(selectedChange)` | `onClick`, `onChange` + `useState` | **100%** | None |
@@ -315,12 +315,12 @@ Below is the detailed 1-to-1 event contract parity breakdown automatically parse
 | `UserActivity` | `(selectedChange)` | `onBgColor`, `onTextColor`, `onChange` + `useState` | **100%** | None |
 | `VisitorsAnalyticsChart` | `(chartInit)`, `(params)` | `onClick` + `useState` | **100%** | None |
 | `VisitorsStatistics` | `(chartInit)` | State Engine | **0%** | `onChartInit` |
-| `Chat` | `(send)` | `onClick`, `onSubmit`, `onChange` + `useState` | **100%** | None |
+| `Chat` | `(send)` | `onClick`, `onSubmit`, `onChange`, `onClear` + `useState` | **100%** | None |
 | `Accordion` | `(click)` | `onClick` + `useState` | **100%** | None |
 | `InfiniteList` | `(bottomThreshold)` | `onClick` + `useState` | **100%** | None |
-| `Stepper` | `(ngSubmit)`, `(click)` | `onClick`, `onChange` + `useState` | **100%** | None |
+| `Stepper` | `(ngSubmit)`, `(click)` | `onClick`, `onChange`, `onClear` + `useState` | **100%** | None |
 | `NotFound` | `(click)` | State Engine | **0%** | `onClick` |
 | `Toastr` | `(click)` | `onClasses`, `onClick` + `useState` | **100%** | None |
 | `Window` | `(click)` | `onClick` + `useState` | **100%** | None |
-| `SmartTable` | `(deleteConfirm)` | `onChange`, `onClick` + `useState` | **100%** | None |
+| `SmartTable` | `(deleteConfirm)` | `onChange`, `onClear`, `onClick` + `useState` | **100%** | None |
 | `TreeGrid` | `(sort)` | `onClick` + `useState` | **100%** | None |

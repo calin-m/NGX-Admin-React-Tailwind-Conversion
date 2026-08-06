@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FormInput from '../ui/FormInput.jsx';
 
 export default function UserManagement() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -35,24 +36,29 @@ export default function UserManagement() {
         </div>
 
         <div className="flex items-center space-x-3">
-          <input
-            type="text"
-            placeholder="Search users..."
-            value={searchTerm}
-            onChange={e => setSearchTerm(e.target.value)}
-            className="w-56 px-3.5 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent"
-          />
+          <div className="w-56">
+            <FormInput
+              icon="🔍"
+              placeholder="Search users..."
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+              onClear={() => setSearchTerm('')}
+            />
+          </div>
 
-          <select
-            value={roleFilter}
-            onChange={e => setRoleFilter(e.target.value)}
-            className="px-3 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-200 focus:outline-none font-medium"
-          >
-            <option value="All">All Roles</option>
-            <option value="Admin">Admin</option>
-            <option value="Editor">Editor</option>
-            <option value="Viewer">Viewer</option>
-          </select>
+          <div className="w-36">
+            <FormInput
+              type="select"
+              value={roleFilter}
+              onChange={e => setRoleFilter(e.target.value)}
+              options={[
+                { value: 'All', label: 'All Roles' },
+                { value: 'Admin', label: 'Admin' },
+                { value: 'Editor', label: 'Editor' },
+                { value: 'Viewer', label: 'Viewer' }
+              ]}
+            />
+          </div>
         </div>
       </div>
 

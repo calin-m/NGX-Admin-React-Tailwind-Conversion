@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ClearableInput from '../ui/ClearableInput.jsx';
 
 export default function Dialogs() {
   const [activeModal, setActiveModal] = useState(null); // 'confirm' | 'prompt' | 'info'
@@ -77,12 +78,11 @@ export default function Dialogs() {
               <>
                 <h4 className="font-bold text-slate-900 dark:text-slate-100 text-base">Enter Name</h4>
                 <p className="text-xs text-slate-500 dark:text-slate-400">Please type a name to confirm update:</p>
-                <input
-                  type="text"
+                <ClearableInput
                   value={promptText}
                   onChange={e => setPromptText(e.target.value)}
+                  onClear={() => setPromptText('')}
                   placeholder="Enter name..."
-                  className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none"
                 />
                 <div className="flex justify-end space-x-3 pt-2">
                   <button onClick={() => setActiveModal(null)} className="px-3.5 py-1.5 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl text-xs font-semibold">

@@ -139,8 +139,10 @@ graph LR
 | `src/components/ui/Card.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/CardHeader.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/CircularProgress.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/ui/ClearableInput.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/ui/FlipButton.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/ui/FlipCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/ui/FormInput.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/ui/GlassCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/PeriodSelector.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/ui/RevealCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |

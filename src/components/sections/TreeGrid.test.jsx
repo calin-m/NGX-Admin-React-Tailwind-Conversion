@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
 import TreeGrid from './TreeGrid.jsx';
@@ -8,5 +8,18 @@ describe('TreeGrid Corporate Component Suite', () => {
     const { container } = render(<TreeGrid />);
     expect(container.firstChild).toBeDefined();
     expect(screen.getByText(/Hierarchical Tree Grid Table/i)).toBeInTheDocument();
+  });
+
+  it('toggles folder expansion and child row visibility on full row click', () => {
+    render(<TreeGrid />);
+    const sourceFolder = screen.getByText('src/ (Application Source)');
+    
+    // Click folder row to collapse
+    fireEvent.click(sourceFolder);
+    expect(screen.queryByText('components/sections/')).not.toBeInTheDocument();
+
+    // Click folder row to expand again
+    fireEvent.click(sourceFolder);
+    expect(screen.getByText('components/sections/')).toBeInTheDocument();
   });
 });

@@ -7,7 +7,7 @@ export const AuthContext = createContext({
   logout: () => {}
 });
 
-export function AuthProvider({ children }) {
+export function AuthProvider({ children } = {}) {
   const [user, setUser] = useState({
     name: 'Admin User',
     email: 'admin@ngx-corporate.io',

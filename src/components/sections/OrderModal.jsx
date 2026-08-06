@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FormInput from '../ui/FormInput.jsx';
 
 export default function OrderModal({ isOpen, onClose, onSubmit }) {
   const [customer, setCustomer] = useState('');
@@ -18,52 +19,40 @@ export default function OrderModal({ isOpen, onClose, onSubmit }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs">
-      <div className="w-full max-w-md bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 p-6 space-y-6 animate-in fade-in zoom-in-95 duration-200">
+      <div className="w-full max-w-md bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 p-6 space-y-6 animate-scale-in">
         <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
           <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">Create New Order</h3>
           <button onClick={onClose} className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-lg">✕</button>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-1">
-            <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Customer Name</label>
-            <input
-              type="text"
-              required
-              placeholder="e.g. Sarah Jenkins"
-              value={customer}
-              onChange={e => setCustomer(e.target.value)}
-              className="w-full px-3.5 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
-            />
-          </div>
+          <FormInput
+            label="Customer Name"
+            required
+            placeholder="e.g. Sarah Jenkins"
+            value={customer}
+            onChange={e => setCustomer(e.target.value)}
+            onClear={() => setCustomer('')}
+          />
 
-          <div className="space-y-1">
-            <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Order Amount ($)</label>
-            <input
-              type="number"
-              required
-              step="0.01"
-              placeholder="e.g. 1250.00"
-              value={amount}
-              onChange={e => setAmount(e.target.value)}
-              className="w-full px-3.5 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
-            />
+          <FormInput
+            label="Order Amount ($)"
+            type="number"
+            required
+            step="0.01"
+            placeholder="e.g. 1250.00"
+            value={amount}
+            onChange={e => setAmount(e.target.value)}
+            onClear={() => setAmount('')}
+          />
 
-          </div>
-
-          <div className="space-y-1">
-            <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Payment Method</label>
-            <select
-              value={method}
-              onChange={e => setMethod(e.target.value)}
-              className="w-full px-3.5 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none"
-            >
-              <option value="Credit Card">Credit Card</option>
-              <option value="PayPal">PayPal</option>
-              <option value="Apple Pay">Apple Pay</option>
-              <option value="Wire Transfer">Wire Transfer</option>
-            </select>
-          </div>
+          <FormInput
+            label="Payment Method"
+            type="select"
+            value={method}
+            onChange={e => setMethod(e.target.value)}
+            options={['Credit Card', 'PayPal', 'Apple Pay', 'Wire Transfer']}
+          />
 
           <div className="flex justify-end space-x-3 pt-4 border-t border-slate-100 dark:border-slate-700/60">
             <button

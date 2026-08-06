@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useLayoutEffect } from 'react';
 
 /**
  * Sidebar Component
@@ -7,6 +7,8 @@ import React, { useState } from 'react';
  */
 export default function Sidebar({ isCollapsed, activeTab, setActiveTab, onToggleSidebar }) {
   const [hoveredItemId, setHoveredItemId] = useState(null);
+  const itemRefs = useRef({});
+  const [pillStyle, setPillStyle] = useState({ top: 0, height: 40, opacity: 0 });
 
   const menuItems = [
     { id: 'dashboard', label: 'Corporate Dashboard', icon: '📊' },
@@ -28,7 +30,28 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab, onToggle
     { id: 'settings', label: 'Settings', icon: '⚙️' }
   ];
 
+  useLayoutEffect(() => {
+    const currentEl = itemRefs.current[activeTab];
+    if (currentEl) {
+      setPillStyle({
+        top: currentEl.offsetTop,
+        height: currentEl.offsetHeight,
+        opacity: 1
+      });
+    } else {
+      const idx = menuItems.findIndex(i => i.id === activeTab);
+      if (idx !== -1) {
+        setPillStyle({
+          top: idx * 44,
+          height: 40,
+          opacity: 1
+        });
+      }
+    }
+  }, [activeTab, isCollapsed]);
+
   const handleTabClick = (id) => {
+    setHoveredItemId(null);
     if (setActiveTab) setActiveTab(id);
     if (!isCollapsed && onToggleSidebar && typeof window !== 'undefined' && window.innerWidth < 768) {
       onToggleSidebar();
@@ -81,6 +104,16 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab, onToggle
 
           {/* Navigation Menu */}
           <nav className="space-y-1 relative">
+            {/* Dynamic 300ms GPU Sliding Active Accent Background Pill */}
+            <div
+              className="absolute left-0 right-0 bg-accent rounded-xl shadow-md transition-all duration-300 ease-out pointer-events-none z-0"
+              style={{
+                transform: `translateY(${pillStyle.top}px)`,
+                height: `${pillStyle.height}px`,
+                opacity: pillStyle.opacity
+              }}
+            />
+
             {menuItems.map(item => {
               const isActive = activeTab === item.id;
               const isHovered = hoveredItemId === item.id;
@@ -88,17 +121,18 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab, onToggle
               return (
                 <div
                   key={item.id}
-                  className="relative flex items-center"
+                  ref={el => (itemRefs.current[item.id] = el)}
+                  className="relative flex items-center z-10"
                   onMouseEnter={() => setHoveredItemId(item.id)}
                   onMouseLeave={() => setHoveredItemId(null)}
                 >
                   <button
                     type="button"
                     onClick={() => handleTabClick(item.id)}
-                    className={`w-full flex items-center rounded-xl text-xs font-medium transition-all ${
+                    className={`w-full flex items-center rounded-xl text-xs transition-colors ${
                       isActive
-                        ? 'bg-accent text-white shadow-md transition-colors'
-                        : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-slate-900 dark:hover:text-slate-100'
+                        ? 'text-white font-semibold'
+                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100/60 dark:hover:bg-slate-700/40'
                     } ${isCollapsed ? 'justify-center p-0' : 'space-x-3 px-1 py-0.5'}`}
                   >
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-base">

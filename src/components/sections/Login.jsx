@@ -1,78 +1,81 @@
 import React, { useState } from 'react';
+import useAuth from '../../context/AuthContext.jsx';
+import FormInput from '../ui/FormInput.jsx';
 
 export default function Login({ onLoginSuccess }) {
   const [email, setEmail] = useState('admin@ngx-corporate.io');
-  const [password, setPassword] = useState('password123');
-  const [showPassword, setShowPassword] = useState(false);
+  const [password, setPassword] = useState('password');
   const [rememberMe, setRememberMe] = useState(true);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
+  const { login } = useAuth();
 
   const handleSubmit = e => {
     e.preventDefault();
-    setIsSubmitted(true);
-    if (onLoginSuccess) setTimeout(onLoginSuccess, 1000);
+    setError('');
+
+    if (!email || !password) {
+      setError('Please fill in both Email and Password fields.');
+      return;
+    }
+
+    const isOk = login(email, password);
+    if (isOk) {
+      setSuccess(true);
+      setTimeout(() => {
+        if (onLoginSuccess) onLoginSuccess();
+      }, 600);
+    } else {
+      setError('Invalid email or password credentials.');
+    }
   };
 
   return (
     <div className="w-full max-w-md mx-auto p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-2xl space-y-6">
       <div className="text-center space-y-2">
-        <div className="w-12 h-12 rounded-2xl bg-accent text-white font-black text-2xl flex items-center justify-center mx-auto shadow-md transition-colors">
-          N
-        </div>
-        <h3 className="font-extrabold text-slate-900 dark:text-slate-100 text-xl">Sign In to NGX Admin</h3>
-        <p className="text-xs text-slate-500">Welcome back! Please enter your credentials.</p>
+        <h3 className="font-extrabold text-slate-900 dark:text-slate-100 text-2xl tracking-tight">Enterprise Login</h3>
+        <p className="text-xs text-slate-500 dark:text-slate-400">Welcome back! Sign in to access your corporate dashboard.</p>
       </div>
 
-      {isSubmitted && (
-        <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold text-center animate-in fade-in">
+      {error && (
+        <div className="p-3 rounded-xl bg-rose-50 dark:bg-rose-900/30 border border-rose-200 dark:border-rose-800 text-xs font-semibold text-rose-600 dark:text-rose-400">
+          ⚠️ {error}
+        </div>
+      )}
+
+      {success && (
+        <div className="p-3 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
           ✓ Authentication Successful! Redirecting to Dashboard...
         </div>
       )}
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1">Email Address</label>
-          <input
-            type="email"
-            required
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder="admin@ngx-corporate.io"
-            className="w-full px-4 py-2.5 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
-          />
-        </div>
+        <FormInput
+          label="Email Address"
+          type="email"
+          required
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          onClear={() => setEmail('')}
+          placeholder="admin@ngx-corporate.io"
+        />
 
-        <div>
-          <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1">Password</label>
-          <div className="relative">
-            <input
-              type={showPassword ? 'text' : 'password'}
-              required
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              placeholder="••••••••"
-              className="w-full px-4 py-2.5 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
-            />
-            <button
-              type="button"
-              onClick={() => setShowPassword(prev => !prev)}
-              className="absolute inset-y-0 right-0 pr-3 flex items-center text-xs text-slate-400 hover:text-slate-600"
-            >
-              {showPassword ? '🙈 Hide' : '👁️ Show'}
-            </button>
-          </div>
-        </div>
+        <FormInput
+          label="Password"
+          type="password"
+          required
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+          onClear={() => setPassword('')}
+        />
 
         <div className="flex items-center justify-between text-xs">
-          <label className="flex items-center space-x-2 cursor-pointer text-slate-600 dark:text-slate-400">
-            <input
-              type="checkbox"
-              checked={rememberMe}
-              onChange={e => setRememberMe(e.target.checked)}
-              className="rounded text-accent focus:ring-accent"
-            />
-            <span>Remember me</span>
-          </label>
+          <FormInput
+            type="checkbox"
+            value={rememberMe}
+            onChange={setRememberMe}
+            placeholder="Remember me"
+          />
           <a href="#reset" className="text-accent font-semibold hover:underline transition-colors">Forgot password?</a>
         </div>
 

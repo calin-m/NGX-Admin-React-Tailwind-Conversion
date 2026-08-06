@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ClearableInput from '../ui/ClearableInput.jsx';
 
 export default function SearchInput({ isOpen, onClose }) {
   const [query, setQuery] = useState('');
@@ -29,19 +30,23 @@ export default function SearchInput({ isOpen, onClose }) {
   const filteredLinks = quickLinks.filter(item => item.title.toLowerCase().includes(query.toLowerCase()));
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 p-4 bg-slate-900/50 backdrop-blur-xs">
-      <div className="w-full max-w-lg bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-        <div className="p-4 border-b border-slate-100 dark:border-slate-700/60 flex items-center space-x-3">
-          <span className="text-base text-slate-400">🔍</span>
-          <input
-            type="text"
+    <div
+      onClick={onClose}
+      className="fixed inset-0 z-50 flex items-start justify-center pt-20 p-4 bg-slate-900/60 backdrop-blur-xs transition-opacity duration-200 ease-out cursor-pointer"
+    >
+      <div
+        onClick={e => e.stopPropagation()}
+        className="w-full max-w-lg bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200/80 dark:border-slate-700 overflow-hidden cursor-default animate-scale-in"
+      >
+        <div className="p-3 border-b border-slate-100 dark:border-slate-700/60">
+          <ClearableInput
             autoFocus
-            placeholder="Type a command or search orders, users, metrics... (Press Esc to close)"
+            icon="🔍"
             value={query}
             onChange={e => setQuery(e.target.value)}
-            className="flex-1 bg-transparent text-sm text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none"
+            onClear={() => setQuery('')}
+            placeholder="Type a command or search orders, users, metrics..."
           />
-          <kbd className="px-2 py-0.5 text-[10px] font-bold text-slate-400 bg-slate-100 dark:bg-slate-700 rounded-md">ESC</kbd>
         </div>
 
         <div className="p-2 space-y-1 max-h-64 overflow-y-auto">

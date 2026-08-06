@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FormInput from '../ui/FormInput.jsx';
 
 export default function FormLayouts() {
   const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '' });
@@ -31,40 +32,33 @@ export default function FormLayouts() {
 
       <form onSubmit={handleSubmit} className="space-y-4 max-w-lg">
         <div className="grid grid-cols-2 gap-4">
-          <div>
-            <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1">First Name *</label>
-            <input
-              type="text"
-              placeholder="John"
-              value={formData.firstName}
-              onChange={e => setFormData({ ...formData, firstName: e.target.value })}
-              className="w-full px-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
-              required
-            />
-          </div>
-          <div>
-            <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1">Last Name</label>
-            <input
-              type="text"
-              placeholder="Doe"
-              value={formData.lastName}
-              onChange={e => setFormData({ ...formData, lastName: e.target.value })}
-              className="w-full px-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
-            />
-          </div>
-        </div>
-
-        <div>
-          <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1">Email Address *</label>
-          <input
-            type="email"
-            placeholder="john.doe@example.com"
-            value={formData.email}
-            onChange={e => setFormData({ ...formData, email: e.target.value })}
-            className="w-full px-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent"
+          <FormInput
+            label="First Name"
             required
+            placeholder="John"
+            value={formData.firstName}
+            onChange={e => setFormData({ ...formData, firstName: e.target.value })}
+            onClear={() => setFormData({ ...formData, firstName: '' })}
+          />
+
+          <FormInput
+            label="Last Name"
+            placeholder="Doe"
+            value={formData.lastName}
+            onChange={e => setFormData({ ...formData, lastName: e.target.value })}
+            onClear={() => setFormData({ ...formData, lastName: '' })}
           />
         </div>
+
+        <FormInput
+          label="Email Address"
+          type="email"
+          required
+          placeholder="john.doe@example.com"
+          value={formData.email}
+          onChange={e => setFormData({ ...formData, email: e.target.value })}
+          onClear={() => setFormData({ ...formData, email: '' })}
+        />
 
         <button type="submit" className="px-4 py-2.5 bg-accent hover:bg-accent-hover text-white text-xs font-bold rounded-xl shadow-sm transition-all">
           Submit Form

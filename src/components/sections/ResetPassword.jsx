@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FormInput from '../ui/FormInput.jsx';
 
 export default function ResetPassword() {
   const [email, setEmail] = useState('');
@@ -11,14 +12,17 @@ export default function ResetPassword() {
       </div>
 
       <form onSubmit={e => e.preventDefault()} className="space-y-4">
-        <div>
-          <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1">Email</label>
-          <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="your-email@corporate.com" className="w-full px-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600" />
-        </div>
-        <button type="submit" className="w-full py-2.5 bg-accent hover:bg-accent-hover text-white font-bold text-xs rounded-xl shadow-md transition-colors">
+        <FormInput
+          label="Email Address"
+          type="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          onClear={() => setEmail('')}
+          placeholder="your-email@corporate.com"
+        />
+        <button type="submit" className="w-full py-2.5 bg-accent hover:bg-accent-hover text-white font-bold text-xs rounded-xl shadow-md transition-colors active:scale-[0.98]">
           Send Recovery Link
         </button>
-
       </form>
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FormInput from '../ui/FormInput.jsx';
 
 export default function Settings() {
   const [emailNotifs, setEmailNotifs] = useState(true);
@@ -15,30 +16,24 @@ export default function Settings() {
       <div className="space-y-6 max-w-2xl">
         {/* Preference 1 */}
         <div className="flex items-center justify-between p-4 rounded-xl bg-slate-50 dark:bg-slate-700/30">
-          <div>
-            <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100">Email Digest Notifications</h4>
-            <p className="text-[10px] text-slate-400">Receive daily summary reports of orders and revenue targets.</p>
-          </div>
-          <button
-            onClick={() => setEmailNotifs(prev => !prev)}
-            className={`w-11 h-6 rounded-full transition-colors relative p-0.5 ${emailNotifs ? 'bg-accent' : 'bg-slate-300 dark:bg-slate-600'}`}
-          >
-            <div className={`w-5 h-5 rounded-full bg-white transition-transform ${emailNotifs ? 'translate-x-5' : 'translate-x-0'}`} />
-          </button>
+          <FormInput
+            label="Email Digest Notifications"
+            type="toggle"
+            value={emailNotifs}
+            onChange={setEmailNotifs}
+            helpText="Receive daily summary reports of orders and revenue targets."
+          />
         </div>
 
         {/* Preference 2 */}
         <div className="flex items-center justify-between p-4 rounded-xl bg-slate-50 dark:bg-slate-700/30">
-          <div>
-            <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100">Compact Dashboard Cards</h4>
-            <p className="text-[10px] text-slate-400">Reduce spacing and padding for high-density displays.</p>
-          </div>
-          <button
-            onClick={() => setCompactView(prev => !prev)}
-            className={`w-11 h-6 rounded-full transition-colors relative p-0.5 ${compactView ? 'bg-accent' : 'bg-slate-300 dark:bg-slate-600'}`}
-          >
-            <div className={`w-5 h-5 rounded-full bg-white transition-transform ${compactView ? 'translate-x-5' : 'translate-x-0'}`} />
-          </button>
+          <FormInput
+            label="Compact Dashboard Cards"
+            type="toggle"
+            value={compactView}
+            onChange={setCompactView}
+            helpText="Reduce spacing and padding for high-density displays."
+          />
         </div>
 
         {/* Preference 3 */}

@@ -62,6 +62,17 @@ export default function App() {
     document.documentElement.setAttribute('data-accent', accentColor);
   }, [accentColor]);
 
+  useEffect(() => {
+    const handleGlobalKeyDown = e => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        setIsSearchOpen(prev => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleGlobalKeyDown);
+    return () => window.removeEventListener('keydown', handleGlobalKeyDown);
+  }, []);
+
 
   const toggleTheme = () => {
     setIsDarkMode(prev => {
@@ -98,96 +109,98 @@ export default function App() {
         />
 
         <main className={`flex-1 p-4 sm:p-6 max-w-[1600px] mx-auto w-full space-y-6 overflow-x-hidden transition-[padding-left] duration-300 ease-in-out ${isSidebarCollapsed ? 'md:pl-24' : 'md:pl-72'}`}>
-          {activeTab === 'maps' ? (
-            <Maps />
-          ) : activeTab === 'ckeditor' ? (
-            <CkEditor />
-          ) : activeTab === 'stepper' ? (
-            <Stepper />
-          ) : activeTab === 'accordion' ? (
-            <Accordion />
-          ) : activeTab === 'grid' ? (
-            <Grid />
-          ) : activeTab === 'typography' ? (
-            <Typography />
-          ) : activeTab === 'icons' ? (
-            <Icons />
-          ) : activeTab === 'treegrid' ? (
-            <TreeGrid />
-          ) : activeTab === 'chat' ? (
-            <Chat />
-          ) : activeTab === 'calendar' ? (
-            <CalendarApp />
-          ) : activeTab === 'forms' ? (
-            <div className="space-y-6">
-              <FormInputs />
-              <FormLayouts />
-            </div>
-          ) : activeTab === 'auth' ? (
-            <div className="space-y-8 py-4">
-              <Login />
-              <Register />
-              <ResetPassword />
-            </div>
-          ) : activeTab === 'iot' ? (
-            <div className="space-y-6">
-              <StatusCard />
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-                <div className="lg:col-span-4 flex">
-                  <TemperatureCard />
+          <div key={activeTab} className="w-full animate-fade-in">
+            {activeTab === 'maps' ? (
+              <Maps />
+            ) : activeTab === 'ckeditor' ? (
+              <CkEditor />
+            ) : activeTab === 'stepper' ? (
+              <Stepper />
+            ) : activeTab === 'accordion' ? (
+              <Accordion />
+            ) : activeTab === 'grid' ? (
+              <Grid />
+            ) : activeTab === 'typography' ? (
+              <Typography />
+            ) : activeTab === 'icons' ? (
+              <Icons />
+            ) : activeTab === 'treegrid' ? (
+              <TreeGrid />
+            ) : activeTab === 'chat' ? (
+              <Chat />
+            ) : activeTab === 'calendar' ? (
+              <CalendarApp />
+            ) : activeTab === 'forms' ? (
+              <div className="space-y-6">
+                <FormInputs />
+                <FormLayouts />
+              </div>
+            ) : activeTab === 'auth' ? (
+              <div className="space-y-8 py-4">
+                <Login />
+                <Register />
+                <ResetPassword />
+              </div>
+            ) : activeTab === 'iot' ? (
+              <div className="space-y-6">
+                <StatusCard />
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                  <div className="lg:col-span-4 flex">
+                    <TemperatureCard />
+                  </div>
+                  <div className="lg:col-span-8 flex">
+                    <ElectricityCard />
+                  </div>
                 </div>
-                <div className="lg:col-span-8 flex">
-                  <ElectricityCard />
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                  <div className="lg:col-span-8 flex">
+                    <SecurityCameras />
+                  </div>
+                  <div className="lg:col-span-4 flex flex-col space-y-6">
+                    <SolarCard />
+                    <WeatherCard />
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                  <div className="lg:col-span-8 flex">
+                    <RoomsCard />
+                  </div>
+                  <div className="lg:col-span-4 flex">
+                    <KittenCard />
+                  </div>
                 </div>
               </div>
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-                <div className="lg:col-span-8 flex">
-                  <SecurityCameras />
-                </div>
-                <div className="lg:col-span-4 flex flex-col space-y-6">
-                  <SolarCard />
-                  <WeatherCard />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-                <div className="lg:col-span-8 flex">
-                  <RoomsCard />
-                </div>
-                <div className="lg:col-span-4 flex">
-                  <KittenCard />
-                </div>
-              </div>
-            </div>
 
-          ) : activeTab === 'orders' ? (
-            <div className="space-y-4">
-              <div className="flex justify-end">
-                <button
-                  onClick={() => setIsOrderModalOpen(true)}
-                  className="px-4 py-2 bg-accent hover:bg-accent-hover text-white text-xs font-semibold rounded-xl shadow-sm transition-all flex items-center space-x-2"
-                >
-                  <span>➕ Create New Order</span>
-                </button>
+            ) : activeTab === 'orders' ? (
+              <div className="space-y-4">
+                <div className="flex justify-end">
+                  <button
+                    type="button"
+                    onClick={() => setIsOrderModalOpen(true)}
+                    className="px-4 py-2 bg-accent hover:bg-accent-hover text-white text-xs font-semibold rounded-xl shadow-sm transition-all active:scale-[0.98] flex items-center space-x-2 cursor-pointer"
+                  >
+                    <span>➕ Create New Order</span>
+                  </button>
+                </div>
+                <SmartTable />
               </div>
-              <SmartTable />
-            </div>
-          ) : activeTab === 'users' ? (
-            <UserManagement />
-          ) : activeTab === 'analytics' ? (
-            <div className="space-y-6">
-              <VisitorsAnalytics />
-              <TrafficRevealCard />
-            </div>
-          ) : activeTab === 'settings' ? (
-            <div className="space-y-6">
-              <Settings />
-              <Toastr />
-              <Dialogs />
-            </div>
-          ) : (
-            <ECommerce />
-          )}
-
+            ) : activeTab === 'users' ? (
+              <UserManagement />
+            ) : activeTab === 'analytics' ? (
+              <div className="space-y-6">
+                <VisitorsAnalytics />
+                <TrafficRevealCard />
+              </div>
+            ) : activeTab === 'settings' ? (
+              <div className="space-y-6">
+                <Settings />
+                <Toastr />
+                <Dialogs />
+              </div>
+            ) : (
+              <ECommerce />
+            )}
+          </div>
         </main>
       </div>
 

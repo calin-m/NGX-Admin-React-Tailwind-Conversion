@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useSmartTableData from '../../hooks/useSmartTableData.js';
+import ClearableInput from '../ui/ClearableInput.jsx';
 
 export default function SmartTable() {
   const {
@@ -69,15 +70,14 @@ export default function SmartTable() {
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
-          <div className="relative">
-            <input
-              type="text"
+          <div className="w-56">
+            <ClearableInput
+              icon="🔍"
               placeholder="Search orders, customers..."
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
-              className="w-56 pl-9 pr-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent transition-all"
+              onClear={() => setSearchTerm('')}
             />
-            <span className="absolute left-3 top-2.5 text-xs text-slate-400">🔍</span>
           </div>
 
           <button
@@ -214,26 +214,25 @@ export default function SmartTable() {
           <div className="w-full max-w-md bg-white dark:bg-slate-800 rounded-2xl p-6 space-y-4 border border-slate-200 dark:border-slate-700 shadow-2xl">
             <h4 className="font-bold text-slate-900 dark:text-slate-100 text-base">➕ Create New Order Record</h4>
             <div className="space-y-3 text-xs">
-              <input
-                type="text"
+              <ClearableInput
                 placeholder="Customer Name"
                 value={newOrder.customer}
                 onChange={e => setNewOrder({ ...newOrder, customer: e.target.value })}
-                className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600"
+                onClear={() => setNewOrder({ ...newOrder, customer: '' })}
               />
-              <input
+              <ClearableInput
                 type="email"
                 placeholder="Email Address"
                 value={newOrder.email}
                 onChange={e => setNewOrder({ ...newOrder, email: e.target.value })}
-                className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600"
+                onClear={() => setNewOrder({ ...newOrder, email: '' })}
               />
-              <input
+              <ClearableInput
                 type="number"
                 placeholder="Total ($)"
                 value={newOrder.total}
                 onChange={e => setNewOrder({ ...newOrder, total: e.target.value })}
-                className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600"
+                onClear={() => setNewOrder({ ...newOrder, total: '' })}
               />
             </div>
             <div className="flex justify-end space-x-2 pt-2">

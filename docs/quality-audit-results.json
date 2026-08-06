@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-08-06T09:25:34.677Z",
+  "timestamp": "2026-08-06T10:22:12.891Z",
   "healthScore": 100,
   "summary": {
-    "totalComponents": 298,
+    "totalComponents": 304,
     "hardcodedColors": 0,
     "menuTabsTotal": 17,
     "menuTabsGreen": 17,
@@ -377,7 +377,7 @@
     ]
   },
   "layoutDensity": {
-    "scannedComponents": 298,
+    "scannedComponents": 304,
     "headerWrapRisks": 0,
     "status": "PASSED"
   },
@@ -392,25 +392,25 @@
         "assertionResults": [
           {
             "ancestorTitles": [
-              "App Auto-Generated Test Suite"
+              "Login Corporate Component Suite"
             ],
-            "fullName": "App Auto-Generated Test Suite renders without crashing",
+            "fullName": "Login Corporate Component Suite renders correctly without crashing",
             "status": "passed",
-            "title": "renders without crashing",
-            "duration": 123.81690000003437,
+            "title": "renders correctly without crashing",
+            "duration": 38.820999999996275,
             "failureMessages": [],
             "location": {
-              "line": 9,
+              "line": 8,
               "column": 3
             },
             "meta": {}
           }
         ],
-        "startTime": 1786008139897,
-        "endTime": 1786008140020.817,
+        "startTime": 1786011665847,
+        "endTime": 1786011665885.821,
         "status": "passed",
         "message": "",
-        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/App.test.jsx"
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Login.test.jsx"
       }
     ]
   }

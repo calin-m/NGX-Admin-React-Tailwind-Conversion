@@ -96,15 +96,23 @@ export default function TreeGrid() {
             {treeData.map(node => (
               <React.Fragment key={node.id}>
                 {/* Level 1 Row */}
-                <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+                <tr
+                  onClick={() => node.children && toggleExpand(node.id)}
+                  className={`hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors ${
+                    node.children ? 'cursor-pointer' : ''
+                  }`}
+                >
                   <td className="py-3 px-4 flex items-center space-x-2">
                     {node.children ? (
-                      <button onClick={() => toggleExpand(node.id)} className="w-5 h-5 font-bold text-slate-500 hover:text-accent transition-colors">
-                        {expanded[node.id] ? '▼' : '▶'}
-                      </button>
+                      <div className="w-5 h-5 flex items-center justify-center text-slate-500 hover:text-accent transition-colors shrink-0">
+                        <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${expanded[node.id] ? 'rotate-90 text-accent' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                      </div>
                     ) : (
                       <span className="w-5" />
                     )}
+                    <span className="text-base select-none">{node.children ? (expanded[node.id] ? '📂' : '📁') : '📄'}</span>
                     <span className="font-bold text-slate-900 dark:text-slate-100">{node.name}</span>
                   </td>
                   <td className="py-3 px-4 text-slate-500">{node.type}</td>
@@ -114,16 +122,23 @@ export default function TreeGrid() {
                 {/* Level 2 Children */}
                 {node.children && expanded[node.id] && node.children.map(child => (
                   <React.Fragment key={child.id}>
-                    <tr className="bg-slate-50/40 dark:bg-slate-700/20 hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+                    <tr
+                      onClick={() => child.children && toggleExpand(child.id)}
+                      className={`bg-slate-50/40 dark:bg-slate-700/20 hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors animate-fade-in ${
+                        child.children ? 'cursor-pointer' : ''
+                      }`}
+                    >
                       <td className="py-2.5 px-4 pl-10 flex items-center space-x-2 text-slate-700 dark:text-slate-200 font-semibold">
                         {child.children ? (
-                          <button onClick={() => toggleExpand(child.id)} className="w-5 h-5 font-bold text-slate-500 hover:text-accent transition-colors">
-                            {expanded[child.id] ? '▼' : '▶'}
-                          </button>
-
+                          <div className="w-5 h-5 flex items-center justify-center text-slate-500 hover:text-accent transition-colors shrink-0">
+                            <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${expanded[child.id] ? 'rotate-90 text-accent' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="9 18 15 12 9 6" />
+                            </svg>
+                          </div>
                         ) : (
                           <span className="w-5 text-slate-400">📄</span>
                         )}
+                        <span className="text-sm select-none">{child.children ? (expanded[child.id] ? '📂' : '📁') : ''}</span>
                         <span>{child.name}</span>
                       </td>
                       <td className="py-2.5 px-4 text-slate-400">{child.type}</td>
@@ -132,9 +147,10 @@ export default function TreeGrid() {
 
                     {/* Level 3 Children */}
                     {child.children && expanded[child.id] && child.children.map(subChild => (
-                      <tr key={subChild.id} className="bg-slate-100/50 dark:bg-slate-700/30 hover:bg-slate-100 dark:hover:bg-slate-700/40 transition-colors">
-                        <td className="py-2 px-4 pl-16 text-slate-600 dark:text-slate-300">
-                          🔹 {subChild.name}
+                      <tr key={subChild.id} className="bg-slate-100/50 dark:bg-slate-700/30 hover:bg-slate-100 dark:hover:bg-slate-700/40 transition-colors animate-fade-in">
+                        <td className="py-2 px-4 pl-16 text-slate-600 dark:text-slate-300 flex items-center space-x-2">
+                          <span className="text-slate-400">📄</span>
+                          <span>{subChild.name}</span>
                         </td>
                         <td className="py-2 px-4 text-slate-400 text-[11px]">{subChild.type}</td>
                         <td className="py-2 px-4 text-right text-slate-400 text-[11px]">{subChild.size}</td>

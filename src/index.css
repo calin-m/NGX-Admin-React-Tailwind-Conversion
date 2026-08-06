@@ -9,6 +9,10 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+
   :root {
     --accent-bg: #4f46e5;
     --accent-hover: #4338ca;
@@ -53,7 +57,11 @@
   .bg-accent-light { background-color: var(--accent-light); }
   .focus\:ring-accent:focus { --tw-ring-color: var(--accent-bg); border-color: var(--accent-text); }
 
-  /* Custom scrollbar utilities */
+  /* Custom scrollbar utilities for Zero-CLS layout stability */
+  .scrollbar-stable {
+    scrollbar-gutter: stable;
+  }
+
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
@@ -62,6 +70,9 @@
     scrollbar-width: none;
   }
 
+  .scrollbar-thin {
+    scrollbar-gutter: stable;
+  }
   .scrollbar-thin::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -77,7 +88,10 @@
     background: rgba(148, 163, 184, 0.5);
   }
 
-  /* Ultra-thin 3px scrollbar for collapsed mode (permanently visible) */
+  /* Ultra-thin 3px scrollbar for collapsed mode (permanently visible, zero CLS) */
+  .scrollbar-collapsed-hover {
+    scrollbar-gutter: stable;
+  }
   .scrollbar-collapsed-hover::-webkit-scrollbar {
     width: 3px;
   }
@@ -154,6 +168,54 @@
     animation: laserOrbitClockwise 6s infinite linear;
     pointer-events: none;
     z-index: 10;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 180ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .animate-scale-in {
+    animation: scaleIn 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .animate-flip-teaser {
+    animation: flipTeaser 6s infinite ease-in-out;
+  }
+}
+
+@keyframes flipTeaser {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  15% {
+    transform: rotate(180deg) scale(1.12);
+    color: var(--accent-text);
+  }
+  30% {
+    transform: rotate(360deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
