@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-06T16:15:29.392Z",
+  "timestamp": "2026-08-06T16:40:52.881Z",
   "healthScore": 100,
   "summary": {
     "totalComponents": 313,
@@ -397,7 +397,7 @@
             "fullName": "App Auto-Generated Test Suite renders without crashing",
             "status": "passed",
             "title": "renders without crashing",
-            "duration": 140.2213000000047,
+            "duration": 118.99210000000312,
             "failureMessages": [],
             "location": {
               "line": 9,
@@ -406,8 +406,8 @@
             "meta": {}
           }
         ],
-        "startTime": 1786016297612,
-        "endTime": 1786016297752.2212,
+        "startTime": 1786034298753,
+        "endTime": 1786034298871.9922,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/App.test.jsx"
@@ -416,12 +416,12 @@
         "assertionResults": [
           {
             "ancestorTitles": [
-              "ThemeContext Auto-Generated Test Suite"
+              "Header Corporate Component Suite"
             ],
-            "fullName": "ThemeContext Auto-Generated Test Suite renders without crashing",
+            "fullName": "Header Corporate Component Suite renders correctly without crashing",
             "status": "passed",
-            "title": "renders without crashing",
-            "duration": 20.31030000001192,
+            "title": "renders correctly without crashing",
+            "duration": 34.19570000001113,
             "failureMessages": [],
             "location": {
               "line": 7,
@@ -430,22 +430,22 @@
             "meta": {}
           }
         ],
-        "startTime": 1786016297379,
-        "endTime": 1786016297399.3103,
+        "startTime": 1786034298554,
+        "endTime": 1786034298588.1958,
         "status": "passed",
         "message": "",
-        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/context/ThemeContext.test.jsx"
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Header.test.jsx"
       },
       {
         "assertionResults": [
           {
             "ancestorTitles": [
-              "Stepper Corporate Component Suite"
+              "NotificationDrawer Component Suite"
             ],
-            "fullName": "Stepper Corporate Component Suite renders correctly without crashing",
+            "fullName": "NotificationDrawer Component Suite renders unread notifications and badge when open",
             "status": "passed",
-            "title": "renders correctly without crashing",
-            "duration": 49.942699999999604,
+            "title": "renders unread notifications and badge when open",
+            "duration": 41.289600000018254,
             "failureMessages": [],
             "location": {
               "line": 7,
@@ -455,12 +455,12 @@
           },
           {
             "ancestorTitles": [
-              "Stepper Corporate Component Suite"
+              "NotificationDrawer Component Suite"
             ],
-            "fullName": "Stepper Corporate Component Suite navigates to next step on Next button click",
+            "fullName": "NotificationDrawer Component Suite marks all notifications as read when clicking Mark all read",
             "status": "passed",
-            "title": "navigates to next step on Next button click",
-            "duration": 82.27429999999003,
+            "title": "marks all notifications as read when clicking Mark all read",
+            "duration": 90.63950000001932,
             "failureMessages": [],
             "location": {
               "line": 13,
@@ -469,11 +469,11 @@
             "meta": {}
           }
         ],
-        "startTime": 1786016297388,
-        "endTime": 1786016297520.2744,
+        "startTime": 1786034298556,
+        "endTime": 1786034298688.6394,
         "status": "passed",
         "message": "",
-        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Stepper.test.jsx"
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/NotificationDrawer.test.jsx"
       }
     ]
   }
