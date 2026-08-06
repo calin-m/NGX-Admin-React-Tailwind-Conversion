@@ -2,7 +2,7 @@ import React from 'react';
 import CircularProgress from './CircularProgress.jsx';
 
 export default {
-  title: 'UI/Primitives/CircularProgress',
+  title: 'UI Primitives/CircularProgress',
   component: CircularProgress,
 };
 

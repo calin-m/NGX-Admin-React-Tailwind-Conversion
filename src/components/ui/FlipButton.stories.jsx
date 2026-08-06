@@ -2,7 +2,7 @@ import React from 'react';
 import FlipButton from './FlipButton.jsx';
 
 export default {
-  title: 'UI/Primitives/FlipButton',
+  title: 'UI Primitives/FlipButton',
   component: FlipButton,
 };
 

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import FormInput from '../ui/FormInput.jsx';
+import Modal from '../ui/Modal.jsx';
 
 export default function OrderModal({ isOpen, onClose, onSubmit }) {
   const [customer, setCustomer] = useState('');
   const [amount, setAmount] = useState('');
   const [method, setMethod] = useState('Credit Card');
-
-  if (!isOpen) return null;
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -18,14 +17,8 @@ export default function OrderModal({ isOpen, onClose, onSubmit }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs">
-      <div className="w-full max-w-md bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 p-6 space-y-6 animate-scale-in">
-        <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
-          <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">Create New Order</h3>
-          <button onClick={onClose} className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-lg">✕</button>
-        </div>
-
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <Modal isOpen={isOpen} onClose={onClose} title="Create New Order">
+      <form onSubmit={handleSubmit} className="space-y-4">
           <FormInput
             label="Customer Name"
             required
@@ -71,7 +64,6 @@ export default function OrderModal({ isOpen, onClose, onSubmit }) {
             </button>
           </div>
         </form>
-      </div>
-    </div>
+    </Modal>
   );
 }

@@ -134,6 +134,8 @@ graph LR
 | `src/components/sections/VisitorsStatistics.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/WeatherCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Window.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/ui/AlertBanner.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/ui/Avatar.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/Badge.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/Button.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/Card.jsx` | **COMPONENTS** | 🟡 Static Showcase |
@@ -144,6 +146,7 @@ graph LR
 | `src/components/ui/FlipCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/FormInput.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/ui/GlassCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/ui/Modal.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/ui/PeriodSelector.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/ui/RevealCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/ToggleSwitch.jsx` | **COMPONENTS** | 🟢 Interactive Demo |

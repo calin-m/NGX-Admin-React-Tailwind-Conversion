@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ClearableInput from './ClearableInput.jsx';
 
 export default {
-  title: 'UI/ClearableInput',
+  title: 'UI Primitives/ClearableInput',
   component: ClearableInput,
 };
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PeriodSelector from './PeriodSelector.jsx';
 
 export default {
-  title: 'Corporate/UI/PeriodSelector',
+  title: 'UI Primitives/PeriodSelector',
   component: PeriodSelector,
   parameters: {
     layout: 'padded',

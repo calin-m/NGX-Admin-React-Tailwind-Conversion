@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import FormInput from './FormInput.jsx';
 
 export default {
-  title: 'UI/FormInput',
+  title: 'UI Primitives/FormInput',
   component: FormInput,
   tags: ['autodocs'],
 };

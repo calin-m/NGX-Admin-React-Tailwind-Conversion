@@ -2,7 +2,7 @@ import React from 'react';
 import RevealCard from './RevealCard.jsx';
 
 export default {
-  title: 'UI/RevealCard',
+  title: 'UI Primitives/RevealCard',
   component: RevealCard,
 };
 

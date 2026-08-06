@@ -2,7 +2,7 @@ import React from 'react';
 import Badge from './Badge.jsx';
 
 export default {
-  title: 'Corporate/UI Primitives/Badge',
+  title: 'UI Primitives/Badge',
   component: Badge,
   parameters: {
     layout: 'centered',

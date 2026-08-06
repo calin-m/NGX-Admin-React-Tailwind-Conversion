@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card.jsx';
 
 export default {
-  title: 'Corporate/UI Primitives/Card',
+  title: 'UI Primitives/Card',
   component: Card,
   parameters: {
     layout: 'centered',

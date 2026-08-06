@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import FormInput from '../ui/FormInput.jsx';
+import Card from '../ui/Card.jsx';
 
 export default function FormInputs() {
   const [text, setText] = useState('');
@@ -9,11 +10,10 @@ export default function FormInputs() {
   const [selectedRadio, setSelectedRadio] = useState('Option A');
 
   return (
-    <div className="w-full rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 space-y-6">
-      <div className="border-b border-slate-100 dark:border-slate-700/60 pb-3">
-        <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Form Controls & Inputs</h3>
-        <p className="text-xs text-slate-500 dark:text-slate-400">Validation States, Toggles & Selects</p>
-      </div>
+    <Card
+      title="Form Controls & Inputs"
+      subtitle="Validation States, Toggles & Selects"
+    >
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-4">
@@ -78,7 +78,7 @@ export default function FormInputs() {
           </div>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }
 

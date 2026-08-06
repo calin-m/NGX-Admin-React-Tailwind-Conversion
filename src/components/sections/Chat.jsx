@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import useChat from '../../hooks/useChat.js';
 import ClearableInput from '../ui/ClearableInput.jsx';
+import Avatar from '../ui/Avatar.jsx';
 
 export default function Chat() {
   const { contacts, activeContact, setActiveContactId, activeMessages, sendMessage } = useChat();
@@ -33,14 +34,7 @@ export default function Chat() {
                     : 'border-transparent text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/60'
                 }`}
               >
-                <div className="relative shrink-0">
-                  <img src={c.avatar} alt={c.name} className="w-9 h-9 rounded-full object-cover" />
-                  <span
-                    className={`absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full ring-2 ring-white dark:ring-slate-800 ${
-                      isOnline ? 'bg-emerald-500' : 'bg-slate-300 dark:bg-slate-600'
-                    }`}
-                  />
-                </div>
+                <Avatar name={c.name} src={c.avatar} status={c.status} size="sm" />
                 <div className="min-w-0 flex-1">
                   <h5 className="text-xs font-semibold text-slate-900 dark:text-slate-100 truncate">{c.name}</h5>
                   <p className="text-[10px] text-slate-500 truncate">{c.role}</p>
@@ -54,14 +48,7 @@ export default function Chat() {
       {/* Chat Messages Panel */}
       <div className="flex-1 flex flex-col">
         <div className="p-4 bg-slate-50 dark:bg-slate-700/50 border-b border-slate-200 dark:border-slate-700 flex items-center space-x-3">
-          <div className="relative shrink-0">
-            <img src={activeContact.avatar} alt={activeContact.name} className="w-9 h-9 rounded-full object-cover shadow-sm" />
-            <span
-              className={`absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full ring-2 ring-white dark:ring-slate-700 ${
-                activeContact.status?.toLowerCase() === 'online' ? 'bg-emerald-500' : 'bg-slate-300 dark:bg-slate-600'
-              }`}
-            />
-          </div>
+          <Avatar name={activeContact.name} src={activeContact.avatar} status={activeContact.status} size="sm" />
           <div>
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-sm">{activeContact.name}</h3>
             <span

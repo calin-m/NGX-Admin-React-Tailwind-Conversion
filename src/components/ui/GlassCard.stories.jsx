@@ -2,7 +2,7 @@ import React from 'react';
 import GlassCard from './GlassCard.jsx';
 
 export default {
-  title: 'Corporate/UI Primitives/GlassCard',
+  title: 'UI Primitives/GlassCard',
   component: GlassCard,
   parameters: {
     layout: 'centered',

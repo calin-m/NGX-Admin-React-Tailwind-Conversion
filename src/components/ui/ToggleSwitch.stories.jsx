@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ToggleSwitch from './ToggleSwitch.jsx';
 
 export default {
-  title: 'UI/Primitives/ToggleSwitch',
+  title: 'UI Primitives/ToggleSwitch',
   component: ToggleSwitch,
 };
 

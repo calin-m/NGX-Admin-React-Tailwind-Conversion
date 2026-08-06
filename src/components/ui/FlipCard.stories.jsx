@@ -2,7 +2,7 @@ import React from 'react';
 import FlipCard from './FlipCard.jsx';
 
 export default {
-  title: 'UI/FlipCard',
+  title: 'UI Primitives/FlipCard',
   component: FlipCard,
 };
 

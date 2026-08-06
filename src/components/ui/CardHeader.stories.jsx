@@ -3,7 +3,7 @@ import CardHeader from './CardHeader.jsx';
 import PeriodSelector from './PeriodSelector.jsx';
 
 export default {
-  title: 'UI/Primitives/CardHeader',
+  title: 'UI Primitives/CardHeader',
   component: CardHeader,
 };
 

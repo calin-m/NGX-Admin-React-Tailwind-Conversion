@@ -2,7 +2,7 @@ import React from 'react';
 import TrendBadge from './TrendBadge.jsx';
 
 export default {
-  title: 'UI/Primitives/TrendBadge',
+  title: 'UI Primitives/TrendBadge',
   component: TrendBadge,
 };
 

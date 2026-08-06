@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import FormInput from '../ui/FormInput.jsx';
+import Avatar from '../ui/Avatar.jsx';
 
 export default function UserManagement() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -67,12 +68,7 @@ export default function UserManagement() {
           <div key={user.id} className="p-4 rounded-xl border border-slate-100 dark:border-slate-700/60 bg-slate-50/50 dark:bg-slate-700/30 flex items-center justify-between hover:border-accent transition-all">
 
             <div className="flex items-center space-x-3">
-              <div className="relative">
-                <div className="w-10 h-10 rounded-full bg-accent text-white font-bold flex items-center justify-center text-xs shadow-sm transition-colors">
-                  {user.avatar}
-                </div>
-                <span className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-white dark:border-slate-800 ${getStatusColor(user.status)}`} />
-              </div>
+              <Avatar name={user.name} initials={user.avatar} status={user.status} />
 
               <div>
                 <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100">{user.name}</h4>
