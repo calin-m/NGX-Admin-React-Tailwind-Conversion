@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
+/**
+ * Sidebar Component
+ * Modernized React 18 + Tailwind CSS v4 Component
+ * Source Reference: old-src/ngx-admin-master <ngx-sidebar>
+ */
 export default function Sidebar({ isCollapsed, activeTab, setActiveTab, onToggleSidebar }) {
+  const [hoveredItemId, setHoveredItemId] = useState(null);
+
   const menuItems = [
     { id: 'dashboard', label: 'Corporate Dashboard', icon: '📊' },
     { id: 'iot', label: 'IoT Smart Home', icon: '🏠' },
@@ -39,13 +46,13 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab, onToggle
       )}
 
       <aside
-        className={`bg-white dark:bg-slate-800 border-r border-slate-200/80 dark:border-slate-700/80 flex flex-col justify-between overflow-hidden z-40 shrink-0 transition-all duration-300 ease-in-out ${
+        className={`bg-white dark:bg-slate-800 border-r border-slate-200/80 dark:border-slate-700/80 flex flex-col justify-between z-40 shrink-0 transition-all duration-300 ease-in-out fixed top-0 bottom-0 left-0 h-full max-md:w-64 max-md:shadow-2xl ${
           isCollapsed
-            ? 'w-20 max-md:-translate-x-full max-md:w-0'
-            : 'w-64 max-md:fixed max-md:top-0 max-md:bottom-0 max-md:left-0 max-md:h-full max-md:shadow-2xl'
-        } md:fixed md:top-16 md:left-0 md:bottom-0 md:h-[calc(100vh-4rem)]`}
+            ? 'max-md:-translate-x-full max-md:overflow-hidden md:w-20 md:overflow-visible md:top-16 md:bottom-0 md:left-0 md:h-[calc(100vh-4rem)] md:shadow-none'
+            : 'max-md:translate-x-0 max-md:overflow-y-auto md:w-64 md:overflow-hidden md:top-16 md:bottom-0 md:left-0 md:h-[calc(100vh-4rem)] md:shadow-none'
+        } md:fixed`}
       >
-        <div className="p-3 space-y-6 flex-1 overflow-y-auto relative scrollbar-collapsed-hover">
+        <div className={`p-3 space-y-6 flex-1 relative ${isCollapsed ? 'overflow-visible' : 'overflow-y-auto scrollbar-collapsed-hover'}`}>
           {/* Logo Section & Mobile Close Button */}
           <div className={`flex items-center justify-between px-1 ${isCollapsed ? 'justify-center px-0' : ''}`}>
             <div className="flex items-center space-x-3">
@@ -76,22 +83,41 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab, onToggle
           <nav className="space-y-1 relative">
             {menuItems.map(item => {
               const isActive = activeTab === item.id;
+              const isHovered = hoveredItemId === item.id;
+
               return (
-                <button
+                <div
                   key={item.id}
-                  onClick={() => handleTabClick(item.id)}
-                  className={`w-full flex items-center rounded-xl text-xs font-medium transition-all ${
-                    isActive
-                      ? 'bg-accent text-white shadow-md transition-colors'
-                      : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-slate-900 dark:hover:text-slate-100'
-                  } ${isCollapsed ? 'justify-center p-0' : 'space-x-3 px-1 py-0.5'}`}
-                  title={isCollapsed ? item.label : undefined}
+                  className="relative flex items-center"
+                  onMouseEnter={() => setHoveredItemId(item.id)}
+                  onMouseLeave={() => setHoveredItemId(null)}
                 >
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-base">
-                    {item.icon}
-                  </div>
-                  {!isCollapsed && <span className="truncate pr-2">{item.label}</span>}
-                </button>
+                  <button
+                    type="button"
+                    onClick={() => handleTabClick(item.id)}
+                    className={`w-full flex items-center rounded-xl text-xs font-medium transition-all ${
+                      isActive
+                        ? 'bg-accent text-white shadow-md transition-colors'
+                        : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-slate-900 dark:hover:text-slate-100'
+                    } ${isCollapsed ? 'justify-center p-0' : 'space-x-3 px-1 py-0.5'}`}
+                  >
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-base">
+                      {item.icon}
+                    </div>
+                    {!isCollapsed && <span className="truncate pr-2">{item.label}</span>}
+                  </button>
+
+                  {/* Instant 0ms Zero-Delay Dual-Theme Glassmorphic Tooltip */}
+                  {isCollapsed && isHovered && (
+                    <div className="absolute left-full ml-3 z-50 pointer-events-none transition-none flex items-center animate-in fade-in zoom-in-95 duration-100">
+                      <div className="w-2 h-2 bg-white/95 dark:bg-slate-900/95 transform rotate-45 -mr-1 border-l border-b border-slate-200 dark:border-slate-700" />
+                      <div className="backdrop-blur-md bg-white/95 dark:bg-slate-900/95 text-slate-900 dark:text-slate-100 text-xs font-bold px-3 py-1.5 rounded-xl shadow-2xl border border-slate-200 dark:border-slate-700 whitespace-nowrap flex items-center space-x-2">
+                        <span>{item.icon}</span>
+                        <span>{item.label}</span>
+                      </div>
+                    </div>
+                  )}
+                </div>
               );
             })}
           </nav>
@@ -113,8 +139,16 @@ export default function Sidebar({ isCollapsed, activeTab, setActiveTab, onToggle
               </div>
             </div>
           ) : (
-            <div className="flex justify-center py-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" title="Corporate Edition Active" />
+            <div className="flex justify-center py-2 relative group" onMouseEnter={() => setHoveredItemId('pro-badge')} onMouseLeave={() => setHoveredItemId(null)}>
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse cursor-pointer" />
+              {hoveredItemId === 'pro-badge' && (
+                <div className="absolute left-full ml-3 z-50 pointer-events-none transition-none flex items-center animate-in fade-in zoom-in-95 duration-100">
+                  <div className="w-2 h-2 bg-white/95 dark:bg-slate-900/95 transform rotate-45 -mr-1 border-l border-b border-slate-200 dark:border-slate-700" />
+                  <div className="backdrop-blur-md bg-white/95 dark:bg-slate-900/95 text-slate-900 dark:text-slate-100 text-xs font-bold px-3 py-1.5 rounded-xl shadow-2xl border border-slate-200 dark:border-slate-700 whitespace-nowrap">
+                    Corporate Edition Active
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>

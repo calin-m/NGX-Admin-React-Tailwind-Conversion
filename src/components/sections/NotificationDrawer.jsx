@@ -1,6 +1,34 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
+/**
+ * NotificationDrawer Component
+ * Modernized React 18 + Tailwind CSS v4 Component
+ * Source Reference: old-src/ngx-admin-master <ngx-notification-drawer>
+ */
 export default function NotificationDrawer({ isOpen, onClose }) {
+  const drawerRef = useRef(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleClickOutside = (event) => {
+      const isOutsideDrawer = drawerRef.current && !drawerRef.current.contains(event.target);
+      const isNotifButton = event.target.closest('[title="System Notifications"]');
+
+      if (isOutsideDrawer && !isNotifButton) {
+        onClose();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   const notifications = [
@@ -11,34 +39,46 @@ export default function NotificationDrawer({ isOpen, onClose }) {
   ];
 
   return (
-    <div className="fixed top-16 right-3 left-3 sm:absolute sm:right-0 sm:left-auto sm:top-14 sm:w-80 z-40 bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 rounded-2xl shadow-2xl p-4 space-y-4 animate-in fade-in slide-in-from-top-2 duration-200">
-      <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
-        <div className="flex items-center space-x-2">
-          <h3 className="font-bold text-slate-900 dark:text-slate-100 text-sm">Notifications</h3>
-          <span className="text-[10px] font-bold bg-accent text-white px-2 py-0.5 rounded-full">2 New</span>
-        </div>
-        <button onClick={onClose} className="text-slate-400 hover:text-slate-600 text-xs font-semibold">Mark read</button>
-      </div>
+    <>
+      {/* Mobile Touch Backdrop Overlay */}
+      <div
+        className="fixed inset-0 z-30 sm:hidden bg-slate-900/20 backdrop-blur-xs transition-opacity animate-in fade-in"
+        onClick={onClose}
+      />
 
-      <div className="space-y-2.5 max-h-[70vh] sm:max-h-80 overflow-y-auto pr-1">
-        {notifications.map(notif => (
-          <div
-            key={notif.id}
-            className={`p-3 rounded-xl transition-all flex items-start space-x-3 ${
-              notif.unread ? 'bg-accent-light border border-accent/20' : 'bg-slate-50 dark:bg-slate-700/30'
-            }`}
-          >
-            <span className="text-lg shrink-0">{notif.icon}</span>
-            <div className="flex-1 overflow-hidden">
-              <div className="flex justify-between items-baseline">
-                <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100 truncate">{notif.title}</h4>
-                <span className="text-[10px] text-slate-400 shrink-0 ml-1">{notif.time}</span>
-              </div>
-              <p className="text-[10px] text-slate-500 dark:text-slate-400 line-clamp-2 mt-0.5">{notif.desc}</p>
-            </div>
+      <div
+        ref={drawerRef}
+        className="fixed top-16 right-3 left-3 sm:absolute sm:right-0 sm:left-auto sm:top-14 sm:w-80 z-40 bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 rounded-2xl shadow-2xl p-4 space-y-4 animate-in fade-in slide-in-from-top-2 duration-200"
+      >
+        <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
+          <div className="flex items-center space-x-2">
+            <h3 className="font-bold text-slate-900 dark:text-slate-100 text-sm">Notifications</h3>
+            <span className="text-[10px] font-bold bg-accent text-white px-2 py-0.5 rounded-full">2 New</span>
           </div>
-        ))}
+          <button onClick={onClose} className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs font-semibold">Mark read</button>
+        </div>
+
+        <div className="space-y-2.5 max-h-[70vh] sm:max-h-80 overflow-y-auto pr-1">
+          {notifications.map(notif => (
+            <div
+              key={notif.id}
+              onClick={onClose}
+              className={`p-3 rounded-xl transition-all flex items-start space-x-3 cursor-pointer ${
+                notif.unread ? 'bg-accent-light border border-accent/20 hover:brightness-95' : 'bg-slate-50 dark:bg-slate-700/30 hover:bg-slate-100 dark:hover:bg-slate-700/50'
+              }`}
+            >
+              <span className="text-lg shrink-0">{notif.icon}</span>
+              <div className="flex-1 overflow-hidden">
+                <div className="flex justify-between items-baseline">
+                  <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100 truncate">{notif.title}</h4>
+                  <span className="text-[10px] text-slate-400 shrink-0 ml-1">{notif.time}</span>
+                </div>
+                <p className="text-[10px] text-slate-500 dark:text-slate-400 line-clamp-2 mt-0.5">{notif.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

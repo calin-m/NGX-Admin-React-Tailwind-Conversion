@@ -111,19 +111,19 @@ export default function VisitorsAnalytics() {
                 )}
 
                 {/* Track Column & Side-by-Side Dual Pillars */}
-                <div className="w-full flex justify-center items-end gap-1.5 h-full relative">
-                  <div className="w-full max-w-[36px] h-full bg-slate-100/50 dark:bg-slate-700/30 rounded-t-lg absolute inset-0 mx-auto" />
+                <div className="w-full flex justify-center items-end gap-1 h-full relative">
+                  <div className="w-full max-w-[22px] sm:max-w-[28px] h-full bg-slate-100/60 dark:bg-slate-700/40 rounded-t-md absolute inset-0 mx-auto" />
                   {/* Page Views Pillar */}
                   <div
                     style={{ height: `${(pt.pageViews / maxVal) * 98}%` }}
-                    className={`w-3 sm:w-4 rounded-t-lg transition-all duration-300 relative z-10 ${
+                    className={`w-2.5 sm:w-3.5 rounded-t-md transition-all duration-300 relative z-10 ${
                       isHovered ? 'scale-105 shadow-md brightness-110' : ''
                     } bg-accent`}
                   />
                   {/* Unique Visitors Pillar */}
                   <div
                     style={{ height: `${(pt.uniqueVisitors / maxVal) * 98}%` }}
-                    className={`w-3 sm:w-4 rounded-t-lg transition-all duration-300 relative z-10 ${
+                    className={`w-1.5 sm:w-2 rounded-t-sm transition-all duration-300 relative z-10 ${
                       isHovered ? 'scale-105 shadow-md brightness-110' : ''
                     } bg-emerald-500`}
                   />

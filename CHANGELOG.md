@@ -4,9 +4,70 @@
 
 ---
 
-## [1.0.0] — 2026-08-05
+## [1.0.0] — 2026-08-06
 
 ### 🚀 New Features
+- **feat(ui): complete 100% theme accent parity, pure pill bar charts, 3D SVG flip icons, fixed sidebar anchoring, and 2-row sticky footer** (`f7eca0a`) *by Calin on 2026-08-05*
+  - Modified src/components/sections/Footer.jsx (added sticky bottom-0 z-20 backdrop-blur-md and 2-row mobile text layout)
+  - Modified src/components/sections/NotificationDrawer.jsx (fixed mobile viewport overflow with fixed top-16 right-3 left-3 and bg-accent badges)
+  - Modified src/App.jsx (upgraded Create Order button to bg-accent and added dynamic main padding for fixed sidebar)
+  - Modified src/components/sections/Sidebar.jsx (updated desktop sidebar to md:fixed md:top-16 md:left-0 md:bottom-0 md:h-[calc(100vh-4rem)])
+  - Modified src/components/sections/ChartsPanel.jsx (upgraded Orders & Profit Chart to Profit Analytics pill bar geometry with bg-accent and 0ms instant tooltips)
+  - Modified src/components/sections/VisitorsAnalytics.jsx (upgraded Page Views vs Unique Visitors to side-by-side pill bars with 0ms tooltips)
+  - Modified src/components/sections/UserActivity.jsx (stabilized container height to h-full min-h-[460px] for pixel-perfect row alignment)
+  - Modified src/components/sections/EarningCard.jsx (colored 3 distinct crypto donut chart segments with Amber, Brand Accent, and Emerald)
+  - Modified src/components/sections/CountryOrdersChart.jsx (upgraded country volume bars to bg-accent and 0ms instant tooltips)
+  - Modified src/components/sections/traffic-reveal/TrafficFrontCard.jsx & TrafficBackCard.jsx (replaced emoji with 3D Card Flip SVG icons)
+  - Modified src/components/sections/profit-card/StatsCardFront.jsx & StatsCardBack.jsx (replaced emoji with 3D Card Flip SVG icons and bg-accent parity)
+  - Modified src/components/sections/EarningPieChart.jsx, VisitorsAnalyticsChart.jsx, ChartPanelHeader.jsx, SmartTable.jsx, StatusCard.jsx (upgraded to dynamic bg-accent, text-accent, and ring-accent classes)
+- **feat(mobile): optimize mobile drawer backdrop, clockwise laser border, responsive header spacing, and slide transitions** (`20dcff9`) *by Calin on 2026-08-05*
+  - Modified src/App.jsx (initialized isSidebarCollapsed state to true on mobile viewports < 768px and passed onToggleSidebar prop)
+  - Modified src/index.css (added @property --laser-angle, @keyframes laserOrbitClockwise, and .laser-border-wrapper::before)
+  - Modified src/components/sections/Header.jsx (wrapped hamburger in laser wrapper and applied responsive px-3 sm:px-6 padding and control gaps)
+  - Modified src/components/sections/Sidebar.jsx (added top-right mobile close button ✕, backdrop tap-outside close, and Corporate Edition text cleanup)
+  - Modified src/components/sections/ThemeCustomizer.jsx (implemented smooth translate-x slide-in and slide-out drawer transitions)
+  - Modified src/components/sections/UserActivity.jsx (added truncate class to action description text for 1-line mobile alignment)
+  - Modified src/components/sections/ECommerce.jsx (paired ProfitCard + EarningCard with ChartsPanel in Row 1, TrafficRevealCard with ProgressSection in Row 2, and full-width CountryOrders in Row 3)
+  - Modified src/components/sections/ChartsPanel.jsx (updated container height to h-full for pixel-perfect row balance)
+  - Modified src/components/sections/ProgressSection.jsx (added icon badge and bottom summary line)
+  - Modified src/components/sections/VisitorsAnalytics.jsx (upgraded to dual-series multi-data chart)
+  - Modified src/hooks/useVisitorsAnalytics.js (added synchronous period data map)
+  - Modified index.html (set default data-accent='teal')
+  - Modified .husky/pre-commit (added docs/LEGACY_BLUEPRINT.md and CHANGELOG.md to auto-stage command)
+  - Modified README.md (added akveo/ngx-admin repository attribution links)
+- **feat(dashboard): optimize grid row alignment, Visitors Analytics dual-series, and default teal accent** (`0c50012`) *by Calin on 2026-08-05*
+  - Modified index.html (set default data-accent='teal')
+  - Modified src/App.jsx (set initial accentColor state to 'teal')
+  - Modified src/components/sections/Sidebar.jsx (applied scrollbar-collapsed-hover unconditionally for navigation scrollbar parity)
+  - Modified src/components/sections/VisitorsAnalytics.jsx (upgraded to dual-series Page Views vs Unique Visitors columns, added period selectors, tooltips, and h-64 height)
+  - Modified src/hooks/useVisitorsAnalytics.js (added synchronous period data map for week, month, year)
+  - Modified src/components/sections/ChartsPanel.jsx (set h-full to align 100% pixel-perfect with Earning Live Stats)
+  - Modified src/components/sections/ECommerce.jsx (paired ProfitCard + EarningCard with ChartsPanel in Row 1, TrafficRevealCard with ProgressSection in Row 2, and full-width CountryOrders in Row 3)
+  - Modified src/components/sections/ProgressSection.jsx (added icon badge and bottom completion summary line for design parity)
+  - Modified src/components/sections/profit-card/StatsCardFront.jsx (scaled inner bars to 98% space utilization)
+  - Modified src/components/sections/OrdersChart.jsx (scaled inner bars to 98% space utilization)
+  - Modified src/components/sections/Echarts.jsx (restored compact viewport bounds)
+  - Modified .husky/pre-commit (added docs/LEGACY_BLUEPRINT.md and CHANGELOG.md to auto-stage command)
+  - Modified README.md (added akveo/ngx-admin repository attribution links)
+- **feat(dashboard): upgrade Visitors Analytics to dual-series and set default teal theme accent** (`9cd9113`) *by Calin on 2026-08-05*
+  - Modified index.html (set default data-accent='teal')
+  - Modified src/App.jsx (set initial accentColor state to 'teal')
+  - Modified src/components/sections/Sidebar.jsx (applied scrollbar-collapsed-hover unconditionally for navigation scrollbar parity)
+  - Modified src/components/sections/VisitorsAnalytics.jsx (upgraded to dual-series Page Views vs Unique Visitors columns, added period selectors, tooltips, and h-64 height)
+  - Modified src/hooks/useVisitorsAnalytics.js (added synchronous period data map for week, month, year)
+  - Modified src/components/sections/ChartsPanel.jsx (scaled inner curve and bars to 98% space utilization)
+  - Modified src/components/sections/profit-card/StatsCardFront.jsx (scaled inner bars to 98% space utilization)
+  - Modified src/components/sections/OrdersChart.jsx (scaled inner bars to 98% space utilization)
+  - Modified src/components/sections/Echarts.jsx (restored compact viewport bounds)
+  - Modified docs/LEGACY_BLUEPRINT.md (synchronized legacy migration blueprint)
+  - Modified README.md (synchronized master documentation registry)
+- **feat(ui): add 3D FlipCard, vertical RevealCard, sidebar alignment & micro-animations** (`f53b7a5`) *by Calin on 2026-08-05*
+  - Created src/components/ui/FlipCard.jsx & RevealCard.jsx with Vitest test suites and Storybook 8 stories
+  - Modified src/components/sections/Sidebar.jsx (standardized 40px icon containers & mobile overlay)
+  - Modified ProfitCard.jsx & TrafficRevealCard.jsx (wrapped with FlipCard & RevealCard)
+  - Modified Accordion.jsx & Stepper.jsx (smooth CSS height transitions & step slides)
+  - Modified index.css (3D perspective utilities & permanent 3px scrollbar)
+  - Modified README.md & AGENTS.md (updated stack specifications & test-results.json registry)
 - **feat(theme): implement 100% theme accent parity engine and serialized json quality audit system** (`7238d56`) *by Calin on 2026-08-05*
   - Modified src/index.css & App.jsx (bound data-accent attribute to CSS custom variables).
   - Refactored 25 presentation components across Corporate Dashboard, IoT Smart Home, Chat, Calendar, Stepper, Accordion, Maps, Forms, TreeGrid, Grid, Typography, Auth, and Settings tabs.
@@ -203,6 +264,13 @@
   - Created src/hooks/useOrdersProfit.js (alias export wrapping useOrdersProfitChart)
   - Modified walkthrough.md (documented import resolution fix)
 
+### 📖 Documentation Updates
+- **docs(readme): add akveo/ngx-admin repository attribution** (`72bccc5`) *by Calin on 2026-08-05*
+- **docs(infrastructure): update pre-commit hook to auto-stage legacy blueprint** (`9fa122b`) *by Calin on 2026-08-05*
+  - Modified .husky/pre-commit (added docs/LEGACY_BLUEPRINT.md to auto-stage command)
+- **docs(readme): update stack specifications and concept translation matrix** (`4d30391`) *by Calin on 2026-08-05*
+  - Modified README.md (added explicit FROM/TO stack package specifications)
+
 ### 🧹 Maintenance & Refactors
 - **chore(husky): modernize pre-commit hook with clean husky v9 syntax and full terminal streaming** (`37808bb`) *by Calin on 2026-08-05*
   - Modified .husky/pre-commit (removed deprecated sh headers and configured live terminal streaming execution of node scripts/verify-build.js).
@@ -225,4 +293,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-05T12:11:31.277Z*
+*Last Auto-Generated: 2026-08-06T07:19:14.172Z*
