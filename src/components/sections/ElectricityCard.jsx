@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PeriodSelector from '../ui/PeriodSelector.jsx';
 import useElectricity from '../../hooks/useElectricity.js';
 
 /**
@@ -34,20 +35,7 @@ export default function ElectricityCard() {
           <p className="text-xs text-slate-500 dark:text-slate-400">Total: {totalKwh} • Cost: {avgCost}</p>
         </div>
 
-        <div className="flex bg-slate-100 dark:bg-slate-700/60 p-1 rounded-xl text-xs font-semibold space-x-1">
-          {['2025', '2026'].map(y => (
-            <button
-              key={y}
-              type="button"
-              onClick={() => setYear(y)}
-              className={`px-3 py-1 rounded-md transition-all ${
-                year === y ? 'bg-accent text-white font-bold shadow-xs' : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100'
-              }`}
-            >
-              {y}
-            </button>
-          ))}
-        </div>
+        <PeriodSelector periods={['2025', '2026']} selected={year} onChange={setYear} />
       </div>
 
       {/* Plot Area */}

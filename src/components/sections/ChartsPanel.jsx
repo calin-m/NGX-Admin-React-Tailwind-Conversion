@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import useOrdersChart from '../../hooks/useOrdersChart.js';
 import OrdersChart from './OrdersChart.jsx';
 import ProfitChart from './ProfitChart.jsx';
+import PeriodSelector from '../ui/PeriodSelector.jsx';
 
 export default function ChartsPanel() {
   const [activeTab, setActiveTab] = useState('orders');
@@ -38,22 +39,7 @@ export default function ChartsPanel() {
           </button>
         </div>
 
-        <div className="flex bg-slate-100 dark:bg-slate-700/60 p-1 rounded-lg text-xs font-semibold">
-          {['week', 'month', 'year'].map(p => (
-            <button
-              key={p}
-              type="button"
-              onClick={() => setPeriod(p)}
-              className={`px-3 py-1 rounded-md transition-all capitalize ${
-                period === p
-                  ? 'bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 shadow-xs font-bold'
-                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
-              }`}
-            >
-              {p}
-            </button>
-          ))}
-        </div>
+        <PeriodSelector selected={period} onChange={setPeriod} />
       </div>
 
       {/* Discrete Composed Sub-Components (Rule 5 Protocol) */}

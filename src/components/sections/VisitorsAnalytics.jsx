@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PeriodSelector from '../ui/PeriodSelector.jsx';
 import useVisitorsAnalytics from '../../hooks/useVisitorsAnalytics.js';
 
 export default function VisitorsAnalytics() {
@@ -39,23 +40,7 @@ export default function VisitorsAnalytics() {
             </span>
           </div>
 
-          {/* Period Selector Tabs */}
-          <div className="flex bg-slate-100 dark:bg-slate-700/60 p-1 rounded-lg text-xs font-semibold">
-            {['week', 'month', 'year'].map(p => (
-              <button
-                key={p}
-                type="button"
-                onClick={() => setPeriod && setPeriod(p)}
-                className={`px-3 py-1 rounded-md transition-all capitalize ${
-                  period === p
-                    ? 'bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 shadow-xs font-bold'
-                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
-                }`}
-              >
-                {p}
-              </button>
-            ))}
-          </div>
+          <PeriodSelector selected={period} onChange={setPeriod} />
         </div>
       </div>
 

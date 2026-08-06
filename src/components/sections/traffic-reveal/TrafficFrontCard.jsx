@@ -1,4 +1,5 @@
 import React from 'react';
+import PeriodSelector from '../../ui/PeriodSelector.jsx';
 
 export default function TrafficFrontCard({ data, period, setPeriod, onFlip }) {
   const totalSessions = data?.totalSessions || '142,850';
@@ -36,22 +37,7 @@ export default function TrafficFrontCard({ data, period, setPeriod, onFlip }) {
           </div>
         </div>
 
-        <div className="flex bg-slate-100 dark:bg-slate-700/60 p-1 rounded-lg text-xs font-medium">
-          {['week', 'month', 'year'].map(p => (
-            <button
-              key={p}
-              type="button"
-              onClick={() => setPeriod && setPeriod(p)}
-              className={`px-2.5 py-1 rounded-md transition-all capitalize ${
-                period === p
-                  ? 'bg-white dark:bg-slate-800 text-accent shadow-sm font-semibold'
-                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
-              }`}
-            >
-              {p}
-            </button>
-          ))}
-        </div>
+        <PeriodSelector selected={period} onChange={setPeriod} />
       </div>
 
       <div className="space-y-4 py-2">

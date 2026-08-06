@@ -138,6 +138,7 @@ graph LR
 | `src/components/ui/Card.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/FlipCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/GlassCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/ui/PeriodSelector.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/ui/RevealCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/context/AuthContext.jsx` | **CONTEXT** | 🟢 Interactive Demo |
 | `src/context/ThemeContext.jsx` | **CONTEXT** | 🟢 Interactive Demo |

@@ -293,16 +293,16 @@ Below is the detailed 1-to-1 event contract parity breakdown automatically parse
 | `SearchInput` | `(click)`, `(blur)`, `(input)` | `onChange`, `onClick` + `useState` | **100%** | None |
 | `SecurityCameras` | `(click)` | `onClick` + `useState` | **100%** | None |
 | `StatusCard` | `(click)` | `onClick` + `useState` | **100%** | None |
-| `ChartPanelHeader` | `(selectedChange)` | `onClick` + `useState` | **100%** | None |
-| `OrdersChart` | `(chartInit)`, `(params)` | `onMouseEnter`, `onMouseLeave`, `onClick` + `useState` | **100%** | None |
-| `ProfitChart` | `(chartInit)` | `onMouseEnter`, `onMouseLeave`, `onClick` + `useState` | **100%** | None |
-| `ChartsPanel` | `(changeTab)`, `(periodChange)` | `onClick` + `useState` | **100%** | None |
+| `ChartPanelHeader` | `(selectedChange)` | `onClick`, `onChange` + `useState` | **100%** | None |
+| `OrdersChart` | `(chartInit)`, `(params)` | `onMouseEnter`, `onMouseLeave`, `onChange` + `useState` | **100%** | None |
+| `ProfitChart` | `(chartInit)` | `onMouseEnter`, `onMouseLeave`, `onChange` + `useState` | **100%** | None |
+| `ChartsPanel` | `(changeTab)`, `(periodChange)` | `onClick`, `onChange` + `useState` | **100%** | None |
 | `CountryOrdersChart` | `(chartInit)` | `onClick`, `onMouseEnter`, `onMouseLeave` + `useState` | **100%** | None |
 | `CountryOrders` | `(selectEvent)`, `(countriesCategories)`, `(countryData)` | State Engine + `useState` | **100%** | None |
 | `CountryOrdersMap` | `(leafletMapReady)`, `(e)` | `onClick` + `useState` | **100%** | None |
 | `EarningCardBack` | `(selectPie)` | State Engine | **0%** | `onSelectPie` |
 | `EarningPieChart` | `(chartInit)`, `(chartClick)`, `(item)` | `onClick` + `useState` | **100%** | None |
-| `EarningCard` | `(click)` | `onClick` + `useState` | **100%** | None |
+| `EarningCard` | `(click)` | `onChange`, `onClick` + `useState` | **100%** | None |
 | `EarningCardFront` | `(selectedChange)` | State Engine | **0%** | `onSelect` |
 | `EarningLiveUpdateChart` | `(chartInit)` | State Engine | **0%** | `onChartInit` |
 | `StatsAreaChart` | `(chartInit)` | State Engine | **0%** | `onChartInit` |
@@ -312,7 +312,7 @@ Below is the detailed 1-to-1 event contract parity breakdown automatically parse
 | `TrafficBarChart` | `(chartInit)` | `onClick` + `useState` | **100%** | None |
 | `TrafficCardsHeader` | `(selectedChange)` | State Engine | **0%** | `onSelect` |
 | `TrafficRevealCard` | `(periodChange)`, `(click)` | `onFlip` + `useState` | **100%** | None |
-| `UserActivity` | `(selectedChange)` | `onClick` + `useState` | **100%** | None |
+| `UserActivity` | `(selectedChange)` | `onChange` + `useState` | **100%** | None |
 | `VisitorsAnalyticsChart` | `(chartInit)`, `(params)` | `onClick` + `useState` | **100%** | None |
 | `VisitorsStatistics` | `(chartInit)` | State Engine | **0%** | `onChartInit` |
 | `Chat` | `(send)` | `onClick`, `onSubmit`, `onChange` + `useState` | **100%** | None |

@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-08-06T07:45:43.918Z",
+  "timestamp": "2026-08-06T08:09:11.411Z",
   "healthScore": 100,
   "summary": {
-    "totalComponents": 277,
+    "totalComponents": 280,
     "hardcodedColors": 0,
     "menuTabsTotal": 17,
     "menuTabsGreen": 17,
@@ -377,17 +377,56 @@
     ]
   },
   "layoutDensity": {
-    "scannedComponents": 277,
+    "scannedComponents": 280,
     "headerWrapRisks": 0,
     "status": "PASSED"
   },
   "unitTests": {
-    "numTotalTestSuites": 8,
-    "numPassedTestSuites": 8,
-    "numTotalTests": 4,
-    "numPassedTests": 4,
+    "numTotalTestSuites": 32,
+    "numPassedTestSuites": 32,
+    "numTotalTests": 17,
+    "numPassedTests": 17,
     "success": true,
     "testResults": [
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "PeriodSelector UI Component"
+            ],
+            "fullName": "PeriodSelector UI Component renders period options correctly",
+            "status": "passed",
+            "title": "renders period options correctly",
+            "duration": 47.9079999999999,
+            "failureMessages": [],
+            "location": {
+              "line": 8,
+              "column": 3
+            },
+            "meta": {}
+          },
+          {
+            "ancestorTitles": [
+              "PeriodSelector UI Component"
+            ],
+            "fullName": "PeriodSelector UI Component triggers onChange callback when a period button is clicked",
+            "status": "passed",
+            "title": "triggers onChange callback when a period button is clicked",
+            "duration": 12.88000000000011,
+            "failureMessages": [],
+            "location": {
+              "line": 15,
+              "column": 3
+            },
+            "meta": {}
+          }
+        ],
+        "startTime": 1786003596532,
+        "endTime": 1786003596592.88,
+        "status": "passed",
+        "message": "",
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/ui/PeriodSelector.test.jsx"
+      },
       {
         "assertionResults": [
           {
@@ -397,7 +436,7 @@
             "fullName": "ECommerce Corporate Component Suite renders complete corporate dashboard assembly without crashing",
             "status": "passed",
             "title": "renders complete corporate dashboard assembly without crashing",
-            "duration": 163.75400000000081,
+            "duration": 187.03480000000127,
             "failureMessages": [],
             "location": {
               "line": 7,
@@ -406,8 +445,8 @@
             "meta": {}
           }
         ],
-        "startTime": 1786002252583,
-        "endTime": 1786002252746.754,
+        "startTime": 1786003595030,
+        "endTime": 1786003595217.035,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ECommerce.test.jsx"
@@ -421,7 +460,7 @@
             "fullName": "App Auto-Generated Test Suite renders without crashing",
             "status": "passed",
             "title": "renders without crashing",
-            "duration": 135.64810000000216,
+            "duration": 167.3816999999981,
             "failureMessages": [],
             "location": {
               "line": 9,
@@ -430,11 +469,131 @@
             "meta": {}
           }
         ],
-        "startTime": 1786002252715,
-        "endTime": 1786002252850.6482,
+        "startTime": 1786003595232,
+        "endTime": 1786003595399.3816,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/App.test.jsx"
+      },
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "ChartsPanel Corporate Component Suite"
+            ],
+            "fullName": "ChartsPanel Corporate Component Suite renders correctly without crashing",
+            "status": "passed",
+            "title": "renders correctly without crashing",
+            "duration": 122.00920000000042,
+            "failureMessages": [],
+            "location": {
+              "line": 7,
+              "column": 3
+            },
+            "meta": {}
+          }
+        ],
+        "startTime": 1786003594918,
+        "endTime": 1786003595040.0093,
+        "status": "passed",
+        "message": "",
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ChartsPanel.test.jsx"
+      },
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "OrdersChart Corporate Component Suite"
+            ],
+            "fullName": "OrdersChart Corporate Component Suite renders correctly without crashing",
+            "status": "passed",
+            "title": "renders correctly without crashing",
+            "duration": 116.67160000000149,
+            "failureMessages": [],
+            "location": {
+              "line": 7,
+              "column": 3
+            },
+            "meta": {}
+          }
+        ],
+        "startTime": 1786003594884,
+        "endTime": 1786003595000.6716,
+        "status": "passed",
+        "message": "",
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/OrdersChart.test.jsx"
+      },
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "ProfitChart Corporate Component Suite"
+            ],
+            "fullName": "ProfitChart Corporate Component Suite renders correctly without crashing",
+            "status": "passed",
+            "title": "renders correctly without crashing",
+            "duration": 54.60429999999997,
+            "failureMessages": [],
+            "location": {
+              "line": 7,
+              "column": 3
+            },
+            "meta": {}
+          }
+        ],
+        "startTime": 1786003596577,
+        "endTime": 1786003596631.6042,
+        "status": "passed",
+        "message": "",
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ProfitChart.test.jsx"
+      },
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "ProfitCard Corporate Component Suite"
+            ],
+            "fullName": "ProfitCard Corporate Component Suite renders correctly without crashing",
+            "status": "passed",
+            "title": "renders correctly without crashing",
+            "duration": 121.66359999999986,
+            "failureMessages": [],
+            "location": {
+              "line": 7,
+              "column": 3
+            },
+            "meta": {}
+          }
+        ],
+        "startTime": 1786003594887,
+        "endTime": 1786003595008.6636,
+        "status": "passed",
+        "message": "",
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ProfitCard.test.jsx"
+      },
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "StatsCardFront Auto-Generated Test Suite"
+            ],
+            "fullName": "StatsCardFront Auto-Generated Test Suite renders without crashing",
+            "status": "passed",
+            "title": "renders without crashing",
+            "duration": 46.8438000000001,
+            "failureMessages": [],
+            "location": {
+              "line": 7,
+              "column": 3
+            },
+            "meta": {}
+          }
+        ],
+        "startTime": 1786003596427,
+        "endTime": 1786003596473.8438,
+        "status": "passed",
+        "message": "",
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/profit-card/StatsCardFront.test.jsx"
       },
       {
         "assertionResults": [
@@ -445,7 +604,7 @@
             "fullName": "TrafficRevealCard Corporate Component Suite renders correctly without crashing",
             "status": "passed",
             "title": "renders correctly without crashing",
-            "duration": 54.801400000000285,
+            "duration": 106.80599999999686,
             "failureMessages": [],
             "location": {
               "line": 7,
@@ -454,8 +613,8 @@
             "meta": {}
           }
         ],
-        "startTime": 1786002252529,
-        "endTime": 1786002252583.8015,
+        "startTime": 1786003594925,
+        "endTime": 1786003595031.806,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/TrafficRevealCard.test.jsx"
@@ -464,12 +623,12 @@
         "assertionResults": [
           {
             "ancestorTitles": [
-              "TrafficBackCard Auto-Generated Test Suite"
+              "TrafficFrontCard Auto-Generated Test Suite"
             ],
-            "fullName": "TrafficBackCard Auto-Generated Test Suite renders without crashing",
+            "fullName": "TrafficFrontCard Auto-Generated Test Suite renders without crashing",
             "status": "passed",
             "title": "renders without crashing",
-            "duration": 31.00930000000153,
+            "duration": 30.043899999999894,
             "failureMessages": [],
             "location": {
               "line": 7,
@@ -478,11 +637,155 @@
             "meta": {}
           }
         ],
-        "startTime": 1786002252521,
-        "endTime": 1786002252552.0093,
+        "startTime": 1786003596848,
+        "endTime": 1786003596878.044,
         "status": "passed",
         "message": "",
-        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/traffic-reveal/TrafficBackCard.test.jsx"
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/traffic-reveal/TrafficFrontCard.test.jsx"
+      },
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "VisitorsAnalytics Corporate Component Suite"
+            ],
+            "fullName": "VisitorsAnalytics Corporate Component Suite renders correctly without crashing",
+            "status": "passed",
+            "title": "renders correctly without crashing",
+            "duration": 65.33699999999999,
+            "failureMessages": [],
+            "location": {
+              "line": 7,
+              "column": 3
+            },
+            "meta": {}
+          }
+        ],
+        "startTime": 1786003596396,
+        "endTime": 1786003596461.337,
+        "status": "passed",
+        "message": "",
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/VisitorsAnalytics.test.jsx"
+      },
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "ElectricityCard Corporate Component Suite"
+            ],
+            "fullName": "ElectricityCard Corporate Component Suite renders correctly without crashing",
+            "status": "passed",
+            "title": "renders correctly without crashing",
+            "duration": 49.42089999999985,
+            "failureMessages": [],
+            "location": {
+              "line": 7,
+              "column": 3
+            },
+            "meta": {}
+          }
+        ],
+        "startTime": 1786003596662,
+        "endTime": 1786003596711.421,
+        "status": "passed",
+        "message": "",
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ElectricityCard.test.jsx"
+      },
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "UserActivity Corporate Component Suite"
+            ],
+            "fullName": "UserActivity Corporate Component Suite renders correctly without crashing",
+            "status": "passed",
+            "title": "renders correctly without crashing",
+            "duration": 88.02110000000539,
+            "failureMessages": [],
+            "location": {
+              "line": 7,
+              "column": 3
+            },
+            "meta": {}
+          }
+        ],
+        "startTime": 1786003594885,
+        "endTime": 1786003594973.021,
+        "status": "passed",
+        "message": "",
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/UserActivity.test.jsx"
+      },
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "EarningCard Corporate Component Suite"
+            ],
+            "fullName": "EarningCard Corporate Component Suite renders correctly without crashing",
+            "status": "passed",
+            "title": "renders correctly without crashing",
+            "duration": 112.05920000000333,
+            "failureMessages": [],
+            "location": {
+              "line": 7,
+              "column": 3
+            },
+            "meta": {}
+          }
+        ],
+        "startTime": 1786003594884,
+        "endTime": 1786003594996.059,
+        "status": "passed",
+        "message": "",
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/EarningCard.test.jsx"
+      },
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "Echarts Corporate Component Suite"
+            ],
+            "fullName": "Echarts Corporate Component Suite renders correctly without crashing",
+            "status": "passed",
+            "title": "renders correctly without crashing",
+            "duration": 61.90409999999997,
+            "failureMessages": [],
+            "location": {
+              "line": 7,
+              "column": 3
+            },
+            "meta": {}
+          }
+        ],
+        "startTime": 1786003596380,
+        "endTime": 1786003596441.904,
+        "status": "passed",
+        "message": "",
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Echarts.test.jsx"
+      },
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "ChartPanelHeader Corporate Component Suite"
+            ],
+            "fullName": "ChartPanelHeader Corporate Component Suite renders correctly without crashing",
+            "status": "passed",
+            "title": "renders correctly without crashing",
+            "duration": 43.02089999999998,
+            "failureMessages": [],
+            "location": {
+              "line": 7,
+              "column": 3
+            },
+            "meta": {}
+          }
+        ],
+        "startTime": 1786003596593,
+        "endTime": 1786003596636.021,
+        "status": "passed",
+        "message": "",
+        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ChartPanelHeader.test.jsx"
       }
     ]
   }

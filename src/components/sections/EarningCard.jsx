@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PeriodSelector from '../ui/PeriodSelector.jsx';
 import useEarning from '../../hooks/useEarning.js';
 
 export default function EarningCard() {
@@ -27,21 +28,7 @@ export default function EarningCard() {
             <p className="text-xs text-slate-500 dark:text-slate-400">Revenue & Portfolio Shares</p>
           </div>
         </div>
-        <div className="flex bg-slate-100 dark:bg-slate-700/60 p-1 rounded-lg text-xs font-medium">
-          {['week', 'month', 'year'].map(p => (
-            <button
-              key={p}
-              onClick={() => setPeriod(p)}
-              className={`px-2.5 py-1 rounded-md transition-all capitalize ${
-                period === p
-                  ? 'bg-white dark:bg-slate-800 text-amber-600 dark:text-amber-400 shadow-sm font-semibold'
-                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
-              }`}
-            >
-              {p}
-            </button>
-          ))}
-        </div>
+        <PeriodSelector selected={period} onChange={setPeriod} />
       </div>
 
       {/* SVG Pie / Donut Chart */}

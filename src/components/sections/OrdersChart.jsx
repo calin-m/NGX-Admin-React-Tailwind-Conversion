@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PeriodSelector from '../ui/PeriodSelector.jsx';
 
 /**
  * OrdersChart Component
@@ -151,23 +152,7 @@ export default function OrdersChart({ activeTab = 'orders', period: propPeriod, 
           </p>
         </div>
 
-        {/* Period Selector Tabs */}
-        <div className="flex items-center space-x-1 bg-slate-100 dark:bg-slate-700/60 p-1 rounded-lg text-xs font-semibold">
-          {['week', 'month', 'year'].map(p => (
-            <button
-              key={p}
-              type="button"
-              onClick={() => changePeriod(p)}
-              className={`px-3 py-1 rounded-md transition-all capitalize ${
-                activePeriod === p
-                  ? 'bg-accent text-white font-bold shadow-xs'
-                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100'
-              }`}
-            >
-              {p}
-            </button>
-          ))}
-        </div>
+        <PeriodSelector selected={activePeriod} onChange={changePeriod} />
       </div>
 
       {content}

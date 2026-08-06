@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PeriodSelector from '../ui/PeriodSelector.jsx';
 
 export default function ChartPanelHeader({ type = 'Orders', period = 'week', onTypeChange, onPeriodChange }) {
   const [selectedType, setSelectedType] = useState(type);
@@ -40,21 +41,7 @@ export default function ChartPanelHeader({ type = 'Orders', period = 'week', onT
         </button>
       </div>
 
-      <div className="flex items-center space-x-1 text-xs">
-        {['week', 'month', 'year'].map(p => (
-          <button
-            key={p}
-            onClick={() => handlePeriodSelect(p)}
-            className={`px-2.5 py-1 rounded-md font-semibold capitalize transition-colors ${
-              selectedPeriod === p
-                ? 'bg-accent-light text-accent border border-accent/20'
-                : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
-            }`}
-          >
-            {p}
-          </button>
-        ))}
-      </div>
+      <PeriodSelector selected={selectedPeriod} onChange={handlePeriodSelect} />
     </div>
   );
 }

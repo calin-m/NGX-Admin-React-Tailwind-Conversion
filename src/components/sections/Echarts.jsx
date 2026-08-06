@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PeriodSelector from '../ui/PeriodSelector.jsx';
 
 export default function Echarts() {
   const [chartType, setChartType] = useState('bar'); // 'bar' | 'line' | 'pie' | 'area'
@@ -42,21 +43,7 @@ export default function Echarts() {
             ))}
           </div>
 
-          {/* Period Selector */}
-          <div className="flex bg-slate-100 dark:bg-slate-700/60 p-1 rounded-lg text-xs font-semibold">
-            {['week', 'month', 'year'].map(p => (
-              <button
-                key={p}
-                type="button"
-                onClick={() => setPeriod(p)}
-                className={`px-2.5 py-1 rounded-md transition-all capitalize ${
-                  period === p ? 'bg-indigo-600 text-white font-bold shadow-xs' : 'text-slate-500 dark:text-slate-400'
-                }`}
-              >
-                {p}
-              </button>
-            ))}
-          </div>
+          <PeriodSelector selected={period} onChange={setPeriod} />
         </div>
       </div>
 
