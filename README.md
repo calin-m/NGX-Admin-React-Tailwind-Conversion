@@ -33,6 +33,19 @@ All presentation components bind to CSS custom properties (`[data-accent]`) usin
 
 ---
 
+## 🧩 Enterprise UI Primitives Architecture (`src/components/ui/`)
+
+The repository features a suite of 17 low-level **UI Primitives** designed under Atomic Design principles with 100% test coverage in Vitest and Storybook CSF 3 stories:
+
+- **`Card.jsx`**: Compound card container with title, subtitle, top-right extra actions, hover elevation, and dark mode padding.
+- **`Modal.jsx`**: Accessible modal dialog with backdrop blur, scale entry animation, `✕` close button, backdrop click dismiss, and `Esc` key listener.
+- **`AlertBanner.jsx`**: Accessible callout banner (`role="alert"`) supporting `success`, `error`, `warning`, and `info` variants.
+- **`Avatar.jsx`**: Automated initials calculation, image fallback, online status dot (`Online`, `Busy`, `Offline`), and sizes (`sm`, `md`, `lg`).
+- **`FormInput.jsx`**: Standalone form field container with label, helper text, validation message, and integrated clear badge.
+- **`ClearableInput.jsx`**: Universal input field with dynamic `✕ ESC` badge (renders when text is entered) and `Esc` key listener.
+
+---
+
 ## 📌 17 / 17 Sidebar Menu Tab Parity Matrix
 
 Every single page and underlying component across all **17 sidebar menu tabs** has achieved 100% dynamic theme accent parity:

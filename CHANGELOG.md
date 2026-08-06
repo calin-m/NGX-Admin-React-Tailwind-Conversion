@@ -7,6 +7,34 @@
 ## [1.0.0] — 2026-08-06
 
 ### 🚀 New Features
+- **feat(ui): implement Card, Modal, AlertBanner, and Avatar UI primitives with 100% Storybook taxonomy harmonization** (`3231c8d`) *by Calin on 2026-08-06*
+  - Created Modal.jsx, AlertBanner.jsx, and Avatar.jsx primitives with unit test suites and Storybook stories
+  - Refactored OrderModal, UserManagement, Chat, Alert, and FormInputs presentation components
+  - Standardized Storybook story title paths across all 17 UI primitive components
+  - Safe default props in AuthContext.jsx and updated Login.test.jsx assertion
+- **feat(ui): decompose FormInput and ClearableInput primitives with 100% app-wide form coverage** (`2e8902e`) *by Calin on 2026-08-06*
+  - Created src/components/ui/ClearableInput.jsx and FormInput.jsx primitives with unit tests and Storybook stories
+  - Refactored Chat, SearchInput, SmartTable, UserManagement, OrderModal, Stepper, FormInputs, FormLayouts, Settings, Login, Register, ResetPassword, Dialogs, and AnimatedSearch components
+  - Added zero-CLS scrollbar-gutter: stable and keyframe animations in src/index.css
+  - Updated Sidebar sliding active pill and TreeGrid full-row click interactivity
+- **feat(ui): add animated PeriodSelector with brand accent and zero-CLS offset measurement** (`1cc2b1c`) *by Calin on 2026-08-06*
+  - Created src/components/ui/PeriodSelector.jsx with brand accent text styling and JSDOM fallback.
+  - Created PeriodSelector.test.jsx test suite with @testing-library/jest-dom matchers and infinite loop guard.
+  - Created PeriodSelector.stories.jsx interactive Storybook preview.
+  - Refactored 11 card header components to consume PeriodSelector UI primitive.
+  - Fixed top-right anchoring for flip card toggle buttons across StatsCard and TrafficReveal cards.
+- **feat(ui): complete subcomponent decomposition, mobile sidebar drawer animation, and top-right flip button anchoring** (`69c4184`) *by Calin on 2026-08-06*
+  - Modified src/components/sections/ChartsPanel.jsx (refactored layout container composing sub-components with activeTab transition support)
+  - Modified src/components/sections/OrdersChart.jsx (upgraded to Profit Analytics pill bar system with activeTab prop and 500ms CSS transitions)
+  - Modified src/components/sections/ProfitChart.jsx (upgraded to Profit Analytics pill bar system with embedded composition and 500ms CSS transitions)
+  - Modified src/components/sections/ElectricityCard.jsx (standardized pill bar geometry, Y-axis gridlines, and 0ms instant tooltips)
+  - Modified src/hooks/useElectricity.js (updated to synchronous state initialization for smooth year transitions)
+  - Modified src/components/sections/NotificationDrawer.jsx (added click-outside, tap-outside, and mobile backdrop auto-dismiss)
+  - Modified src/components/sections/Sidebar.jsx (added instant 0ms dual-theme glassmorphic tooltips and 300ms mobile slide drawer animation)
+  - Modified src/components/sections/profit-card/StatsCardFront.jsx & StatsCardBack.jsx (anchored flip button to absolute top-0 right-0 z-20)
+  - Modified src/components/sections/traffic-reveal/TrafficFrontCard.jsx & TrafficBackCard.jsx (anchored flip button to absolute top-0 right-0 z-20)
+  - Modified src/App.jsx (applied dynamic main padding for fixed sidebar anchoring)
+  - Modified src/components/sections/VisitorsAnalytics.jsx (standardized pillar geometry)
 - **feat(ui): complete 100% theme accent parity, pure pill bar charts, 3D SVG flip icons, fixed sidebar anchoring, and 2-row sticky footer** (`f7eca0a`) *by Calin on 2026-08-05*
   - Modified src/components/sections/Footer.jsx (added sticky bottom-0 z-20 backdrop-blur-md and 2-row mobile text layout)
   - Modified src/components/sections/NotificationDrawer.jsx (fixed mobile viewport overflow with fixed top-16 right-3 left-3 and bg-accent badges)
@@ -272,6 +300,19 @@
   - Modified README.md (added explicit FROM/TO stack package specifications)
 
 ### 🧹 Maintenance & Refactors
+- **refactor(ui): decompose device status card, normalize toggle switch props, and stabilize sidebar collapse transition** (`822df49`) *by Calin on 2026-08-06*
+  - Added src/components/sections/status-card/DeviceStatusCard.jsx, DeviceStatusCard.test.jsx, DeviceStatusCard.stories.jsx
+  - Modified src/App.jsx (Restricted main layout transition strictly to transition-[padding-left] duration-300 ease-in-out)
+  - Modified src/components/sections/StatusCard.jsx (Consumes extracted DeviceStatusCard sub-component)
+  - Modified src/components/ui/ToggleSwitch.jsx (Normalized checked & enabled props for smooth sliding knob animation)
+  - Modified src/components/sections/EarningCard.jsx & src/hooks/useEarning.js (Synchronized 1:1 color parity, thick SVG donut ring, zero CLS)
+- **refactor(ui): extract card header toggle switch circular progress primitives and fix donut chart parity** (`cc9b80e`) *by Calin on 2026-08-06*
+  - Added src/components/ui/CardHeader.jsx, CardHeader.test.jsx, CardHeader.stories.jsx (Standardized section card header primitive)
+  - Added src/components/ui/ToggleSwitch.jsx, ToggleSwitch.test.jsx, ToggleSwitch.stories.jsx (Accessible switch toggle primitive)
+  - Added src/components/ui/CircularProgress.jsx, CircularProgress.test.jsx, CircularProgress.stories.jsx (SVG circular progress ring primitive)
+  - Added src/components/ui/PeriodSelector.jsx, FlipButton.jsx, TrendBadge.jsx with full test and storybook suites
+  - Refactored EarningCard.jsx & useEarning.js for 100% screenshot parity, zero CLS, and accurate donut ring stroke offsets
+  - Refactored StatsCardFront, UserActivity, ElectricityCard, SolarCard, SecurityCameras, VisitorsAnalytics, and ProgressSection to consume new UI primitives
 - **chore(husky): modernize pre-commit hook with clean husky v9 syntax and full terminal streaming** (`37808bb`) *by Calin on 2026-08-05*
   - Modified .husky/pre-commit (removed deprecated sh headers and configured live terminal streaming execution of node scripts/verify-build.js).
   - Conducted full manual documentation audit across README.md, DEVELOPMENT.md, PIPELINE_GUIDE.md, and .agents/AGENTS.md.
@@ -293,4 +334,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-06T07:19:14.172Z*
+*Last Auto-Generated: 2026-08-06T16:12:56.358Z*
