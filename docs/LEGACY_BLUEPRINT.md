@@ -292,7 +292,7 @@ Below is the detailed 1-to-1 event contract parity breakdown automatically parse
 | `Header` | `(click)`, `(selectedChange)` | `onClick`, `onClose` + `useState` | **100%** | None |
 | `SearchInput` | `(click)`, `(blur)`, `(input)` | `onChange`, `onClick` + `useState` | **100%** | None |
 | `SecurityCameras` | `(click)` | `onBgColor`, `onTextColor`, `onClick` + `useState` | **100%** | None |
-| `StatusCard` | `(click)` | `onClick` + `useState` | **100%** | None |
+| `StatusCard` | `(click)` | `onToggle` + `useState` | **100%** | None |
 | `ChartPanelHeader` | `(selectedChange)` | `onClick`, `onChange` + `useState` | **100%** | None |
 | `OrdersChart` | `(chartInit)`, `(params)` | `onMouseEnter`, `onMouseLeave`, `onChange` + `useState` | **100%** | None |
 | `ProfitChart` | `(chartInit)` | `onMouseEnter`, `onMouseLeave`, `onChange` + `useState` | **100%** | None |

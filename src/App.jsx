@@ -97,7 +97,7 @@ export default function App() {
           onToggleSidebar={toggleSidebar}
         />
 
-        <main className={`flex-1 p-4 sm:p-6 max-w-[1600px] mx-auto w-full space-y-6 overflow-x-hidden transition-all duration-300 ${isSidebarCollapsed ? 'md:pl-24' : 'md:pl-72'}`}>
+        <main className={`flex-1 p-4 sm:p-6 max-w-[1600px] mx-auto w-full space-y-6 overflow-x-hidden transition-[padding-left] duration-300 ease-in-out ${isSidebarCollapsed ? 'md:pl-24' : 'md:pl-72'}`}>
           {activeTab === 'maps' ? (
             <Maps />
           ) : activeTab === 'ckeditor' ? (

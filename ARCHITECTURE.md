@@ -110,6 +110,7 @@ graph LR
 | `src/components/sections/Spinner.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/StatsAreaChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/StatsBarAnimationChart.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/sections/status-card/DeviceStatusCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/StatusCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Stepper.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Tabs.jsx` | **COMPONENTS** | 🟢 Interactive Demo |

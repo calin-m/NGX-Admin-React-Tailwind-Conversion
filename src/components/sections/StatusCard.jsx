@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DeviceStatusCard from './status-card/DeviceStatusCard.jsx';
 
 export default function StatusCard() {
   const [devices, setDevices] = useState([
@@ -15,31 +16,14 @@ export default function StatusCard() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {devices.map(device => (
-        <div
+        <DeviceStatusCard
           key={device.id}
-          onClick={() => toggleDevice(device.id)}
-          className={`p-5 rounded-2xl border transition-all duration-300 cursor-pointer flex flex-col justify-between h-36 ${
-            device.on
-              ? 'bg-white dark:bg-slate-800 border-accent/40 shadow-lg shadow-accent/5'
-              : 'bg-slate-50/80 dark:bg-slate-800/40 border-slate-200 dark:border-slate-700/60 opacity-70'
-          }`}
-        >
-          <div className="flex items-center justify-between">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl ${
-              device.on ? 'bg-accent-light text-accent' : 'bg-slate-200 dark:bg-slate-700 text-slate-400'
-            }`}>
-              {device.icon}
-            </div>
-            <div className={`w-3 h-3 rounded-full transition-all ${
-              device.on ? 'bg-emerald-500 shadow-sm shadow-emerald-500 animate-pulse' : 'bg-slate-300 dark:bg-slate-600'
-            }`} />
-          </div>
-
-          <div>
-            <h4 className="font-bold text-slate-900 dark:text-slate-100 text-sm">{device.title}</h4>
-            <span className="text-[10px] text-slate-400 block">{device.detail}</span>
-          </div>
-        </div>
+          title={device.title}
+          detail={device.detail}
+          icon={device.icon}
+          on={device.on}
+          onToggle={() => toggleDevice(device.id)}
+        />
       ))}
     </div>
   );

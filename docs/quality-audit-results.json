@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-08-06T08:30:52.676Z",
+  "timestamp": "2026-08-06T09:25:34.677Z",
   "healthScore": 100,
   "summary": {
-    "totalComponents": 295,
+    "totalComponents": 298,
     "hardcodedColors": 0,
     "menuTabsTotal": 17,
     "menuTabsGreen": 17,
@@ -377,41 +377,17 @@
     ]
   },
   "layoutDensity": {
-    "scannedComponents": 295,
+    "scannedComponents": 298,
     "headerWrapRisks": 0,
     "status": "PASSED"
   },
   "unitTests": {
-    "numTotalTestSuites": 6,
-    "numPassedTestSuites": 6,
-    "numTotalTests": 3,
-    "numPassedTests": 3,
+    "numTotalTestSuites": 2,
+    "numPassedTestSuites": 2,
+    "numTotalTests": 1,
+    "numPassedTests": 1,
     "success": true,
     "testResults": [
-      {
-        "assertionResults": [
-          {
-            "ancestorTitles": [
-              "ECommerce Corporate Component Suite"
-            ],
-            "fullName": "ECommerce Corporate Component Suite renders complete corporate dashboard assembly without crashing",
-            "status": "passed",
-            "title": "renders complete corporate dashboard assembly without crashing",
-            "duration": 155.10460000002058,
-            "failureMessages": [],
-            "location": {
-              "line": 7,
-              "column": 3
-            },
-            "meta": {}
-          }
-        ],
-        "startTime": 1786004963125,
-        "endTime": 1786004963280.1045,
-        "status": "passed",
-        "message": "",
-        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/ECommerce.test.jsx"
-      },
       {
         "assertionResults": [
           {
@@ -421,7 +397,7 @@
             "fullName": "App Auto-Generated Test Suite renders without crashing",
             "status": "passed",
             "title": "renders without crashing",
-            "duration": 138.91109999999753,
+            "duration": 123.81690000003437,
             "failureMessages": [],
             "location": {
               "line": 9,
@@ -430,35 +406,11 @@
             "meta": {}
           }
         ],
-        "startTime": 1786004963218,
-        "endTime": 1786004963356.9111,
+        "startTime": 1786008139897,
+        "endTime": 1786008140020.817,
         "status": "passed",
         "message": "",
         "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/App.test.jsx"
-      },
-      {
-        "assertionResults": [
-          {
-            "ancestorTitles": [
-              "EarningCard Corporate Component Suite"
-            ],
-            "fullName": "EarningCard Corporate Component Suite renders correctly without crashing",
-            "status": "passed",
-            "title": "renders correctly without crashing",
-            "duration": 52.19139999998151,
-            "failureMessages": [],
-            "location": {
-              "line": 7,
-              "column": 3
-            },
-            "meta": {}
-          }
-        ],
-        "startTime": 1786004963099,
-        "endTime": 1786004963151.1914,
-        "status": "passed",
-        "message": "",
-        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/EarningCard.test.jsx"
       }
     ]
   }
