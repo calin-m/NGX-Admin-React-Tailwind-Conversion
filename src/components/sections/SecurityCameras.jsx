@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CardHeader from '../ui/CardHeader.jsx';
 import useSecurityCameras from '../../hooks/useSecurityCameras.js';
 
 export default function SecurityCameras() {
@@ -14,16 +15,19 @@ export default function SecurityCameras() {
 
   return (
     <div className="w-full rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 space-y-6">
-      <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
-        <div>
-          <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Security Cameras Grid</h3>
-          <p className="text-xs text-slate-500 dark:text-slate-400">4-Channel HD Video Stream</p>
-        </div>
-
-        <span className="text-xs font-bold text-rose-500 bg-rose-500/10 px-2.5 py-1 rounded-full animate-pulse">
-          ● LIVE STREAM
-        </span>
-      </div>
+      <CardHeader
+        icon="🎥"
+        iconBgColor="bg-rose-500/10"
+        iconTextColor="text-rose-500"
+        title="Security Cameras Grid"
+        subtitle="4-Channel HD Video Stream"
+        action={
+          <span className="text-xs font-bold text-rose-500 bg-rose-500/10 px-2.5 py-1 rounded-full animate-pulse">
+            ● LIVE STREAM
+          </span>
+        }
+        className="border-b border-slate-100 dark:border-slate-700/60 pb-3"
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {cameras.map(cam => (

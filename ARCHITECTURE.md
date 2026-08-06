@@ -91,7 +91,7 @@ graph LR
 | `src/components/sections/OrderModal.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/OrdersChart.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Popover.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
-| `src/components/sections/profit-card/StatsCardBack.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/profit-card/StatsCardBack.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/profit-card/StatsCardFront.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/ProfitCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/ProfitChart.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
@@ -118,7 +118,7 @@ graph LR
 | `src/components/sections/TinyMce.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Toastr.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/Tooltip.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
-| `src/components/sections/traffic-reveal/TrafficBackCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/sections/traffic-reveal/TrafficBackCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/traffic-reveal/TrafficFrontCard.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/sections/TrafficBar.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/sections/TrafficBarChart.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
@@ -136,10 +136,15 @@ graph LR
 | `src/components/ui/Badge.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/Button.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/Card.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/ui/CardHeader.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/ui/CircularProgress.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/ui/FlipButton.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/ui/FlipCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/GlassCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/components/ui/PeriodSelector.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
 | `src/components/ui/RevealCard.jsx` | **COMPONENTS** | 🟡 Static Showcase |
+| `src/components/ui/ToggleSwitch.jsx` | **COMPONENTS** | 🟢 Interactive Demo |
+| `src/components/ui/TrendBadge.jsx` | **COMPONENTS** | 🟡 Static Showcase |
 | `src/context/AuthContext.jsx` | **CONTEXT** | 🟢 Interactive Demo |
 | `src/context/ThemeContext.jsx` | **CONTEXT** | 🟢 Interactive Demo |
 | `src/main.jsx` | **ROOT** | 🟡 Static Showcase |

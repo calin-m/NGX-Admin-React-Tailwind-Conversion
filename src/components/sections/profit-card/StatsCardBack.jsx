@@ -1,21 +1,10 @@
 import React from 'react';
+import FlipButton from '../../ui/FlipButton.jsx';
 
 export default function StatsCardBack({ onFlip }) {
   return (
     <div className="flex flex-col h-full justify-between space-y-4 relative">
-      <button
-        type="button"
-        onClick={onFlip}
-        className="absolute top-0 right-0 p-2 rounded-xl text-slate-400 hover:text-accent hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-colors group z-20"
-        title="Flip to overview"
-      >
-        <svg className="w-4 h-4 transition-transform duration-300 group-hover:-rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M17 2.1l4 4-4 4" />
-          <path d="M3 11V9a4 4 0 0 1 4-4h14" />
-          <path d="M7 21.9l-4-4 4-4" />
-          <path d="M21 13v2a4 4 0 0 1-4 4H3" />
-        </svg>
-      </button>
+      <FlipButton onFlip={onFlip} isFlipped={true} title="Flip to overview" />
 
       <div className="flex items-center justify-between pr-10">
         <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Profit Breakdown</h3>

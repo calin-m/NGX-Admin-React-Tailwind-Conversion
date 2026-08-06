@@ -1,5 +1,8 @@
 import React from 'react';
 import PeriodSelector from '../../ui/PeriodSelector.jsx';
+import FlipButton from '../../ui/FlipButton.jsx';
+import TrendBadge from '../../ui/TrendBadge.jsx';
+import CardHeader from '../../ui/CardHeader.jsx';
 
 export default function StatsCardFront({ data, period, setPeriod, onFlip }) {
   const [hoverIndex, setHoverIndex] = React.useState(null);
@@ -21,40 +24,22 @@ export default function StatsCardFront({ data, period, setPeriod, onFlip }) {
 
   return (
     <div className="flex flex-col h-full justify-between space-y-4 relative">
-      <button
-        type="button"
-        onClick={onFlip}
-        className="absolute top-0 right-0 p-2 rounded-xl text-slate-400 hover:text-accent hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-colors group z-20"
-        title="Flip to breakdown"
-      >
-        <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M17 2.1l4 4-4 4" />
-          <path d="M3 11V9a4 4 0 0 1 4-4h14" />
-          <path d="M7 21.9l-4-4 4-4" />
-          <path d="M21 13v2a4 4 0 0 1-4 4H3" />
-        </svg>
-      </button>
+      <FlipButton onFlip={onFlip} isFlipped={false} title="Flip to breakdown" />
 
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pr-10">
-        <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-lg">
-            $
-          </div>
-          <div>
-            <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Profit Analytics</h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400 capitalize">{period} Profit vs Orders</p>
-          </div>
-        </div>
-
-        <PeriodSelector selected={period} onChange={setPeriod} />
-      </div>
+      <CardHeader
+        icon="$"
+        iconBgColor="bg-emerald-500/10"
+        iconTextColor="text-emerald-600 dark:text-emerald-400"
+        title="Profit Analytics"
+        subtitle={`${period} Profit vs Orders`}
+        action={<PeriodSelector selected={period} onChange={setPeriod} />}
+        className="pr-10"
+      />
 
       <div className="flex items-baseline justify-between py-1 border-b border-slate-100 dark:border-slate-700/60 pb-2">
-        <div>
+        <div className="flex items-center">
           <span className="text-2xl font-bold text-slate-900 dark:text-slate-100">{profitVal}</span>
-          <span className="ml-2 text-xs font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full">
-            {growthVal}
-          </span>
+          <TrendBadge value={growthVal} className="ml-2" />
         </div>
         <div className="text-xs text-slate-500 dark:text-slate-400">
           Orders: <span className="font-semibold text-slate-700 dark:text-slate-300">{ordersVal}</span>

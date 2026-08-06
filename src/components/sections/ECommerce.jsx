@@ -1,4 +1,5 @@
 import React from 'react';
+import TrendBadge from '../ui/TrendBadge.jsx';
 import ChartsPanel from './ChartsPanel.jsx';
 import ProfitCard from './ProfitCard.jsx';
 import EarningCard from './EarningCard.jsx';
@@ -27,7 +28,7 @@ export default function ECommerce() {
               <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">{s.title}</span>
               <div className="flex items-baseline space-x-2">
                 <h3 className="text-2xl font-extrabold text-slate-900 dark:text-slate-100">{s.val}</h3>
-                <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400">{s.change}</span>
+                <TrendBadge value={s.change} />
               </div>
             </div>
             <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold ${s.color}`}>

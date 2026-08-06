@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PeriodSelector from '../ui/PeriodSelector.jsx';
+import CardHeader from '../ui/CardHeader.jsx';
 import useVisitorsAnalytics from '../../hooks/useVisitorsAnalytics.js';
 
 export default function VisitorsAnalytics() {
@@ -20,29 +21,30 @@ export default function VisitorsAnalytics() {
 
   return (
     <div className="w-full rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 space-y-6">
-      {/* Header & Period Selectors */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-700/60 pb-4">
-        <div>
-          <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Visitors & Traffic Analytics</h3>
-          <p className="text-xs text-slate-500 dark:text-slate-400 capitalize">{period} Traffic & Engagement Metrics</p>
-        </div>
+      <CardHeader
+        icon="📈"
+        iconBgColor="bg-accent/10"
+        iconTextColor="text-accent"
+        title="Visitors & Traffic Analytics"
+        subtitle={`${period} Traffic & Engagement Metrics`}
+        action={
+          <div className="flex items-center space-x-3 self-start sm:self-auto">
+            <div className="hidden md:flex items-center space-x-3 text-xs font-semibold">
+              <span className="flex items-center space-x-1.5 text-slate-600 dark:text-slate-300">
+                <span className="w-2.5 h-2.5 rounded-full bg-accent inline-block" />
+                <span>Page Views</span>
+              </span>
+              <span className="flex items-center space-x-1.5 text-slate-600 dark:text-slate-300">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block" />
+                <span>Unique Visitors</span>
+              </span>
+            </div>
 
-        <div className="flex items-center space-x-3 self-start sm:self-auto">
-          {/* Series Legend Indicators */}
-          <div className="hidden md:flex items-center space-x-3 text-xs font-semibold">
-            <span className="flex items-center space-x-1.5 text-slate-600 dark:text-slate-300">
-              <span className="w-2.5 h-2.5 rounded-full bg-accent inline-block" />
-              <span>Page Views</span>
-            </span>
-            <span className="flex items-center space-x-1.5 text-slate-600 dark:text-slate-300">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block" />
-              <span>Unique Visitors</span>
-            </span>
+            <PeriodSelector selected={period} onChange={setPeriod} />
           </div>
-
-          <PeriodSelector selected={period} onChange={setPeriod} />
-        </div>
-      </div>
+        }
+        className="border-b border-slate-100 dark:border-slate-700/60 pb-4"
+      />
 
       {/* KPI Cards Header */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CardHeader from '../ui/CardHeader.jsx';
 import useTemperatureHumidity from '../../hooks/useTemperatureHumidity.js';
 
 export default function TemperatureCard() {
@@ -13,40 +14,42 @@ export default function TemperatureCard() {
 
   return (
     <div className="w-full rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 flex flex-col justify-between space-y-6">
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-700/60 pb-3">
-
-        <div>
-          <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Temperature Thermostat</h3>
-          <p className="text-xs text-slate-500 dark:text-slate-400">Outdoor: {outdoorTemp} • HVAC Climate</p>
-        </div>
-
-        <div className="flex bg-slate-100 dark:bg-slate-700/60 p-1 rounded-xl text-xs font-medium">
-          <button
-            onClick={() => setMode('heat')}
-            className={`px-2.5 py-1.5 rounded-lg transition-all ${
-              mode === 'heat' ? 'bg-amber-500 text-white font-bold shadow-sm' : 'text-slate-600 dark:text-slate-400'
-            }`}
-          >
-            🔥 Heat
-          </button>
-          <button
-            onClick={() => setMode('cool')}
-            className={`px-2.5 py-1.5 rounded-lg transition-all ${
-              mode === 'cool' ? 'bg-accent text-white font-bold shadow-sm transition-colors' : 'text-slate-600 dark:text-slate-400'
-            }`}
-          >
-            ❄️ Cool
-          </button>
-          <button
-            onClick={() => setMode('fan')}
-            className={`px-2.5 py-1.5 rounded-lg transition-all ${
-              mode === 'fan' ? 'bg-emerald-600 text-white font-bold shadow-sm' : 'text-slate-600 dark:text-slate-400'
-            }`}
-          >
-            🌀 Fan
-          </button>
-        </div>
-      </div>
+      <CardHeader
+        icon="🌡️"
+        iconBgColor="bg-amber-500/10"
+        iconTextColor="text-amber-500"
+        title="Temperature Thermostat"
+        subtitle={`Outdoor: ${outdoorTemp} • HVAC Climate`}
+        action={
+          <div className="flex bg-slate-100 dark:bg-slate-700/60 p-1 rounded-xl text-xs font-medium">
+            <button
+              onClick={() => setMode('heat')}
+              className={`px-2.5 py-1.5 rounded-lg transition-all ${
+                mode === 'heat' ? 'bg-amber-500 text-white font-bold shadow-sm' : 'text-slate-600 dark:text-slate-400'
+              }`}
+            >
+              🔥 Heat
+            </button>
+            <button
+              onClick={() => setMode('cool')}
+              className={`px-2.5 py-1.5 rounded-lg transition-all ${
+                mode === 'cool' ? 'bg-accent text-white font-bold shadow-sm transition-colors' : 'text-slate-600 dark:text-slate-400'
+              }`}
+            >
+              ❄️ Cool
+            </button>
+            <button
+              onClick={() => setMode('fan')}
+              className={`px-2.5 py-1.5 rounded-lg transition-all ${
+                mode === 'fan' ? 'bg-emerald-600 text-white font-bold shadow-sm' : 'text-slate-600 dark:text-slate-400'
+              }`}
+            >
+              🌀 Fan
+            </button>
+          </div>
+        }
+        className="border-b border-slate-100 dark:border-slate-700/60 pb-3"
+      />
 
       <div className="flex flex-col items-center justify-center py-2 space-y-4">
         {/* Thermostat Dial Circle */}

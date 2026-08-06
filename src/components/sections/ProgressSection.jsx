@@ -1,4 +1,6 @@
 import React from 'react';
+import CardHeader from '../ui/CardHeader.jsx';
+import TrendBadge from '../ui/TrendBadge.jsx';
 import useStatsProgressBar from '../../hooks/useStatsProgressBar.js';
 
 export default function ProgressSection() {
@@ -14,20 +16,14 @@ export default function ProgressSection() {
 
   return (
     <div className="w-full min-h-[260px] rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 flex flex-col justify-between space-y-4">
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-        <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-lg">
-            🎯
-          </div>
-          <div>
-            <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Corporate Targets</h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400">Quarterly Progress Breakdown</p>
-          </div>
-        </div>
-        <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full">
-          On Track
-        </span>
-      </div>
+      <CardHeader
+        icon="🎯"
+        iconBgColor="bg-emerald-500/10"
+        iconTextColor="text-emerald-600 dark:text-emerald-400"
+        title="Corporate Targets"
+        subtitle="Quarterly Progress Breakdown"
+        action={<TrendBadge value="On Track" type="positive" />}
+      />
 
       <div className="space-y-3.5 py-1">
         {progressItems.map((item, idx) => (

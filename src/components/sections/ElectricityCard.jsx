@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PeriodSelector from '../ui/PeriodSelector.jsx';
+import CardHeader from '../ui/CardHeader.jsx';
 import useElectricity from '../../hooks/useElectricity.js';
 
 /**
@@ -28,15 +29,15 @@ export default function ElectricityCard() {
 
   return (
     <div className="w-full rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 space-y-4">
-      {/* Header & Year Selector */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3 gap-3">
-        <div>
-          <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">Electricity Consumption</h3>
-          <p className="text-xs text-slate-500 dark:text-slate-400">Total: {totalKwh} • Cost: {avgCost}</p>
-        </div>
-
-        <PeriodSelector periods={['2025', '2026']} selected={year} onChange={setYear} />
-      </div>
+      <CardHeader
+        icon="⚡"
+        iconBgColor="bg-amber-500/10"
+        iconTextColor="text-amber-500"
+        title="Electricity Consumption"
+        subtitle={`Total: ${totalKwh} • Cost: ${avgCost}`}
+        action={<PeriodSelector periods={['2025', '2026']} selected={year} onChange={setYear} />}
+        className="border-b border-slate-100 dark:border-slate-700/60 pb-3"
+      />
 
       {/* Plot Area */}
       <div className="relative h-64 sm:h-80 min-h-[240px] w-full flex-1 flex flex-col justify-between pt-1">
