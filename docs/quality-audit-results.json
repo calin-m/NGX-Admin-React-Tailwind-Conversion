@@ -1,480 +1,454 @@
 {
-  "timestamp": "2026-08-06T16:40:52.881Z",
+  "timestamp": "2026-08-07T08:48:55.033Z",
   "healthScore": 100,
   "summary": {
     "totalComponents": 313,
-    "hardcodedColors": 0,
-    "menuTabsTotal": 17,
-    "menuTabsGreen": 17,
-    "healthStatus": "100% CLEAN"
+    "blockingErrors": 0,
+    "advisoryWarnings": 66,
+    "healthStatus": "100% CLEAN (0 Errors, 66 Advisory Warnings)"
   },
-  "themeParity": {
-    "status": "100% Dynamic Theme Accents",
-    "menuTabs": [
-      {
-        "id": "dashboard",
-        "label": "Corporate Dashboard",
-        "componentCount": 10,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/ECommerce.jsx",
-            "basename": "ECommerce.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/ChartsPanel.jsx",
-            "basename": "ChartsPanel.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/OrdersChart.jsx",
-            "basename": "OrdersChart.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/EarningCard.jsx",
-            "basename": "EarningCard.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/VisitorsAnalytics.jsx",
-            "basename": "VisitorsAnalytics.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/UserActivity.jsx",
-            "basename": "UserActivity.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/CountryOrders.jsx",
-            "basename": "CountryOrders.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/ProfitCard.jsx",
-            "basename": "ProfitCard.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/TrafficRevealCard.jsx",
-            "basename": "TrafficRevealCard.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/ProgressSection.jsx",
-            "basename": "ProgressSection.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          }
-        ]
-      },
-      {
-        "id": "iot",
-        "label": "IoT Smart Home",
-        "componentCount": 5,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/ElectricityCard.jsx",
-            "basename": "ElectricityCard.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/SecurityCameras.jsx",
-            "basename": "SecurityCameras.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/RoomsCard.jsx",
-            "basename": "RoomsCard.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/TemperatureCard.jsx",
-            "basename": "TemperatureCard.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "basename": "SolarWeather.jsx",
-            "hardcodedCount": 0
-          }
-        ]
-      },
-      {
-        "id": "orders",
-        "label": "Orders & Invoices",
-        "componentCount": 2,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/OrdersChart.jsx",
-            "basename": "OrdersChart.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/OrderModal.jsx",
-            "basename": "OrderModal.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          }
-        ]
-      },
-      {
-        "id": "users",
-        "label": "User Management",
-        "componentCount": 1,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/UserManagement.jsx",
-            "basename": "UserManagement.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          }
-        ]
-      },
-      {
-        "id": "chat",
-        "label": "Support Chat App",
-        "componentCount": 1,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/Chat.jsx",
-            "basename": "Chat.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          }
-        ]
-      },
-      {
-        "id": "calendar",
-        "label": "Calendar Scheduler",
-        "componentCount": 1,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/CalendarApp.jsx",
-            "basename": "CalendarApp.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          }
-        ]
-      },
-      {
-        "id": "maps",
-        "label": "Maps Showcase",
-        "componentCount": 2,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/Maps.jsx",
-            "basename": "Maps.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/BubbleMaps.jsx",
-            "basename": "BubbleMaps.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          }
-        ]
-      },
-      {
-        "id": "ckeditor",
-        "label": "CKEditor Text Format",
-        "componentCount": 1,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "basename": "CKEditorApp.jsx",
-            "hardcodedCount": 0
-          }
-        ]
-      },
-      {
-        "id": "stepper",
-        "label": "Multi-Step Stepper",
-        "componentCount": 1,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/Stepper.jsx",
-            "basename": "Stepper.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          }
-        ]
-      },
-      {
-        "id": "accordion",
-        "label": "Accordion List",
-        "componentCount": 1,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/Accordion.jsx",
-            "basename": "Accordion.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          }
-        ]
-      },
-      {
-        "id": "grid",
-        "label": "Responsive Grid",
-        "componentCount": 1,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/Grid.jsx",
-            "basename": "Grid.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          }
-        ]
-      },
-      {
-        "id": "typography",
-        "label": "Typography Scale",
-        "componentCount": 1,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/Typography.jsx",
-            "basename": "Typography.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          }
-        ]
-      },
-      {
-        "id": "icons",
-        "label": "Icon Gallery",
-        "componentCount": 1,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "basename": "IconGallery.jsx",
-            "hardcodedCount": 0
-          }
-        ]
-      },
-      {
-        "id": "treegrid",
-        "label": "Tree Grid Table",
-        "componentCount": 1,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/TreeGrid.jsx",
-            "basename": "TreeGrid.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          }
-        ]
-      },
-      {
-        "id": "forms",
-        "label": "Form Controls",
-        "componentCount": 3,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/FormInputs.jsx",
-            "basename": "FormInputs.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/FormLayouts.jsx",
-            "basename": "FormLayouts.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/FormButtons.jsx",
-            "basename": "FormButtons.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          }
-        ]
-      },
-      {
-        "id": "auth",
-        "label": "Authentication",
-        "componentCount": 3,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/Login.jsx",
-            "basename": "Login.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/Register.jsx",
-            "basename": "Register.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          },
-          {
-            "path": "src/components/sections/ResetPassword.jsx",
-            "basename": "ResetPassword.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          }
-        ]
-      },
-      {
-        "id": "settings",
-        "label": "Settings",
-        "componentCount": 1,
-        "hardcodedCount": 0,
-        "status": "GREEN",
-        "files": [
-          {
-            "path": "src/components/sections/Settings.jsx",
-            "basename": "Settings.jsx",
-            "hardcodedCount": 0,
-            "matches": []
-          }
-        ]
-      }
-    ]
+  "reports": {
+    "markdownReportPath": "docs/QUALITY_AUDIT_REPORT.md",
+    "vitestJsonPath": "test-results.json",
+    "architectureMatrixPath": "ARCHITECTURE.md",
+    "legacyBlueprintPath": "docs/LEGACY_BLUEPRINT.md",
+    "decisionsPath": "docs/DECISIONS.md"
   },
-  "layoutDensity": {
-    "scannedComponents": 313,
-    "headerWrapRisks": 0,
-    "status": "PASSED"
-  },
-  "unitTests": {
-    "numTotalTestSuites": 6,
-    "numPassedTestSuites": 6,
-    "numTotalTests": 4,
-    "numPassedTests": 4,
-    "success": true,
-    "testResults": [
-      {
-        "assertionResults": [
-          {
-            "ancestorTitles": [
-              "App Auto-Generated Test Suite"
-            ],
-            "fullName": "App Auto-Generated Test Suite renders without crashing",
-            "status": "passed",
-            "title": "renders without crashing",
-            "duration": 118.99210000000312,
-            "failureMessages": [],
-            "location": {
-              "line": 9,
-              "column": 3
-            },
-            "meta": {}
-          }
-        ],
-        "startTime": 1786034298753,
-        "endTime": 1786034298871.9922,
-        "status": "passed",
-        "message": "",
-        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/App.test.jsx"
+  "audits": {
+    "secretScanner": {
+      "status": "PASS",
+      "blockingErrors": 0,
+      "scannedPath": "src/"
+    },
+    "astSyntax": {
+      "status": "PASS",
+      "blockingErrors": 0,
+      "scannedFilesCount": 313
+    },
+    "themeAccentParity": {
+      "status": "PASS",
+      "menuTabsTotal": 17,
+      "menuTabsGreen": 17,
+      "hardcodedColorsCount": 0
+    },
+    "unitTests": {
+      "status": "PASS",
+      "numTotalTestSuites": 214,
+      "numPassedTestSuites": 214,
+      "numFailedTestSuites": 0,
+      "numTotalTests": 130,
+      "numPassedTests": 130,
+      "numFailedTests": 0
+    },
+    "viteBuild": {
+      "status": "PASS",
+      "blockingErrors": 0
+    },
+    "layoutDensityAdvisories": {
+      "status": "ADVISORY",
+      "totalWarnings": 66,
+      "breakdown": {
+        "HEADER_WRAP_RISK": 63,
+        "SUB_GRID_SQUEEZE": 3
       },
-      {
-        "assertionResults": [
-          {
-            "ancestorTitles": [
-              "Header Corporate Component Suite"
-            ],
-            "fullName": "Header Corporate Component Suite renders correctly without crashing",
-            "status": "passed",
-            "title": "renders correctly without crashing",
-            "duration": 34.19570000001113,
-            "failureMessages": [],
-            "location": {
-              "line": 7,
-              "column": 3
-            },
-            "meta": {}
-          }
-        ],
-        "startTime": 1786034298554,
-        "endTime": 1786034298588.1958,
-        "status": "passed",
-        "message": "",
-        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/Header.test.jsx"
-      },
-      {
-        "assertionResults": [
-          {
-            "ancestorTitles": [
-              "NotificationDrawer Component Suite"
-            ],
-            "fullName": "NotificationDrawer Component Suite renders unread notifications and badge when open",
-            "status": "passed",
-            "title": "renders unread notifications and badge when open",
-            "duration": 41.289600000018254,
-            "failureMessages": [],
-            "location": {
-              "line": 7,
-              "column": 3
-            },
-            "meta": {}
-          },
-          {
-            "ancestorTitles": [
-              "NotificationDrawer Component Suite"
-            ],
-            "fullName": "NotificationDrawer Component Suite marks all notifications as read when clicking Mark all read",
-            "status": "passed",
-            "title": "marks all notifications as read when clicking Mark all read",
-            "duration": 90.63950000001932,
-            "failureMessages": [],
-            "location": {
-              "line": 13,
-              "column": 3
-            },
-            "meta": {}
-          }
-        ],
-        "startTime": 1786034298556,
-        "endTime": 1786034298688.6394,
-        "status": "passed",
-        "message": "",
-        "name": "D:/Proiecte/NGX-Admin-React-Tailwind-Conversion/src/components/sections/NotificationDrawer.test.jsx"
-      }
-    ]
+      "items": [
+        {
+          "file": "src/components/sections/Accordion.jsx",
+          "component": "Accordion.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/AnimatedSearch.jsx",
+          "component": "AnimatedSearch.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/AnimatedSearch.jsx",
+          "component": "AnimatedSearch.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/CalendarApp.jsx",
+          "component": "CalendarApp.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/CalendarApp.jsx",
+          "component": "CalendarApp.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/CalendarKit.jsx",
+          "component": "CalendarKit.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/CalendarKit.jsx",
+          "component": "CalendarKit.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/ChartPanelSummary.jsx",
+          "component": "ChartPanelSummary.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/CountryOrders.jsx",
+          "component": "CountryOrders.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/CountryOrders.jsx",
+          "component": "CountryOrders.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/CountryOrdersChart.jsx",
+          "component": "CountryOrdersChart.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/CountryOrdersMap.jsx",
+          "component": "CountryOrdersMap.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/CountryOrdersMap.jsx",
+          "component": "CountryOrdersMap.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/Datepicker.jsx",
+          "component": "Datepicker.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/Dialogs.jsx",
+          "component": "Dialogs.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/EarningCardBack.jsx",
+          "component": "EarningCardBack.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/EarningCardFront.jsx",
+          "component": "EarningCardFront.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/EarningLiveUpdateChart.jsx",
+          "component": "EarningLiveUpdateChart.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/ECommerce.jsx",
+          "component": "ECommerce.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/FormButtons.jsx",
+          "component": "FormButtons.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/FormLayouts.jsx",
+          "component": "FormLayouts.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/FormLayouts.jsx",
+          "component": "FormLayouts.jsx",
+          "type": "SUB_GRID_SQUEEZE",
+          "description": "Internal 2-column grid (`grid-cols-2`) is hardcoded without responsive breakpoint adjustments."
+        },
+        {
+          "file": "src/components/sections/Header.jsx",
+          "component": "Header.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/Header.jsx",
+          "component": "Header.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/Icons.jsx",
+          "component": "Icons.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/InfiniteList.jsx",
+          "component": "InfiniteList.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/InfiniteList.jsx",
+          "component": "InfiniteList.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/KittenCard.jsx",
+          "component": "KittenCard.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/LegendChart.jsx",
+          "component": "LegendChart.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/List.jsx",
+          "component": "List.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/Login.jsx",
+          "component": "Login.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/NotificationDrawer.jsx",
+          "component": "NotificationDrawer.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/Popover.jsx",
+          "component": "Popover.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/profit-card/StatsCardBack.jsx",
+          "component": "StatsCardBack.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/RoomsCard.jsx",
+          "component": "RoomsCard.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/RoomsCard.jsx",
+          "component": "RoomsCard.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/SearchInput.jsx",
+          "component": "SearchInput.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/Settings.jsx",
+          "component": "Settings.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/Settings.jsx",
+          "component": "Settings.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/SlideOut.jsx",
+          "component": "SlideOut.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/SmartTable.jsx",
+          "component": "SmartTable.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/StatsAreaChart.jsx",
+          "component": "StatsAreaChart.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/StatsBarAnimationChart.jsx",
+          "component": "StatsBarAnimationChart.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/status-card/DeviceStatusCard.jsx",
+          "component": "DeviceStatusCard.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/status-card/DeviceStatusCard.jsx",
+          "component": "DeviceStatusCard.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/Stepper.jsx",
+          "component": "Stepper.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/Stepper.jsx",
+          "component": "Stepper.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/Tabs.jsx",
+          "component": "Tabs.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/TemperatureCard.jsx",
+          "component": "TemperatureCard.jsx",
+          "type": "SUB_GRID_SQUEEZE",
+          "description": "Internal 2-column grid (`grid-cols-2`) is hardcoded without responsive breakpoint adjustments."
+        },
+        {
+          "file": "src/components/sections/ThemeCustomizer.jsx",
+          "component": "ThemeCustomizer.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/ThemeCustomizer.jsx",
+          "component": "ThemeCustomizer.jsx",
+          "type": "SUB_GRID_SQUEEZE",
+          "description": "Internal 2-column grid (`grid-cols-2`) is hardcoded without responsive breakpoint adjustments."
+        },
+        {
+          "file": "src/components/sections/TinyMce.jsx",
+          "component": "TinyMce.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/Toastr.jsx",
+          "component": "Toastr.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/Tooltip.jsx",
+          "component": "Tooltip.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/traffic-reveal/TrafficBackCard.jsx",
+          "component": "TrafficBackCard.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/TrafficBar.jsx",
+          "component": "TrafficBar.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/TrafficBarChart.jsx",
+          "component": "TrafficBarChart.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/TrafficCardsHeader.jsx",
+          "component": "TrafficCardsHeader.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/TreeGrid.jsx",
+          "component": "TreeGrid.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/UserActivity.jsx",
+          "component": "UserActivity.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/UserManagement.jsx",
+          "component": "UserManagement.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/VisitorsAnalyticsChart.jsx",
+          "component": "VisitorsAnalyticsChart.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/VisitorsStatistics.jsx",
+          "component": "VisitorsStatistics.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/WeatherCard.jsx",
+          "component": "WeatherCard.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/sections/Window.jsx",
+          "component": "Window.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        },
+        {
+          "file": "src/components/ui/Modal.jsx",
+          "component": "Modal.jsx",
+          "type": "HEADER_WRAP_RISK",
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+        }
+      ]
+    }
   }
 }

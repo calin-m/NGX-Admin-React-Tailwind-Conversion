@@ -22,6 +22,7 @@
 
 ## 6. Automated Verification Engine Protocol
 - Every quality audit MUST execute `node scripts/verify-build.js` to validate AST syntax, JSX A11y image alt attributes, layout density, 100% theme accent parity across all 17 menu tabs, in-depth quality report generation (`docs/QUALITY_AUDIT_REPORT.md`), living blueprint presence, decision record numbering, and dual-theme state passes.
+- **Reporting Transparency Standard**: Agent verification summaries MUST provide 100% transparency by explicitly detailing both zero-blocking errors AND any logged advisory warnings (e.g., layout density wrap risks or lint advisories).
 
 
 ## 7. Approval-First Protocol

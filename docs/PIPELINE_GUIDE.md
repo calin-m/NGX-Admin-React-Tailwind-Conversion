@@ -8,15 +8,15 @@ Welcome to the **Automation & Pipeline Guide**. This document details our 7-Gate
 
 ## 🔬 1. 7-Gateway Quality Verification Engine (`scripts/verify-build.js`)
 
-Executing `npm run verify` triggers a 7-pass quality gate audit:
-1. **Pass 0: Zero-Manual Auto-Scaffolder & Dual-Stack Doc Sync**: Auto-scaffolds missing tests/stories & syncs `ARCHITECTURE.md`, `docs/LEGACY_BLUEPRINT.md` + `CHANGELOG.md`.
-2. **Pass 0.5: Pre-Commit Secret & Security Scanner**: Audits codebase for hardcoded private keys, tokens, or un-ignored `.env` credentials.
-3. **Pass 1: AST Syntax & A11y Audit**: Validates JSX syntax and image `alt` accessibility attributes.
-4. **Pass 2: Ghost Files Audit**: Ensures no orphan or dead files exist in `src/`.
-5. **Pass 3: Living Architecture Blueprint (`ARCHITECTURE.md`)**: Verifies C4 Mermaid Level 1-3 diagrams.
-6. **Pass 4: ADR Decision Records (`docs/DECISIONS.md`)**: Validates sequential numbering of Architectural Decision Records.
-7. **Pass 5 & 6: Vitest Dual-Theme Execution**: Executes full test suites across Dark and Light modes.
-8. **Pass 7: Production Vite Bundle Compilation**: Verifies clean production `dist/` compilation.
+Executing `npm run verify` triggers a non-destructive 7-pass quality gate audit:
+1. **Pass 0.5: Pre-Commit Secret Scanner**: Audits codebase for hardcoded private keys, tokens, or `.env` credentials.
+2. **Pass 1: AST Syntax Validation**: Validates JSX/JS syntax across `src/`.
+3. **Pass 2 & 3: Vitest Dual-Theme Execution**: Executes full test suites across Dark and Light modes to generate fresh `test-results.json`.
+4. **Pass 4: Master Quality Report Auto-Sync**: Reads fresh `test-results.json` to auto-sync `docs/QUALITY_AUDIT_REPORT.md`, `docs/quality-audit-results.json`, `ARCHITECTURE.md`, `docs/LEGACY_BLUEPRINT.md` + `CHANGELOG.md`.
+5. **Pass 5: Living Blueprints & ADR Decision Records**: Validates presence of `ARCHITECTURE.md`, `docs/LEGACY_BLUEPRINT.md`, and `docs/DECISIONS.md`.
+6. **Pass 7: Production Vite Bundle Compilation**: Verifies clean production `dist/` compilation.
+
+> **Reporting Transparency Standard**: Verification output explicitly details both 0 blocking errors AND any non-blocking advisory warnings (e.g. 66 layout density wrap warnings). All blocking and non-blocking audits are serialized directly into machine-readable JSON ([`docs/quality-audit-results.json`](docs/quality-audit-results.json)) containing explicit references to all generated markdown and test reports.
 
 ---
 

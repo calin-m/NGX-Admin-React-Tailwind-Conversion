@@ -21,11 +21,14 @@ export default function NotificationDrawer({ isOpen, onClose }) {
   useEffect(() => {
     if (isOpen) {
       setShouldRender(true);
-      // Double rAF ensures DOM element is rendered before applying entrance transition class
-      const frame = requestAnimationFrame(() => {
-        requestAnimationFrame(() => setIsMounted(true));
+      let innerFrame;
+      const outerFrame = requestAnimationFrame(() => {
+        innerFrame = requestAnimationFrame(() => setIsMounted(true));
       });
-      return () => cancelAnimationFrame(frame);
+      return () => {
+        cancelAnimationFrame(outerFrame);
+        if (innerFrame) cancelAnimationFrame(innerFrame);
+      };
     } else {
       setIsMounted(false);
       const timer = setTimeout(() => {

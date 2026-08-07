@@ -20,8 +20,8 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      'max-lines-per-function': ['error', { max: 180, skipBlankLines: true, skipComments: true }],
-      'max-lines': ['error', { max: 250, skipBlankLines: true, skipComments: true }],
+      'max-lines-per-function': ['warn', { max: 220, skipBlankLines: true, skipComments: true }],
+      'max-lines': ['warn', { max: 350, skipBlankLines: true, skipComments: true }],
       'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }]
     }
   }

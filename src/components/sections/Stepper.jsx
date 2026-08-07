@@ -50,15 +50,23 @@ export default function Stepper() {
           const stepNum = idx + 1;
           const isDone = step > stepNum;
           const isCurrent = step === stepNum;
+          const canJump = stepNum <= step || Boolean(formData[steps[step - 1].key]?.trim());
           return (
-            <div key={idx} className="relative z-10 flex flex-col items-center space-y-1">
-              <div className={`w-9 h-9 rounded-full font-extrabold text-xs flex items-center justify-center transition-all ${
+            <button
+              type="button"
+              key={idx}
+              disabled={!canJump && !isDone}
+              onClick={() => canJump && setStep(stepNum)}
+              className="relative z-10 flex flex-col items-center space-y-1 group cursor-pointer disabled:cursor-not-allowed disabled:opacity-60 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded-lg p-1 transition-all"
+              aria-label={`Go to Step ${stepNum}: ${s.title}`}
+            >
+              <div className={`w-9 h-9 rounded-full font-extrabold text-xs flex items-center justify-center transition-all group-hover:scale-105 ${
                 isCurrent ? 'bg-accent text-white ring-4 ring-accent shadow-md' : isDone ? 'bg-emerald-500 text-white' : 'bg-slate-200 dark:bg-slate-700 text-slate-500'
               }`}>
                 {isDone ? '✓' : stepNum}
               </div>
               <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">{s.title}</span>
-            </div>
+            </button>
           );
         })}
       </div>
