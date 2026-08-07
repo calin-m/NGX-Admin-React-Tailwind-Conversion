@@ -32,7 +32,7 @@ export default function EarningCard() {
   });
 
   return (
-    <div className="w-full min-h-[320px] rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 flex flex-col justify-between overflow-hidden">
+    <div className="w-full min-h-[320px] rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-4 sm:p-6 flex flex-col justify-between">
       <CardHeader
         icon="💰"
         iconBgColor="bg-amber-500/10"
@@ -43,9 +43,9 @@ export default function EarningCard() {
       />
 
       {/* Thick Lush SVG Donut Ring Chart */}
-      <div className="flex flex-col sm:flex-row items-center justify-around py-4 gap-6">
+      <div className="flex flex-col sm:flex-row items-center justify-around py-2 gap-4">
 
-        <div className="relative w-44 h-44 flex items-center justify-center shrink-0">
+        <div className="relative w-36 h-36 sm:w-44 sm:h-44 flex items-center justify-center shrink-0">
           <svg className="w-full h-full -rotate-90 drop-shadow-xs" viewBox="0 0 120 120">
             {/* Background Donut Track */}
             <circle
@@ -79,8 +79,8 @@ export default function EarningCard() {
 
           {/* Center Total Earnings Label */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-2 pointer-events-none">
-            <span className="text-2xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">{totalEarnings}</span>
-            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">TOTAL EARNINGS</span>
+            <span className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">{totalEarnings}</span>
+            <span className="text-[9px] sm:text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">TOTAL EARNINGS</span>
           </div>
         </div>
 

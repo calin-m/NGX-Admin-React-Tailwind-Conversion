@@ -52,6 +52,16 @@ export default function App() {
     }
     return false;
   });
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsSidebarCollapsed(true);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const [activeTab, setActiveTab] = useState('dashboard');
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -108,7 +118,7 @@ export default function App() {
           onToggleSidebar={toggleSidebar}
         />
 
-        <main className={`flex-1 p-4 sm:p-6 max-w-[1600px] mx-auto w-full space-y-6 overflow-x-hidden transition-[padding-left] duration-300 ease-in-out ${isSidebarCollapsed ? 'md:pl-24' : 'md:pl-72'}`}>
+        <main className={`flex-1 p-4 sm:p-6 w-full min-w-0 space-y-6 overflow-x-hidden transition-[padding-left] duration-300 ease-in-out ${isSidebarCollapsed ? 'md:pl-24' : 'md:pl-72'}`}>
           <div key={activeTab} className="w-full animate-fade-in">
             {activeTab === 'maps' ? (
               <Maps />

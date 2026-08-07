@@ -70,7 +70,7 @@ export default function SmartTable() {
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
-          <div className="w-56">
+          <div className="w-full sm:w-56">
             <ClearableInput
               icon="🔍"
               placeholder="Search orders, customers..."

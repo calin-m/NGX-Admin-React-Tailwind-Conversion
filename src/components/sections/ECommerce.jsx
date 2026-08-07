@@ -21,17 +21,17 @@ export default function ECommerce() {
   return (
     <div className="w-full space-y-6">
       {/* Top KPI Summary Row */}
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {stats.map((s, idx) => (
-          <div key={idx} className="rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-5 flex items-center justify-between hover:shadow-xl transition-shadow">
-            <div className="space-y-1">
-              <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">{s.title}</span>
-              <div className="flex items-baseline space-x-2">
-                <h3 className="text-2xl font-extrabold text-slate-900 dark:text-slate-100">{s.val}</h3>
+          <div key={idx} className="rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-3.5 sm:p-5 flex items-center justify-between gap-2.5 hover:shadow-xl transition-shadow min-w-0">
+            <div className="space-y-1 min-w-0 flex-1">
+              <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 block truncate">{s.title}</span>
+              <div className="flex flex-wrap items-baseline gap-1.5 min-w-0">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-slate-100">{s.val}</h3>
                 <TrendBadge value={s.change} />
               </div>
             </div>
-            <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold ${s.color}`}>
+            <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-lg sm:text-xl font-bold shrink-0 ${s.color}`}>
               {s.icon}
             </div>
           </div>

@@ -36,10 +36,10 @@ export default function StatsCardFront({ data, period, setPeriod, onFlip }) {
         className="pr-10"
       />
 
-      <div className="flex items-baseline justify-between py-1 border-b border-slate-100 dark:border-slate-700/60 pb-2">
-        <div className="flex items-center">
-          <span className="text-2xl font-bold text-slate-900 dark:text-slate-100">{profitVal}</span>
-          <TrendBadge value={growthVal} className="ml-2" />
+      <div className="flex flex-wrap items-baseline justify-between gap-2 py-1 border-b border-slate-100 dark:border-slate-700/60 pb-2">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-100">{profitVal}</span>
+          <TrendBadge value={growthVal} />
         </div>
         <div className="text-xs text-slate-500 dark:text-slate-400">
           Orders: <span className="font-semibold text-slate-700 dark:text-slate-300">{ordersVal}</span>

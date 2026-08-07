@@ -22,11 +22,11 @@ export default function Header({ isDarkMode, onToggleTheme, onToggleSidebar, onO
         {/* Global Search Shortcut Button */}
         <button
           onClick={onOpenSearch}
-          className="flex items-center justify-between w-32 xs:w-44 sm:w-64 px-2.5 sm:px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-700/60 border border-slate-200/60 dark:border-slate-600/60 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs transition-colors"
+          className="flex items-center justify-between w-24 xs:w-44 sm:w-64 px-2 sm:px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-700/60 border border-slate-200/60 dark:border-slate-600/60 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs transition-colors"
         >
-          <span className="flex items-center space-x-1.5 sm:space-x-2 truncate">
-            <span>🔍</span>
-            <span className="truncate">Search <span className="hidden xs:inline">commands & data...</span></span>
+          <span className="flex items-center space-x-1 sm:space-x-2 truncate">
+            <span className="shrink-0">🔍</span>
+            <span className="truncate">Search <span className="hidden xs:inline">commands...</span></span>
           </span>
           <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[9px] font-bold bg-white dark:bg-slate-800 rounded-md border border-slate-200 dark:border-slate-600 text-slate-500">
             Ctrl+K
@@ -34,7 +34,7 @@ export default function Header({ isDarkMode, onToggleTheme, onToggleSidebar, onO
         </button>
       </div>
 
-      <div className="flex items-center space-x-1.5 sm:space-x-3 relative">
+      <div className="flex items-center space-x-1 sm:space-x-3 relative shrink-0">
         {/* Palette Theme Customizer Button */}
         <button
           onClick={onOpenThemeCustomizer}
@@ -80,14 +80,13 @@ export default function Header({ isDarkMode, onToggleTheme, onToggleSidebar, onO
         </button>
 
         {/* User Profile Badge */}
-        <div className="flex items-center space-x-3 pl-2 border-l border-slate-200 dark:border-slate-700/80">
-          <div className="w-9 h-9 rounded-xl bg-accent text-white font-bold flex items-center justify-center text-sm shadow-sm transition-colors">
-
+        <div className="flex items-center space-x-2.5 pl-2 border-l border-slate-200 dark:border-slate-700/80 min-w-0 shrink-0">
+          <div className="w-9 h-9 rounded-xl bg-accent text-white font-bold flex items-center justify-center text-sm shadow-sm transition-colors shrink-0">
             AD
           </div>
-          <div className="hidden sm:block text-left">
-            <span className="text-xs font-bold text-slate-900 dark:text-slate-100 block">Admin User</span>
-            <span className="text-[10px] text-slate-400 block">admin@ngx-corporate.io</span>
+          <div className="hidden sm:block text-left min-w-0 max-w-[100px] md:max-w-[140px]">
+            <span className="text-xs font-bold text-slate-900 dark:text-slate-100 block truncate">Admin User</span>
+            <span className="text-[10px] text-slate-400 block truncate" title="admin@ngx-corporate.io">admin@ngx-corporate.io</span>
           </div>
         </div>
       </div>

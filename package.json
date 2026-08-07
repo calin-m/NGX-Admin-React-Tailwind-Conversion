@@ -15,6 +15,7 @@
     "test:run": "vitest run --reporter=default --reporter=json --outputFile=test-results.json",
     "test:watch": "vitest watch --reporter=default --reporter=json --outputFile=test-results.json",
     "lint": "eslint src",
+    "knip": "knip",
     "copy-assets": "node scripts/copy-public-assets.js",
     "verify": "node scripts/verify-build.js",
     "report": "npm run test:run && node scripts/generate-quality-report.js",

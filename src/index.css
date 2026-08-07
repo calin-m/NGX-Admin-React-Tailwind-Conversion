@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-xs: 480px;
+}
+
 @property --laser-angle {
   syntax: '<angle>';
   initial-value: 0deg;

@@ -138,6 +138,19 @@ async function runVerification() {
     console.log('  ✔ Architectural Decision Records (docs/DECISIONS.md) validated.');
   }
 
+  // Pass 6: ESLint Linter & Knip Dead-Code Audit
+  console.log('\n🧹 [Pass 6/7] Running ESLint Code Quality & Knip Dead-Code Audit...');
+  if (!runCommand('npm run lint')) {
+    console.warn('  ⚠️ ESLint logged advisories or warnings.');
+  } else {
+    console.log('  ✔ ESLint Code Quality Audit Passed.');
+  }
+  if (!runCommand('npx knip --reporter compact')) {
+    console.warn('  ⚠️ Knip logged unused export/file advisories.');
+  } else {
+    console.log('  ✔ Knip Dead-Code & Unused Exports Audit Passed.');
+  }
+
   // Pass 7: Production Vite Build Compilation Validation
   console.log('\n📦 [Pass 7/7] Validating Production Vite Bundle Build...');
   const buildPassed = runCommand('npx vite build');

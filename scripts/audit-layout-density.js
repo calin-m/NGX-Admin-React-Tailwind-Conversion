@@ -45,6 +45,21 @@ files.forEach(f => {
       }
     });
   }
+
+  // Check 3: Fixed width controls in flex container without sm: breakpoint (sub-300px overflow risk)
+  const unadaptedControlMatches = code.match(/className="[^"]*\b(w-56|w-64|w-72|w-80|w-96)\b[^"]*"/g);
+  if (unadaptedControlMatches) {
+    unadaptedControlMatches.forEach(m => {
+      if (!m.includes('sm:w-') && !m.includes('md:w-') && !m.includes('max-w-') && !m.includes('w-full')) {
+        issues.push({
+          file: f.relPath,
+          component: f.fileName,
+          type: 'NARROW_VIEWPORT_OVERFLOW_RISK',
+          desc: 'Control element uses rigid fixed width without responsive `sm:w-` prefix, risking sub-300px layout overflow.'
+        });
+      }
+    });
+  }
 });
 
 console.log(`Scanned ${files.length} presentation components.`);

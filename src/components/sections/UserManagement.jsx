@@ -36,8 +36,8 @@ export default function UserManagement() {
           <p className="text-xs text-slate-500 dark:text-slate-400">Team Directory, Access Roles, and Online Presence</p>
         </div>
 
-        <div className="flex items-center space-x-3">
-          <div className="w-56">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
+          <div className="w-full sm:w-56">
             <FormInput
               icon="🔍"
               placeholder="Search users..."
@@ -47,7 +47,7 @@ export default function UserManagement() {
             />
           </div>
 
-          <div className="w-36">
+          <div className="w-full sm:w-36">
             <FormInput
               type="select"
               value={roleFilter}

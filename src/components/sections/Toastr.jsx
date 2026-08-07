@@ -65,7 +65,7 @@ export default function Toastr() {
 
       <div className={`fixed space-y-2 z-50 transition-all duration-300 ${getPositionClasses()}`}>
         {toasts.map(t => (
-          <div key={t.id} className={`p-4 rounded-xl shadow-xl border text-xs font-medium min-w-[280px] text-white flex items-start justify-between gap-3 animate-in slide-in-from-bottom-5 ${
+          <div key={t.id} className={`p-4 rounded-xl shadow-xl border text-xs font-medium w-full max-w-xs min-w-0 text-white flex items-start justify-between gap-3 animate-in slide-in-from-bottom-5 ${
             t.type === 'success' ? 'bg-emerald-600 border-emerald-500' : t.type === 'info' ? 'bg-indigo-600 border-indigo-500' : t.type === 'danger' ? 'bg-rose-600 border-rose-500' : 'bg-amber-500 border-amber-400'
           }`}>
             <div>

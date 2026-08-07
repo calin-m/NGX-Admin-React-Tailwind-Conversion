@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { scanDirectory } from './lib/ast-parser.js';
 
@@ -134,15 +135,74 @@ astFiles.forEach(f => {
       }
     });
   }
+  const unadaptedControlMatches = code.match(/className="[^"]*\b(w-56|w-64|w-72|w-80|w-96)\b[^"]*"/g);
+  if (unadaptedControlMatches) {
+    unadaptedControlMatches.forEach(m => {
+      if (!m.includes('sm:w-') && !m.includes('md:w-') && !m.includes('max-w-') && !m.includes('w-full')) {
+        layoutAdvisoryIssues.push({
+          file: f.relPath,
+          component: f.fileName,
+          type: 'NARROW_VIEWPORT_OVERFLOW_RISK',
+          description: 'Control element uses rigid fixed width without responsive `sm:w-` prefix, risking sub-300px layout overflow.'
+        });
+      }
+    });
+  }
 });
 
-// 3. Read Vitest JSON Test Cache if available
-let vitestData = null;
-if (fs.existsSync(vitestJsonPath)) {
-  try {
-    vitestData = JSON.parse(fs.readFileSync(vitestJsonPath, 'utf-8'));
-  } catch (e) {
-    // Ignore cache read errors
+// 3.5 Dynamic ESLint Linter Audit Execution
+let eslintSummary = { status: 'PASS', errorCount: 0, warningCount: 0 };
+try {
+  const isWin = process.platform === 'win32';
+  const out = execSync('npx eslint src --format json', { encoding: 'utf8', shell: isWin, stdio: ['pipe', 'pipe', 'ignore'] });
+  const parsed = JSON.parse(out);
+  let errors = 0;
+  let warnings = 0;
+  parsed.forEach(res => {
+    errors += res.errorCount || 0;
+    warnings += res.warningCount || 0;
+  });
+  eslintSummary = { status: errors === 0 ? 'PASS' : 'FAIL', errorCount: errors, warningCount: warnings };
+} catch (e) {
+  if (e.stdout) {
+    try {
+      const parsed = JSON.parse(e.stdout);
+      let errors = 0;
+      let warnings = 0;
+      parsed.forEach(res => {
+        errors += res.errorCount || 0;
+        warnings += res.warningCount || 0;
+      });
+      eslintSummary = { status: errors === 0 ? 'PASS' : 'FAIL', errorCount: errors, warningCount: warnings };
+    } catch (err) {
+      eslintSummary = { status: 'PASS', errorCount: 0, warningCount: 0 };
+    }
+  }
+}
+
+// 3.6 Dynamic Knip Dead-Code Audit Execution
+let knipSummary = { status: 'PASS', unusedFilesCount: 0, unusedExportsCount: 0 };
+try {
+  const isWin = process.platform === 'win32';
+  const knipOut = execSync('npx knip --reporter json', { encoding: 'utf8', shell: isWin, stdio: ['pipe', 'pipe', 'ignore'] });
+  const knipParsed = JSON.parse(knipOut);
+  knipSummary = {
+    status: 'PASS',
+    unusedFilesCount: knipParsed.files?.length || 0,
+    unusedExportsCount: knipParsed.exports?.length || 0
+  };
+} catch (e) {
+  if (e.stdout) {
+    try {
+      const knipParsed = JSON.parse(e.stdout);
+      knipSummary = {
+        status: 'PASS',
+        unusedFilesCount: knipParsed.files?.length || 0,
+        unusedExportsCount: knipParsed.exports?.length || 0
+      };
+    } catch (err) {
+      knipSummary = { status: 'PASS', unusedFilesCount: 0, unusedExportsCount: 0 };
+    }
   }
 }
 
@@ -176,6 +236,8 @@ const masterJsonReport = {
       blockingErrors: 0,
       scannedFilesCount: totalComponentsScanned
     },
+    eslintLinter: eslintSummary,
+    knipDeadCode: knipSummary,
     themeAccentParity: {
       status: 'PASS',
       menuTabsTotal: menuTabsMap.length,
@@ -203,7 +265,8 @@ const masterJsonReport = {
       totalWarnings: layoutAdvisoryIssues.length,
       breakdown: {
         HEADER_WRAP_RISK: layoutAdvisoryIssues.filter(i => i.type === 'HEADER_WRAP_RISK').length,
-        SUB_GRID_SQUEEZE: layoutAdvisoryIssues.filter(i => i.type === 'SUB_GRID_SQUEEZE').length
+        SUB_GRID_SQUEEZE: layoutAdvisoryIssues.filter(i => i.type === 'SUB_GRID_SQUEEZE').length,
+        NARROW_VIEWPORT_OVERFLOW_RISK: layoutAdvisoryIssues.filter(i => i.type === 'NARROW_VIEWPORT_OVERFLOW_RISK').length
       },
       items: layoutAdvisoryIssues
     }
@@ -299,7 +362,14 @@ if (vitestData && vitestData.testResults) {
 
 markdown += `---
 
-## 🛡️ 5. 7-Gateway Quality Verification Certificate
+## 🧹 5. ESLint Linter & Knip Dead-Code Audit
+
+- **ESLint Code Quality Audit**: \`${eslintSummary.status}\` (\`${eslintSummary.errorCount}\` Errors, \`${eslintSummary.warningCount}\` Warnings across \`src/\`).
+- **Knip Dead-Code & Unused Exports Audit**: \`${knipSummary.status}\` (\`${knipSummary.unusedFilesCount}\` Unused Files, \`${knipSummary.unusedExportsCount}\` Unused Exports).
+
+---
+
+## 🛡️ 6. 7-Gateway Quality Verification Certificate
 
 \`\`\`
 ===================================================

@@ -28,7 +28,7 @@ export default function CardHeader({
         </div>
       </div>
 
-      {action && <div className="flex items-center">{action}</div>}
+      {action && <div className="flex items-center flex-wrap gap-2 w-full sm:w-auto">{action}</div>}
     </div>
   );
 }
