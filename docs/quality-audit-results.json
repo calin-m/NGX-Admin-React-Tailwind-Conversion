@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-08-07T09:27:32.928Z",
+  "timestamp": "2026-08-07T10:11:00.634Z",
   "healthScore": 100,
   "summary": {
     "totalComponents": 313,
     "blockingErrors": 0,
-    "advisoryWarnings": 21,
-    "healthStatus": "100% CLEAN (0 Errors, 21 Advisory Warnings)"
+    "advisoryWarnings": 20,
+    "healthStatus": "100% CLEAN (0 Errors, 20 Advisory Warnings)"
   },
   "reports": {
     "markdownReportPath": "docs/QUALITY_AUDIT_REPORT.md",
@@ -24,6 +24,16 @@
       "status": "PASS",
       "blockingErrors": 0,
       "scannedFilesCount": 313
+    },
+    "eslintLinter": {
+      "status": "FAIL",
+      "errorCount": 4,
+      "warningCount": 68
+    },
+    "knipDeadCode": {
+      "status": "PASS",
+      "unusedFilesCount": 0,
+      "unusedExportsCount": 0
     },
     "themeAccentParity": {
       "status": "PASS",
@@ -46,10 +56,11 @@
     },
     "layoutDensityAdvisories": {
       "status": "ADVISORY",
-      "totalWarnings": 21,
+      "totalWarnings": 20,
       "breakdown": {
         "HEADER_WRAP_RISK": 20,
-        "SUB_GRID_SQUEEZE": 0
+        "SUB_GRID_SQUEEZE": 0,
+        "NARROW_VIEWPORT_OVERFLOW_RISK": 0
       },
       "items": [
         {
@@ -147,12 +158,6 @@
           "component": "Settings.jsx",
           "type": "HEADER_WRAP_RISK",
           "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
-        },
-        {
-          "file": "src/components/sections/SmartTable.jsx",
-          "component": "SmartTable.jsx",
-          "type": "NARROW_VIEWPORT_OVERFLOW_RISK",
-          "description": "Control element uses rigid fixed width without responsive `sm:w-` prefix, risking sub-300px layout overflow."
         },
         {
           "file": "src/components/sections/status-card/DeviceStatusCard.jsx",

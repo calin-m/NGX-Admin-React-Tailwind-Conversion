@@ -11,6 +11,30 @@ export default [
       sourceType: 'module',
       parserOptions: {
         ecmaFeatures: { jsx: true }
+      },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        alert: 'readonly',
+        fetch: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        navigator: 'readonly',
+        location: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        encodeURI: 'readonly',
+        Event: 'readonly',
+        KeyboardEvent: 'readonly',
+        MouseEvent: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        HTMLInputElement: 'readonly'
       }
     },
     plugins: {
@@ -22,7 +46,7 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'max-lines-per-function': ['warn', { max: 220, skipBlankLines: true, skipComments: true }],
       'max-lines': ['warn', { max: 350, skipBlankLines: true, skipComments: true }],
-      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }]
+      'no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^[A-Z]' }]
     }
   }
 ];

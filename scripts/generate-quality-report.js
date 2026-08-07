@@ -206,6 +206,16 @@ try {
   }
 }
 
+// 3.7 Read Vitest JSON Test Cache if available
+let vitestData = null;
+if (fs.existsSync(vitestJsonPath)) {
+  try {
+    vitestData = JSON.parse(fs.readFileSync(vitestJsonPath, 'utf-8'));
+  } catch (e) {
+    // Ignore cache read errors
+  }
+}
+
 const healthScore = totalHardcodedColors === 0 ? 100 : Math.max(0, 100 - (totalHardcodedColors * 5));
 
 // 4. Construct Master Machine-Readable Audit Results JSON
