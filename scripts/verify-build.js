@@ -109,8 +109,17 @@ async function runVerification() {
   }
   if (!runCommand('node scripts/generate-architecture-matrix.js')) errorCount++;
   if (!runCommand('node scripts/generate-legacy-docs.js')) errorCount++;
-  if (!runCommand('node scripts/audit-layout-density.js')) {
-    advisoryWarningCount += 66;
+  runCommand('node scripts/audit-layout-density.js');
+
+  // Dynamically load advisory warning count from generated JSON source of truth
+  const auditResultsPath = path.join(root, 'docs', 'quality-audit-results.json');
+  if (fs.existsSync(auditResultsPath)) {
+    try {
+      const auditJson = JSON.parse(fs.readFileSync(auditResultsPath, 'utf8'));
+      advisoryWarningCount = auditJson.audits?.layoutDensityAdvisories?.totalWarnings || 0;
+    } catch (e) {
+      advisoryWarningCount = 0;
+    }
   }
 
   // Pass 5: Architecture & ADR Decision Records Validation
@@ -143,7 +152,7 @@ async function runVerification() {
   console.log('\n===================================================');
   if (errorCount === 0) {
     console.log('🎉 ALL AUTOMATED QUALITY GATEWAYS PASSED (0 Errors)!');
-    console.log('⚠️  ADVISORY NOTICE: 66 Non-Blocking Layout Density Warnings Logged (audit-layout-density.js).');
+    console.log(`⚠️  ADVISORY NOTICE: ${advisoryWarningCount} Non-Blocking Layout Density Warnings Logged (audit-layout-density.js).`);
     console.log('===================================================\n');
   } else {
     console.error(`💥 VERIFICATION FAILED with ${errorCount} error(s).`);

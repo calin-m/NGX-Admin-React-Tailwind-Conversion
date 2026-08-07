@@ -27,7 +27,7 @@ export default function Toastr() {
 
   return (
     <div className="w-full rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 space-y-6">
-      <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-700/60 pb-3">
         <div>
           <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Toastr Notifications</h3>
           <p className="text-xs text-slate-500 dark:text-slate-400">Positioning & Status Presets</p>

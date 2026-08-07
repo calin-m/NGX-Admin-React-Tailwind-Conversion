@@ -12,7 +12,7 @@ export default function TinyMce(props) {
 
   return (
     <div className="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-xs border border-slate-200 dark:border-slate-700 space-y-4">
-      <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3 mb-2">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-700 pb-3 mb-2">
         <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
           TinyMCE WYSIWYG Editor
         </h3>

@@ -244,7 +244,7 @@ export default function SmartTable() {
       )}
 
       {/* Pagination Footer */}
-      <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60 text-xs">
+      <div className="flex flex-wrap items-center justify-between gap-2 pt-4 border-t border-slate-100 dark:border-slate-700/60 text-xs">
         <span className="text-slate-500 dark:text-slate-400">
           Showing <span className="font-semibold text-slate-700 dark:text-slate-300">{orders.length}</span> of <span className="font-semibold text-slate-700 dark:text-slate-300">{totalRecords}</span> entries
         </span>

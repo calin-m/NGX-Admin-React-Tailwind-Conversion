@@ -19,7 +19,7 @@ export default function CountryOrdersChart({ countries = ['USA', 'Germany', 'UK'
 
   return (
     <div className="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-xs border border-slate-200 dark:border-slate-700 space-y-4">
-      <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-2">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-700 pb-2">
         <h4 className="text-sm font-bold text-slate-900 dark:text-slate-100">Country Orders Breakdown</h4>
         <span className="text-xs font-semibold text-accent bg-accent-light px-2.5 py-0.5 rounded-full">
           Active: {activeCountry}

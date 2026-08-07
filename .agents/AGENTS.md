@@ -3,6 +3,7 @@
 ## 1. Automated Documentation Synchronization
 - **Living Architecture**: Every code modification, component addition, or architectural refactor MUST automatically update `ARCHITECTURE.md` (including C4 Mermaid diagrams and component matrices) via `npm run docs:sync`, and generate the in-depth quality report into `docs/QUALITY_AUDIT_REPORT.md` via `npm run report`.
 - **Zero-Bloat Rule**: Agents MUST NOT write manual JSDoc headers or documentation comments inside individual presentation components. All component indexing, diagramming, audit reporting, and changelog generation MUST remain 100% script-driven via AST file-tree parsing (`scripts/lib/ast-parser.js`, `scripts/generate-architecture-matrix.js`, `scripts/generate-quality-report.js`).
+- **Automated-Only Report Artifacts**: Agents MUST NEVER manually edit programmatic report artifacts (`docs/QUALITY_AUDIT_REPORT.md`, `docs/quality-audit-results.json`, `ARCHITECTURE.md`, `docs/LEGACY_BLUEPRINT.md`, `test-results.json`). All updates to these files MUST occur strictly via automated driver script execution (`npm run verify` / `npm run report` / `.husky/pre-commit`).
 - **Decision Tracking**: New technical decisions MUST automatically add a numbered Architectural Decision Record (ADR) to `docs/DECISIONS.md` via `npm run adr:new`.
 
 ## 2. Automated Script & Tooling Maintenance

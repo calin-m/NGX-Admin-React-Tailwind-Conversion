@@ -25,7 +25,7 @@ export default function ThemeCustomizer({ isOpen, onClose, accentColor, setAccen
         }`}
       >
         <div className="space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-4">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-700/60 pb-4">
             <div>
               <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">Theme Customizer</h3>
               <p className="text-xs text-slate-500 dark:text-slate-400">Personalize Corporate Palette & Layout</p>
@@ -38,7 +38,7 @@ export default function ThemeCustomizer({ isOpen, onClose, accentColor, setAccen
             <label className="text-xs font-bold text-slate-800 dark:text-slate-200 block uppercase tracking-wider">
               Brand Color Accent
             </label>
-            <div className="grid grid-cols-2 gap-2.5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {accents.map(acc => (
                 <button
                   key={acc.id}

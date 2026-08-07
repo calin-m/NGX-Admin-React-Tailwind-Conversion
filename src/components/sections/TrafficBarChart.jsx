@@ -20,7 +20,7 @@ export default function TrafficBarChart({ onBarSelect }) {
 
   return (
     <div className="p-4 bg-white dark:bg-slate-800 rounded-xl shadow-xs border border-slate-200 dark:border-slate-700 space-y-3">
-      <div className="flex items-center justify-between text-xs font-bold">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-700 pb-3 mb-4">
         <span className="text-slate-900 dark:text-slate-100">Daily Traffic Flow</span>
         <span className="text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded-full">
           Day: {activeDay}

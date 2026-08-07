@@ -101,7 +101,7 @@ export default function TemperatureCard() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 text-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 text-center">
         <div>
           <span className="text-[10px] text-slate-400 block">Humidity</span>
           <span className="text-sm font-bold text-slate-800 dark:text-slate-200">{humidity}</span>

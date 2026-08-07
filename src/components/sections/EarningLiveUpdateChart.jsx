@@ -8,7 +8,7 @@ import React from 'react';
 export default function EarningLiveUpdateChart(props) {
   return (
     <div className="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-xs border border-slate-200 dark:border-slate-700">
-      <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3 mb-4">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-700 pb-3 mb-4">
         <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
           EarningLiveUpdateChart
         </h3>

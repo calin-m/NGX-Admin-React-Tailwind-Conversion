@@ -23,7 +23,7 @@ export default function Stepper() {
 
   return (
     <div className="w-full rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-lg p-6 space-y-6">
-      <div className="border-b border-slate-100 dark:border-slate-700/60 pb-3 flex items-center justify-between">
+      <div className="border-b border-slate-100 dark:border-slate-700/60 pb-3 flex flex-wrap items-center justify-between gap-2">
         <div>
           <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Multi-Step Form Wizard</h3>
           <p className="text-xs text-slate-500 dark:text-slate-400">

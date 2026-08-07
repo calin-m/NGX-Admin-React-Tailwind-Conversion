@@ -102,7 +102,7 @@ const tabsJson = menuTabsMap.map(tab => {
   };
 });
 
-// 2. Audit Layout Density Ergonomics (66 Advisory Warnings)
+// 2. Audit Layout Density Ergonomics
 const astFiles = scanDirectory(componentsDir, [], rootDir).filter(f => f.ext === '.jsx' && !f.fileName.endsWith('.test.jsx') && !f.fileName.endsWith('.stories.jsx'));
 let layoutAdvisoryIssues = [];
 
@@ -111,12 +111,12 @@ astFiles.forEach(f => {
   const nonResponsiveHeaderMatches = code.match(/className="[^"]*flex\s+items-center\s+justify-between[^"]*"/g);
   if (nonResponsiveHeaderMatches) {
     nonResponsiveHeaderMatches.forEach(m => {
-      if (!m.includes('flex-col') && !m.includes('sm:flex-row')) {
+      if (!m.includes('flex-col') && !m.includes('sm:flex-row') && !m.includes('flex-wrap')) {
         layoutAdvisoryIssues.push({
           file: f.relPath,
           component: f.fileName,
           type: 'HEADER_WRAP_RISK',
-          description: 'Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`.'
+          description: 'Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`.'
         });
       }
     });

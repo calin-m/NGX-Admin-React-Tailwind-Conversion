@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-08-07T08:48:55.033Z",
+  "timestamp": "2026-08-07T09:19:01.522Z",
   "healthScore": 100,
   "summary": {
     "totalComponents": 313,
     "blockingErrors": 0,
-    "advisoryWarnings": 66,
-    "healthStatus": "100% CLEAN (0 Errors, 66 Advisory Warnings)"
+    "advisoryWarnings": 20,
+    "healthStatus": "100% CLEAN (0 Errors, 20 Advisory Warnings)"
   },
   "reports": {
     "markdownReportPath": "docs/QUALITY_AUDIT_REPORT.md",
@@ -46,407 +46,131 @@
     },
     "layoutDensityAdvisories": {
       "status": "ADVISORY",
-      "totalWarnings": 66,
+      "totalWarnings": 20,
       "breakdown": {
-        "HEADER_WRAP_RISK": 63,
-        "SUB_GRID_SQUEEZE": 3
+        "HEADER_WRAP_RISK": 20,
+        "SUB_GRID_SQUEEZE": 0
       },
       "items": [
         {
-          "file": "src/components/sections/Accordion.jsx",
-          "component": "Accordion.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
           "file": "src/components/sections/AnimatedSearch.jsx",
           "component": "AnimatedSearch.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/AnimatedSearch.jsx",
-          "component": "AnimatedSearch.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/CalendarApp.jsx",
           "component": "CalendarApp.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/CalendarApp.jsx",
-          "component": "CalendarApp.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/CalendarKit.jsx",
           "component": "CalendarKit.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/CalendarKit.jsx",
-          "component": "CalendarKit.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/ChartPanelSummary.jsx",
-          "component": "ChartPanelSummary.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/CountryOrders.jsx",
           "component": "CountryOrders.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/CountryOrders.jsx",
           "component": "CountryOrders.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/CountryOrdersChart.jsx",
-          "component": "CountryOrdersChart.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/CountryOrdersMap.jsx",
           "component": "CountryOrdersMap.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/CountryOrdersMap.jsx",
-          "component": "CountryOrdersMap.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/Datepicker.jsx",
-          "component": "Datepicker.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/Dialogs.jsx",
-          "component": "Dialogs.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/EarningCardBack.jsx",
-          "component": "EarningCardBack.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/EarningCardFront.jsx",
-          "component": "EarningCardFront.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/EarningLiveUpdateChart.jsx",
-          "component": "EarningLiveUpdateChart.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/ECommerce.jsx",
           "component": "ECommerce.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/FormButtons.jsx",
-          "component": "FormButtons.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/FormLayouts.jsx",
-          "component": "FormLayouts.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/FormLayouts.jsx",
-          "component": "FormLayouts.jsx",
-          "type": "SUB_GRID_SQUEEZE",
-          "description": "Internal 2-column grid (`grid-cols-2`) is hardcoded without responsive breakpoint adjustments."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/Header.jsx",
           "component": "Header.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/Header.jsx",
           "component": "Header.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/Icons.jsx",
-          "component": "Icons.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/InfiniteList.jsx",
           "component": "InfiniteList.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/InfiniteList.jsx",
-          "component": "InfiniteList.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/KittenCard.jsx",
-          "component": "KittenCard.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/LegendChart.jsx",
-          "component": "LegendChart.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/List.jsx",
           "component": "List.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/Login.jsx",
           "component": "Login.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/NotificationDrawer.jsx",
-          "component": "NotificationDrawer.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/Popover.jsx",
-          "component": "Popover.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/profit-card/StatsCardBack.jsx",
-          "component": "StatsCardBack.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/RoomsCard.jsx",
           "component": "RoomsCard.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/RoomsCard.jsx",
-          "component": "RoomsCard.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/SearchInput.jsx",
           "component": "SearchInput.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/Settings.jsx",
           "component": "Settings.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/Settings.jsx",
           "component": "Settings.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/SlideOut.jsx",
-          "component": "SlideOut.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/SmartTable.jsx",
-          "component": "SmartTable.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/StatsAreaChart.jsx",
-          "component": "StatsAreaChart.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/StatsBarAnimationChart.jsx",
-          "component": "StatsBarAnimationChart.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/status-card/DeviceStatusCard.jsx",
           "component": "DeviceStatusCard.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/status-card/DeviceStatusCard.jsx",
-          "component": "DeviceStatusCard.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/Stepper.jsx",
           "component": "Stepper.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/Stepper.jsx",
-          "component": "Stepper.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/Tabs.jsx",
-          "component": "Tabs.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/TemperatureCard.jsx",
-          "component": "TemperatureCard.jsx",
-          "type": "SUB_GRID_SQUEEZE",
-          "description": "Internal 2-column grid (`grid-cols-2`) is hardcoded without responsive breakpoint adjustments."
-        },
-        {
-          "file": "src/components/sections/ThemeCustomizer.jsx",
-          "component": "ThemeCustomizer.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/ThemeCustomizer.jsx",
-          "component": "ThemeCustomizer.jsx",
-          "type": "SUB_GRID_SQUEEZE",
-          "description": "Internal 2-column grid (`grid-cols-2`) is hardcoded without responsive breakpoint adjustments."
-        },
-        {
-          "file": "src/components/sections/TinyMce.jsx",
-          "component": "TinyMce.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/Toastr.jsx",
-          "component": "Toastr.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/Tooltip.jsx",
-          "component": "Tooltip.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/traffic-reveal/TrafficBackCard.jsx",
-          "component": "TrafficBackCard.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/TrafficBar.jsx",
-          "component": "TrafficBar.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/TrafficBarChart.jsx",
-          "component": "TrafficBarChart.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/TrafficCardsHeader.jsx",
-          "component": "TrafficCardsHeader.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/TreeGrid.jsx",
-          "component": "TreeGrid.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/UserActivity.jsx",
           "component": "UserActivity.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         },
         {
           "file": "src/components/sections/UserManagement.jsx",
           "component": "UserManagement.jsx",
           "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/VisitorsAnalyticsChart.jsx",
-          "component": "VisitorsAnalyticsChart.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/VisitorsStatistics.jsx",
-          "component": "VisitorsStatistics.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/WeatherCard.jsx",
-          "component": "WeatherCard.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/sections/Window.jsx",
-          "component": "Window.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
-        },
-        {
-          "file": "src/components/ui/Modal.jsx",
-          "component": "Modal.jsx",
-          "type": "HEADER_WRAP_RISK",
-          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`."
+          "description": "Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`."
         }
       ]
     }

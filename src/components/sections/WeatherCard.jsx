@@ -15,7 +15,7 @@ export default function WeatherCard() {
 
   return (
     <div className="w-full rounded-2xl bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-lg p-6 flex flex-col justify-between space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-2">
         <div>
           <div className="flex items-center space-x-2">
             <select

@@ -11,7 +11,7 @@ export default function DeviceStatusCard({ title, detail, icon, on, onToggle }) 
           : 'bg-slate-50/80 dark:bg-slate-800/40 border-slate-200 dark:border-slate-700/60 opacity-70'
       }`}
     >
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-2">
         <div
           className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl transition-colors ${
             on ? 'bg-accent-light text-accent dark:bg-accent/20 dark:text-accent-light' : 'bg-slate-200 dark:bg-slate-700 text-slate-400'

@@ -6,7 +6,7 @@ export default function StatsCardBack({ onFlip }) {
     <div className="flex flex-col h-full justify-between space-y-4 relative">
       <FlipButton onFlip={onFlip} isFlipped={true} title="Flip to overview" />
 
-      <div className="flex items-center justify-between pr-10">
+      <div className="flex flex-wrap items-center justify-between gap-2 pr-10">
         <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-base">Profit Breakdown</h3>
       </div>
 

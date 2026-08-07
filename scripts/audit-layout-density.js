@@ -16,16 +16,16 @@ let issues = [];
 files.forEach(f => {
   const code = fs.readFileSync(f.fullPath, 'utf8');
 
-  // Check 1: Non-responsive header flex container (flex justify-between without flex-col sm:flex-row)
+  // Check 1: Non-responsive header flex container (flex justify-between without flex-col sm:flex-row or flex-wrap)
   const nonResponsiveHeaderMatches = code.match(/className="[^"]*flex\s+items-center\s+justify-between[^"]*"/g);
   if (nonResponsiveHeaderMatches) {
     nonResponsiveHeaderMatches.forEach(m => {
-      if (!m.includes('flex-col') && !m.includes('sm:flex-row')) {
+      if (!m.includes('flex-col') && !m.includes('sm:flex-row') && !m.includes('flex-wrap')) {
         issues.push({
           file: f.relPath,
           component: f.fileName,
           type: 'HEADER_WRAP_RISK',
-          desc: 'Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row`, causing elements to collide on narrow widths.'
+          desc: 'Header flex container uses non-responsive `flex justify-between` without `flex-col sm:flex-row` or `flex-wrap`, causing elements to collide on narrow widths.'
         });
       }
     });

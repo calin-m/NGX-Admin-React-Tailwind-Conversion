@@ -37,7 +37,7 @@ export default function Modal({
         onClick={e => e.stopPropagation()}
       >
         {title && (
-          <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-700/60 pb-3">
             <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base tracking-tight">
               {title}
             </h3>
