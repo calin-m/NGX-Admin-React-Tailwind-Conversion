@@ -22,19 +22,19 @@ console.log('==================================================\n');
 // 0. Automatic Startup Sweeper (Auto-sync living documentation & legacy blueprint)
 log('\x1b[33m[AUTOMATION]\x1b[0m', '🤖 Running Living Documentation & Legacy Blueprint Auto-Sync...\n');
 try {
-  exec('node scripts/generate-architecture-matrix.js');
-  exec('node scripts/generate-legacy-docs.js');
+  execSync('node scripts/generate-architecture-matrix.js');
+  execSync('node scripts/generate-legacy-docs.js');
 } catch (e) {
   // Silent fallback
 }
 
 // 1. Spawn Vite React App
-const viteProc = spawn('npx', ['vite'], { shell: true, stdio: 'pipe' });
+const viteProc = spawn('npx vite', { shell: true, stdio: 'pipe' });
 viteProc.stdout.on('data', data => log('\x1b[36m[VITE]\x1b[0m', data));
 viteProc.stderr.on('data', data => log('\x1b[36m[VITE]\x1b[0m', data));
 
 // 2. Spawn Storybook Server
-const sbProc = spawn('npx', ['storybook', 'dev', '-p', '6006', '--ci'], { shell: true, stdio: 'pipe' });
+const sbProc = spawn('npx storybook dev -p 6006 --ci', { shell: true, stdio: 'pipe' });
 sbProc.stdout.on('data', data => log('\x1b[35m[STORYBOOK]\x1b[0m', data));
 sbProc.stderr.on('data', data => log('\x1b[35m[STORYBOOK]\x1b[0m', data));
 

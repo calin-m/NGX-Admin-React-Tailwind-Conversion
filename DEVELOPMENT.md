@@ -1,6 +1,6 @@
 # 🛠️ ENTERPRISE REACT STARTER — Developer Environment & Engineering Blueprint
 
-> **Environment**: Node.js 18+ | **Build Tool**: Vite + React 18 | **Design System**: Storybook 8 | **Test Suite**: Vitest + RTL + JSDOM
+> **Environment**: Node.js 24 LTS | **Build Tool**: Vite 6 + React 18 | **Design System**: Storybook 8 | **Test Suite**: Vitest + RTL + JSDOM
 
 Welcome to the **Developer Environment Guide**. This document defines local setup, testing workflows, quality gates, and deployment pipelines.
 
@@ -9,8 +9,8 @@ Welcome to the **Developer Environment Guide**. This document defines local setu
 ## 💻 1. Local Development Setup & Commands
 
 ### Prerequisites
-- **Node.js**: v18.0.0 or higher
-- **npm**: v9.0.0 or higher
+- **Node.js**: v24.0.0 LTS or higher (tested on Node.js v24.18.1)
+- **npm**: v10.0.0 or higher
 
 ### Master Development Commands
 

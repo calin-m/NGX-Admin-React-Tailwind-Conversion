@@ -5,7 +5,7 @@ import React from 'react';
  * Modernized React 18 + Tailwind CSS v4 Component
  * Source Reference: old-src/ngx-admin-master <ngx-earning-card-back>
  */
-export default function EarningCardBack(props) {
+export default function EarningCardBack(_props) {
   return (
     <div className="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-xs border border-slate-200 dark:border-slate-700">
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-700 pb-3 mb-4">

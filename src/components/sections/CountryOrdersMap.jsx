@@ -6,7 +6,7 @@ import useCountryOrdersMap from '../../hooks/useCountryOrdersMap.js';
  * Modernized React 18 + Tailwind CSS v4 Component
  * Source Reference: old-src/ngx-admin-master <ngx-country-orders-map>
  */
-export default function CountryOrdersMap(props) {
+export default function CountryOrdersMap(_props) {
   const { selectedCountry, countryDetails, mapData, selectCountry } = useCountryOrdersMap();
 
   return (

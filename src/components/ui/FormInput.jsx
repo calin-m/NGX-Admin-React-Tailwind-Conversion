@@ -53,7 +53,7 @@ export default function FormInput({
           </div>
         );
 
-      case 'toggle':
+      case 'toggle': {
         const isChecked = Boolean(value);
         return (
           <div className="flex items-center space-x-3">
@@ -78,6 +78,7 @@ export default function FormInput({
             )}
           </div>
         );
+      }
 
       case 'checkbox':
         return (

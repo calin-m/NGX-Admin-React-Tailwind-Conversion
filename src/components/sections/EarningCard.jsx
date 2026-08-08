@@ -4,7 +4,7 @@ import CardHeader from '../ui/CardHeader.jsx';
 import useEarning from '../../hooks/useEarning.js';
 
 export default function EarningCard() {
-  const { data, loading, period, setPeriod } = useEarning('week');
+  const { data, period, setPeriod } = useEarning('week');
   const [selectedSegment, setSelectedSegment] = useState('Bitcoin');
 
   const totalEarnings = data?.totalEarnings || '$64.2k';

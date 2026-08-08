@@ -50,7 +50,7 @@ Using standard `git commit`:
 ## ⚙️ 3. GitHub Actions CI/CD Workflow (`.github/workflows/ci.yml`)
 
 On every `git push` or Pull Request:
-1. Provisions `ubuntu-latest` container with Node.js 18.
+1. Provisions `ubuntu-latest` container with Node.js 24.
 2. Installs dependencies (`npm ci`).
 3. Executes `npm run verify`.
 4. Compiles production bundle (`npm run build`).

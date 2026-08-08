@@ -7,7 +7,7 @@ export default {
 };
 
 export const Interactive = {
-  render: () => {
+  render: function RenderToggleSwitch() {
     const [enabled, setEnabled] = useState(false);
     return (
       <div className="flex items-center space-x-3 p-4 bg-white dark:bg-slate-800 rounded-xl">

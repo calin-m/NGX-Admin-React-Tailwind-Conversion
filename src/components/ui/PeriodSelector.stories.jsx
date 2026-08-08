@@ -10,14 +10,14 @@ export default {
 };
 
 export const Default = {
-  render: () => {
+  render: function RenderDefault() {
     const [selected, setSelected] = useState('week');
     return <PeriodSelector periods={['week', 'month', 'year']} selected={selected} onChange={setSelected} />;
   }
 };
 
 export const YearsOption = {
-  render: () => {
+  render: function RenderYearsOption() {
     const [selected, setSelected] = useState('2026');
     return <PeriodSelector periods={['2025', '2026']} selected={selected} onChange={setSelected} />;
   }

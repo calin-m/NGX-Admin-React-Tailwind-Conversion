@@ -22,7 +22,7 @@ export default function Chat() {
         <div className="space-y-1 overflow-y-auto flex-1">
           {contacts.map(c => {
             const isSelected = activeContact.id === c.id;
-            const isOnline = c.status?.toLowerCase() === 'online';
+            const _isOnline = c.status?.toLowerCase() === 'online';
             return (
               <button
                 key={c.id}

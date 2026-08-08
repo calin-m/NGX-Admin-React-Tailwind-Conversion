@@ -1,6 +1,6 @@
 # ⚡ NGX ADMIN REACT TAILWIND CONVERSION
 
-> **Author & Repository**: Created with ♥ by **Calin M** ([GitHub Repository](https://github.com/calin-m/NGX-Admin-React-Tailwind-Conversion))  
+> **Author & Repository**: Created by **Calin M** ([GitHub Repository](https://github.com/calin-m/NGX-Admin-React-Tailwind-Conversion))  
 > **Original Angular Template**: Modernized conversion based on [akveo/ngx-admin](https://github.com/akveo/ngx-admin)  
 > **Active Target Architecture**: React 18 SPA + Vite 6 + Tailwind CSS v4 + Storybook 8 + Vitest (`src/`)  
 > **Legacy Reference Architecture**: Angular 15 + TypeScript + RxJS + Nebular / Bootstrap 4 (`old-src/`)  
@@ -87,6 +87,7 @@ Every single page and underlying component across all **17 sidebar menu tabs** h
 - **Testing & Tooling**: Karma + Jasmine (`karma` `~6.3.19`), Protractor, Compodoc, TSLint/ESLint
 
 ### 🟢 TO (Modern Target Stack in `src/`)
+- **Runtime Environment**: **Node.js 24 LTS** (`v24.18.1`+) / **npm 10+**
 - **Core Framework**: **React 18** (`react` `^18.3.1`, `react-dom` `^18.3.1`)
 - **Build Tooling & Server**: **Vite 6** (`vite` `^6.0.11`, `@vitejs/plugin-react`)
 - **Styling & Design System**: **Tailwind CSS v4** (`tailwindcss` `^4.0.0`, `@tailwindcss/vite`) + Native CSS Custom Properties (`[data-accent]` 0ms repaints)
@@ -203,4 +204,4 @@ npm run preview
 ---
 
 ## 🛡️ License & Author Attribution
-Created with ♥ by **Calin M** ([Repository URL](https://github.com/calin-m/NGX-Admin-React-Tailwind-Conversion)). All rights reserved.
+Created by **Calin M** ([Repository URL](https://github.com/calin-m/NGX-Admin-React-Tailwind-Conversion)). All rights reserved.

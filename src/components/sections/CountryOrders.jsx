@@ -2,7 +2,7 @@ import React from 'react';
 import useCountryOrder from '../../hooks/useCountryOrder.js';
 
 export default function CountryOrders() {
-  const { data } = useCountryOrder();
+  const { data: _data } = useCountryOrder();
 
   const countries = [
     { name: 'United States', flag: '🇺🇸', orders: '42,500', share: '38%' },

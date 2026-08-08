@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function CountryOrdersChart({ countries = ['USA', 'Germany', 'UK', 'France', 'Japan'], onSelectCountry }) {
+export default function CountryOrdersChart({ countries: _countries = ['USA', 'Germany', 'UK', 'France', 'Japan'], onSelectCountry }) {
   const [activeCountry, setActiveCountry] = useState('USA');
   const [hoverCountry, setHoverCountry] = useState(null);
 
