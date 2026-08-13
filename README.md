@@ -38,11 +38,22 @@ All presentation components bind to CSS custom properties (`[data-accent]`) usin
 The repository features a suite of 17 low-level **UI Primitives** designed under Atomic Design principles with 100% test coverage in Vitest and Storybook CSF 3 stories:
 
 - **`Card.jsx`**: Compound card container with title, subtitle, top-right extra actions, hover elevation, and dark mode padding.
+- **`CardHeader.jsx`**: Universal card header component supporting title, subtitle, status badges, and action slots.
 - **`Modal.jsx`**: Accessible modal dialog with backdrop blur, scale entry animation, `✕` close button, backdrop click dismiss, and `Esc` key listener.
 - **`AlertBanner.jsx`**: Accessible callout banner (`role="alert"`) supporting `success`, `error`, `warning`, and `info` variants.
 - **`Avatar.jsx`**: Automated initials calculation, image fallback, online status dot (`Online`, `Busy`, `Offline`), and sizes (`sm`, `md`, `lg`).
+- **`Button.jsx`**: Reusable interactive button supporting `primary`, `secondary`, `outline`, and `ghost` variants with dynamic theme accents.
+- **`Badge.jsx`**: Status indicator pill with accent color theming, solid, and subtle variants.
+- **`ToggleSwitch.jsx`**: Animated iOS-style toggle switch with full keyboard accessibility and screen-reader labels.
+- **`PeriodSelector.jsx`**: Interactive sliding pill period filter (`week`, `month`, `year`) with zero-CLS measurement and accent animations.
 - **`FormInput.jsx`**: Standalone form field container with label, helper text, validation message, and integrated clear badge.
 - **`ClearableInput.jsx`**: Universal input field with dynamic `✕ ESC` badge (renders when text is entered) and `Esc` key listener.
+- **`CircularProgress.jsx`**: SVG-based radial progress ring with animated stroke offsets and centered metric labels.
+- **`GlassCard.jsx`**: Glassmorphism container with backdrop blur, subtle borders, and dark mode translucency.
+- **`FlipCard.jsx`**: 3D CSS perspective card container supporting smooth front/back flip animations.
+- **`FlipButton.jsx`**: Top-right corner flip action trigger button with hover rotation and icon transitions.
+- **`RevealCard.jsx`**: Two-layer reveal container supporting slide-over interaction between front and back views.
+- **`TrendBadge.jsx`**: Metric delta indicator with directional arrows (▲ / ▼) and positive/negative color coding.
 
 ---
 

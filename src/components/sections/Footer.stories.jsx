@@ -5,7 +5,7 @@ export default {
   title: 'Corporate/Sections/Footer',
   component: Footer,
   parameters: {
-    layout: 'padded',
+    layout: 'fullscreen',
   },
 };
 

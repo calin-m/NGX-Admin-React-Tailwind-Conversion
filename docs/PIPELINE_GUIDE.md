@@ -17,7 +17,7 @@ Executing `npm run verify` triggers a non-destructive 7-pass quality gate audit:
 6. **Pass 6: ESLint Linter & Knip Dead-Code Audit**: Validates code quality rules, accessibility, and zero unused exports.
 7. **Pass 7: Production Vite Bundle Compilation**: Verifies clean production `dist/` compilation.
 
-> **Reporting Transparency Standard**: Verification output explicitly details both 0 blocking errors AND any non-blocking advisory warnings (e.g. 66 layout density wrap warnings). All blocking and non-blocking audits are serialized directly into machine-readable JSON ([`docs/quality-audit-results.json`](docs/quality-audit-results.json)) containing explicit references to all generated markdown and test reports.
+> **Reporting Transparency Standard**: Verification output explicitly details both 0 blocking errors AND any non-blocking advisory warnings (e.g. 20 layout density wrap warnings). All blocking and non-blocking audits are serialized directly into machine-readable JSON ([`docs/quality-audit-results.json`](docs/quality-audit-results.json)) containing explicit references to all generated markdown and test reports.
 
 ---
 

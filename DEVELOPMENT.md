@@ -42,9 +42,10 @@ Executing `npm run verify` triggers a non-destructive 7-pass quality gate audit:
 3. **Pass 2 & 3: Vitest Dual-Theme Execution**: Executes full test suites across Dark and Light modes to generate fresh `test-results.json`.
 4. **Pass 4: Master Quality Report Auto-Sync**: Reads fresh `test-results.json` to auto-sync `docs/QUALITY_AUDIT_REPORT.md`, `docs/quality-audit-results.json`, `ARCHITECTURE.md`, `docs/LEGACY_BLUEPRINT.md` + `CHANGELOG.md`.
 5. **Pass 5: Living Blueprints & ADR Decision Records**: Validates presence of `ARCHITECTURE.md`, `docs/LEGACY_BLUEPRINT.md`, and `docs/DECISIONS.md`.
-6. **Pass 7: Production Vite Bundle Compilation**: Verifies clean production `dist/` compilation.
+6. **Pass 6: ESLint Linter & Knip Dead-Code Audit**: Validates code quality rules, accessibility, and zero unused exports.
+7. **Pass 7: Production Vite Bundle Compilation**: Verifies clean production `dist/` compilation.
 
-> **Reporting Transparency Standard**: Verification output explicitly details both 0 blocking errors AND any non-blocking advisory warnings (e.g. 66 layout density wrap warnings). All blocking and non-blocking audits are serialized directly into machine-readable JSON ([`docs/quality-audit-results.json`](docs/quality-audit-results.json)) containing explicit references to all generated markdown and test reports.
+> **Reporting Transparency Standard**: Verification output explicitly details both 0 blocking errors AND any non-blocking advisory warnings (e.g. 20 layout density wrap warnings). All blocking and non-blocking audits are serialized directly into machine-readable JSON ([`docs/quality-audit-results.json`](docs/quality-audit-results.json)) containing explicit references to all generated markdown and test reports.
 
 
 ---
@@ -52,8 +53,8 @@ Executing `npm run verify` triggers a non-destructive 7-pass quality gate audit:
 ## 📏 3. Code Quality & ESLint AST Line Limits
 
 Code quality is enforced via **ESLint v9 Flat Config** ([eslint.config.js](eslint.config.js)):
-- **`max-lines-per-function`**: Capped at **180 lines** per function/component.
-- **`max-lines`**: Capped at **250 lines** per file.
+- **`max-lines-per-function`**: Capped at **220 lines** per function/component.
+- **`max-lines`**: Capped at **350 lines** per file.
 
 ---
 
@@ -66,7 +67,12 @@ All AI coding assistants operating within this codebase must adhere strictly to 
 - **Rule 4**: Safety & Code Integrity Protocol.
 - **Rule 5**: Sub-Component Decomposition Protocol.
 - **Rule 6**: Automated Verification Engine Protocol.
-- **Rule 7**: **Approval-First Protocol**.
+- **Rule 7**: Approval-First Protocol.
+- **Rule 8**: Repository Hygiene & Secret Prevention Protocol.
+- **Rule 9**: Automated Commit Formatting Protocol (`[PHASE]`, `[WHY]`, `[WHAT]`, `[VERIFICATION]`).
+- **Rule 10**: Domain Separation & Infrastructure Scoping Protocol.
+- **Rule 11**: Dual-Stack Reference & Legacy Migration Protocol (`old-src/` read-only).
+- **Rule 12**: Master Documentation & Quality Report Registry.
 
 ---
 

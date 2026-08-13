@@ -9,8 +9,8 @@ Welcome to the **Sub-Component & Storybook Guide**. This document defines our co
 ## 📏 1. Sub-Component Decomposition Protocol (Rule #5)
 
 All UI presentation components must be decomposed into discrete, single-responsibility sub-components under dedicated subdirectories (`src/components/ui/`, `src/components/sections/`, etc.):
-- **Line Limit Rule**: No component function may exceed **180 lines of code**.
-- **File Limit Rule**: No file may exceed **250 lines of code**.
+- **Line Limit Rule**: No component function may exceed **220 lines of code**.
+- **File Limit Rule**: No file may exceed **350 lines of code**.
 
 ---
 

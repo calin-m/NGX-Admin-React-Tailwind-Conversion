@@ -1,7 +1,7 @@
 # 🛡️ ENTERPRISE QUALITY AUDIT REPORT
 
 > **Shield Badge**: ![Health Score](https://img.shields.io/badge/Codebase_Health-100%25-emerald?style=for-the-badge)  
-> **Timestamp**: `2026-08-13 21:12:29 UTC`  
+> **Timestamp**: `2026-08-13 21:40:48 UTC`  
 > **Target Application**: React 18 SPA + Vite 6 + Tailwind CSS v4 (`src/`)  
 > **Machine-Readable JSON**: [quality-audit-results.json](quality-audit-results.json)  
 > **Audit Status**: 🟢 **100% CLEAN (0 Blocking Errors, 20 Non-Blocking Advisory Warnings)**
@@ -138,438 +138,438 @@ Below is the line-by-line audit report for all presentation components scanned i
 - **Total Assertions**: 176 / 176 Passed
 
 ### 📄 Test Suite: `src/App.test.jsx`
-- `✓ renders without crashing` (PASSED - 273.10839999999916ms)
+- `✓ renders without crashing` (PASSED - 191.0082999999995ms)
 
 ### 📄 Test Suite: `src/context/AuthContext.test.jsx`
-- `✓ renders without crashing` (PASSED - 18.192600000000084ms)
+- `✓ renders without crashing` (PASSED - 13.053800000000138ms)
 
 ### 📄 Test Suite: `src/context/ThemeContext.test.jsx`
-- `✓ renders without crashing` (PASSED - 21.706900000000132ms)
+- `✓ renders without crashing` (PASSED - 20.335600000000113ms)
 
 ### 📄 Test Suite: `src/hooks/useAnalytics.test.jsx`
-- `✓ loads initial analytics metrics dataset` (PASSED - 22.5317ms)
-- `✓ updates metrics when switching period` (PASSED - 4.398199999999861ms)
+- `✓ loads initial analytics metrics dataset` (PASSED - 23.76299999999992ms)
+- `✓ updates metrics when switching period` (PASSED - 4.726200000000063ms)
 
 ### 📄 Test Suite: `src/hooks/useChat.test.jsx`
-- `✓ initializes with default contacts and active contact messages` (PASSED - 19.766599999999926ms)
-- `✓ switches active contact cleanly` (PASSED - 5.156700000000001ms)
-- `✓ sends user message and receives simulated reply` (PASSED - 28.594600000000355ms)
-- `✓ ignores empty whitespace messages` (PASSED - 9.884300000000167ms)
+- `✓ initializes with default contacts and active contact messages` (PASSED - 21.470399999999927ms)
+- `✓ switches active contact cleanly` (PASSED - 5.457400000000007ms)
+- `✓ sends user message and receives simulated reply` (PASSED - 29.287900000000036ms)
+- `✓ ignores empty whitespace messages` (PASSED - 2.7327000000000226ms)
 
 ### 📄 Test Suite: `src/hooks/useCountryOrder.test.jsx`
-- `✓ initializes with default period and loads country metrics` (PASSED - 22.88869999999997ms)
-- `✓ updates metrics when switching period` (PASSED - 4.259999999999991ms)
+- `✓ initializes with default period and loads country metrics` (PASSED - 24.146799999999985ms)
+- `✓ updates metrics when switching period` (PASSED - 5.514899999999898ms)
 
 ### 📄 Test Suite: `src/hooks/useEarning.test.jsx`
-- `✓ loads earning dataset for default week period` (PASSED - 24.417599999999993ms)
-- `✓ loads monthly and yearly earning datasets on period switch` (PASSED - 6.643800000000056ms)
+- `✓ loads earning dataset for default week period` (PASSED - 23.084100000000035ms)
+- `✓ loads monthly and yearly earning datasets on period switch` (PASSED - 4.641099999999824ms)
 
 ### 📄 Test Suite: `src/hooks/useElectricity.test.jsx`
-- `✓ loads electricity consumption data for default year` (PASSED - 19.195599999999786ms)
-- `✓ switches consumption dataset when changing year` (PASSED - 3.961799999999812ms)
+- `✓ loads electricity consumption data for default year` (PASSED - 21.04930000000013ms)
+- `✓ switches consumption dataset when changing year` (PASSED - 4.811499999999796ms)
 
 ### 📄 Test Suite: `src/hooks/useNews.test.jsx`
-- `✓ loads default articles and supports category filtering` (PASSED - 23.282500000000027ms)
-- `✓ handles loadMore pagination action` (PASSED - 5.2456999999999425ms)
+- `✓ loads default articles and supports category filtering` (PASSED - 24.3590999999999ms)
+- `✓ handles loadMore pagination action` (PASSED - 4.8250000000000455ms)
 
 ### 📄 Test Suite: `src/hooks/usePeriods.test.jsx`
-- `✓ initializes with default period and loads period metric dataset` (PASSED - 22.480999999999995ms)
-- `✓ updates data when period changes` (PASSED - 3.886799999999994ms)
+- `✓ initializes with default period and loads period metric dataset` (PASSED - 26.239399999999932ms)
+- `✓ updates data when period changes` (PASSED - 4.561099999999897ms)
 
 ### 📄 Test Suite: `src/hooks/usePlayer.test.jsx`
-- `✓ loads player metric dataset` (PASSED - 22.38819999999987ms)
-- `✓ updates player data when period changes` (PASSED - 4.198900000000094ms)
+- `✓ loads player metric dataset` (PASSED - 27.479100000000017ms)
+- `✓ updates player data when period changes` (PASSED - 4.526100000000042ms)
 
 ### 📄 Test Suite: `src/hooks/useProfitBarAnimationChart.test.jsx`
-- `✓ loads initial animation chart metrics` (PASSED - 24.20270000000005ms)
-- `✓ updates animation chart on period switch` (PASSED - 3.8541000000000167ms)
+- `✓ loads initial animation chart metrics` (PASSED - 28.303600000000188ms)
+- `✓ updates animation chart on period switch` (PASSED - 4.653200000000197ms)
 
 ### 📄 Test Suite: `src/hooks/useProfitChart.test.jsx`
-- `✓ loads initial profit chart metrics` (PASSED - 24.620899999999892ms)
-- `✓ updates profit chart data on period change` (PASSED - 4.263500000000022ms)
+- `✓ loads initial profit chart metrics` (PASSED - 24.86739999999986ms)
+- `✓ updates profit chart data on period change` (PASSED - 4.7043999999998505ms)
 
 ### 📄 Test Suite: `src/hooks/useSecurityCameras.test.jsx`
-- `✓ loads security camera feeds and initializes with camera #1 selected` (PASSED - 23.27949999999987ms)
-- `✓ switches active selected camera` (PASSED - 3.4231999999999516ms)
+- `✓ loads security camera feeds and initializes with camera #1 selected` (PASSED - 24.55860000000007ms)
+- `✓ switches active selected camera` (PASSED - 4.916699999999992ms)
 
 ### 📄 Test Suite: `src/hooks/useSmartTableData.test.jsx`
-- `✓ loads initial orders and pagination parameters` (PASSED - 18.933199999999943ms)
-- `✓ filters orders by search term across fields` (PASSED - 5.0625ms)
-- `✓ handles column sorting in ascending and descending orders` (PASSED - 2.9070999999999003ms)
-- `✓ handles pagination page navigation` (PASSED - 2.757799999999861ms)
+- `✓ loads initial orders and pagination parameters` (PASSED - 19.727499999999964ms)
+- `✓ filters orders by search term across fields` (PASSED - 4.927099999999882ms)
+- `✓ handles column sorting in ascending and descending orders` (PASSED - 3.1175000000000637ms)
+- `✓ handles pagination page navigation` (PASSED - 3.7587999999998374ms)
 
 ### 📄 Test Suite: `src/hooks/useSolar.test.jsx`
-- `✓ loads solar mode metrics by default` (PASSED - 21.74759999999992ms)
-- `✓ switches to battery storage mode dynamically` (PASSED - 4.818200000000161ms)
+- `✓ loads solar mode metrics by default` (PASSED - 25.881000000000085ms)
+- `✓ switches to battery storage mode dynamically` (PASSED - 4.40339999999992ms)
 
 ### 📄 Test Suite: `src/hooks/useStatsBar.test.jsx`
-- `✓ loads initial stats bar metrics` (PASSED - 24.557900000000018ms)
-- `✓ updates stats bar data on period change` (PASSED - 4.211599999999862ms)
+- `✓ loads initial stats bar metrics` (PASSED - 23.666799999999967ms)
+- `✓ updates stats bar data on period change` (PASSED - 4.485300000000052ms)
 
 ### 📄 Test Suite: `src/hooks/useStatsProgressBar.test.jsx`
-- `✓ loads initial stats progress metrics` (PASSED - 25.69530000000009ms)
-- `✓ updates stats progress data on period switch` (PASSED - 5.07120000000009ms)
+- `✓ loads initial stats progress metrics` (PASSED - 26.44360000000006ms)
+- `✓ updates stats progress data on period switch` (PASSED - 4.892399999999952ms)
 
 ### 📄 Test Suite: `src/hooks/useTemperatureHumidity.test.jsx`
-- `✓ loads IoT temperature and humidity telemetry data` (PASSED - 22.92579999999998ms)
+- `✓ loads IoT temperature and humidity telemetry data` (PASSED - 25.005499999999984ms)
 
 ### 📄 Test Suite: `src/hooks/useTrafficBar.test.jsx`
-- `✓ loads daily traffic bar comparison metrics` (PASSED - 24.635099999999966ms)
+- `✓ loads daily traffic bar comparison metrics` (PASSED - 23.682700000000068ms)
 
 ### 📄 Test Suite: `src/hooks/useTrafficChart.test.jsx`
-- `✓ loads weekly traffic sessions by default` (PASSED - 18.38020000000006ms)
-- `✓ updates traffic sessions when switching period` (PASSED - 4.404999999999973ms)
+- `✓ loads weekly traffic sessions by default` (PASSED - 21.90879999999993ms)
+- `✓ updates traffic sessions when switching period` (PASSED - 5.73479999999995ms)
 
 ### 📄 Test Suite: `src/hooks/useTrafficList.test.jsx`
-- `✓ initializes with default period and fetches traffic data` (PASSED - 23.87259999999992ms)
-- `✓ handles period updates` (PASSED - 4.588500000000067ms)
+- `✓ initializes with default period and fetches traffic data` (PASSED - 24.51819999999998ms)
+- `✓ handles period updates` (PASSED - 4.685800000000199ms)
 
 ### 📄 Test Suite: `src/hooks/useUserActivity.test.jsx`
-- `✓ loads weekly user activity by default` (PASSED - 18.740800000000036ms)
-- `✓ updates activity dataset on period change` (PASSED - 4.548399999999901ms)
+- `✓ loads weekly user activity by default` (PASSED - 18.01389999999992ms)
+- `✓ updates activity dataset on period change` (PASSED - 4.973700000000008ms)
 
 ### 📄 Test Suite: `src/hooks/useUsers.test.jsx`
-- `✓ loads initial users metric dataset` (PASSED - 23.543699999999944ms)
-- `✓ updates users metric data on period change` (PASSED - 4.3559999999999945ms)
+- `✓ loads initial users metric dataset` (PASSED - 24.093399999999974ms)
+- `✓ updates users metric data on period change` (PASSED - 4.430799999999863ms)
 
 ### 📄 Test Suite: `src/hooks/useVisitorsAnalytics.test.jsx`
-- `✓ loads weekly visitor analytics by default` (PASSED - 20.918099999999868ms)
-- `✓ switches to monthly and yearly visitor analytics datasets` (PASSED - 4.494500000000016ms)
+- `✓ loads weekly visitor analytics by default` (PASSED - 18.995800000000145ms)
+- `✓ switches to monthly and yearly visitor analytics datasets` (PASSED - 5.8689999999999145ms)
 
 ### 📄 Test Suite: `src/components/ui/AlertBanner.test.jsx`
-- `✓ renders success variant with correct message` (PASSED - 88.63659999999982ms)
-- `✓ triggers onDismiss handler when dismiss button is clicked` (PASSED - 16.428899999999885ms)
+- `✓ renders success variant with correct message` (PASSED - 91.58899999999994ms)
+- `✓ triggers onDismiss handler when dismiss button is clicked` (PASSED - 20.697799999999916ms)
 
 ### 📄 Test Suite: `src/components/ui/Avatar.test.jsx`
-- `✓ computes initials correctly from full name` (PASSED - 31.84569999999985ms)
-- `✓ renders image when src prop is provided` (PASSED - 58.41830000000027ms)
+- `✓ computes initials correctly from full name` (PASSED - 36.5145ms)
+- `✓ renders image when src prop is provided` (PASSED - 73.39250000000015ms)
 
 ### 📄 Test Suite: `src/components/ui/Badge.test.jsx`
-- `✓ renders without crashing` (PASSED - 28.642299999999977ms)
+- `✓ renders without crashing` (PASSED - 33.75800000000004ms)
 
 ### 📄 Test Suite: `src/components/ui/Button.test.jsx`
-- `✓ renders correctly with children` (PASSED - 98.38349999999991ms)
-- `✓ triggers onClick handler when clicked` (PASSED - 18.458799999999883ms)
+- `✓ renders correctly with children` (PASSED - 106.94900000000007ms)
+- `✓ triggers onClick handler when clicked` (PASSED - 15.781000000000404ms)
 
 ### 📄 Test Suite: `src/components/ui/Card.test.jsx`
-- `✓ renders title, subtitle, extra action, and children content correctly` (PASSED - 140.49680000000035ms)
+- `✓ renders title, subtitle, extra action, and children content correctly` (PASSED - 102.24850000000015ms)
 
 ### 📄 Test Suite: `src/components/ui/CardHeader.test.jsx`
-- `✓ renders title, subtitle, and icon correctly` (PASSED - 36.33550000000014ms)
-- `✓ renders action slot element when provided` (PASSED - 5.213399999999865ms)
+- `✓ renders title, subtitle, and icon correctly` (PASSED - 37.660499999999956ms)
+- `✓ renders action slot element when provided` (PASSED - 5.246800000000121ms)
 
 ### 📄 Test Suite: `src/components/ui/CircularProgress.test.jsx`
-- `✓ renders percentage text correctly by default` (PASSED - 38.41610000000014ms)
-- `✓ renders custom label when provided` (PASSED - 5.413199999999961ms)
+- `✓ renders percentage text correctly by default` (PASSED - 36.91479999999979ms)
+- `✓ renders custom label when provided` (PASSED - 5.3633000000002085ms)
 
 ### 📄 Test Suite: `src/components/ui/ClearableInput.test.jsx`
-- `✓ renders correctly with initial value and shows ✕ ESC badge` (PASSED - 42.5641999999998ms)
-- `✓ clears value on ✕ ESC badge click` (PASSED - 11.676899999999932ms)
-- `✓ clears value on Escape keypress` (PASSED - 8.500700000000052ms)
+- `✓ renders correctly with initial value and shows ✕ ESC badge` (PASSED - 40.72869999999989ms)
+- `✓ clears value on ✕ ESC badge click` (PASSED - 14.401999999999589ms)
+- `✓ clears value on Escape keypress` (PASSED - 6.956400000000031ms)
 
 ### 📄 Test Suite: `src/components/ui/FlipButton.test.jsx`
-- `✓ renders correctly with default title and teaser animation class` (PASSED - 33.789800000000014ms)
-- `✓ triggers onFlip callback when clicked` (PASSED - 9.985000000000127ms)
+- `✓ renders correctly with default title and teaser animation class` (PASSED - 37.879199999999855ms)
+- `✓ triggers onFlip callback when clicked` (PASSED - 10.755299999999806ms)
 
 ### 📄 Test Suite: `src/components/ui/FlipCard.test.jsx`
-- `✓ renders front and back children content correctly` (PASSED - 34.0476000000001ms)
+- `✓ renders front and back children content correctly` (PASSED - 38.85799999999995ms)
 
 ### 📄 Test Suite: `src/components/ui/FormInput.test.jsx`
-- `✓ renders label and clearable text input correctly` (PASSED - 44.178499999999985ms)
-- `✓ renders dropdown select variant with options` (PASSED - 77.32990000000018ms)
-- `✓ renders toggle switch variant and handles click` (PASSED - 23.409799999999905ms)
-- `✓ renders error message when error prop is supplied` (PASSED - 6.285799999999654ms)
+- `✓ renders label and clearable text input correctly` (PASSED - 43.80150000000026ms)
+- `✓ renders dropdown select variant with options` (PASSED - 78.88830000000007ms)
+- `✓ renders toggle switch variant and handles click` (PASSED - 28.36359999999968ms)
+- `✓ renders error message when error prop is supplied` (PASSED - 7.498299999999745ms)
 
 ### 📄 Test Suite: `src/components/ui/GlassCard.test.jsx`
-- `✓ renders without crashing` (PASSED - 21.32510000000002ms)
+- `✓ renders without crashing` (PASSED - 21.713999999999942ms)
 
 ### 📄 Test Suite: `src/components/ui/Modal.test.jsx`
-- `✓ renders modal content when isOpen is true` (PASSED - 35.48869999999988ms)
-- `✓ triggers onClose when Esc key is pressed` (PASSED - 6.980099999999766ms)
-- `✓ does not render when isOpen is false` (PASSED - 1.9954999999999927ms)
+- `✓ renders modal content when isOpen is true` (PASSED - 37.40020000000004ms)
+- `✓ triggers onClose when Esc key is pressed` (PASSED - 7.995400000000018ms)
+- `✓ does not render when isOpen is false` (PASSED - 2.412700000000086ms)
 
 ### 📄 Test Suite: `src/components/ui/PeriodSelector.test.jsx`
-- `✓ renders period options correctly` (PASSED - 52.216199999999844ms)
-- `✓ triggers onChange callback when a period button is clicked` (PASSED - 14.540799999999763ms)
+- `✓ renders period options correctly` (PASSED - 54.2043000000001ms)
+- `✓ triggers onChange callback when a period button is clicked` (PASSED - 15.838500000000067ms)
 
 ### 📄 Test Suite: `src/components/ui/RevealCard.test.jsx`
-- `✓ renders front and back children content correctly` (PASSED - 35.79160000000002ms)
+- `✓ renders front and back children content correctly` (PASSED - 33.04079999999999ms)
 
 ### 📄 Test Suite: `src/components/ui/ToggleSwitch.test.jsx`
-- `✓ renders with correct ARIA attributes` (PASSED - 88.15589999999997ms)
-- `✓ triggers onChange callback when toggled` (PASSED - 17.58779999999979ms)
+- `✓ renders with correct ARIA attributes` (PASSED - 87.99739999999997ms)
+- `✓ triggers onChange callback when toggled` (PASSED - 20.955599999999777ms)
 
 ### 📄 Test Suite: `src/components/ui/TrendBadge.test.jsx`
-- `✓ renders positive growth badge correctly` (PASSED - 31.189300000000003ms)
-- `✓ renders negative trend badge correctly` (PASSED - 3.626800000000003ms)
+- `✓ renders positive growth badge correctly` (PASSED - 33.033500000000004ms)
+- `✓ renders negative trend badge correctly` (PASSED - 3.5633000000000266ms)
 
 ### 📄 Test Suite: `src/components/sections/Accordion.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 42.4543000000001ms)
+- `✓ renders correctly without crashing` (PASSED - 44.52060000000006ms)
 
 ### 📄 Test Suite: `src/components/sections/Alert.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 38.39709999999991ms)
+- `✓ renders correctly without crashing` (PASSED - 39.9206999999999ms)
 
 ### 📄 Test Suite: `src/components/sections/AnimatedSearch.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 42.84850000000006ms)
+- `✓ renders correctly without crashing` (PASSED - 47.575000000000045ms)
 
 ### 📄 Test Suite: `src/components/sections/BubbleMaps.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 40.35799999999972ms)
+- `✓ renders correctly without crashing` (PASSED - 40.87699999999995ms)
 
 ### 📄 Test Suite: `src/components/sections/CalendarApp.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 50.627899999999954ms)
+- `✓ renders correctly without crashing` (PASSED - 57.4079999999999ms)
 
 ### 📄 Test Suite: `src/components/sections/CalendarKit.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 49.84739999999965ms)
+- `✓ renders correctly without crashing` (PASSED - 50.04410000000007ms)
 
 ### 📄 Test Suite: `src/components/sections/ChartPanelHeader.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 54.289900000000216ms)
+- `✓ renders correctly without crashing` (PASSED - 56.29430000000002ms)
 
 ### 📄 Test Suite: `src/components/sections/ChartPanelSummary.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 32.425500000000056ms)
+- `✓ renders correctly without crashing` (PASSED - 32.39989999999989ms)
 
 ### 📄 Test Suite: `src/components/sections/ChartsPanel.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 94.22159999999985ms)
+- `✓ renders correctly without crashing` (PASSED - 128.87480000000005ms)
 
 ### 📄 Test Suite: `src/components/sections/Chat.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 48.93889999999965ms)
-- `✓ dispatches new user message into chat list on send click` (PASSED - 175.02700000000004ms)
+- `✓ renders correctly without crashing` (PASSED - 51.77729999999974ms)
+- `✓ dispatches new user message into chat list on send click` (PASSED - 163.35449999999992ms)
 
 ### 📄 Test Suite: `src/components/sections/CkEditor.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 38.18730000000005ms)
+- `✓ renders correctly without crashing` (PASSED - 39.55600000000004ms)
 
 ### 📄 Test Suite: `src/components/sections/CountryOrders.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 46.7342000000001ms)
+- `✓ renders correctly without crashing` (PASSED - 47.74129999999991ms)
 
 ### 📄 Test Suite: `src/components/sections/CountryOrdersChart.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 42.543499999999995ms)
+- `✓ renders correctly without crashing` (PASSED - 44.50980000000027ms)
 
 ### 📄 Test Suite: `src/components/sections/CountryOrdersMap.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 65.4389000000001ms)
+- `✓ renders correctly without crashing` (PASSED - 69.51260000000002ms)
 
 ### 📄 Test Suite: `src/components/sections/Datepicker.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 41.712099999999964ms)
+- `✓ renders correctly without crashing` (PASSED - 42.85019999999986ms)
 
 ### 📄 Test Suite: `src/components/sections/Dialogs.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 37.6259ms)
+- `✓ renders correctly without crashing` (PASSED - 40.19340000000011ms)
 
 ### 📄 Test Suite: `src/components/sections/EarningCard.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 69.96879999999987ms)
+- `✓ renders correctly without crashing` (PASSED - 87.66100000000006ms)
 
 ### 📄 Test Suite: `src/components/sections/EarningCardBack.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 32.91090000000008ms)
+- `✓ renders correctly without crashing` (PASSED - 36.511200000000144ms)
 
 ### 📄 Test Suite: `src/components/sections/EarningCardFront.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 32.84830000000011ms)
+- `✓ renders correctly without crashing` (PASSED - 39.59860000000003ms)
 
 ### 📄 Test Suite: `src/components/sections/EarningLiveUpdateChart.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 36.48880000000008ms)
+- `✓ renders correctly without crashing` (PASSED - 36.99319999999989ms)
 
 ### 📄 Test Suite: `src/components/sections/EarningPieChart.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 36.603399999999965ms)
+- `✓ renders correctly without crashing` (PASSED - 38.99800000000005ms)
 
 ### 📄 Test Suite: `src/components/sections/Echarts.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 69.39739999999983ms)
+- `✓ renders correctly without crashing` (PASSED - 73.62890000000016ms)
 
 ### 📄 Test Suite: `src/components/sections/ECommerce.test.jsx`
-- `✓ renders complete corporate dashboard assembly without crashing` (PASSED - 330.7814000000003ms)
+- `✓ renders complete corporate dashboard assembly without crashing` (PASSED - 215.8100999999997ms)
 
 ### 📄 Test Suite: `src/components/sections/ElectricityCard.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 66.32479999999987ms)
+- `✓ renders correctly without crashing` (PASSED - 68.11299999999983ms)
 
 ### 📄 Test Suite: `src/components/sections/Footer.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 35.27729999999997ms)
+- `✓ renders correctly without crashing` (PASSED - 38.39190000000008ms)
 
 ### 📄 Test Suite: `src/components/sections/FormButtons.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 38.908500000000004ms)
+- `✓ renders correctly without crashing` (PASSED - 38.12810000000013ms)
 
 ### 📄 Test Suite: `src/components/sections/FormInputs.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 65.5295000000001ms)
+- `✓ renders correctly without crashing` (PASSED - 58.61239999999998ms)
 
 ### 📄 Test Suite: `src/components/sections/FormLayouts.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 46.340000000000146ms)
+- `✓ renders correctly without crashing` (PASSED - 50.444099999999935ms)
 
 ### 📄 Test Suite: `src/components/sections/GoogleMaps.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 42.05639999999994ms)
+- `✓ renders correctly without crashing` (PASSED - 44.41579999999999ms)
 
 ### 📄 Test Suite: `src/components/sections/Grid.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 34.634900000000016ms)
+- `✓ renders correctly without crashing` (PASSED - 38.836700000000064ms)
 
 ### 📄 Test Suite: `src/components/sections/Header.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 43.128400000000056ms)
+- `✓ renders correctly without crashing` (PASSED - 52.67610000000013ms)
 
 ### 📄 Test Suite: `src/components/sections/Icons.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 43.76039999999989ms)
+- `✓ renders correctly without crashing` (PASSED - 43.556100000000015ms)
 
 ### 📄 Test Suite: `src/components/sections/InfiniteList.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 48.545700000000124ms)
+- `✓ renders correctly without crashing` (PASSED - 48.98720000000003ms)
 
 ### 📄 Test Suite: `src/components/sections/KittenCard.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 33.575199999999995ms)
+- `✓ renders correctly without crashing` (PASSED - 38.38229999999999ms)
 
 ### 📄 Test Suite: `src/components/sections/LeafletMaps.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 45.55549999999994ms)
+- `✓ renders correctly without crashing` (PASSED - 41.41110000000003ms)
 
 ### 📄 Test Suite: `src/components/sections/LegendChart.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 31.980000000000018ms)
+- `✓ renders correctly without crashing` (PASSED - 35.53480000000013ms)
 
 ### 📄 Test Suite: `src/components/sections/List.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 36.43059999999991ms)
+- `✓ renders correctly without crashing` (PASSED - 40.19550000000004ms)
 
 ### 📄 Test Suite: `src/components/sections/Login.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 54.32960000000003ms)
+- `✓ renders correctly without crashing` (PASSED - 50.470600000000104ms)
 
 ### 📄 Test Suite: `src/components/sections/Maps.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 45.98329999999987ms)
+- `✓ renders correctly without crashing` (PASSED - 45.48540000000003ms)
 
 ### 📄 Test Suite: `src/components/sections/NotFound.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 32.53720000000021ms)
+- `✓ renders correctly without crashing` (PASSED - 32.69119999999998ms)
 
 ### 📄 Test Suite: `src/components/sections/NotificationDrawer.test.jsx`
-- `✓ renders unread notifications and badge when open` (PASSED - 52.34130000000005ms)
-- `✓ marks all notifications as read when clicking Mark all read` (PASSED - 126.51459999999997ms)
+- `✓ renders unread notifications and badge when open` (PASSED - 53.172799999999825ms)
+- `✓ marks all notifications as read when clicking Mark all read` (PASSED - 114.69640000000027ms)
 
 ### 📄 Test Suite: `src/components/sections/OrderModal.test.jsx`
-- `✓ renders correctly when open` (PASSED - 52.40599999999995ms)
+- `✓ renders correctly when open` (PASSED - 72.28749999999991ms)
 
 ### 📄 Test Suite: `src/components/sections/OrdersChart.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 103.30500000000006ms)
+- `✓ renders correctly without crashing` (PASSED - 94.16720000000032ms)
 
 ### 📄 Test Suite: `src/components/sections/Popover.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 38.42190000000005ms)
+- `✓ renders correctly without crashing` (PASSED - 39.719400000000405ms)
 
 ### 📄 Test Suite: `src/components/sections/ProfitCard.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 84.13880000000017ms)
+- `✓ renders correctly without crashing` (PASSED - 83.58920000000035ms)
 
 ### 📄 Test Suite: `src/components/sections/ProfitChart.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 61.21020000000021ms)
+- `✓ renders correctly without crashing` (PASSED - 75.30999999999995ms)
 
 ### 📄 Test Suite: `src/components/sections/ProgressBar.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 33.61829999999986ms)
+- `✓ renders correctly without crashing` (PASSED - 35.339800000000196ms)
 
 ### 📄 Test Suite: `src/components/sections/ProgressSection.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 44.53620000000001ms)
+- `✓ renders correctly without crashing` (PASSED - 48.630300000000034ms)
 
 ### 📄 Test Suite: `src/components/sections/Register.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 44.27780000000007ms)
+- `✓ renders correctly without crashing` (PASSED - 41.17730000000006ms)
 
 ### 📄 Test Suite: `src/components/sections/ResetPassword.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 41.155700000000024ms)
+- `✓ renders correctly without crashing` (PASSED - 44.31320000000005ms)
 
 ### 📄 Test Suite: `src/components/sections/RoomsCard.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 50.0940999999998ms)
+- `✓ renders correctly without crashing` (PASSED - 42.71910000000025ms)
 
 ### 📄 Test Suite: `src/components/sections/SearchInput.test.jsx`
-- `✓ renders correctly when open` (PASSED - 35.73540000000003ms)
+- `✓ renders correctly when open` (PASSED - 34.949100000000044ms)
 
 ### 📄 Test Suite: `src/components/sections/SecurityCameras.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 44.074800000000096ms)
+- `✓ renders correctly without crashing` (PASSED - 45.952999999999975ms)
 
 ### 📄 Test Suite: `src/components/sections/Settings.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 49.76310000000012ms)
+- `✓ renders correctly without crashing` (PASSED - 45.72230000000013ms)
 
 ### 📄 Test Suite: `src/components/sections/Sidebar.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 58.41949999999997ms)
+- `✓ renders correctly without crashing` (PASSED - 54.77599999999984ms)
 
 ### 📄 Test Suite: `src/components/sections/SlideOut.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 33.2501000000002ms)
+- `✓ renders correctly without crashing` (PASSED - 36.98779999999988ms)
 
 ### 📄 Test Suite: `src/components/sections/SmartTable.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 100.83719999999994ms)
-- `✓ filters table rows dynamically on search input change` (PASSED - 40.41689999999994ms)
+- `✓ renders correctly without crashing` (PASSED - 63.88760000000002ms)
+- `✓ filters table rows dynamically on search input change` (PASSED - 48.502700000000004ms)
 
 ### 📄 Test Suite: `src/components/sections/SolarCard.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 44.13959999999997ms)
+- `✓ renders correctly without crashing` (PASSED - 50.133200000000215ms)
 
 ### 📄 Test Suite: `src/components/sections/Spinner.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 33.632499999999936ms)
+- `✓ renders correctly without crashing` (PASSED - 34.79919999999993ms)
 
 ### 📄 Test Suite: `src/components/sections/StatsAreaChart.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 34.12089999999989ms)
+- `✓ renders correctly without crashing` (PASSED - 35.910599999999704ms)
 
 ### 📄 Test Suite: `src/components/sections/StatsBarAnimationChart.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 32.22379999999998ms)
+- `✓ renders correctly without crashing` (PASSED - 36.14760000000001ms)
 
 ### 📄 Test Suite: `src/components/sections/StatusCard.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 47.60480000000007ms)
+- `✓ renders correctly without crashing` (PASSED - 47.299999999999955ms)
 
 ### 📄 Test Suite: `src/components/sections/Stepper.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 50.14469999999983ms)
-- `✓ navigates to next step on Next button click` (PASSED - 101.38000000000011ms)
+- `✓ renders correctly without crashing` (PASSED - 52.30690000000004ms)
+- `✓ navigates to next step on Next button click` (PASSED - 114.48729999999978ms)
 
 ### 📄 Test Suite: `src/components/sections/Tabs.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 129.0471ms)
+- `✓ renders correctly without crashing` (PASSED - 136.77469999999994ms)
 
 ### 📄 Test Suite: `src/components/sections/TemperatureCard.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 44.577999999999975ms)
-- `✓ increments target temperature when plus button is clicked` (PASSED - 108.21300000000019ms)
+- `✓ renders correctly without crashing` (PASSED - 45.012500000000045ms)
+- `✓ increments target temperature when plus button is clicked` (PASSED - 103.05089999999973ms)
 
 ### 📄 Test Suite: `src/components/sections/ThemeCustomizer.test.jsx`
-- `✓ renders correctly when open` (PASSED - 42.19470000000001ms)
+- `✓ renders correctly when open` (PASSED - 42.549600000000055ms)
 
 ### 📄 Test Suite: `src/components/sections/TinyMce.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 38.91010000000006ms)
+- `✓ renders correctly without crashing` (PASSED - 42.228200000000015ms)
 
 ### 📄 Test Suite: `src/components/sections/Toastr.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 43.25669999999991ms)
+- `✓ renders correctly without crashing` (PASSED - 43.502899999999954ms)
 
 ### 📄 Test Suite: `src/components/sections/Tooltip.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 38.75479999999993ms)
+- `✓ renders correctly without crashing` (PASSED - 38.511400000000094ms)
 
 ### 📄 Test Suite: `src/components/sections/TrafficBar.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 32.871000000000095ms)
+- `✓ renders correctly without crashing` (PASSED - 34.472099999999955ms)
 
 ### 📄 Test Suite: `src/components/sections/TrafficBarChart.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 42.70759999999996ms)
+- `✓ renders correctly without crashing` (PASSED - 44.86729999999989ms)
 
 ### 📄 Test Suite: `src/components/sections/TrafficCardsHeader.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 36.488099999999804ms)
+- `✓ renders correctly without crashing` (PASSED - 45.03009999999995ms)
 
 ### 📄 Test Suite: `src/components/sections/TrafficRevealCard.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 84.88439999999991ms)
+- `✓ renders correctly without crashing` (PASSED - 69.69970000000012ms)
 
 ### 📄 Test Suite: `src/components/sections/TreeGrid.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 71.51400000000012ms)
-- `✓ toggles folder expansion and child row visibility on full row click` (PASSED - 65.50239999999985ms)
+- `✓ renders correctly without crashing` (PASSED - 63.43809999999985ms)
+- `✓ toggles folder expansion and child row visibility on full row click` (PASSED - 130.98280000000022ms)
 
 ### 📄 Test Suite: `src/components/sections/Typography.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 37.00209999999993ms)
+- `✓ renders correctly without crashing` (PASSED - 36.85470000000009ms)
 
 ### 📄 Test Suite: `src/components/sections/UserActivity.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 75.74270000000001ms)
+- `✓ renders correctly without crashing` (PASSED - 113.5625ms)
 
 ### 📄 Test Suite: `src/components/sections/UserManagement.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 58.14949999999999ms)
+- `✓ renders correctly without crashing` (PASSED - 75.53449999999998ms)
 
 ### 📄 Test Suite: `src/components/sections/VisitorsAnalytics.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 85.47969999999987ms)
+- `✓ renders correctly without crashing` (PASSED - 90.48879999999986ms)
 
 ### 📄 Test Suite: `src/components/sections/VisitorsAnalyticsChart.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 38.20589999999993ms)
+- `✓ renders correctly without crashing` (PASSED - 39.451500000000124ms)
 
 ### 📄 Test Suite: `src/components/sections/VisitorsStatistics.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 32.11830000000009ms)
+- `✓ renders correctly without crashing` (PASSED - 34.51729999999998ms)
 
 ### 📄 Test Suite: `src/components/sections/WeatherCard.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 43.92450000000008ms)
+- `✓ renders correctly without crashing` (PASSED - 48.4054000000001ms)
 
 ### 📄 Test Suite: `src/components/sections/Window.test.jsx`
-- `✓ renders correctly without crashing` (PASSED - 33.22070000000008ms)
+- `✓ renders correctly without crashing` (PASSED - 38.73700000000008ms)
 
 ### 📄 Test Suite: `src/components/sections/profit-card/StatsCardBack.test.jsx`
-- `✓ renders without crashing` (PASSED - 30.479000000000042ms)
+- `✓ renders without crashing` (PASSED - 29.658300000000054ms)
 
 ### 📄 Test Suite: `src/components/sections/profit-card/StatsCardFront.test.jsx`
-- `✓ renders without crashing` (PASSED - 60.45650000000023ms)
+- `✓ renders without crashing` (PASSED - 62.60539999999992ms)
 
 ### 📄 Test Suite: `src/components/sections/status-card/DeviceStatusCard.test.jsx`
-- `✓ renders title, detail, and icon correctly` (PASSED - 40.13149999999996ms)
-- `✓ triggers onToggle callback when clicked` (PASSED - 14.828500000000076ms)
+- `✓ renders title, detail, and icon correctly` (PASSED - 39.07670000000007ms)
+- `✓ triggers onToggle callback when clicked` (PASSED - 18.466399999999794ms)
 
 ### 📄 Test Suite: `src/components/sections/traffic-reveal/TrafficBackCard.test.jsx`
-- `✓ renders without crashing` (PASSED - 29.815200000000004ms)
+- `✓ renders without crashing` (PASSED - 34.807599999999866ms)
 
 ### 📄 Test Suite: `src/components/sections/traffic-reveal/TrafficFrontCard.test.jsx`
-- `✓ renders without crashing` (PASSED - 57.65789999999993ms)
+- `✓ renders without crashing` (PASSED - 70.17390000000023ms)
 
 ---
 

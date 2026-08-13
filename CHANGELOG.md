@@ -349,6 +349,28 @@
   - Modified README.md (added explicit FROM/TO stack package specifications)
 
 ### 🧹 Maintenance & Refactors
+- **test(quality): add 22 custom hook test suites, configure scoped coverage, harmonize docs, and fix Storybook layout** (`3a25819`) *by Calin on 2026-08-14*
+  - Added 22 unit test suites in src/hooks/*.test.jsx
+  - Added jsconfig.json (root configuration excluding old-src, dist, storybook-static)
+  - Modified vitest.config.js (added test.coverage configuration with v8 provider and exclusions)
+  - Modified .storybook/preview.js, src/App.stories.jsx, Header.stories.jsx, Sidebar.stories.jsx, and Footer.stories.jsx (configured layout: fullscreen)
+  - Modified README.md (cataloged all 17 atomic UI primitives in src/components/ui/)
+  - Modified DEVELOPMENT.md (added Pass 6, updated line limits to 220/350, updated warnings to 20, and listed all 12 agent rules)
+  - Modified docs/COMPONENT_GUIDE.md (updated line limits to 220/350)
+  - Modified docs/PIPELINE_GUIDE.md (updated warning count reference to 20)
+  - Modified scripts/verify-build.js (added generate-changelog.js to Pass 4)
+  - Modified eslint.config.js (updated varsIgnorePattern to ^([A-Z]|_))
+  - Modified old-src/ngx-admin-master/src/index.html & app.module.ts (sanitized demo Google Maps keys)
+- **test(quality): add 22 custom hook test suites, configure scoped coverage, and close DX drift loops** (`e8227f2`) *by Calin on 2026-08-14*
+  - Added 22 test suites in src/hooks/*.test.jsx (useVisitorsAnalytics, useSmartTableData, useChat, useEarning, useSolar, etc.)
+  - Added jsconfig.json (root configuration excluding old-src, dist, storybook-static)
+  - Modified vitest.config.js (added test.coverage configuration with v8 provider and exclusions)
+  - Modified scripts/verify-build.js (added generate-changelog.js to Pass 4)
+  - Modified eslint.config.js (updated varsIgnorePattern to ^([A-Z]|_))
+  - Modified DEVELOPMENT.md (documented npm run test:coverage command)
+  - Modified docs/PIPELINE_GUIDE.md (documented Pass 6 and updated script trigger registry)
+  - Modified old-src/ngx-admin-master/src/index.html (sanitized Google Maps script tag key)
+  - Modified old-src/ngx-admin-master/src/app/app.module.ts (sanitized messageGoogleMapKey string)
 - **chore(dx): close environment drift loops, add root jsconfig, and sanitize legacy secrets** (`9cc145c`) *by Calin on 2026-08-13*
   - Added jsconfig.json (root configuration excluding old-src, dist, storybook-static)
   - Modified scripts/verify-build.js (added generate-changelog.js to Pass 4)
@@ -398,4 +420,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-13T21:12:30.771Z*
+*Last Auto-Generated: 2026-08-13T21:40:49.857Z*

@@ -5,7 +5,7 @@ export default {
   title: 'Corporate/Sections/Header',
   component: Header,
   parameters: {
-    layout: 'padded',
+    layout: 'fullscreen',
   },
 };
 
