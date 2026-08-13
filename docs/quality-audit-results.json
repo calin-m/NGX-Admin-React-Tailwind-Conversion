@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-08T06:42:50.284Z",
+  "timestamp": "2026-08-13T20:40:13.788Z",
   "healthScore": 100,
   "summary": {
     "totalComponents": 313,
@@ -28,11 +28,11 @@
     "eslintLinter": {
       "status": "PASS",
       "errorCount": 0,
-      "warningCount": 60
+      "warningCount": 58
     },
     "knipDeadCode": {
       "status": "PASS",
-      "unusedFilesCount": 0,
+      "unusedFilesCount": 294,
       "unusedExportsCount": 0
     },
     "themeAccentParity": {

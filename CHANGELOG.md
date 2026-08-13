@@ -4,9 +4,37 @@
 
 ---
 
-## [1.0.0] — 2026-08-06
+## [1.0.0] — 2026-08-13
 
 ### 🚀 New Features
+- **feat(ui): upgrade verification engine, Master Audit JSON schema, and NotificationDrawer exit animation** (`09e868e`) *by Calin on 2026-08-07*
+  - Modified package.json, package-lock.json & eslint.config.js (added jsx-a11y and knip dependencies and synced lockfile)
+  - Modified scripts/verify-build.js & scripts/generate-quality-report.js (reordered verification pipeline & upgraded master audit JSON schema)
+  - Modified docs/quality-audit-results.json & docs/QUALITY_AUDIT_REPORT.md (auto-generated master audit reports with report portal references)
+  - Modified .agents/AGENTS.md, README.md, DEVELOPMENT.md & docs/PIPELINE_GUIDE.md (updated Reporting Transparency Standard & Master Document Registry)
+  - Modified src/components/sections/NotificationDrawer.jsx (added top-right exit animation, double-RAF cleanup & Mark all read state)
+  - Created src/components/sections/NotificationDrawer.test.jsx (added unit test suite)
+  - Modified src/index.css & src/context/ThemeContext.jsx (configured 200ms M3 deceleration transition & GPU translateZ(0) layers)
+  - Modified src/components/sections/Stepper.jsx & Stepper.test.jsx (converted step headers to interactive validation-aware buttons & added test assertion)
+  - Modified scripts/generate-legacy-docs.js (fixed f.relPath.endsWith TypeError for docs:sync)
+- **feat(ui): implement NotificationDrawer exit animation, Mark All Read state, and M3 theme deceleration** (`ee91802`) *by Calin on 2026-08-06*
+  - Modified src/components/sections/NotificationDrawer.jsx (added top-right anchored exit animation & Mark all read state)
+  - Created src/components/sections/NotificationDrawer.test.jsx (added unit test suite verifying notification state)
+  - Modified src/index.css (configured 200ms theme transition & GPU translateZ(0) keyframe layers)
+  - Modified src/context/ThemeContext.jsx (updated cleanup timer to 250ms)
+  - Modified src/components/sections/Stepper.jsx (converted step headers to interactive buttons & integrated Card/FormInput primitives)
+  - Modified src/components/sections/Stepper.test.jsx (added step header jump navigation test assertion)
+  - Modified scripts/generate-legacy-docs.js (fixed f.relPath.endsWith TypeError for docs:sync)
+  - Modified docs/LEGACY_BLUEPRINT.md (auto-synchronized blueprint metrics)
+  - Modified README.md (documented UI Primitives architecture)
+- **feat(ui): standardize 200ms M3 theme transition, GPU acceleration, and Stepper header interactivity** (`8abab98`) *by Calin on 2026-08-06*
+  - Modified src/index.css (configured 200ms theme transition & GPU translateZ(0) keyframe layers)
+  - Modified src/context/ThemeContext.jsx (updated cleanup timer to 250ms)
+  - Modified src/components/sections/Stepper.jsx (converted step headers to interactive buttons & integrated Card/FormInput primitives)
+  - Modified src/components/sections/Stepper.test.jsx (added step header jump navigation test assertion)
+  - Modified scripts/generate-legacy-docs.js (fixed f.relPath.endsWith TypeError for docs:sync)
+  - Modified docs/LEGACY_BLUEPRINT.md (auto-synchronized blueprint metrics)
+  - Modified README.md (documented UI Primitives architecture)
 - **feat(ui): implement Card, Modal, AlertBanner, and Avatar UI primitives with 100% Storybook taxonomy harmonization** (`3231c8d`) *by Calin on 2026-08-06*
   - Created Modal.jsx, AlertBanner.jsx, and Avatar.jsx primitives with unit test suites and Storybook stories
   - Refactored OrderModal, UserManagement, Chat, Alert, and FormInputs presentation components
@@ -276,6 +304,27 @@
   - Synchronized ARCHITECTURE.md, docs/LEGACY_BLUEPRINT.md, docs/DECISIONS.md, and .agents/AGENTS.md
 
 ### 🐛 Bug Fixes
+- **fix(ci): remediate Storybook hook rules, switch case lexical declarations, Node 24 DEP0190, and doc versions** (`60a5fea`) *by Calin on 2026-08-08*
+  - Modified scripts/start-all.js (updated spawn commands to single string format for Node 24 compatibility)
+  - Modified .github/workflows/ci.yml (updated node-version to 24)
+  - Modified src/components/ui/FormInput.jsx (wrapped case 'toggle': block in curly braces)
+  - Modified src/components/ui/ToggleSwitch.stories.jsx & PeriodSelector.stories.jsx (capitalized render function names)
+  - Modified README.md, DEVELOPMENT.md, and docs/PIPELINE_GUIDE.md (updated Node 24 specifications and author attribution)
+  - Modified LegendChart.jsx, EarningLiveUpdateChart.jsx, EarningCardFront.jsx, EarningCardBack.jsx, CountryOrdersMap.jsx, CountryOrdersChart.jsx, CountryOrders.jsx, Chat.jsx, ChartPanelSummary.jsx, EarningCard.jsx (cleaned unused variables)
+- **fix(pipeline): configure ESLint animation frame globals and fix generate-quality-report.js vitestData reference** (`1cf363a`) *by Calin on 2026-08-07*
+  - Modified eslint.config.js (added requestAnimationFrame, cancelAnimationFrame, MouseEvent, HTMLElement globals)
+  - Modified scripts/generate-quality-report.js (re-instated vitestData JSON cache reader block)
+- **fix(header): resolve user email truncation and main container right-side margin alignment on window resize** (`7dfa096`) *by Calin on 2026-08-07*
+  - Added min-w-0 max-w-[100px] md:max-w-[140px] truncate to Header.jsx user text container
+  - Replaced max-w-[1600px] mx-auto with w-full min-w-0 in App.jsx main element
+  - Registered @theme { --breakpoint-xs: 480px; } in src/index.css
+  - Added resize event listener to App.jsx for 768px threshold handling
+  - Added flex-wrap gap-2 w-full sm:w-auto to CardHeader.jsx action container
+  - Updated Header search input to w-24 xs:w-44 sm:w-64 with space-x-1 sm:space-x-3
+  - Added min-w-0 flex-1 and shrink-0 icon containers to ECommerce KPI stat cards
+  - Programmatic JSON execution for ESLint and Knip in scripts/generate-quality-report.js
+  - Added Pass 6 (ESLint & Knip Audit) to scripts/verify-build.js and package.json
+  - Added Automated-Only Report Artifacts rule to .agents/AGENTS.md
 - **fix(test): align Maps.test.jsx matcher title and optimize Vitest UI timing pool config** (`f4e81bd`) *by Calin on 2026-08-05*
   - Modified src/components/sections/Maps.test.jsx (updated text matcher to /Interactive Maps Showcase/i).
   - Modified vite.config.js (configured pool: forks, maxForks: 4, and sequence.concurrent: false).
@@ -300,6 +349,14 @@
   - Modified README.md (added explicit FROM/TO stack package specifications)
 
 ### 🧹 Maintenance & Refactors
+- **removed old api which came from NGX repo** (`fe4aff5`) *by Calin on 2026-08-12*
+- **refactor(ui): remediate layout density advisories and enforce dynamic audit reporting** (`5aba514`) *by Calin on 2026-08-07*
+  - Updated FormLayouts, TemperatureCard, ThemeCustomizer to mobile-first grid-cols-1 sm:grid-cols-2
+  - Added responsive flex-wrap gap-2 to card headers across 42 presentation components
+  - Updated audit-layout-density.js and generate-quality-report.js to recognize flex-wrap
+  - Updated verify-build.js to read advisory warning counts dynamically from quality-audit-results.json
+  - Updated package.json report script to execute vitest before report generation
+  - Added Automated-Only Report Artifacts rule to .agents/AGENTS.md
 - **refactor(ui): decompose device status card, normalize toggle switch props, and stabilize sidebar collapse transition** (`822df49`) *by Calin on 2026-08-06*
   - Added src/components/sections/status-card/DeviceStatusCard.jsx, DeviceStatusCard.test.jsx, DeviceStatusCard.stories.jsx
   - Modified src/App.jsx (Restricted main layout transition strictly to transition-[padding-left] duration-300 ease-in-out)
@@ -334,4 +391,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-06T16:12:56.358Z*
+*Last Auto-Generated: 2026-08-13T20:40:14.713Z*

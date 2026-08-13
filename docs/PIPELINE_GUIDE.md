@@ -14,7 +14,8 @@ Executing `npm run verify` triggers a non-destructive 7-pass quality gate audit:
 3. **Pass 2 & 3: Vitest Dual-Theme Execution**: Executes full test suites across Dark and Light modes to generate fresh `test-results.json`.
 4. **Pass 4: Master Quality Report Auto-Sync**: Reads fresh `test-results.json` to auto-sync `docs/QUALITY_AUDIT_REPORT.md`, `docs/quality-audit-results.json`, `ARCHITECTURE.md`, `docs/LEGACY_BLUEPRINT.md` + `CHANGELOG.md`.
 5. **Pass 5: Living Blueprints & ADR Decision Records**: Validates presence of `ARCHITECTURE.md`, `docs/LEGACY_BLUEPRINT.md`, and `docs/DECISIONS.md`.
-6. **Pass 7: Production Vite Bundle Compilation**: Verifies clean production `dist/` compilation.
+6. **Pass 6: ESLint Linter & Knip Dead-Code Audit**: Validates code quality rules, accessibility, and zero unused exports.
+7. **Pass 7: Production Vite Bundle Compilation**: Verifies clean production `dist/` compilation.
 
 > **Reporting Transparency Standard**: Verification output explicitly details both 0 blocking errors AND any non-blocking advisory warnings (e.g. 66 layout density wrap warnings). All blocking and non-blocking audits are serialized directly into machine-readable JSON ([`docs/quality-audit-results.json`](docs/quality-audit-results.json)) containing explicit references to all generated markdown and test reports.
 
@@ -30,7 +31,7 @@ Executing `npm run verify` triggers a non-destructive 7-pass quality gate audit:
 | `audit-layout-density.js` | 📐 **Layout Density Scanner** | Terminal Audit Output | `npm run audit:density` |
 | `generate-architecture-matrix.js` | 🚀 **Active React (`src/`)** | [**`ARCHITECTURE.md`**](ARCHITECTURE.md) | `npm run docs:sync` / `npm run verify` |
 | `generate-legacy-docs.js` | 📜 **Legacy Angular (`old-src/`)** | [**`docs/LEGACY_BLUEPRINT.md`**](docs/LEGACY_BLUEPRINT.md) | `npm run docs:legacy` / `npm run docs:sync` / `npm run verify` |
-| `generate-changelog.js` | 📜 **Release History** | [**`CHANGELOG.md`**](CHANGELOG.md) | `npm run docs:sync` |
+| `generate-changelog.js` | 📜 **Release History** | [**`CHANGELOG.md`**](CHANGELOG.md) | `npm run docs:sync` / `npm run verify` |
 | `verify-build.js` | 🛡️ **7-Gateway Engine** | Terminal & Report Output | `npm run verify` |
 | `new-adr.js` | 📜 **ADR Generator** | [**`docs/DECISIONS.md`**](docs/DECISIONS.md) | `npm run adr:new` |
 

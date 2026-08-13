@@ -109,6 +109,7 @@ async function runVerification() {
   }
   if (!runCommand('node scripts/generate-architecture-matrix.js')) errorCount++;
   if (!runCommand('node scripts/generate-legacy-docs.js')) errorCount++;
+  if (!runCommand('node scripts/generate-changelog.js')) errorCount++;
   runCommand('node scripts/audit-layout-density.js');
 
   // Dynamically load advisory warning count from generated JSON source of truth
