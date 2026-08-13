@@ -9,7 +9,21 @@ export default defineConfig({
     setupFiles: [],
     include: ['src/**/*.{test,spec}.{js,jsx}'],
     reporters: ['default', 'json'],
-    outputFile: 'test-results.json'
+    outputFile: 'test-results.json',
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'html', 'json'],
+      include: ['src/**/*.{js,jsx}'],
+      exclude: [
+        'src/**/*.{test,spec,stories}.{js,jsx}',
+        'src/main.jsx',
+        'node_modules/**',
+        'old-src/**',
+        'scripts/**',
+        'dist/**',
+        'storybook-static/**'
+      ]
+    }
   }
 });
 

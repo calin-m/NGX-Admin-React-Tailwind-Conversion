@@ -349,6 +349,13 @@
   - Modified README.md (added explicit FROM/TO stack package specifications)
 
 ### 🧹 Maintenance & Refactors
+- **chore(dx): close environment drift loops, add root jsconfig, and sanitize legacy secrets** (`9cc145c`) *by Calin on 2026-08-13*
+  - Added jsconfig.json (root configuration excluding old-src, dist, storybook-static)
+  - Modified scripts/verify-build.js (added generate-changelog.js to Pass 4)
+  - Modified eslint.config.js (updated varsIgnorePattern to ^([A-Z]|_))
+  - Modified docs/PIPELINE_GUIDE.md (documented Pass 6 and updated script trigger commands)
+  - Modified old-src/ngx-admin-master/src/index.html (sanitized Google Maps script tag key)
+  - Modified old-src/ngx-admin-master/src/app/app.module.ts (sanitized messageGoogleMapKey string)
 - **removed old api which came from NGX repo** (`fe4aff5`) *by Calin on 2026-08-12*
 - **refactor(ui): remediate layout density advisories and enforce dynamic audit reporting** (`5aba514`) *by Calin on 2026-08-07*
   - Updated FormLayouts, TemperatureCard, ThemeCustomizer to mobile-first grid-cols-1 sm:grid-cols-2
@@ -391,4 +398,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-13T20:40:14.713Z*
+*Last Auto-Generated: 2026-08-13T21:12:30.771Z*

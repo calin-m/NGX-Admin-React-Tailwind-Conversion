@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-13T20:40:13.788Z",
+  "timestamp": "2026-08-13T21:12:29.790Z",
   "healthScore": 100,
   "summary": {
     "totalComponents": 313,
@@ -32,7 +32,7 @@
     },
     "knipDeadCode": {
       "status": "PASS",
-      "unusedFilesCount": 294,
+      "unusedFilesCount": 286,
       "unusedExportsCount": 0
     },
     "themeAccentParity": {
@@ -43,11 +43,11 @@
     },
     "unitTests": {
       "status": "PASS",
-      "numTotalTestSuites": 214,
-      "numPassedTestSuites": 214,
+      "numTotalTestSuites": 258,
+      "numPassedTestSuites": 258,
       "numFailedTestSuites": 0,
-      "numTotalTests": 130,
-      "numPassedTests": 130,
+      "numTotalTests": 176,
+      "numPassedTests": 176,
       "numFailedTests": 0
     },
     "viteBuild": {

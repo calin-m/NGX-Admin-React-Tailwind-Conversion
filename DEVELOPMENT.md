@@ -21,6 +21,7 @@ Welcome to the **Developer Environment Guide**. This document defines local setu
 | `npm run storybook` | Launches Storybook Design System Catalog | `http://localhost:6006` |
 | `npm test` | Runs Vitest unit test suite once in terminal | Terminal Output |
 | `npm run test:watch` | Runs Vitest in interactive watch mode | Terminal Output |
+| `npm run test:coverage` | **Code Coverage Suite**: Runs Vitest V8 coverage report | Terminal & `coverage/index.html` |
 | `npm run report` | **In-Depth Quality Report**: Generates full AST quality report | `docs/QUALITY_AUDIT_REPORT.md` |
 | `npm run audit:pages` | **17-Menu-Tab Parity Check**: Runs 100% menu tab accent check | Terminal Output |
 | `npm run audit:theme` | **AST Accent Scanner**: Scans components for hardcoded colors | Terminal Output |
