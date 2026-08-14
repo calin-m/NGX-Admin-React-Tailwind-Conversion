@@ -361,6 +361,7 @@ All documentation in this repository is **programmatically auto-synchronized** f
 
 | Documentation Portal | Generating Command | Purpose & Description |
 | :--- | :--- | :--- |
+| [**`docs/test-results.json`**](docs/test-results.json) | `npm test` / `npm run test:run` | Raw real-time Vitest JSON execution output containing test suite pass/fail assertions. |
 | [**`docs/QUALITY_AUDIT_REPORT.md`**](docs/QUALITY_AUDIT_REPORT.md) | `npm run report` | Line-by-line AST audit, theme accent parity breakdown, and Vitest test assertions. |
 | [**`docs/quality-audit-results.json`**](docs/quality-audit-results.json) | `npm run report` | Serialized machine-readable quality audit results, health score, and bundle size metrics. |
 | [**`ARCHITECTURE.md`**](ARCHITECTURE.md) | `npm run docs:sync` | Active React C4 Level 1-3 system diagrams, Hook dependency graph, and prop schemas. |

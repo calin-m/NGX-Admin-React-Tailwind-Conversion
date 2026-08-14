@@ -11,7 +11,9 @@ const componentsDir = path.join(rootDir, 'src', 'components');
 const docsDir = path.join(rootDir, 'docs');
 const reportPath = path.join(docsDir, 'QUALITY_AUDIT_REPORT.md');
 const jsonReportPath = path.join(docsDir, 'quality-audit-results.json');
-const vitestJsonPath = path.join(rootDir, 'test-results.json');
+const vitestJsonPath = fs.existsSync(path.join(docsDir, 'test-results.json')) 
+  ? path.join(docsDir, 'test-results.json') 
+  : path.join(rootDir, 'test-results.json');
 
 // Ensure docs directory exists
 if (!fs.existsSync(docsDir)) {

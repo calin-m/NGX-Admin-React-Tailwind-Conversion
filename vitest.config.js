@@ -9,7 +9,7 @@ export default defineConfig({
     setupFiles: [],
     include: ['src/**/*.{test,spec}.{js,jsx}'],
     reporters: ['default', 'json'],
-    outputFile: 'test-results.json',
+    outputFile: 'docs/test-results.json',
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html', 'json'],

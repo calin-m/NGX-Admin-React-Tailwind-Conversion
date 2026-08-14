@@ -347,6 +347,9 @@
   - Modified walkthrough.md (documented import resolution fix)
 
 ### 📖 Documentation Updates
+- **docs(master): expand README into 16-section enterprise hub and document ADR-001 through ADR-008** (`18f8a49`) *by Calin on 2026-08-14*
+  - Modified README.md (added 16 enterprise sections, dynamic shields, C4 Mermaid architecture diagrams, migration code diffs, benchmark tables, and ADR index)
+  - Modified docs/DECISIONS.md (documented ADR-001 through ADR-008 with complete rationale, decisions, and consequences)
 - **docs(sync): harmonize master documentation, fix Storybook fullscreen layout, and complete batch 2 hook tests** (`e1ffb6d`) *by Calin on 2026-08-14*
   - Added 12 custom hook unit test suites in src/hooks/*.test.jsx
   - Modified .storybook/preview.js and layout stories (configured layout: fullscreen)
@@ -420,4 +423,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-14T08:19:53.365Z*
+*Last Auto-Generated: 2026-08-14T08:46:23.469Z*

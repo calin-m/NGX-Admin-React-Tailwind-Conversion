@@ -75,16 +75,17 @@ async function runVerification() {
   scanAST(path.join(root, 'src'));
   console.log('  ✔ AST Syntax Validation Passed.');
 
-  // Pass 2 & Pass 3: Vitest Dual-Theme Execution (Generates FRESH test-results.json FIRST)
+  // Pass 2 & Pass 3: Vitest Dual-Theme Execution (Generates FRESH docs/test-results.json FIRST)
   function runVitestTheme(theme) {
-    const resultsFile = path.join(root, 'test-results.json');
-    const passed = runCommand(`npx vitest run --reporter=verbose --reporter=json --outputFile=test-results.json`, {
+    const resultsFile = path.join(root, 'docs', 'test-results.json');
+    const passed = runCommand(`npx vitest run --reporter=verbose --reporter=json --outputFile=docs/test-results.json`, {
       env: { ...process.env, VITE_TEST_THEME: theme }
     });
 
-    if (fs.existsSync(resultsFile)) {
+    const targetFile = fs.existsSync(resultsFile) ? resultsFile : path.join(root, 'test-results.json');
+    if (fs.existsSync(targetFile)) {
       try {
-        const json = JSON.parse(fs.readFileSync(resultsFile, 'utf8'));
+        const json = JSON.parse(fs.readFileSync(targetFile, 'utf8'));
         if (json.numFailedTestSuites === 0 && json.numFailedTests === 0 && json.numPassedTestSuites > 0) {
           console.log(`  ✔ ${theme === 'dark' ? 'Dark' : 'Light'} Mode Vitest Test Suite Passed (${json.numPassedTestSuites} test suites passed).`);
           return true;

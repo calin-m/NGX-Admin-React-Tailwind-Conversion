@@ -3,7 +3,7 @@
 ## 1. Automated Documentation Synchronization
 - **Living Architecture**: Every code modification, component addition, or architectural refactor MUST automatically update `ARCHITECTURE.md` (including C4 Mermaid diagrams and component matrices) via `npm run docs:sync`, and generate the in-depth quality report into `docs/QUALITY_AUDIT_REPORT.md` via `npm run report`.
 - **Zero-Bloat Rule**: Agents MUST NOT write manual JSDoc headers or documentation comments inside individual presentation components. All component indexing, diagramming, audit reporting, and changelog generation MUST remain 100% script-driven via AST file-tree parsing (`scripts/lib/ast-parser.js`, `scripts/generate-architecture-matrix.js`, `scripts/generate-quality-report.js`).
-- **Automated-Only Report Artifacts**: Agents MUST NEVER manually edit programmatic report artifacts (`docs/QUALITY_AUDIT_REPORT.md`, `docs/quality-audit-results.json`, `ARCHITECTURE.md`, `docs/LEGACY_BLUEPRINT.md`, `test-results.json`). All updates to these files MUST occur strictly via automated driver script execution (`npm run verify` / `npm run report` / `.husky/pre-commit`).
+- **Automated-Only Report Artifacts**: Agents MUST NEVER manually edit programmatic report artifacts (`docs/QUALITY_AUDIT_REPORT.md`, `docs/quality-audit-results.json`, `ARCHITECTURE.md`, `docs/LEGACY_BLUEPRINT.md`, `docs/test-results.json`). All updates to these files MUST occur strictly via automated driver script execution (`npm run verify` / `npm run report` / `.husky/pre-commit`).
 - **Decision Tracking**: New technical decisions MUST automatically add a numbered Architectural Decision Record (ADR) to `docs/DECISIONS.md` via `npm run adr:new`.
 
 ## 2. Automated Script & Tooling Maintenance
@@ -62,7 +62,7 @@ Agents MUST reference the following registry to locate generated reports and liv
 
 | Report / Blueprint File | Generating Driver Script | Trigger Command | Purpose & Agent Usage |
 | :--- | :--- | :--- | :--- |
-| **[`test-results.json`](test-results.json)** | `vitest` | `npm test` / `npm run test:run` | Raw real-time Vitest JSON execution output containing test suite pass/fail assertions and failure trace messages. |
+| **[`docs/test-results.json`](docs/test-results.json)** | `vitest` | `npm test` / `npm run test:run` | Raw real-time Vitest JSON execution output containing test suite pass/fail assertions and failure trace messages. |
 | **[`docs/QUALITY_AUDIT_REPORT.md`](docs/QUALITY_AUDIT_REPORT.md)** | `scripts/generate-quality-report.js` | `npm run report` / `npm run verify` | Full line-by-line AST quality audit, 17-menu-tab theme accent parity breakdown, layout density audit, and Vitest test results. |
 | **[`docs/quality-audit-results.json`](docs/quality-audit-results.json)** | `scripts/generate-quality-report.js` | `npm run report` / `npm run verify` | Serialized machine-readable JSON containing full test suite results, health score, menu tab status, and bundle size metrics. |
 | **[`ARCHITECTURE.md`](ARCHITECTURE.md)** | `scripts/generate-architecture-matrix.js` | `npm run docs:sync` / `npm run verify` | Active React C4 Level 1-3 system context diagrams, C4 Level 3 Hook dependency graph, AST component index matrix, state dependencies, and prop schemas. |
