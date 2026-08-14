@@ -22,7 +22,12 @@ export default defineConfig({
         'scripts/**',
         'dist/**',
         'storybook-static/**'
-      ]
+      ],
+      thresholds: {
+        lines: 85,
+        statements: 85,
+        branches: 70
+      }
     }
   }
 });

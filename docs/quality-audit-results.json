@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-13T21:40:48.934Z",
+  "timestamp": "2026-08-14T07:16:17.170Z",
   "healthScore": 100,
   "summary": {
     "totalComponents": 313,
@@ -32,7 +32,7 @@
     },
     "knipDeadCode": {
       "status": "PASS",
-      "unusedFilesCount": 286,
+      "unusedFilesCount": 8,
       "unusedExportsCount": 0
     },
     "themeAccentParity": {

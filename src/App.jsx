@@ -43,9 +43,10 @@ import Icons from './components/sections/Icons.jsx';
 import TreeGrid from './components/sections/TreeGrid.jsx';
 import Maps from './components/sections/Maps.jsx';
 import CkEditor from './components/sections/CkEditor.jsx';
+import { useTheme } from './context/ThemeContext.jsx';
 
 export default function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const { isDarkMode, toggleDarkMode } = useTheme();
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(() => {
     if (typeof window !== 'undefined') {
       return window.innerWidth < 768;
@@ -83,19 +84,6 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleGlobalKeyDown);
   }, []);
 
-
-  const toggleTheme = () => {
-    setIsDarkMode(prev => {
-      const next = !prev;
-      if (next) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-      return next;
-    });
-  };
-
   const toggleSidebar = () => {
     setIsSidebarCollapsed(prev => !prev);
   };
@@ -104,7 +92,7 @@ export default function App() {
     <div className={`min-h-screen ${isDarkMode ? 'dark' : ''} bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans flex flex-col antialiased transition-colors duration-200`}>
       <Header
         isDarkMode={isDarkMode}
-        onToggleTheme={toggleTheme}
+        onToggleTheme={toggleDarkMode}
         onToggleSidebar={toggleSidebar}
         onOpenSearch={() => setIsSearchOpen(true)}
         onOpenThemeCustomizer={() => setIsCustomizerOpen(true)}
@@ -222,7 +210,7 @@ export default function App() {
         accentColor={accentColor}
         setAccentColor={setAccentColor}
         isDarkMode={isDarkMode}
-        onToggleTheme={toggleTheme}
+        onToggleTheme={toggleDarkMode}
       />
 
       <OrderModal

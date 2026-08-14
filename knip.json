@@ -1,0 +1,17 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": [
+    "src/main.jsx",
+    "src/**/*.stories.jsx",
+    "src/**/*.test.jsx"
+  ],
+  "project": [
+    "src/**/*.{js,jsx}"
+  ],
+  "ignore": [
+    "old-src/**",
+    "scripts/**",
+    "dist/**",
+    "storybook-static/**"
+  ]
+}

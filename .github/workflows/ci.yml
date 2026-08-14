@@ -27,8 +27,44 @@ jobs:
       - name: Run 7-Gateway Verification Engine
         run: npm run verify
 
+      - name: Run Scoped Vitest V8 Code Coverage
+        run: npm run test:coverage
+
       - name: Compile Production Bundle
         run: npm run build
 
       - name: Build Storybook Catalog
         run: npm run build-storybook
+
+      - name: Upload Test Coverage Artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: vitest-coverage-report
+          path: coverage/
+          retention-days: 14
+
+      - name: Upload Production Build Bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-dist
+          path: dist/
+          retention-days: 14
+
+      - name: Upload Storybook Static Catalog
+        uses: actions/upload-artifact@v4
+        with:
+          name: storybook-static-catalog
+          path: storybook-static/
+          retention-days: 14
+
+      - name: Upload Quality Audit Reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: enterprise-quality-reports
+          path: |
+            docs/QUALITY_AUDIT_REPORT.md
+            docs/quality-audit-results.json
+            ARCHITECTURE.md
+          retention-days: 14

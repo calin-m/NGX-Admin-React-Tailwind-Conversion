@@ -4,7 +4,7 @@
 
 ---
 
-## [1.0.0] — 2026-08-13
+## [1.0.0] — 2026-08-14
 
 ### 🚀 New Features
 - **feat(ui): upgrade verification engine, Master Audit JSON schema, and NotificationDrawer exit animation** (`09e868e`) *by Calin on 2026-08-07*
@@ -342,6 +342,13 @@
   - Modified walkthrough.md (documented import resolution fix)
 
 ### 📖 Documentation Updates
+- **docs(sync): harmonize master documentation, fix Storybook fullscreen layout, and complete batch 2 hook tests** (`e1ffb6d`) *by Calin on 2026-08-14*
+  - Added 12 custom hook unit test suites in src/hooks/*.test.jsx
+  - Modified .storybook/preview.js and layout stories (configured layout: fullscreen)
+  - Modified README.md (cataloged all 17 atomic UI primitives)
+  - Modified DEVELOPMENT.md (added Pass 6, updated line limits, and listed all 12 agent rules)
+  - Modified docs/COMPONENT_GUIDE.md & docs/PIPELINE_GUIDE.md (synchronized line limits & warning counts)
+  - Modified docs/QUALITY_AUDIT_REPORT.md & CHANGELOG.md (auto-synchronized reports)
 - **docs(readme): add akveo/ngx-admin repository attribution** (`72bccc5`) *by Calin on 2026-08-05*
 - **docs(infrastructure): update pre-commit hook to auto-stage legacy blueprint** (`9fa122b`) *by Calin on 2026-08-05*
   - Modified .husky/pre-commit (added docs/LEGACY_BLUEPRINT.md to auto-stage command)
@@ -349,18 +356,6 @@
   - Modified README.md (added explicit FROM/TO stack package specifications)
 
 ### 🧹 Maintenance & Refactors
-- **test(quality): add 22 custom hook test suites, configure scoped coverage, harmonize docs, and fix Storybook layout** (`3a25819`) *by Calin on 2026-08-14*
-  - Added 22 unit test suites in src/hooks/*.test.jsx
-  - Added jsconfig.json (root configuration excluding old-src, dist, storybook-static)
-  - Modified vitest.config.js (added test.coverage configuration with v8 provider and exclusions)
-  - Modified .storybook/preview.js, src/App.stories.jsx, Header.stories.jsx, Sidebar.stories.jsx, and Footer.stories.jsx (configured layout: fullscreen)
-  - Modified README.md (cataloged all 17 atomic UI primitives in src/components/ui/)
-  - Modified DEVELOPMENT.md (added Pass 6, updated line limits to 220/350, updated warnings to 20, and listed all 12 agent rules)
-  - Modified docs/COMPONENT_GUIDE.md (updated line limits to 220/350)
-  - Modified docs/PIPELINE_GUIDE.md (updated warning count reference to 20)
-  - Modified scripts/verify-build.js (added generate-changelog.js to Pass 4)
-  - Modified eslint.config.js (updated varsIgnorePattern to ^([A-Z]|_))
-  - Modified old-src/ngx-admin-master/src/index.html & app.module.ts (sanitized demo Google Maps keys)
 - **test(quality): add 22 custom hook test suites, configure scoped coverage, and close DX drift loops** (`e8227f2`) *by Calin on 2026-08-14*
   - Added 22 test suites in src/hooks/*.test.jsx (useVisitorsAnalytics, useSmartTableData, useChat, useEarning, useSolar, etc.)
   - Added jsconfig.json (root configuration excluding old-src, dist, storybook-static)
@@ -420,4 +415,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-13T21:40:49.857Z*
+*Last Auto-Generated: 2026-08-14T07:16:18.097Z*
