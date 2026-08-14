@@ -15,29 +15,85 @@ graph TD
 
 ---
 
-## 🔗 C4 Level 3: Custom Hook Data Dependency Graph
+## 🔗 C4 Level 3: Dynamic Custom Hook & Context Dependency Graph
 
 ```mermaid
 graph LR
-    subgraph DataHooks ["Custom Data Hooks (src/hooks/)"]
-        H1["useEarning.js"]
-        H2["useOrdersChart.js"]
-        H3["useSmartTableData.js"]
+    subgraph ContextProviders ["Context State Providers (src/context/)"]
+        CTX_1["useTheme (ThemeContext)"]
+        CTX_2["useAuth (AuthContext)"]
     end
 
-    subgraph Components ["Presentation Components (src/components/)"]
-        C1["ECommerce.jsx"]
-        C2["EarningCard.jsx"]
-        C3["ChartsPanel.jsx"]
-        C4["OrdersChart.jsx"]
-        C5["SmartTable.jsx"]
+    subgraph CorporateHooks ["Corporate Analytics Hooks (src/hooks/)"]
+        H_1["useOrdersChart.js"]
+        H_2["useCountryOrder.js"]
+        H_3["useCountryOrdersMap.js"]
+        H_4["useEarning.js"]
+        H_5["useStatsProgressBar.js"]
+        H_6["useTrafficChart.js"]
+        H_7["useTrafficList.js"]
+        H_8["useUserActivity.js"]
+        H_9["useVisitorsAnalytics.js"]
     end
 
-    H1 --> C1
-    H1 --> C2
-    H2 --> C3
-    H2 --> C4
-    H3 --> C5
+    subgraph IoTHooks ["IoT & Telemetry Hooks (src/hooks/)"]
+        H_10["useElectricity.js"]
+        H_11["useNews.js"]
+        H_12["useSecurityCameras.js"]
+        H_13["useSolar.js"]
+        H_14["useTemperatureHumidity.js"]
+    end
+
+    subgraph TableAuthHooks ["Tables, Auth & App Hooks (src/hooks/)"]
+        H_15["useChat.js"]
+        H_16["useOrdersProfit.js"]
+        H_17["useSmartTableData.js"]
+    end
+
+    subgraph Components ["Presentation & Layout Components (src/components/)"]
+        C_1["ChartsPanel.jsx"]
+        C_2["Chat.jsx"]
+        C_3["CountryOrders.jsx"]
+        C_4["CountryOrdersMap.jsx"]
+        C_5["EarningCard.jsx"]
+        C_6["ElectricityCard.jsx"]
+        C_7["InfiniteList.jsx"]
+        C_8["ProfitCard.jsx"]
+        C_9["ProgressSection.jsx"]
+        C_10["SecurityCameras.jsx"]
+        C_11["SmartTable.jsx"]
+        C_12["SolarCard.jsx"]
+        C_13["TemperatureCard.jsx"]
+        C_14["TrafficRevealCard.jsx"]
+        C_15["UserActivity.jsx"]
+        C_16["VisitorsAnalytics.jsx"]
+        C_17["App.jsx"]
+        C_18["ThemeContext.jsx"]
+        C_19["Login.jsx"]
+        C_20["AuthContext.jsx"]
+    end
+
+    CTX_1 -.-> C_17
+    CTX_1 -.-> C_18
+    CTX_2 -.-> C_19
+    CTX_2 -.-> C_20
+    H_1 --> C_1
+    H_15 --> C_2
+    H_2 --> C_3
+    H_3 --> C_4
+    H_4 --> C_5
+    H_10 --> C_6
+    H_11 --> C_7
+    H_16 --> C_8
+    H_5 --> C_9
+    H_12 --> C_10
+    H_17 --> C_11
+    H_13 --> C_12
+    H_14 --> C_13
+    H_6 --> C_14
+    H_7 --> C_14
+    H_8 --> C_15
+    H_9 --> C_16
 ```
 
 ---

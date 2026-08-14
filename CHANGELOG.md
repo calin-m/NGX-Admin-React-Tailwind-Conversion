@@ -364,6 +364,12 @@
   - Modified README.md (added explicit FROM/TO stack package specifications)
 
 ### 🧹 Maintenance & Refactors
+- **refactor(test): streamline test-results artifact path to docs directory and simplify test scripts** (`5b18c52`) *by Calin on 2026-08-14*
+  - Modified vitest.config.js (updated outputFile to docs/test-results.json)
+  - Modified package.json (simplified test:run and test:watch scripts)
+  - Modified scripts/verify-build.js & scripts/generate-quality-report.js (updated resultsFile path)
+  - Modified .agents/AGENTS.md, README.md, DEVELOPMENT.md, docs/PIPELINE_GUIDE.md (updated test results path)
+  - Regenerated docs/QUALITY_AUDIT_REPORT.md & docs/quality-audit-results.json from docs/test-results.json
 - **test(quality): add 22 custom hook test suites, configure scoped coverage, and close DX drift loops** (`e8227f2`) *by Calin on 2026-08-14*
   - Added 22 test suites in src/hooks/*.test.jsx (useVisitorsAnalytics, useSmartTableData, useChat, useEarning, useSolar, etc.)
   - Added jsconfig.json (root configuration excluding old-src, dist, storybook-static)
@@ -423,4 +429,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-14T08:46:23.469Z*
+*Last Auto-Generated: 2026-08-14T09:02:31.461Z*

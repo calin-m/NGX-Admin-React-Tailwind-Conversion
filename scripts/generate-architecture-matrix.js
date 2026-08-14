@@ -27,13 +27,135 @@ function scanComponents(dir, baseDir = srcDir) {
   return results;
 }
 
-function scanHooks() {
-  if (!fs.existsSync(hooksDir)) return [];
-  return fs.readdirSync(hooksDir).filter(f => f.endsWith('.js')).map(f => path.basename(f, '.js'));
+function scanHookDependencies(componentFiles) {
+  const hookToComponents = new Map();
+  const contextToComponents = new Map();
+
+  componentFiles.forEach(comp => {
+    const fullPath = path.join(srcDir, comp);
+    if (!fs.existsSync(fullPath)) return;
+    const code = fs.readFileSync(fullPath, 'utf8');
+    const compName = path.basename(comp, '.jsx');
+
+    // Extract hook imports: e.g. import ... from '../../hooks/useXxx.js' or import { useXxx }
+    const hookImportMatches = [...code.matchAll(/import\s+(?:\{([^}]+)\}|(\w+))\s+from\s+['"][^'"]*hooks\/([^'"]+)['"]/g)];
+    hookImportMatches.forEach(match => {
+      const hookFile = match[3].replace(/\.(js|jsx)$/, '');
+      const hookName = hookFile.startsWith('use') ? hookFile : `use${hookFile}`;
+      if (!hookToComponents.has(hookName)) {
+        hookToComponents.set(hookName, new Set());
+      }
+      hookToComponents.get(hookName).add(compName);
+    });
+
+    // Extract context imports: ThemeContext, AuthContext
+    if (/useTheme/.test(code) && /ThemeContext/.test(code)) {
+      if (!contextToComponents.has('useTheme (ThemeContext)')) {
+        contextToComponents.set('useTheme (ThemeContext)', new Set());
+      }
+      contextToComponents.get('useTheme (ThemeContext)').add(compName);
+    }
+    if (/useAuth/.test(code) && /AuthContext/.test(code)) {
+      if (!contextToComponents.has('useAuth (AuthContext)')) {
+        contextToComponents.set('useAuth (AuthContext)', new Set());
+      }
+      contextToComponents.get('useAuth (AuthContext)').add(compName);
+    }
+  });
+
+  return { hookToComponents, contextToComponents };
 }
 
 const components = scanComponents(srcDir);
-const hooksList = scanHooks();
+const { hookToComponents, contextToComponents } = scanHookDependencies(components);
+
+// Categorize hooks into architectural domains
+const corporateHooksList = ['useEarning', 'useOrdersChart', 'useOrdersProfitChart', 'useProfitChart', 'useProfitBarAnimationChart', 'useCountryOrder', 'useCountryOrdersMap', 'useTrafficChart', 'useTrafficBar', 'useTrafficList', 'useVisitorsAnalytics', 'useUserActivity', 'usePeriods', 'useStatsBar', 'useStatsProgressBar'];
+const iotHooksList = ['useSecurityCameras', 'useSolar', 'useTemperatureHumidity', 'useElectricity', 'usePlayer', 'useNews'];
+const tableAuthHooksList = ['useSmartTable', 'useSmartTableData', 'useUsers', 'useChat', 'useLayout', 'useAnalytics', 'useSeo', 'useState'];
+
+let mermaidGraph = `\`\`\`mermaid
+graph LR
+    subgraph ContextProviders ["Context State Providers (src/context/)"]
+`;
+
+let contextIdx = 1;
+const contextNodeMap = new Map();
+contextToComponents.forEach((_, ctxName) => {
+  const nodeId = `CTX_${contextIdx++}`;
+  contextNodeMap.set(ctxName, nodeId);
+  mermaidGraph += `        ${nodeId}["${ctxName}"]\n`;
+});
+mermaidGraph += `    end\n\n`;
+
+mermaidGraph += `    subgraph CorporateHooks ["Corporate Analytics Hooks (src/hooks/)"]\n`;
+let hookIdx = 1;
+const hookNodeMap = new Map();
+hookToComponents.forEach((_, hookName) => {
+  if (corporateHooksList.includes(hookName)) {
+    const nodeId = `H_${hookIdx++}`;
+    hookNodeMap.set(hookName, nodeId);
+    mermaidGraph += `        ${nodeId}["${hookName}.js"]\n`;
+  }
+});
+mermaidGraph += `    end\n\n`;
+
+mermaidGraph += `    subgraph IoTHooks ["IoT & Telemetry Hooks (src/hooks/)"]\n`;
+hookToComponents.forEach((_, hookName) => {
+  if (iotHooksList.includes(hookName)) {
+    const nodeId = `H_${hookIdx++}`;
+    hookNodeMap.set(hookName, nodeId);
+    mermaidGraph += `        ${nodeId}["${hookName}.js"]\n`;
+  }
+});
+mermaidGraph += `    end\n\n`;
+
+mermaidGraph += `    subgraph TableAuthHooks ["Tables, Auth & App Hooks (src/hooks/)"]\n`;
+hookToComponents.forEach((_, hookName) => {
+  if (tableAuthHooksList.includes(hookName) || (!corporateHooksList.includes(hookName) && !iotHooksList.includes(hookName))) {
+    const nodeId = `H_${hookIdx++}`;
+    hookNodeMap.set(hookName, nodeId);
+    mermaidGraph += `        ${nodeId}["${hookName}.js"]\n`;
+  }
+});
+mermaidGraph += `    end\n\n`;
+
+mermaidGraph += `    subgraph Components ["Presentation & Layout Components (src/components/)"]\n`;
+const compNodeMap = new Map();
+let compIdx = 1;
+const allConsumerComps = new Set();
+hookToComponents.forEach(comps => comps.forEach(c => allConsumerComps.add(c)));
+contextToComponents.forEach(comps => comps.forEach(c => allConsumerComps.add(c)));
+
+allConsumerComps.forEach(compName => {
+  const nodeId = `C_${compIdx++}`;
+  compNodeMap.set(compName, nodeId);
+  mermaidGraph += `        ${nodeId}["${compName}.jsx"]\n`;
+});
+mermaidGraph += `    end\n\n`;
+
+// Draw edges
+contextToComponents.forEach((comps, ctxName) => {
+  const ctxNode = contextNodeMap.get(ctxName);
+  comps.forEach(compName => {
+    const compNode = compNodeMap.get(compName);
+    if (ctxNode && compNode) {
+      mermaidGraph += `    ${ctxNode} -.-> ${compNode}\n`;
+    }
+  });
+});
+
+hookToComponents.forEach((comps, hookName) => {
+  const hookNode = hookNodeMap.get(hookName);
+  comps.forEach(compName => {
+    const compNode = compNodeMap.get(compName);
+    if (hookNode && compNode) {
+      mermaidGraph += `    ${hookNode} --> ${compNode}\n`;
+    }
+  });
+});
+
+mermaidGraph += `\`\`\``;
 
 let markdown = `# 📐 MASTER ARCHITECTURE & LIVING COMPONENT BLUEPRINT
 
@@ -52,30 +174,9 @@ graph TD
 
 ---
 
-## 🔗 C4 Level 3: Custom Hook Data Dependency Graph
+## 🔗 C4 Level 3: Dynamic Custom Hook & Context Dependency Graph
 
-\`\`\`mermaid
-graph LR
-    subgraph DataHooks ["Custom Data Hooks (src/hooks/)"]
-        H1["useEarning.js"]
-        H2["useOrdersChart.js"]
-        H3["useSmartTableData.js"]
-    end
-
-    subgraph Components ["Presentation Components (src/components/)"]
-        C1["ECommerce.jsx"]
-        C2["EarningCard.jsx"]
-        C3["ChartsPanel.jsx"]
-        C4["OrdersChart.jsx"]
-        C5["SmartTable.jsx"]
-    end
-
-    H1 --> C1
-    H1 --> C2
-    H2 --> C3
-    H2 --> C4
-    H3 --> C5
-\`\`\`
+${mermaidGraph}
 
 ---
 
@@ -95,4 +196,4 @@ components.forEach(comp => {
 });
 
 fs.writeFileSync(archFile, markdown, 'utf-8');
-console.log('✔ Successfully auto-synchronized ARCHITECTURE.md component inventory matrix and C4 Mermaid diagrams.');
+console.log('✔ Successfully auto-synchronized ARCHITECTURE.md dynamic C4 Level 3 Hook dependency graph and component inventory.');
