@@ -30,7 +30,7 @@ Welcome to the **Developer Environment Guide**. This document defines local setu
 | `npm run docs:sync` | Auto-synchronizes active React architecture, legacy blueprint & release changelog | `ARCHITECTURE.md`, `docs/LEGACY_BLUEPRINT.md` & `CHANGELOG.md` |
 | `npm run docs:legacy` | Auto-synchronizes legacy Angular reference blueprint & conversion tracking | `docs/LEGACY_BLUEPRINT.md` |
 | `npm run adr:new` | Generates a new numbered Architectural Decision Record | `docs/DECISIONS.md` |
-
+| `docker compose up -d` | **Optional Container Deployment**: Launches Nginx Alpine production container | `http://localhost:80` |
 
 ---
 

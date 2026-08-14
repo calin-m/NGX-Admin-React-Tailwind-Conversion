@@ -433,6 +433,13 @@ npm run build-storybook  # Compile static Storybook website (storybook-static/)
 npm run preview          # Preview local production build
 ```
 
+#### 6. Docker & Containerized Deployment (Optional)
+```bash
+docker compose up -d     # Build and start Nginx Alpine container on http://localhost:80
+docker compose down      # Stop and remove container
+docker build -t ngx-admin-react . # Build standalone multi-stage Docker image
+```
+
 ---
 
 ## ❓ Developer FAQ & Troubleshooting Cheatsheet

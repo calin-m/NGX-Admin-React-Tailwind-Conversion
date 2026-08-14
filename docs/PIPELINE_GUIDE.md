@@ -51,10 +51,24 @@ Using standard `git commit`:
 ## ⚙️ 3. GitHub Actions CI/CD Workflow (`.github/workflows/ci.yml`)
 
 On every `git push` or Pull Request:
-1. Provisions `ubuntu-latest` container with Node.js 24.
+1. Provisions `ubuntu-latest` runner with Node.js 24.
 2. Installs dependencies (`npm ci`).
-3. Executes `npm run verify`.
-4. Compiles production bundle (`npm run build`).
+3. Executes `npm run verify` and `npm run test:coverage`.
+4. Compiles production bundle (`npm run build`) and static Storybook catalog (`npm run build-storybook`).
+5. Uploads production build artifacts and quality audit reports.
+
+---
+
+## 🐳 4. Docker Containerization Architecture (`Dockerfile`, `compose.yaml`, `nginx.conf`)
+
+For containerized cloud deployments (Kubernetes, AWS ECS, Google Cloud Run, Azure Container Apps):
+1. **Multi-Stage Build Pipeline**:
+   * **Stage 1 (`builder`)**: Node.js 24 Alpine builds optimized React SPA production bundle (`npm run build` ➔ `/app/dist`).
+   * **Stage 2 (`runner`)**: Nginx Alpine (~15MB image) serves static assets with gzip compression, security headers, and static caching.
+2. **SPA Client-Side Fallback Routing**:
+   * Custom `nginx.conf` configures `try_files $uri $uri/ /index.html;` ensuring direct navigation and browser refreshes work flawlessly across all 17 menu routes.
+3. **1-Command Orchestration**:
+   * `docker compose up -d` launches the containerized dashboard on `http://localhost:80`.
 
 ---
 

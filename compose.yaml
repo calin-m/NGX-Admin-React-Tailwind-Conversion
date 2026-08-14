@@ -1,0 +1,9 @@
+services:
+  ngx-admin-react:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ngx-admin-react
+    ports:
+      - "80:80"
+    restart: unless-stopped

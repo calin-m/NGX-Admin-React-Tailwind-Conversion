@@ -7,6 +7,10 @@
 ## [1.0.0] — 2026-08-14
 
 ### 🚀 New Features
+- **feat(arch): make C4 Level 3 Hook dependency graph dynamic via AST import parsing** (`8e72157`) *by Calin M on 2026-08-14*
+  - Modified scripts/generate-architecture-matrix.js (added AST import scanner and dynamic Mermaid C4 generator)
+  - Modified ARCHITECTURE.md (auto-synchronized dynamic C4 Level 3 Hook dependency graph)
+  - Modified CHANGELOG.md (auto-synchronized release log)
 - **feat(ui): upgrade verification engine, Master Audit JSON schema, and NotificationDrawer exit animation** (`09e868e`) *by Calin on 2026-08-07*
   - Modified package.json, package-lock.json & eslint.config.js (added jsx-a11y and knip dependencies and synced lockfile)
   - Modified scripts/verify-build.js & scripts/generate-quality-report.js (reordered verification pipeline & upgraded master audit JSON schema)
@@ -429,4 +433,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-14T09:02:31.461Z*
+*Last Auto-Generated: 2026-08-14T09:16:51.091Z*
