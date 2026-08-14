@@ -304,6 +304,11 @@
   - Synchronized ARCHITECTURE.md, docs/LEGACY_BLUEPRINT.md, docs/DECISIONS.md, and .agents/AGENTS.md
 
 ### 🐛 Bug Fixes
+- **fix(theme): sync App theme state with ThemeContext and upgrade CI/CD pipeline** (`80ae1fc`) *by Calin on 2026-08-14*
+  - Modified src/App.jsx (consumed useTheme and passed toggleDarkMode to Header & ThemeCustomizer)
+  - Added knip.json (configured entrypoints and ignore paths for Knip)
+  - Modified vitest.config.js (configured minimum coverage thresholds)
+  - Modified .github/workflows/ci.yml (added test:coverage step and artifact uploads)
 - **fix(ci): remediate Storybook hook rules, switch case lexical declarations, Node 24 DEP0190, and doc versions** (`60a5fea`) *by Calin on 2026-08-08*
   - Modified scripts/start-all.js (updated spawn commands to single string format for Node 24 compatibility)
   - Modified .github/workflows/ci.yml (updated node-version to 24)
@@ -415,4 +420,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-14T07:16:18.097Z*
+*Last Auto-Generated: 2026-08-14T08:19:53.365Z*
