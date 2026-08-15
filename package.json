@@ -2,6 +2,8 @@
   "name": "ngx-admin-react-tailwind-conversion",
   "private": true,
   "version": "1.0.0",
+  "author": "Calin M",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",

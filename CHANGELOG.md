@@ -357,6 +357,10 @@
   - Modified walkthrough.md (documented import resolution fix)
 
 ### 📖 Documentation Updates
+- **docs(commands): synchronize all remaining CLI scripts across README and DEVELOPMENT** (`070ec17`) *by Calin M on 2026-08-15*
+  - Modified README.md (added lint, knip, and docs:legacy commands)
+  - Modified DEVELOPMENT.md (added lint, knip, build, build-storybook, and preview to master table)
+  - Modified CHANGELOG.md (auto-synchronized release log)
 - **docs(master): expand README into 16-section enterprise hub and document ADR-001 through ADR-008** (`18f8a49`) *by Calin on 2026-08-14*
   - Modified README.md (added 16 enterprise sections, dynamic shields, C4 Mermaid architecture diagrams, migration code diffs, benchmark tables, and ADR index)
   - Modified docs/DECISIONS.md (documented ADR-001 through ADR-008 with complete rationale, decisions, and consequences)
@@ -439,4 +443,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-15T08:05:01.793Z*
+*Last Auto-Generated: 2026-08-15T08:12:34.630Z*
