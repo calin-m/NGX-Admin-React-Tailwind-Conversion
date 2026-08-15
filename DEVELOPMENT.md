@@ -21,7 +21,10 @@ Welcome to the **Developer Environment Guide**. This document defines local setu
 | `npm run storybook` | Launches Storybook Design System Catalog | `http://localhost:6006` |
 | `npm test` | Runs Vitest unit test suite once in terminal | Terminal Output |
 | `npm run test:watch` | Runs Vitest in interactive watch mode | Terminal Output |
+| `npm run test:ui` | **Vitest Visual UI**: Launches Vitest Interactive Visual Browser UI | Browser UI |
 | `npm run test:coverage` | **Code Coverage Suite**: Runs Vitest V8 coverage report | Terminal & `coverage/index.html` |
+| `npm run lint` | **ESLint Audit**: Executes ESLint 9 code quality & a11y audit | Terminal Output |
+| `npm run knip` | **Knip Audit**: Scans codebase for dead code and unused exports | Terminal Output |
 | `npm run report` | **In-Depth Quality Report**: Generates full AST quality report | `docs/QUALITY_AUDIT_REPORT.md` |
 | `npm run audit:pages` | **17-Menu-Tab Parity Check**: Runs 100% menu tab accent check | Terminal Output |
 | `npm run audit:theme` | **AST Accent Scanner**: Scans components for hardcoded colors | Terminal Output |
@@ -30,6 +33,9 @@ Welcome to the **Developer Environment Guide**. This document defines local setu
 | `npm run docs:sync` | Auto-synchronizes active React architecture, legacy blueprint & release changelog | `ARCHITECTURE.md`, `docs/LEGACY_BLUEPRINT.md` & `CHANGELOG.md` |
 | `npm run docs:legacy` | Auto-synchronizes legacy Angular reference blueprint & conversion tracking | `docs/LEGACY_BLUEPRINT.md` |
 | `npm run adr:new` | Generates a new numbered Architectural Decision Record | `docs/DECISIONS.md` |
+| `npm run build` | Compiles optimized React production bundle | `dist/` |
+| `npm run build-storybook` | Compiles static Storybook website catalog | `storybook-static/` |
+| `npm run preview` | Previews compiled local production build | `http://localhost:4173` |
 | `docker compose up -d` | **Optional Container Deployment**: Launches Nginx Alpine production container | `http://localhost:80` |
 
 ---

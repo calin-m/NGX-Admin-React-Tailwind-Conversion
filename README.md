@@ -2,15 +2,15 @@
 
 <div align="center">
 
-![React 18](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Vite 6](https://img.shields.io/badge/Vite-6.0.11-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4.0.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Storybook 8](https://img.shields.io/badge/Storybook-8.6.0-FF4785?style=for-the-badge&logo=storybook&logoColor=white)
-![Vitest 3](https://img.shields.io/badge/Vitest-3.0.5-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
-![Node 24 LTS](https://img.shields.io/badge/Node.js-24_LTS-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![Code Coverage](https://img.shields.io/badge/Coverage-87.87%25-brightgreen?style=for-the-badge&logo=vitest)
-![Theme Parity](https://img.shields.io/badge/Theme_Parity-100%25_(17/17_Tabs)-success?style=for-the-badge)
-![7-Gateway Verified](https://img.shields.io/badge/7--Gateway_Engine-Verified_0_Errors-blue?style=for-the-badge)
+<img src="https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 18" />
+<img src="https://img.shields.io/badge/Vite-6.0.11-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 6" />
+<img src="https://img.shields.io/badge/Tailwind_CSS-v4.0.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS v4" />
+<img src="https://img.shields.io/badge/Storybook-8.6.0-FF4785?style=for-the-badge&logo=storybook&logoColor=white" alt="Storybook 8" />
+<img src="https://img.shields.io/badge/Vitest-3.0.5-6E9F18?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest 3" />
+<img src="https://img.shields.io/badge/Node.js-24_LTS-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node 24 LTS" />
+<img src="https://img.shields.io/badge/Coverage-87.87%25-brightgreen?style=for-the-badge&logo=vitest" alt="Code Coverage" />
+<img src="https://img.shields.io/badge/Theme_Parity-100%25_(17/17_Tabs)-success?style=for-the-badge" alt="Theme Parity" />
+<img src="https://img.shields.io/badge/7--Gateway_Engine-Verified_0_Errors-blue?style=for-the-badge" alt="7-Gateway Verified" />
 
 </div>
 
@@ -406,9 +406,12 @@ npm run storybook   # Launch Storybook Component Workshop (:6006) standalone
 
 #### 2. Testing & Quality Verification
 ```bash
-npm test            # Run all 236 Vitest unit test suites
+npm test            # Run all Vitest unit test suites
 npm run test:watch  # Run Vitest in interactive watch mode
+npm run test:ui     # Launch Vitest Interactive Visual Browser UI
 npm run test:coverage # Collect V8 code coverage report (87.87%)
+npm run lint        # Execute ESLint 9 code quality & a11y audit
+npm run knip        # Audit codebase for dead code and unused exports
 npm run verify      # Execute the 7-Gateway Quality Engine audit
 npm run report      # Generate docs/QUALITY_AUDIT_REPORT.md
 ```
@@ -423,6 +426,7 @@ node scripts/audit-layout-density.js   # Audit layout density & flex collisions
 #### 4. Documentation & ADR Tools
 ```bash
 npm run docs:sync   # Synchronize ARCHITECTURE.md & C4 Mermaid diagrams
+npm run docs:legacy # Synchronize legacy Angular conversion blueprint
 npm run adr:new     # Create a new numbered Architectural Decision Record
 ```
 

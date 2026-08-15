@@ -4,9 +4,15 @@
 
 ---
 
-## [1.0.0] — 2026-08-14
+## [1.0.0] — 2026-08-15
 
 ### 🚀 New Features
+- **feat(deploy): add production multi-stage Dockerfile and Nginx SPA containerization suite** (`afc8245`) *by Calin M on 2026-08-14*
+  - Created Dockerfile (multi-stage Node 24 -> Nginx Alpine build)
+  - Created nginx.conf (configured try_files SPA fallback, gzip compression, security headers)
+  - Created compose.yaml (single-command container orchestration)
+  - Created .dockerignore (optimized Docker build context)
+  - Modified README.md, DEVELOPMENT.md, docs/PIPELINE_GUIDE.md, and CHANGELOG.md
 - **feat(arch): make C4 Level 3 Hook dependency graph dynamic via AST import parsing** (`8e72157`) *by Calin M on 2026-08-14*
   - Modified scripts/generate-architecture-matrix.js (added AST import scanner and dynamic Mermaid C4 generator)
   - Modified ARCHITECTURE.md (auto-synchronized dynamic C4 Level 3 Hook dependency graph)
@@ -433,4 +439,4 @@
 
 ---
 
-*Last Auto-Generated: 2026-08-14T09:16:51.091Z*
+*Last Auto-Generated: 2026-08-15T08:05:01.793Z*
